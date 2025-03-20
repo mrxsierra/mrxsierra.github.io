@@ -1,4 +1,110 @@
 site_name: mrxsierra
+site_author: mrxsierra
 site_url: https://mrxsierra.github.io/
+site_description: "Welcome to my personal website. Here you will find my projects, blogs, and more."
+
+# Navigation
+nav:
+  - Welcome: index.md
+  - Projects: projects/index.md
+  - Blogs: blog/index.md
+  - About: about.md
+  - Contact: contact.md
+
+# Theme
 theme:
   name: material
+  
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.footer
+    - navigation.instant.progress
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - header.autohide
+    # - navigation.tabs.sticky
+  
+  icon:
+    logo: simple/spond
+    tag:
+      home: material/home-roof
+      html: fontawesome/brands/html5
+      js: fontawesome/brands/js
+      css:  fontawesome/brands/css3
+      python: fontawesome/brands/python
+      c: fontawesome/solid/c
+  
+  # Color palettes
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+      # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+
+# Plugins 
+plugins:
+  - tags
+  - search
+  - blog:
+      enabled: true
+      blog_dir: blog
+      blog_toc: false
+  # - social:
+      # cards_layout_options:
+      #   font_family: Noto Sans SC
+  - git-revision-date-localized
+
+# Extensions
+markdown_extensions:
+  - footnotes
+
+# Root directory
+docs_dir: docs
+
+# Extra Settings
+extra:
+  # Tags mapping
+  tags:
+    Home: home
+    Welcome: home
+    HTML5: html
+    JavaScript: js
+    CSS: css
+    Python: python
+    C: c
+
+  # Social Media
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/sunilsharma97/
+      name: LinkedIn
+    - icon: fontawesome/brands/GitHub
+      link: https://github.com/mrxsierra/
+      name: Github
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/u/mrxsierra
+      name: DockerHub
+  
+  # Footer disble generator
+  generator: false
+
+# Footer copyright
+copyright: Copyright &copy; 2025-2030 mrxsierra
