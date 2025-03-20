@@ -97,7 +97,7 @@ background: none
     --hero-text-size: 1.2em;
     --link-size: 1.1em;
   }
-  /* Dark mode overrides */
+  /* Dark mode overrides */ 
   @media (prefers-color-scheme: dark) {
     :root {
       --hero-bg: var(--hero-bg-dark);
