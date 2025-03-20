@@ -1,0 +1,4 @@
+site_name: mrxsierra
+# site_url: https://mrxsierra.github.io/
+theme:
+  name: material
