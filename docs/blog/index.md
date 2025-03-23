@@ -1,9 +1,15 @@
 ---
 nav:
-  - Section:
-    - projects/index.md 
-    - Page 1: projects/b-1.md
-    - Page 2: projects/b-2.md
+  - Overview: blog/index.md 
+  - Blog 1: blog/posts/b-1.md
+  - Blog 2: blog/posts/b-2.md
+
+date:
+  creted: 12/12/12
+
+tag:
+  - latest
+  - blog
 ---
 
 # Blogs

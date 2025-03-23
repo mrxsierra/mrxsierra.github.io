@@ -1,17 +1,16 @@
 ---
-nav:
-  - Section:
-    - projects/index.md 
-    - Page 1: projects/p-1.md
-    - Page n: projects/p-2.md
+date:
 ---
 
 # Projects
 
 Here are some of my notable projects:
 
-## Project 1
-[Project 1](projects/p-1.md) - A brief description of project 1.
+## Fake data generator
+[s3 faker](s3-faker.md) - Fake data generation and storing with s3.
 
-## Project 2
-[Project 2](projects/p-2.md) - A brief description of project 2.
+## Hunt Jobs
+[webscraper](naukari-webscraper.md) - Using Webscraper to Hunt Jobs.
+
+## Convert docx to excel
+[paraxcel](paraxcel.md) - Converting docx to excel.

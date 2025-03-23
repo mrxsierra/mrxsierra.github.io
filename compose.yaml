@@ -1,0 +1,10 @@
+services:
+  mysite:
+    build:
+      context: .
+      target: dev
+    # image: squidfunk/mkdocs-material
+    volumes:
+      - .:/docs
+    ports:
+      - "8000:8000"

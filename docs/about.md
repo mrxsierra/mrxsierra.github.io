@@ -13,7 +13,6 @@ I have worked on various projects involving data analysis, machine learning, and
 
 ## Education
 - Bachelor's in Computer Science
-- Master's in Data Science
 
 ## Hobbies
 - Coding

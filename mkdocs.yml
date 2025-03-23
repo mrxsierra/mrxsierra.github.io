@@ -6,14 +6,31 @@ site_description: "Welcome to my personal website. Here you will find my project
 # Navigation
 nav:
   - Welcome: index.md
-  - Projects: projects/index.md
+  - Projects:
+      - Overview: projects/index.md
+      - projects/naukari-webscraper.md
+      - projects/paraxcel.md
+      - projects/s3-faker.md
+      # - Project 2: projects/p-2.md
   - Blogs: blog/index.md
   - About: about.md
   - Contact: contact.md
 
+not_in_nav: |
+  projects/p-1.md
+  tags.md
+
+extra_css:
+  - assets/css/index.css
+
+extra_javascript:
+  - assets/js/index.js
+
 # Theme
 theme:
   name: material
+  # custom_dir: overrides
+  favicon: assets/img/favicon.ico
   
   features:
     - navigation.instant
@@ -29,14 +46,17 @@ theme:
     # - navigation.tabs.sticky
   
   icon:
-    logo: simple/spond
-    tag:
-      home: material/home-roof
-      html: fontawesome/brands/html5
-      js: fontawesome/brands/js
-      css:  fontawesome/brands/css3
-      python: fontawesome/brands/python
-      c: fontawesome/solid/c
+    logo: simple/sogou
+  #   tag:
+  #     home: material/home-roof
+  #     html: fontawesome/brands/html5
+  #     js: fontawesome/brands/js
+  #     css:  fontawesome/brands/css3
+  #     python: fontawesome/brands/python
+  #     c: fontawesome/solid/c
+  #     latest: material/new-releases
+  #     blog: material/rss
+  #     project: material/developer-board
   
   # Color palettes
   palette:
@@ -73,8 +93,8 @@ plugins:
   - git-revision-date-localized
 
 # Extensions
-markdown_extensions:
-  - footnotes
+# markdown_extensions:
+#   - footnotes
 
 # Root directory
 docs_dir: docs
@@ -90,6 +110,9 @@ extra:
     CSS: css
     Python: python
     C: c
+    latest: latest
+    blog: blog
+    project: project
 
   # Social Media
   social:
