@@ -93,6 +93,16 @@
   }
   /* Responsive features grid */
   .features {
+    /* display: grid; */
+    /* grid-template-columns: repeat(1, 1fr); */
+    gap: 20px;
+    max-width: 1200px;
+    /* margin: 40px auto; */
+    /* padding: 0 20px; */
+    /* box-sizing: border-box; */
+  }
+  
+  .project-cards, .blog-cards{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
@@ -101,17 +111,20 @@
     padding: 0 20px;
     box-sizing: border-box;
   }
+
   @media (max-width: 800px) {
     .features {
       grid-template-columns: repeat(2, 1fr);
     }
   }
+
   @media (max-width: 400px) {
     .features {
       grid-template-columns: 1fr;
     }
   }
-  .feature-card {
+
+  .feature-card, .project-card, .blog-card {
     background: var(--md-default-bg-color);
     padding: 20px;
     border: 1px solid var(--primary-color);
@@ -119,11 +132,12 @@
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  .feature-card:hover {
+
+  .feature-card:hover, .project-card:hover, .blog-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   }
-  .feature-card h3 {
+  .feature-card h3, .project-card h3, .blog-card h3{
     color: var(--primary-color);
   }
   .feature-card a {
@@ -138,5 +152,19 @@
     transition: background 0.3s ease;
   }
   .feature-card a:hover {
+    background: var(--accent-color);
+  }
+  .project-card a, .blog-card a  {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 16px;
+    /* background: var(--primary-color); */
+    color: #121212;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  .project-card:hover, .blog-card:hover {
     background: var(--accent-color);
   }

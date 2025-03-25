@@ -14,6 +14,7 @@ nav:
       # - Project 2: projects/p-2.md
   - Blogs: blog/index.md
   - About: about.md
+  - Resume: resume.md
   - Contact: contact.md
 
 not_in_nav: |

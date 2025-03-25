@@ -23,6 +23,58 @@ background: none
         <a class="hero-link" href="about">About Me</a>
         <a class="hero-link" href="contact">Contact</a>
     </div>
+</div>
+
+<h2 style="font-size:2em;" id="projects"> Featured Projects</h2>
+
+<!-- Showcase 2-3 of your best projects with brief descriptions and links. -->
+<div class="project-cards">
+    <div class="project-card">
+        <h3><a class="project-link" href="projects/s3-faker.md">S3-faker</a></h3>
+        <p>Create fake Data and store in aws s3 bucket (localstack)</p>
+    </div>
+    <div class="project-card">
+        <h3><a class="project-link" href="projects/paraxcel.md">paraxcel</a></h3>
+        <p>Convert docx to excel sheet</p>
+    </div>
+</div>
+
+<h2 style="font-size:2em;" id="projects"> Featured Blogs</h2>
+
+<!-- Showcase 2-3 of your best blogs with brief descriptions and links. -->
+<div class="blog-cards">
+    <div class="blog-card">
+        <h3><a class="blog-link" href="blog/post/b-1.md">blog 1 title</a></h3>
+        <p>Short description of the project.</p>
+    </div>
+    <div class="blog-card">
+        <h3><a class="blog-link" href="blog/post/b-2.md">blog 2 title</a></h3>
+        <p>Short description of the project.</p>
+    </div>
+</div>
+
+<h2 style="font-size:2em;" id="skills"> Skills</h2>
+<!-- A concise list of your technical skills. You can categorize them if needed. -->
+<div class="skill-cards">
+    <div class="skill-card">
+        > <b>Programming Languages:</b> Python, JavaScript, etc.
+    </div>
+    <div class="skill-card">
+        > <b>Data Science:</b> Machine Learning, Data Visualization, etc.
+    </div>
+    <div class="skill-card">
+        > <b>Frameworks/Libraries:</b> React, TensorFlow, etc.
+    </div>
+    <div class="skill-card">
+        > <b>Tools:</b> Git, Docker, etc.
+    </div>
+</div>
+
+## Let's Connect
+
+<!-- Link to your LinkedIn, GitHub, and other relevant profiles. -->
+
+<div class="hero-wrapper">
     <blockquote style="background-color:rgba(0,10,255,0.8);color:black;opacity:0.9">
         <h2 style="font-size:1.5em; text-align:center; color:yellow;" id="explore">
             >> I'm thrilled to have you here. Explore my projects, read my blogs, and get to know more about me. <<

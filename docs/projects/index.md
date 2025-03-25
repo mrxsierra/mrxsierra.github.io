@@ -1,16 +1,19 @@
 ---
-date:
+date: 2024
 ---
 
 # Projects
 
 Here are some of my notable projects:
 
-## Fake data generator
-[s3 faker](s3-faker.md) - Fake data generation and storing with s3.
+## [s3 faker](s3-faker.md) - Fake data generator
 
-## Hunt Jobs
-[webscraper](naukari-webscraper.md) - Using Webscraper to Hunt Jobs.
+Fake data generation and storing with s3.
 
-## Convert docx to excel
-[paraxcel](paraxcel.md) - Converting docx to excel.
+## [webscraper](naukari-webscraper.md) - Hunt Jobs
+
+Using Webscraper to Hunt Jobs.
+
+## [paraxcel](paraxcel.md) - Convert docx to excel
+
+Converting docx to excel.

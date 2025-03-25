@@ -43,3 +43,6 @@ date:
 ## Screenshots
 ![Data Visualization Example](https://github.com/mrxsierra/paraxcel/blob/main/docs/images/data_visualization.png)
 ![Excel File Processing](https://github.com/mrxsierra/paraxcel/blob/main/docs/images/excel_processing.png)
+
+
+
