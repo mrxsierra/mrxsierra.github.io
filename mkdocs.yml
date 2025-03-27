@@ -1,4 +1,4 @@
-site_name: mrxsierra
+site_name: mrxsierra | Sunil Sharma
 site_author: mrxsierra
 site_url: https://mrxsierra.github.io/
 site_description: "Welcome to my personal website. Here you will find my projects, blogs, and more."
@@ -23,6 +23,8 @@ not_in_nav: |
 
 extra_css:
   - assets/css/index.css
+  - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css
+
 
 extra_javascript:
   - assets/js/index.js

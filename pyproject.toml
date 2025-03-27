@@ -5,7 +5,7 @@ description = "my site"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "mkdocs-material>=9.6.9",
+    "mkdocs-material[imaging]>=9.6.9",
     "mkdocs-blogging-plugin",
     "mkdocs-git-revision-date-localized-plugin",
     "pymdown-extensions>=10.14.3",

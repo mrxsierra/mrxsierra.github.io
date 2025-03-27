@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // apply effect on page load
     // # welcome, name and explore ids are used in index.md
-    typeWriter("Hey there Hello..! and Welcome to my Portfolio", 'welcome', 10);
+    typeWriter(">>> Hey there Hello..! and Welcome to my Portfolio <<<", 'welcome', 10);
     typeWriter("Sunil Sharma", 'name', 100);
-    typeWriter("I'm thrilled to have you here. Explore my projects, read my blogs, and get to know more about me.", 'explore', 10);
+    typeWriter(">>> I'm thrilled to have you here. Explore my projects, read my blogs, and get to know more about me. <<<", 'explore', 10);
 });
