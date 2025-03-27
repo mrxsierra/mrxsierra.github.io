@@ -122,7 +122,7 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/sunilsharma97/
       name: LinkedIn
-    - icon: fontawesome/brands/GitHub
+    - icon: fontawesome/brands/gitHub
       link: https://github.com/mrxsierra/
       name: Github
     - icon: fontawesome/brands/docker
