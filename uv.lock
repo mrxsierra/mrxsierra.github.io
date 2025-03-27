@@ -173,6 +173,14 @@ wheels = [
 ]
 
 [[package]]
+name = "fontawesome-free"
+version = "5.15.4"
+source = { registry = "https://pypi.org/simple" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/01/68/6ed8f4c7efa69a479c8421d9a9d2905132c3869b118554014b8ab7291912/fontawesome_free-5.15.4-py3-none-any.whl", hash = "sha256:5d3d0edbf6ce0f7cd56978a31ea4ea697a8bb28103b5c528b3aa1f0a4474d9a1", size = 20862662 },
+]
+
+[[package]]
 name = "ghp-import"
 version = "2.1.0"
 source = { registry = "https://pypi.org/simple" }
@@ -395,6 +403,7 @@ name = "mrxsierra-github-io"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "fontawesome-free" },
     { name = "mkdocs-blogging-plugin" },
     { name = "mkdocs-git-revision-date-localized-plugin" },
     { name = "mkdocs-material", extra = ["imaging"] },
@@ -408,6 +417,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "fontawesome-free", specifier = ">=5.15.4" },
     { name = "mkdocs-blogging-plugin" },
     { name = "mkdocs-git-revision-date-localized-plugin" },
     { name = "mkdocs-material", extras = ["imaging"], specifier = ">=9.6.9" },
