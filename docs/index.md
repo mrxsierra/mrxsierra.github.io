@@ -54,32 +54,40 @@ background: none
     <p>Discover innovative projects where technology meets creativity.</p>
     <div class="project-cards">
         <div class="project-card">
-            <img src="/assets/img/paraxcel.ico" alt="S3-faker Project Logo - AWS S3 Data Generation Tool" />
-            <a class="project-link" href="projects/s3-faker.md">
+            <div class="project-content">
                 <h3>S3-faker</h3>
+                <p>Create fake Data and store in aws s3 bucket (localstack)</p>
+            </div>
+            <a class="project-link" href="projects/s3-faker">
+                <img src="/assets/img/paraxcel.ico" alt="S3-faker Project Logo - AWS S3 Data Generation Tool"/>
             </a>
-            <p>Create fake Data and store in aws s3 bucket (localstack)</p>
         </div>
         <div class="project-card">
-            <img src="/assets/img/paraxcel.ico" alt="Project Image" />
-            <a class="project-link" href="projects/paraxcel.md">
-            <h3>paraxcel</h3>
-            </a>
-            <p>Convert docx to excel sheet</p>
-        </div>
-        <div class="project-card">
-            <img src="/assets/img/paraxcel.ico" alt="Project Image" />
-            <a class="project-link" href="projects/s3-faker.md">
-                <h3>S3-faker</h3>
-            </a>
-            <p>Create fake Data and store in aws s3 bucket (localstack)</p>
-        </div>
-        <div class="project-card">
-            <img src="/assets/img/paraxcel.ico" alt="Project Image" />
-            <a class="project-link" href="projects/paraxcel.md">
+            <div class="project-content">
                 <h3>paraxcel</h3>
+                <p>Convert docx to excel sheet</p>
+            </div>
+            <a class="project-link" href="projects/paraxcel">
+                <img src="/assets/img/paraxcel.ico" alt="Project Image" />
             </a>
-            <p>Convert docx to excel sheet</p>
+        </div>
+        <div class="project-card">
+            <div class="project-content">
+                <h3>S3-faker</h3>
+                <p>Create fake Data and store in aws s3 bucket (localstack)</p>
+            </div>
+            <a class="project-link" href="projects/s3-faker">
+                <img src="/assets/img/paraxcel.ico" alt="Project Image" />
+            </a>
+        </div>
+        <div class="project-card">
+            <div class="project-content">
+                <h3>paraxcel</h3>
+                <p>Convert docx to excel sheet</p>
+            </div>
+            <a class="project-link" href="projects/paraxcel">
+                <img src="/assets/img/paraxcel.ico" alt="Project Image" />
+            </a>
         </div>
     </div>
     <div class="explore-button">
@@ -94,32 +102,40 @@ background: none
     <p>Read my latest insights on development, data science, and tech trends.</p>
     <div class="blog-cards">
         <div class="blog-card">
-            <img src="path/to/image.jpg" alt="Project Image" />
-            <a class="blog-link" href="blog/post/b-1.md">
+            <div class="blog-content">
                 <h3>blog 1 title</h3>
+                <p>Short description of the project.</p>
+            </div>
+            <a class="blog-link" href="blog/post/b-1">
+                <img src="path/to/image.jpg" alt="Project Image" />
             </a>
-            <p>Short description of the project.</p>
         </div>
         <div class="blog-card">
-            <img src="path/to/image.jpg" alt="Project Image" />
-            <a class="blog-link" href="blog/post/b-2.md">
+            <div class="blog-content">
                 <h3>blog 2 title</h3>
+                <p>Short description of the project.</p>
+            </div>
+            <a class="blog-link" href="blog/post/b-2">
+                <img src="path/to/image.jpg" alt="Project Image" />
             </a>
-            <p>Short description of the project.</p>
         </div>
         <div class="blog-card">
-            <img src="path/to/image.jpg" alt="Project Image" />
-            <a class="blog-link" href="blog/post/b-1.md">
+            <div class="blog-content">
                 <h3>blog 1 title</h3>
+                <p>Short description of the project.</p>
+            </div>
+            <a class="blog-link" href="blog/post/b-1">
+                <img src="path/to/image.jpg" alt="Project Image" />
             </a>
-            <p>Short description of the project.</p>
         </div>
         <div class="blog-card">
-            <img src="path/to/image.jpg" alt="Project Image" />
-            <a class="blog-link" href="blog/post/b-2.md">
+            <div class="blog-content">
                 <h3>blog 2 title</h3>
+                <p>Short description of the project.</p>
+            </div>
+            <a class="blog-link" href="blog/post/b-2">
+                <img src="path/to/image.jpg" alt="Project Image" />
             </a>
-            <p>Short description of the project.</p>
         </div>
     </div>
     <div class="explore-button">
@@ -128,38 +144,54 @@ background: none
 </section>
 <!-- Skills -->
 <section class="skill-section">
-    <h2 id="skills"> Skills</h2>
-    <p>Contantly Learnning New Technologies</p>
-    <ul>
-        <li>
-            <div>
-                <span>Programming Languages | </span>
-                Python, JavaScript, etc.
+    <h2 id="skills">Skills & Expertise</h2>
+    <p>Continuously expanding my technical horizons</p>
+    <div class="skills-grid">
+        <div class="skill-card">
+            <div class="content">
+                <h3>Programming Languages</h3>
+                <p class="skill-list">
+                    Python,
+                    JavaScript,
+                    SQL
+                </p>
             </div>
-            <span><i class="fas fa-code"></i></span>
-        </li>
-        <li>
-            <div>
-                <span>Data Science | </span>
-                Machine Learning, Data Visualization, etc.
+            <i class="fas fa-code skill-icon"></i>
+        </div>
+        <div class="skill-card">
+            <div class="content">
+                <h3>Data Science</h3>
+                <p class="skill-list">
+                    Machine Learning,
+                    Data Visualization,
+                    Statistical Analysis
+                </p>
             </div>
-            <span><i class="fas fa-chart-bar"></i></span>
-        </li>
-        <li>
-            <div>
-                <span>Frameworks/Libraries | </span>
-                React, TensorFlow, etc.
+            <i class="fas fa-chart-bar skill-icon"></i>
+        </div>
+        <div class="skill-card">
+            <div class="content">
+                <h3>Frameworks & Libraries</h3>
+                <p class="skill-list">
+                    React,
+                    TensorFlow,
+                    Pandas
+                </p>
             </div>
-            <span><i class="fas fa-toolbox"></i></span>
-        </li>
-        <li>
-            <div>
-                <span>Tools | </span>
-                Git, Docker, etc.
+            <i class="fas fa-toolbox skill-icon"></i>
+        </div>
+        <div class="skill-card">
+            <div class="content">
+                <h3>Tools & Technologies</h3>
+                <p class="skill-list">
+                    Git,
+                    Docker,
+                    AWS
+                </p>
             </div>
-            <span><i class="fas fa-terminal"></i></span>
-        </li>
-    </ul>
+            <i class="fas fa-terminal skill-icon"></i>
+        </div>
+    </div>
 </section>
 
 <!-- About Me and Connect Section -->
