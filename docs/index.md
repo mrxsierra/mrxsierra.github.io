@@ -1,6 +1,5 @@
 ---
-title: Home
-description: Portfolio of Sunil Sharma - Python Developer and Data Scientist
+description: Personal & Portfolio website of Sunil Sharma - Python Developer and Data Scientist
 hide:
   - tags
   - footer
@@ -36,7 +35,9 @@ background: none
     <!-- Quick links -->
     <blockquote id="ex-quote">
         <h3 id="explore">
-            >> I'm thrilled to have you here. Explore my projects, read my blogs, and get to know more about me. <<
+            <i class="fas fa-quote-left"></i>
+            I'm thrilled to have you here. Explore my projects, read my blogs, and get to know more about me.
+            <i class="fas fa-quote-right"></i>
         </h3>
     </blockquote>
 </section>
