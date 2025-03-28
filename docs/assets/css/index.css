@@ -1,10 +1,9 @@
 :root {
     /* Base colors and gradients */
-    --blockquote-color: yellow;
-    --blockquote-bg-color: rgb(32, 30, 56);
     --skill-hover-bg: rgba(137, 43, 226, 0.1);
     
     /* Light */
+    --quote-color-light: rgb(9, 102, 193);
     --bg-card-hover-light: rgba(203, 155, 248, 0.116);
     --accent-color-light: rgba(137, 43, 226, 0.1);
     --primary-color-light: rgb(98, 0, 255);
@@ -15,6 +14,9 @@
     --highlight-gradient-light: linear-gradient(130deg, rgb(71, 7, 247), rgba(149, 0, 248, 0.62));
     
     /* Dark */
+    --quote-bg-color: rgba(122, 134, 161, 0.7);
+    --quote-color-dark: rgba(255, 236, 203 ,0.68);
+    --anchor-text-color-dark: rgb(36, 112, 252);
     --bg-card-hover-dark: rgba(0, 0, 0, 0.9);
     --accent-color-dark: rgba(207, 179, 235, 0.1);
     --primary-color-dark: rgb(29, 88, 196);
@@ -34,6 +36,8 @@
     --hero-bg: var(--hero-bg-light);
     --bg-overlay: var(--bg-overlay-light);
     --highlight-gradient: var(--highlight-gradient-light);
+    --blockquote-color: var(--quote-color-light);
+    --blockquote-bg-color: var(--accent-color);
     
     /* Text sizes */
     --hero-title-size: 2.8em;
@@ -46,9 +50,11 @@
   /* Dark slate mode overrides */
   
   [data-md-color-scheme="slate"] {
+    --blockquote-color: var(--quote-color-dark);
+    --blockquote-bg-color: var(--accent-color);
     --bg-card-hover: var(--bg-card-hover-dark);
     --accent-color: var(--accent-color-dark);
-    --anchor-text-color: var(--text-color-dark);
+    --anchor-text-color: var(--anchor-text-color-dark);
     --primary-color:  var(--primary-color-dark);
     --secondary-color: var(--secondary-color-dark);
     --text-color: var(--text-color-dark);
@@ -88,10 +94,18 @@
     width: 100%;
     background: var(--hero-bg);
     text-align: center;
+    max-width: 1250px;
     border-radius: 10px;
     transition: background 0.3s ease;
     box-sizing: border-box;
     position: relative;
+    padding: 0 1em;
+  }
+
+  @media (max-width: 768px) {
+    .main-body {
+      padding: 0;
+    }
   }
 
   .main-body section {
@@ -102,11 +116,19 @@
   .main-body #wel-quote, .main-body #ex-quote {
     font-style: italic;
     padding: 0.1em;
-    margin: 1em 1em;
+    margin: 1em 0.1em;
     background-color: var(--blockquote-bg-color);
-    border-left: 0.5em solid var(--blockquote-color);
+    border-left: 0.5em solid var(--primary-color);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-radius: 5px;
+    max-width: 1200px;
+  }
+  
+  @media (max-width:768px) {
+    .main-body #wel-quote, .main-body #ex-quote {
+      padding: 0.1em 0;
+      margin: 0.1em 0;
+    }
   }
   
   .main-body #wel-quote h3, .main-body #ex-quote h3 {
@@ -128,7 +150,11 @@
     margin: 2.5em 0.5em;
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 768px) {
+    .main-body #wel-quote, .main-body #ex-quote {
+      padding: 0.1em 0;
+      margin: 1em 0;
+    }
 
     .main-body h1 {
       font-size: 1em;
@@ -219,9 +245,9 @@
     transition: font-size 0.3s ease, color 0.3s ease, border 0.3s ease;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     .main-body .hero-link {
-        font-size: 1em;
+        font-size: 1.3em;
         padding: 0.3em 0.6em;
     }
   }
@@ -325,7 +351,9 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2em;
-    padding: 2em;
+    padding: 0 !important;
+    max-width: 1200px;
+    /* margin: 0 auto;; */
   }
   
   @media (max-width: 768px) {
@@ -342,17 +370,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2em 1em;
+    padding: 0;
   }
   
   .skills-grid {
+    max-width: 1200px;
     display: grid;
     grid-template-columns: repeat(2, minmax(280px, 1fr));
     gap: 1.5em;
     width: 100%;
-    max-width: 1200px;
-    margin: 2em auto;
-    padding: 0 1em;
+    /* margin: 2em auto; */
+    /* padding: 0 1em; */
   }
   
   .skill-card {
@@ -403,7 +431,7 @@
     .skills-grid {
       grid-template-columns: 1fr;
       gap: 1em;
-      padding: 0 0.5em;
+      padding: 0;
     }
     
     .skill-card {
@@ -428,6 +456,7 @@
   .social-link , .social-link a {
     display: inline-flex;
     align-items: center;
+    max-width: 200px;
     gap: 0.5em;
     padding: 0.8em 1.5em;
     background: var(--bg-overlay);
@@ -451,7 +480,7 @@
 
   @media (max-width: 400px) {
     .main-body .about-connect .social-links, .social-links {
-        flex-direction: column;
+        flex-direction: row;
     }
     .main-body .about-connect .social-link, .social-link {
         width: 100%;
@@ -466,8 +495,9 @@
 .resume-link a {
     display: inline-flex;
     align-items: center;
+    max-width: 200px;
     gap: 0.5em;
-    padding: 0.8em 1.5em;
+    padding: 1em;
     background: var(--bg-overlay);
     color: var(--text-color);
     text-decoration: none;
@@ -484,7 +514,15 @@
 }
 
 .resume-link i {
-    font-size: 1.2em;
+    font-size: 1em;
+}
+
+.about-connect {
+  padding: 1em 1em;
+  margin: 0 auto;
+}
+.about-section {
+  max-width: 1200px;
 }
 
 .about-connect .social-links {

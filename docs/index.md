@@ -14,7 +14,11 @@ background: none
 <div class="main-body">
 <!-- Welcome Message -->
 <blockquote id="wel-quote">
-    <h3 id="welcome">Hey there Hello..! Welcome to my Portfolio</h3>
+    <h3 id="welcome">
+    <i class="fas fa-quote-left"></i>
+    Hey there Hello..! Welcome to my Portfolio
+    <i class="fas fa-quote-right"></i>
+    </h3>
 </blockquote>
 
 <!-- Intro -->
@@ -225,7 +229,10 @@ background: none
             </a>
         </div>
         <div class="explore-button">
-            <a href="contact/">More Ways to Connect</a>
+            <a href="contact/">
+                <i class="fab fa-link"></i>
+            More Ways to Connect
+            </a>
         </div>
     </div>
 </section>
