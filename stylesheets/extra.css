@@ -1,0 +1,4 @@
+.md-typeset .emojione, .md-typeset .gemoji, .md-typeset .twemoji {
+    --md-icon-size: 0.8em;
+    vertical-align: inherit;
+}
