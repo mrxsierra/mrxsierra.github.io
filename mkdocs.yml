@@ -2,16 +2,18 @@ site_name: mrxsierra | Sunil Sharma
 site_author: mrxsierra
 site_url: https://mrxsierra.github.io/
 site_description: "Welcome to my personal website. Here you will find my projects, blogs, and more."
-
+# repo_url: https://github.com/mrxsierra/mrxsierra.github.io
+# edit_uri: edit/main/docs/
 # Navigation
 nav:
   - Welcome: index.md
   - Projects:
       - Overview: projects/index.md
-      - projects/naukari-webscraper.md
-      - projects/paraxcel.md
+      - Naukari Web Scraper: projects/naukari-webscraper.md
+      - Exam Management System Database: projects/ems-db.md
+      - QA Docx to Excel: projects/paraxcel.md
+      - Test Management Site: projects/test-site.md
       - projects/s3-faker.md
-      # - Project 2: projects/p-2.md
   - Blogs: blog/index.md
   - About: about.md
   - Resume: resume.md
@@ -22,12 +24,13 @@ not_in_nav: |
   tags.md
 
 extra_css:
-  - assets/css/index.css
+  - stylesheets/index.css
+  - stylesheets/extra.css
   - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css
 
 
 extra_javascript:
-  - assets/js/index.js
+  - javascripts/index.js
 
 # Theme
 theme:
@@ -46,9 +49,28 @@ theme:
     - navigation.indexes
     - navigation.top
     - header.autohide
+    - content.code.copy
+    - content.code.annotate
+    - content.tooltips
+    - content.footnote.tooltips
+    # - content.action.edit
+    # - content.action.view
     # - navigation.tabs.sticky
   
   icon:
+    # admonition:
+        # note: fontawesome/solid/note-sticky
+        # abstract: fontawesome/solid/book
+        # info: fontawesome/solid/circle-info
+        # tip: fontawesome/solid/bullhorn
+        # success: fontawesome/solid/check
+        # question: fontawesome/solid/circle-question
+        # warning: fontawesome/solid/triangle-exclamation
+        # failure: fontawesome/solid/bomb
+        # danger: fontawesome/solid/skull
+        # bug: fontawesome/solid/robot
+        # example: fontawesome/solid/flask
+        # quote: fontawesome/solid/quote-left
     logo: simple/sogou
   #   tag:
   #     home: material/home-roof
@@ -84,23 +106,49 @@ theme:
 
 # Plugins 
 plugins:
-  - tags
-  - search
   - blog:
       enabled: true
       blog_dir: blog
       blog_toc: false
-  # - social:
-      # cards_layout_options:
-      #   font_family: Noto Sans SC
   - git-revision-date-localized
+  - search
+  # - social
+  - tags
 
 # Extensions
-# markdown_extensions:
-#   - footnotes
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbr.md
+  - toc:
+      permalink: true
 
 # Root directory
 docs_dir: docs
+
+# watch abbrevations
+watch:
+  - includes
 
 # Extra Settings
 extra:
@@ -128,6 +176,9 @@ extra:
     - icon: fontawesome/brands/docker
       link: https://hub.docker.com/u/mrxsierra
       name: DockerHub
+  
+  status:
+    new: Recently added
   
   # Footer disble generator
   generator: false

@@ -39,35 +39,27 @@ Essential Elements of a Project Post: Each project post should detail the
 as is a clear layout for maximum impact and readability.
 Project posts should `also highlight the individual's unique skills and contributions`.
 
-```md
----
-title: Project short template for cv
----
-
 # Project Title
 
-## Project Overview
-
-* A concise summary of the project, its purpose, and its goals. [cite: 44, 45, 46, 47, 48, 49]
-* Context: Client/Company/Project type, Project date/duration. [cite: 44, 45, 46, 47, 48, 49]
-
-## My Role & Responsibilities
-
-* Clearly define your role and responsibilities within the project. [cite: 46]
-* For team projects, specify your contributions and acknowledge collaborators. [cite: 18]
-
-## Accomplishments & Results
-
-* Use the "Accomplished \[X] as measured by \[Y], by doing \[Z]" formula to describe your key achievements.
-```
-
-
 ```md
----
-title: Project Title
----
 
-# Project Title
+??? In-Hurry
+
+    ## Project Overview
+
+    * A concise summary of the project, its purpose, and its goals. [cite: 44, 45, 46, 47, 48, 49]
+    * Context: Client/Company/Project type, Project date/duration. [cite: 44, 45, 46, 47, 48, 49]
+
+    ## My Role & Responsibilities
+
+    * Clearly define your role and responsibilities within the project. [cite: 46]
+    * For team projects, specify your contributions and acknowledge collaborators. [cite: 18]
+
+    ## Accomplishments & Results
+
+    * Use the "Accomplished \[X] as measured by \[Y], by doing \[Z]" formula to describe your key achievements.
+
+
 
 ## Overview
 Provide a concise summary of the project. Explain the main purpose, goals, and any key features. 
