@@ -76,35 +76,38 @@ The project resulted in a functional test management application that showcases 
 Here are some images showcasing the project:
 
 #### Login Page
-![Login Page](https://github.com/mrxsierra/test-site/blob/main/img/login.jpg)
+![Login Page](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/login.jpg)
 
 #### Register Page
-![Register Page](https://github.com/mrxsierra/test-site/blob/main/img/register.jpg)
+![Register Page](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/register.jpg)
 
 #### Test Selection
-![Select Test](https://github.com/mrxsierra/test-site/blob/main/img/select-test-to-take.jpg)
+![Select Test](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/select-test-to-take.jpg)
 
 #### Test Page
-![Test Page](https://github.com/mrxsierra/test-site/blob/main/img/test-page.png)
+![Test Page](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/test-page.png)
 
 #### Test Timeout
-![Test Timeout](https://github.com/mrxsierra/test-site/blob/main/img/test-time-out.png)
+![Test Timeout](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/test-time-out.png)
 
 #### Dashboard
-![Dashboard](https://github.com/mrxsierra/test-site/blob/main/img/anamoly-dash.png)
+![Dashboard](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/anamoly-dash.png)
 
 #### User Management
-![Change Password](https://github.com/mrxsierra/test-site/blob/main/img/change-pass.png)
+![Change Password](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/change-pass.png)
 
 #### CRUD Operations
-![Create Operation](https://github.com/mrxsierra/test-site/blob/main/img/create.png)
-![Read Operation](https://github.com/mrxsierra/test-site/blob/main/img/Read.png)
-![Update Operation](https://github.com/mrxsierra/test-site/blob/main/img/update.png)
-![Delete Operation](https://github.com/mrxsierra/test-site/blob/main/img/delete.png)
+![Create Operation](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/create.png)
+![Read Operation](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/Read.png)
+![Update Operation](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/update.png)
+![Delete Operation](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/delete.png)
 
 #### Test Results
-![Individual Test Result](https://github.com/mrxsierra/test-site/blob/main/img/individual-test-result.png)
-![Multi User Result Track](https://github.com/mrxsierra/test-site/blob/main/img/multi-user-result-track.png)
+![Individual Test Result](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/individual-test-result.png)
+![Multi User Result Track](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/multi-user-result-track.png)
+
+#### Error Handling
+![Unsupported Error](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/unsupported-error.png)
 
 #### Error Handling
 ![Unsupported Error](https://github.com/mrxsierra/test-site/blob/main/img/unsupported-error.png)
