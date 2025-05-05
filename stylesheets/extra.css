@@ -1,4 +1,11 @@
-.md-typeset .emojione, .md-typeset .gemoji, .md-typeset .twemoji {
+.md-typeset .emojione,
+.md-typeset .gemoji,
+.md-typeset .twemoji {
     --md-icon-size: 0.8em;
     vertical-align: inherit;
+}
+
+.md-typeset .twemoji#source {
+    --md-icon-size: 1.5em;
+    vertical-align: bottom;
 }
