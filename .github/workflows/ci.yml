@@ -40,7 +40,7 @@ jobs:
             mkdocs-material-
 
       - name: Install MkDocs Material
-        run: pip install mkdocs-material mkdocs-blogging-plugin mkdocs-git-revision-date-localized-plugin pymdown-extensions
+        run: pip install mkdocs-material mkdocs-blogging-plugin mkdocs-git-revision-date-localized-plugin pymdown-extensions mkdocs-glightbox
 
       - name: Deploy with MkDocs
         run: mkdocs gh-deploy --force
