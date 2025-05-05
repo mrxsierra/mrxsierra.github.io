@@ -6,13 +6,11 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "mkdocs-material[imaging]>=9.6.9",
+    "pymdown-extensions>=10.14.3",
     "mkdocs-blogging-plugin",
     "mkdocs-git-revision-date-localized-plugin",
-    "pymdown-extensions>=10.14.3",
+    "mkdocs-glightbox>=0.4.0",
 ]
 
 [dependency-groups]
-dev = [
-    "ruff>=0.11.2",
-]
-
+dev = ["ruff>=0.11.2"]

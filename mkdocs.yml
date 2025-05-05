@@ -1,28 +1,46 @@
 site_name: mrxsierra | Sunil Sharma
 site_author: mrxsierra
 site_url: https://mrxsierra.github.io/
+repo_url: https://github.com/mrxsierra/mrxsierra.github.io/
+# edit_uri: 'blob/main/docs/'
+# edit_uri_template: 'blob/main/docs/{path}'
 site_description: "Welcome to my personal website. Here you will find my projects, blogs, and more."
-# repo_url: https://github.com/mrxsierra/mrxsierra.github.io
-# edit_uri: edit/main/docs/
+copyright: "© 2025 mrxsierra. All rights reserved."
+# docs_dir: "docs"
+watch:
+  - includes
+
 # Navigation
 nav:
   - Welcome: index.md
   - Projects:
       - Overview: projects/index.md
-      - Naukari Web Scraper: projects/naukari-webscraper.md
+      - Naukri Web Scraper: projects/naukri-webscraper.md
       - Exam Management System Database: projects/ems-db.md
       - QA Docx to Excel: projects/paraxcel.md
       - Test Management Site: projects/test-site.md
-      - projects/s3-faker.md
+      - Fake Data Generator: projects/s3-faker.md
   - Blogs: blog/index.md
   - About: about.md
   - Resume: resume.md
   - Contact: contact.md
 
 not_in_nav: |
-  projects/p-1.md
+  test.md
   tags.md
 
+# exclude
+exclude_docs: |
+  # test.md
+
+draft_docs: |
+  drafts/          # Any file inside the "drafts" directory
+  _unpublished.md  # Any file ending in "_unpublished.md"
+  !/keep_this.md   # Exclude a specific file from being treated as a draft
+  test.md
+  # blog/
+
+# extra styles and scripts
 extra_css:
   - stylesheets/index.css
   - stylesheets/extra.css
@@ -110,11 +128,26 @@ plugins:
       enabled: true
       blog_dir: blog
       blog_toc: false
-  - git-revision-date-localized
+  - git-revision-date-localized:
+      type: date
+  - glightbox:
+      auto_caption: true
   - search
   # - social
-  - tags
-
+  - tags:
+      tags_allowed:
+        - Welcome
+        - Backend
+        - Data Analysis
+        - Database Design
+        - Database Management
+        - Data Science
+        - Data Visualization
+        - Python
+        - Frontend
+        - Web Scraping
+        - Selenium
+        - Automation
 # Extensions
 markdown_extensions:
   - abbr
@@ -123,7 +156,14 @@ markdown_extensions:
   - def_list
   - footnotes
   - md_in_html
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.blocks.caption
   - pymdownx.details
+  - pymdownx.inlinehilite
   - pymdownx.superfences
   - pymdownx.tasklist:
       custom_checkbox: true
@@ -136,19 +176,12 @@ markdown_extensions:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
-  - pymdownx.inlinehilite
   - pymdownx.snippets:
       auto_append:
         - includes/abbr.md
   - toc:
       permalink: true
 
-# Root directory
-docs_dir: docs
-
-# watch abbrevations
-watch:
-  - includes
 
 # Extra Settings
 extra:
@@ -177,11 +210,9 @@ extra:
       link: https://hub.docker.com/u/mrxsierra
       name: DockerHub
   
+  
   status:
     new: Recently added
   
-  # Footer disble generator
+  # Footer disable generator
   generator: false
-
-# Footer copyright
-copyright: Copyright &copy; 2025-2030 mrxsierra

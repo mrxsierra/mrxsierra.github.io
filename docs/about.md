@@ -17,21 +17,21 @@ Hi, I'm **Sunil Sharma**, a passionate **Python Developer** and **Data Scientist
 ### Education
 
 - **Degree**: Bachelor's in Computer Science
-    - **University:** Devi Ahilyabai Vishav Vidhyalay(DAVV), Indore
-    - **Collage:** PMB Gujarati Science College, Indore
-    - 2015-2018
+  - **University:** Devi Ahilyabai Vishav Vidhyalay(DAVV), Indore
+  - **Collage:** PMB Gujarati Science College, Indore
+  - 2015-2018
 
 ### Experience
 
 I have worked on various projects involving data analysis, machine learning, and web development. My goal is to leverage my skills to solve real-world problems and contribute to the tech community.
 
 - **Hackathon**
-    - GSTN Hackathon | 2024
-    - Developing a Binary Classification model on highly annonymised data.
+  - GSTN Hackathon | 2024
+  - Developing a Binary Classification model on highly anonymized data.
 
 - **Academic Project**
-    - Company Name | Dates
-    - Describe your role and responsibilities.
+  - Company Name | Dates
+  - Describe your role and responsibilities.
 
 #### Explore
 
@@ -53,12 +53,12 @@ I have worked on various projects involving data analysis, machine learning, and
 - Data Visualization (Matplotlib, Seaborn)
 - Web Scrapping (BeautifulSoup, Selenium)
 - Ai & Agentic space:
-    - Mistralai, Gemini
-    - Langchain, Langgraph
-    - Huggingface
+  - Mistralai, Gemini
+  - Langchain, Langgraph
+  - Huggingface
 - Database:
-    - `SQL`: Sql, MySql, Postgresql
-    - `NoSQL`: MongoDB, Redis
+  - `SQL`: Sql, MySql, Postgresql
+  - `NoSQL`: MongoDB, Redis
 
 ## Tools & Dev-Ops
 

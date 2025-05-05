@@ -9,8 +9,9 @@ tags:
   - Welcome
 background: none
 ---
-
+<!-- markdownlint-disable MD041 -->
 <div class="main-body">
+
 <!-- Welcome Message -->
 <blockquote id="wel-quote">
     <h3 id="welcome">
@@ -60,38 +61,38 @@ background: none
     <div class="project-cards">
         <div class="project-card">
             <div class="project-content">
-                <h3>S3-faker</h3>
-                <p>Create fake Data and store in aws s3 bucket (localstack)</p>
+                <h3>Examination Management System DB</h3>
+                <p>Multi-RDBMS exam/test management, automation, Docker, Python, CI-ready.</p>
             </div>
-            <a class="project-link" href="projects/s3-faker">
-                <img src="/assets/img/paraxcel.ico" alt="S3-faker Project Logo - AWS S3 Data Generation Tool"/>
+            <a class="project-link" href="projects/ems-db.md#examination-management-system-database">
+                <i class="fas fa-database"></i>
             </a>
         </div>
         <div class="project-card">
             <div class="project-content">
-                <h3>paraxcel</h3>
-                <p>Convert docx to excel sheet</p>
+                <h3>S3 Faker</h3>
+                <p>Fake data generator with S3/LocalStack integration for cloud testing.</p>
             </div>
-            <a class="project-link" href="projects/paraxcel">
-                <img src="/assets/img/paraxcel.ico" alt="Project Image" />
+            <a class="project-link" href="projects/s3-faker.md#s3-faker">
+                <i class="fas fa-cloud-upload-alt"></i>
             </a>
         </div>
         <div class="project-card">
             <div class="project-content">
-                <h3>S3-faker</h3>
-                <p>Create fake Data and store in aws s3 bucket (localstack)</p>
+                <h3>Paraxcel</h3>
+                <p>Excel data extraction, transformation, and visualization toolkit.</p>
             </div>
-            <a class="project-link" href="projects/s3-faker">
-                <img src="/assets/img/paraxcel.ico" alt="Project Image" />
+            <a class="project-link" href="projects/paraxcel.md#paraxcel">
+                <i class="fas fa-file-excel"></i>
             </a>
         </div>
         <div class="project-card">
             <div class="project-content">
-                <h3>paraxcel</h3>
-                <p>Convert docx to excel sheet</p>
+                <h3>Test Management Site</h3>
+                <p>Frontend web app for test management and result tracking.</p>
             </div>
-            <a class="project-link" href="projects/paraxcel">
-                <img src="/assets/img/paraxcel.ico" alt="Project Image" />
+            <a class="project-link" href="projects/test-site.md#test-management-site">
+                <i class="fas fa-robot"></i>
             </a>
         </div>
     </div>
@@ -212,7 +213,7 @@ background: none
         </div>
         <div class="explore-button">
             <a href="about">
-                <i class="fas fa-user"></i> 
+                <i class="fas fa-user"></i>
             Get to Know Me</a>
         </div>
     </div>

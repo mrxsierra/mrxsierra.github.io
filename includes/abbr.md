@@ -1,3 +1,4 @@
+<!-- markdownlint-disable -->
 *[API]: Application Programming Interface
 *[CLI]: Command Line Interface
 *[Chrome-WebDriver]: A tool for automating the Chrome browser
@@ -22,3 +23,16 @@
 *[UI]: User Interface
 *[URL]: Uniform Resource Locator
 *[W3C]: World Wide Web Consortium
+*[Adminer]: A web-based database management tool for multiple RDBMS
+*[CI/CD]: Continuous Integration / Continuous Deployment
+*[ER]: Entity-Relationship
+*[MySQL]: An open-source relational database management system
+*[phpMyAdmin]: A web-based MySQL administration tool
+*[PostgreSQL]: An advanced open-source relational database
+*[psycopg2]: A PostgreSQL adapter for Python
+*[pytest]: A Python testing framework
+*[RDBMS]: Relational Database Management System
+*[SQLite]: A lightweight, file-based SQL database engine
+*[Traefik]: A modern reverse proxy and load balancer
+*[uv]: A fast Python package installer
+*[CRUD]: Operations create, read, update and delete 
