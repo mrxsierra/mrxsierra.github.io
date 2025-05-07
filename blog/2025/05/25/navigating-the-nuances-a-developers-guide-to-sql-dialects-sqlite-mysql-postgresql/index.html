@@ -1,0 +1,1701 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Welcome to my personal website. Here you will find my projects, blogs, and more.">
+      
+      
+        <meta name="author" content="mrxsierra">
+      
+      
+        <link rel="canonical" href="https://mrxsierra.github.io/blog/2025/05/25/navigating-the-nuances-a-developers-guide-to-sql-dialects-sqlite-mysql-postgresql/">
+      
+      
+        <link rel="prev" href="../beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql--postgresql/">
+      
+      
+      
+      <link rel="icon" href="../../../../../assets/img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Navigating the Nuances: A Developer's Guide to SQL Dialects (SQLite, MySQL, PostgreSQL) - mrxsierra | Sunil Sharma</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/index.css">
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#navigating-the-nuances-a-developers-guide-to-sql-dialects-sqlite-mysql-postgresql" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="mrxsierra | Sunil Sharma" class="md-header__button md-logo" aria-label="mrxsierra | Sunil Sharma" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.801 22.74 17.79 24c1.561-.676 2.926-1.62 4.051-2.851l-.946-1.318a10.3 10.3 0 0 1-4.08 2.909zM12 22.199c-5.775 0-10.455-4.619-10.455-10.35C1.545 6.15 6.225 1.53 12 1.53s10.456 4.65 10.456 10.35c0 2.55-.946 4.891-2.507 6.69l.945 1.261C22.801 17.729 24 14.939 24 11.88 24 5.295 18.63 0 12 0S0 5.311 0 11.85c0 6.57 5.37 11.88 12 11.88 1.71 0 3.33-.346 4.801-.99l-.961-1.26c-1.2.45-2.49.719-3.84.719m6-9.553c-2.25-1.86-5.34-2.101-7.801-3.556-.75-.479-.148-1.395.602-1.425 2.699-.45 5.369.63 7.889 1.5l.151-2.655c-3.151-1.14-6.57-1.875-9.901-1.35-1.2.3-2.4.675-3.254 1.56-1.171 1.2-.961 3.36.389 4.32 2.236 1.755 5.176 2.011 7.621 3.36.96.39.555 1.68-.391 1.77-2.925.555-5.805-.721-8.325-2.1-.03 1.02-.06 2.01-.06 3 3.195 1.409 6.75 2.069 10.2 1.529 1.17-.225 2.37-.6 3.225-1.454 1.229-1.2 1.111-3.511-.33-4.5H18z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            mrxsierra | Sunil Sharma
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Navigating the Nuances: A Developer's Guide to SQL Dialects (SQLite, MySQL, PostgreSQL)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mrxsierra/mrxsierra.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../projects/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="../../../../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Blogs
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../resume/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Resume
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../contact/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Contact
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="mrxsierra | Sunil Sharma" class="md-nav__button md-logo" aria-label="mrxsierra | Sunil Sharma" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.801 22.74 17.79 24c1.561-.676 2.926-1.62 4.051-2.851l-.946-1.318a10.3 10.3 0 0 1-4.08 2.909zM12 22.199c-5.775 0-10.455-4.619-10.455-10.35C1.545 6.15 6.225 1.53 12 1.53s10.456 4.65 10.456 10.35c0 2.55-.946 4.891-2.507 6.69l.945 1.261C22.801 17.729 24 14.939 24 11.88 24 5.295 18.63 0 12 0S0 5.311 0 11.85c0 6.57 5.37 11.88 12 11.88 1.71 0 3.33-.346 4.801-.99l-.961-1.26c-1.2.45-2.49.719-3.84.719m6-9.553c-2.25-1.86-5.34-2.101-7.801-3.556-.75-.479-.148-1.395.602-1.425 2.699-.45 5.369.63 7.889 1.5l.151-2.655c-3.151-1.14-6.57-1.875-9.901-1.35-1.2.3-2.4.675-3.254 1.56-1.171 1.2-.961 3.36.389 4.32 2.236 1.755 5.176 2.011 7.621 3.36.96.39.555 1.68-.391 1.77-2.925.555-5.805-.721-8.325-2.1-.03 1.02-.06 2.01-.06 3 3.195 1.409 6.75 2.069 10.2 1.529 1.17-.225 2.37-.6 3.225-1.454 1.229-1.2 1.111-3.511-.33-4.5H18z"/></svg>
+
+    </a>
+    mrxsierra | Sunil Sharma
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mrxsierra/mrxsierra.github.io/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../projects/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Projects
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../projects/naukri-webscraper/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Naukri Web Scraper
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../projects/ems-db/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exam Management System Database
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../projects/paraxcel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    QA Docx to Excel
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--new" title="Recently added">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../projects/test-site/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Test Management Site
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../projects/s3-faker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fake Data Generator
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--new" title="Recently added">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Blogs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../resume/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Resume
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contact
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-areas-of-difference-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Areas of Difference: Schema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Areas of Difference: Schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-dropping-objects-tables-views-indexes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Dropping Objects (Tables, Views, Indexes)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-data-types-and-auto-incrementing-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Data Types and Auto-Incrementing IDs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-default-values-especially-timestamps" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Default Values (Especially Timestamps)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-trigger-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Trigger Syntax
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-time-and-interval-arithmetic" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Time and Interval Arithmetic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-conditional-logic-in-triggersqueries" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Conditional Logic in Triggers/Queries
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-handling-nulls-in-aggregate-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Handling NULLs in Aggregate Functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-create-table-if-not-exists" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. CREATE TABLE IF NOT EXISTS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Comments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-index-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Index Creation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-time-zone-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Time Zone Handling
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-cheatsheet-sqlite-vs-postgresql-vs-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Cheatsheet: SQLite vs. PostgreSQL vs. MySQL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Matters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-read" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Read
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      References &amp; Resources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="References &amp; Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    <span class="md-ellipsis">
+      General
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sqlite" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQLite
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      PostgreSQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      MySQL
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2025-05-25 00:00:00+00:00" class="md-ellipsis">May 25, 2025</time>
+                      </div>
+                    </li>
+                    
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              8 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+
+
+
+  
+  
+
+
+<h1 id="navigating-the-nuances-a-developers-guide-to-sql-dialects-sqlite-mysql-postgresql">Navigating the Nuances: A Developer's Guide to <abbr title="Structured Query Language">SQL</abbr> Dialects (<abbr title="A lightweight, file-based SQL database engine">SQLite</abbr>, <abbr title="An open-source relational database management system">MySQL</abbr>, <abbr title="An advanced open-source relational database">PostgreSQL</abbr>)<a class="headerlink" href="#navigating-the-nuances-a-developers-guide-to-sql-dialects-sqlite-mysql-postgresql" title="Permanent link">&para;</a></h1>
+<p>As developers, we often encounter various <abbr title="Structured Query Language">SQL</abbr> databases, each with its own flavor of <code>SQL</code>. <strong>While the core concepts remain similar, the devil is in the details – especially when it comes to schema definitions, data types, and procedural extensions like triggers.</strong></p>
+<!-- more -->
+<p><strong>Recently</strong>, while working on an <a href="https://github.com/mrxsierra/ems-db/"><strong><em><code>Exam Management System (EMS)</code></em></strong></a>, I had the opportunity to define the database schema for <code>SQLite</code>, <code>MySQL</code>, and <code>PostgreSQL</code>. This exercise highlighted some fascinating and crucial differences between these popular relational database management systems (<abbr title="Relational Database Management System">RDBMS</abbr>).</p>
+<blockquote>
+<p><strong>Note :</strong> This post aims to serve as a practical guide and a bit of a cheatsheet, drawing directly from the <code>schema</code> files of project.</p>
+</blockquote>
+<p><strong><em>Project Repo :</em></strong> <a href="https://github.com/mrxsierra/ems-db/">ems-db</a> <strong><code>&lt;-- root-dir-name</code></strong></p>
+<ul>
+<li><a href="https://github.com/mrxsierra/ems-db/blob/main/sqlite/schema.sql">sqlite/schema.sql</a></li>
+<li><a href="https://github.com/mrxsierra/ems-db/blob/main/psql/schema.sql">psql/schema.sql</a></li>
+<li><a href="https://github.com/mrxsierra/ems-db/blob/main/mysql/schema.sql">mysql/schema.sql</a></li>
+</ul>
+<p>Whether you're a fellow developer looking for a quick reference or trying to gauge a database differences, I hope this comparison proves insightful!</p>
+<h2 id="key-areas-of-difference-schema">Key Areas of Difference: Schema<a class="headerlink" href="#key-areas-of-difference-schema" title="Permanent link">&para;</a></h2>
+<p>Let's dive into the specific areas where these <code>SQL dialects</code> diverge:</p>
+<blockquote>
+<p><strong><em>Drill</em></strong></p>
+<ul>
+<li><strong><em>Warning :</em></strong> Refer to <code>Official Docs</code>, when in doubt. <strong><code>"Its not ultimate source of truth. It could be good starting point."</code></strong></li>
+<li><strong><em>Understanding :</em></strong> Use <a href="https://github.com/mrxsierra/ems-db/">project</a> as reference.</li>
+<li><strong><em>Prerequisites :</em></strong> Familiar with <code>sql syntax</code>, <code>client interaction</code>, <code>Docker</code>, and <code>Python</code> (language of choice).</li>
+</ul>
+</blockquote>
+<h3 id="1-dropping-objects-tables-views-indexes">1. Dropping Objects (Tables, Views, Indexes)<a class="headerlink" href="#1-dropping-objects-tables-views-indexes" title="Permanent link">&para;</a></h3>
+<p>The syntax for dropping database objects is largely similar, but identifier quoting can vary.</p>
+<ul>
+<li>
+<p><strong><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr> &amp; <abbr title="An advanced open-source relational database">PostgreSQL</abbr>:</strong> Use double quotes for identifiers if they contain special characters or are case-sensitive (though often optional).</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">-- SQLite &amp; PostgreSQL</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">DROP</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="ss">&quot;tests_history&quot;</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="ss">&quot;students&quot;</span><span class="p">;</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><strong><abbr title="An open-source relational database management system">MySQL</abbr>:</strong> Uses backticks for identifiers.</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">-- MySQL</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">DROP</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="o">`</span><span class="n">tests_history</span><span class="o">`</span><span class="p">;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="o">`</span><span class="n">students</span><span class="o">`</span><span class="p">;</span>
+</span></code></pre></div>
+</li>
+</ul>
+<h3 id="2-data-types-and-auto-incrementing-ids">2. Data Types and Auto-Incrementing IDs<a class="headerlink" href="#2-data-types-and-auto-incrementing-ids" title="Permanent link">&para;</a></h3>
+<p>This is a significant area of divergence.</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr></th>
+<th><abbr title="An advanced open-source relational database">PostgreSQL</abbr></th>
+<th><abbr title="An open-source relational database management system">MySQL</abbr></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Auto-Increment ID</strong></td>
+<td><code>id INTEGER PRIMARY KEY</code> (implicitly <code>AUTOINCREMENT</code> if it's the primary key and integer type) or explicitly <code>id INTEGER PRIMARY KEY AUTOINCREMENT</code></td>
+<td><code>id SERIAL PRIMARY KEY</code> (creates a sequence)</td>
+<td><code>id INT AUTO_INCREMENT PRIMARY KEY</code></td>
+</tr>
+<tr>
+<td><strong>Text</strong></td>
+<td><code>TEXT</code></td>
+<td><code>VARCHAR(n)</code>, <code>TEXT</code></td>
+<td><code>VARCHAR(n)</code>, <code>TEXT</code></td>
+</tr>
+<tr>
+<td><strong>Integer</strong></td>
+<td><code>INTEGER</code></td>
+<td><code>INTEGER</code>, <code>SMALLINT</code> (for <code>is_correct</code>, <code>score</code>)</td>
+<td><code>INT</code>, <code>TINYINT(1)</code> (often for booleans)</td>
+</tr>
+<tr>
+<td><strong>Boolean</strong></td>
+<td><code>INTEGER NOT NULL CHECK ("is_correct" IN (0, 1))</code></td>
+<td><code>SMALLINT NOT NULL DEFAULT 0 CHECK ("is_correct" IN (0, 1))</code> (or native <code>BOOLEAN</code>)</td>
+<td><code>TINYINT(1) NOT NULL DEFAULT '0'</code></td>
+</tr>
+<tr>
+<td><strong>Date/Time</strong></td>
+<td><code>NUMERIC</code> (stored as text, real, or int), <code>DATETIME('now', 'localtime')</code></td>
+<td><code>TIMESTAMP WITH TIME ZONE</code>, <code>CURRENT_TIMESTAMP</code></td>
+<td><code>DATETIME</code>, <code>TIME</code>, <code>CURRENT_TIMESTAMP</code>, <code>NOW()</code></td>
+</tr>
+<tr>
+<td><strong>Duration/Interval</strong></td>
+<td><code>NUMERIC</code> (e.g., storing time as text 'HH:MM:SS')</td>
+<td><code>INTERVAL</code></td>
+<td><code>TIME</code> (for durations within 24h) or calculate</td>
+</tr>
+<tr>
+<td><strong>ENUM Types</strong></td>
+<td>Simulated with <code>CHECK</code> constraint: <code>CHECK ("status" IN (...))</code></td>
+<td>Native: <code>CREATE TYPE "events_type" AS ENUM (...);</code></td>
+<td>Native: <code>status ENUM ('active', 'completed')</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Example: Students Table ID</strong></p>
+</blockquote>
+<ul>
+<li>
+<p><strong><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr>:</strong></p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="ss">&quot;students&quot;</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="ss">&quot;id&quot;</span><span class="w"> </span><span class="nb">INTEGER</span><span class="p">,</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="c1">-- ...</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="ss">&quot;id&quot;</span><span class="p">)</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">);</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><strong><abbr title="An advanced open-source relational database">PostgreSQL</abbr>:</strong></p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="ss">&quot;students&quot;</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="ss">&quot;id&quot;</span><span class="w"> </span><span class="nb">SERIAL</span><span class="p">,</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="c1">-- ...</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">(</span><span class="ss">&quot;id&quot;</span><span class="p">)</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">);</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><strong><abbr title="An open-source relational database management system">MySQL</abbr>:</strong></p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="o">`</span><span class="n">students</span><span class="o">`</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="c1">-- ...</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">)</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">);</span>
+</span></code></pre></div>
+</li>
+</ul>
+<p><strong>Example: ENUM for <code>tests_sessions.status</code></strong></p>
+<ul>
+<li>
+<p><strong><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr>:</strong></p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="ss">&quot;tests_sessions&quot;</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="c1">-- ...</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="ss">&quot;status&quot;</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;in-progress&#39;</span><span class="w"> </span><span class="k">CHECK</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">        </span><span class="ss">&quot;status&quot;</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;in-progress&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ended&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;completed&#39;</span><span class="p">)</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="p">)</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="c1">-- ...</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">);</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><strong><abbr title="An advanced open-source relational database">PostgreSQL</abbr>:</strong></p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TYPE</span><span class="w"> </span><span class="ss">&quot;tests_session_status_type&quot;</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">ENUM</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;in-progress&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ended&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;completed&#39;</span><span class="p">);</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="ss">&quot;tests_sessions&quot;</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="c1">-- ...</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="ss">&quot;status&quot;</span><span class="w"> </span><span class="ss">&quot;tests_session_status_type&quot;</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;in-progress&#39;</span><span class="p">,</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="c1">-- ...</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="p">);</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><strong><abbr title="An open-source relational database management system">MySQL</abbr>:</strong></p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="o">`</span><span class="n">tests_sessions</span><span class="o">`</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="c1">-- ...</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="o">`</span><span class="n">status</span><span class="o">`</span><span class="w"> </span><span class="n">ENUM</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;in-progress&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ended&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;completed&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">&#39;in-progress&#39;</span><span class="p">,</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="c1">-- ...</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="p">);</span>
+</span></code></pre></div>
+</li>
+</ul>
+<h3 id="3-default-values-especially-timestamps">3. Default Values (Especially Timestamps)<a class="headerlink" href="#3-default-values-especially-timestamps" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr>:</strong> Uses functions like <code>DATETIME('now', 'localtime')</code>.</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="ss">&quot;start&quot;</span><span class="w"> </span><span class="nb">NUMERIC</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="p">(</span><span class="n">DATETIME</span><span class="p">(</span><span class="s1">&#39;now&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;localtime&#39;</span><span class="p">))</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><strong><abbr title="An advanced open-source relational database">PostgreSQL</abbr>:</strong> Uses <code>CURRENT_TIMESTAMP</code>.</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="ss">&quot;start&quot;</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="k">TIME</span><span class="w"> </span><span class="k">ZONE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><strong><abbr title="An open-source relational database management system">MySQL</abbr>:</strong> Uses <code>CURRENT_TIMESTAMP</code> or <code>NOW()</code>.</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="o">`</span><span class="k">start</span><span class="o">`</span><span class="w"> </span><span class="n">DATETIME</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span>
+</span></code></pre></div>
+</li>
+</ul>
+<h3 id="4-trigger-syntax">4. Trigger Syntax<a class="headerlink" href="#4-trigger-syntax" title="Permanent link">&para;</a></h3>
+<p>Triggers are where the syntactical differences become very pronounced.</p>
+<p><strong>Common Goal:</strong> Set the <code>end</code> time of a <code>tests_sessions</code> row upon insertion, based on the test's duration.</p>
+<ul>
+<li>
+<p><strong><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr>:</strong></p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="ss">&quot;set_end_for_test_session&quot;</span><span class="w"> </span><span class="k">AFTER</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="ss">&quot;tests_sessions&quot;</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">BEGIN</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="k">UPDATE</span><span class="w"> </span><span class="ss">&quot;tests_sessions&quot;</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="k">SET</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="ss">&quot;end&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DATETIME</span><span class="p">(</span><span class="k">new</span><span class="p">.</span><span class="k">start</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;+&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">            </span><span class="k">SELECT</span><span class="w"> </span><span class="k">TIME</span><span class="p">(</span><span class="n">duration</span><span class="p">)</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">            </span><span class="k">FROM</span><span class="w"> </span><span class="ss">&quot;tests&quot;</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">t</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">            </span><span class="k">WHERE</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="ss">&quot;id&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="p">.</span><span class="ss">&quot;test_id&quot;</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">        </span><span class="p">))</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="k">WHERE</span><span class="w"> </span><span class="ss">&quot;id&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="p">.</span><span class="n">id</span><span class="p">;</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="k">END</span><span class="p">;</span>
+</span></code></pre></div>
+<ul>
+<li>Uses <code>BEGIN...END;</code> block.</li>
+<li><code>AFTER INSERT</code>.</li>
+<li><code>new</code> refers to the inserted row.</li>
+<li>Date/time arithmetic involves string concatenation for modifiers.</li>
+</ul>
+</li>
+<li>
+<p><strong><abbr title="An advanced open-source relational database">PostgreSQL</abbr>:</strong></p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="k">FUNCTION</span><span class="w"> </span><span class="n">set_end_for_test_session_fn</span><span class="p">()</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">RETURNS</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">$$</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="k">BEGIN</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="k">NEW</span><span class="p">.</span><span class="k">end</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="k">start</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="ss">&quot;duration&quot;</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="ss">&quot;tests&quot;</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="ss">&quot;id&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">test_id</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">    </span><span class="p">);</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">    </span><span class="k">RETURN</span><span class="w"> </span><span class="k">NEW</span><span class="p">;</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="k">END</span><span class="p">;</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="err">$$</span><span class="w"> </span><span class="k">LANGUAGE</span><span class="w"> </span><span class="n">plpgsql</span><span class="p">;</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="ss">&quot;set_end_for_test_session&quot;</span><span class="w"> </span><span class="k">BEFORE</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">ON</span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="ss">&quot;tests_sessions&quot;</span><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="k">EXECUTE</span><span class="w"> </span><span class="k">FUNCTION</span><span class="w"> </span><span class="n">set_end_for_test_session_fn</span><span class="p">();</span>
+</span></code></pre></div>
+<ul>
+<li>Requires a separate trigger function written in a procedural language (e.g., <code>plpgsql</code>).</li>
+<li><code>BEFORE INSERT</code> (can modify <code>NEW</code> directly).</li>
+<li><code>FOR EACH ROW</code> is explicit.</li>
+<li><code>NEW</code> is a record variable; assignments use <code>:=</code>.</li>
+<li><code>RETURN NEW</code> is crucial for <code>BEFORE</code> triggers.</li>
+<li>Interval arithmetic is more direct (<code>+ duration</code>).</li>
+</ul>
+</li>
+<li>
+<p><strong><abbr title="An open-source relational database management system">MySQL</abbr>:</strong></p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">DELIMITER</span><span class="w"> </span><span class="err">$$</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="o">`</span><span class="n">set_end_for_test_session</span><span class="o">`</span><span class="w"> </span><span class="k">BEFORE</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">ON</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="o">`</span><span class="n">tests_sessions</span><span class="o">`</span><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="k">BEGIN</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="k">end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DATE_ADD</span><span class="p">(</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">        </span><span class="n">IFNULL</span><span class="p">(</span><span class="k">NEW</span><span class="p">.</span><span class="k">start</span><span class="p">,</span><span class="w"> </span><span class="n">NOW</span><span class="p">()),</span><span class="w"> </span><span class="c1">-- NOW() if NEW.start is not yet set</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">        </span><span class="nb">INTERVAL</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">            </span><span class="k">SELECT</span><span class="w"> </span><span class="n">TIME_TO_SEC</span><span class="p">(</span><span class="o">`</span><span class="n">duration</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">60</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">tests</span><span class="o">`</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="o">`</span><span class="n">test_id</span><span class="o">`</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">        </span><span class="p">)</span><span class="w"> </span><span class="k">MINUTE</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">    </span><span class="p">);</span>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="k">END</span><span class="err">$$</span>
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span>
+</span></code></pre></div>
+<ul>
+<li>Uses <code>DELIMITER</code> to define a multi-statement trigger body.</li>
+<li><code>BEFORE INSERT</code>.</li>
+<li><code>FOR EACH ROW</code> is explicit.</li>
+<li><code>SET NEW.column = ...</code> for assignments.</li>
+<li>Uses functions like <code>DATE_ADD</code> and <code>TIME_TO_SEC</code> for time arithmetic.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Key Trigger Differences Summary:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr></th>
+<th><abbr title="An advanced open-source relational database">PostgreSQL</abbr></th>
+<th><abbr title="An open-source relational database management system">MySQL</abbr></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Structure</strong></td>
+<td><code>BEGIN...END</code> directly in trigger</td>
+<td>Separate function + trigger definition</td>
+<td><code>DELIMITER $$ BEGIN...END$$ DELIMITER ;</code></td>
+</tr>
+<tr>
+<td><strong>Timing</strong></td>
+<td><code>AFTER</code>/<code>BEFORE</code>/<code>INSTEAD OF</code></td>
+<td><code>AFTER</code>/<code>BEFORE</code>/<code>INSTEAD OF</code></td>
+<td><code>AFTER</code>/<code>BEFORE</code></td>
+</tr>
+<tr>
+<td><strong>Row Reference</strong></td>
+<td><code>new</code>, <code>old</code></td>
+<td><code>NEW</code>, <code>OLD</code> (case-sensitive in PL/pgSQL)</td>
+<td><code>NEW</code>, <code>OLD</code></td>
+</tr>
+<tr>
+<td><strong>Modification</strong></td>
+<td><code>UPDATE</code> statement for <code>AFTER</code></td>
+<td>Direct assignment to <code>NEW</code> in <code>BEFORE</code> trigger</td>
+<td>Direct assignment to <code>NEW</code> in <code>BEFORE</code> trigger</td>
+</tr>
+<tr>
+<td><strong>Return Value</strong></td>
+<td>N/A for <code>AFTER</code></td>
+<td><code>RETURN NEW</code>/<code>OLD</code>/<code>NULL</code> for <code>BEFORE</code></td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-time-and-interval-arithmetic">5. Time and Interval Arithmetic<a class="headerlink" href="#5-time-and-interval-arithmetic" title="Permanent link">&para;</a></h3>
+<p>As seen in the trigger examples, how you add durations to timestamps varies:</p>
+<ul>
+<li>
+<p><strong><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr>:</strong> String manipulation with <code>DATETIME</code> function modifiers.</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">DATETIME</span><span class="p">(</span><span class="k">new</span><span class="p">.</span><span class="k">start</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;+&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">TIME</span><span class="p">(</span><span class="n">duration</span><span class="p">)</span><span class="w"> </span><span class="p">...))</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><strong><abbr title="An advanced open-source relational database">PostgreSQL</abbr>:</strong> Direct arithmetic with <code>INTERVAL</code> types.</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">NEW</span><span class="p">.</span><span class="k">start</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="ss">&quot;duration&quot;</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="ss">&quot;tests&quot;</span><span class="w"> </span><span class="p">...)</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><strong><abbr title="An open-source relational database management system">MySQL</abbr>:</strong> Functions like <code>DATE_ADD()</code> and <code>INTERVAL</code> keyword.</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">DATE_ADD</span><span class="p">(</span><span class="k">NEW</span><span class="p">.</span><span class="k">start</span><span class="p">,</span><span class="w"> </span><span class="nb">INTERVAL</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="k">MINUTE</span><span class="p">)</span><span class="w"> </span><span class="c1">-- or HOUR, SECOND etc.</span>
+</span></code></pre></div>
+<p>In my schema, I converted the <code>TIME</code> duration to seconds, then to minutes for <code>DATE_ADD</code>:</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nb">INTERVAL</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">TIME_TO_SEC</span><span class="p">(</span><span class="o">`</span><span class="n">duration</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">60</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">tests</span><span class="o">`</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="o">`</span><span class="n">test_id</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="k">MINUTE</span>
+</span></code></pre></div>
+</li>
+</ul>
+<h3 id="6-conditional-logic-in-triggersqueries">6. Conditional Logic in Triggers/Queries<a class="headerlink" href="#6-conditional-logic-in-triggersqueries" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr> &amp; <abbr title="An open-source relational database management system">MySQL</abbr>:</strong> <code>CASE WHEN ... THEN ... ELSE ... END</code> is standard.
+    <em><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr> example from <code>set_score_of_result</code> trigger:</em></p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="ss">&quot;feedback&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(...)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;need-improvement&#39;</span><span class="w"> </span><span class="k">ELSE</span><span class="w"> </span><span class="s1">&#39;great&#39;</span><span class="w"> </span><span class="k">END</span>
+</span></code></pre></div>
+<p><em><abbr title="An open-source relational database management system">MySQL</abbr> example from <code>set_score_of_result</code> trigger:</em></p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">SET</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">feedback</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(...)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">&#39;need-improvement&#39;</span><span class="w"> </span><span class="k">ELSE</span><span class="w"> </span><span class="s1">&#39;great&#39;</span><span class="w"> </span><span class="k">END</span><span class="p">;</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><strong><abbr title="An advanced open-source relational database">PostgreSQL</abbr>:</strong> Supports <code>CASE</code> expressions, but also <code>IF...THEN...ELSE...END IF;</code> in PL/pgSQL functions.
+    <em><abbr title="An advanced open-source relational database">PostgreSQL</abbr> example from <code>set_score_of_result_fn</code> trigger function:</em></p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">IF</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="k">NEW</span><span class="p">.</span><span class="n">feedback</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;need-improvement&#39;</span><span class="p">;</span><span class="w">    </span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="k">ELSE</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">    </span><span class="k">NEW</span><span class="p">.</span><span class="n">feedback</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;great&#39;</span><span class="p">;</span>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
+</span></code></pre></div>
+</li>
+</ul>
+<h3 id="7-handling-nulls-in-aggregate-functions">7. Handling NULLs in Aggregate Functions<a class="headerlink" href="#7-handling-nulls-in-aggregate-functions" title="Permanent link">&para;</a></h3>
+<p>When summing scores, if no results exist for a test session, <code>SUM()</code> might return <code>NULL</code>.</p>
+<ul>
+<li>
+<p><strong><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr>:</strong> <code>SUM()</code> on an empty set returns <code>NULL</code>. My schema doesn't explicitly handle this for <code>final_score</code> in the trigger, which might be an oversight if a report could be generated before any results.</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="ss">&quot;results&quot;</span><span class="p">.</span><span class="ss">&quot;score&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="ss">&quot;results&quot;</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="ss">&quot;results&quot;</span><span class="p">.</span><span class="ss">&quot;test_session_id&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="p">.</span><span class="n">id</span><span class="p">)</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><strong><abbr title="An advanced open-source relational database">PostgreSQL</abbr>:</strong> Uses <code>COALESCE(SUM("score"), 0)</code> to default to <code>0</code> if <code>SUM</code> is <code>NULL</code>.</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">COALESCE</span><span class="p">(</span><span class="k">SUM</span><span class="p">(</span><span class="ss">&quot;score&quot;</span><span class="p">),</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="ss">&quot;results&quot;</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="ss">&quot;test_session_id&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">id</span><span class="p">)</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><strong><abbr title="An open-source relational database management system">MySQL</abbr>:</strong> Uses <code>IFNULL(SUM(\</code>score`), 0)` for the same purpose.</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">IFNULL</span><span class="p">(</span><span class="k">SUM</span><span class="p">(</span><span class="o">`</span><span class="n">score</span><span class="o">`</span><span class="p">),</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">results</span><span class="o">`</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="o">`</span><span class="n">test_session_id</span><span class="o">`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">id</span><span class="p">)</span>
+</span></code></pre></div>
+</li>
+</ul>
+<h3 id="8-create-table-if-not-exists">8. <code>CREATE TABLE IF NOT EXISTS</code><a class="headerlink" href="#8-create-table-if-not-exists" title="Permanent link">&para;</a></h3>
+<p>This useful clause prevents errors if a table already exists.</p>
+<ul>
+<li><strong><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr>:</strong> Supports <code>CREATE TABLE IF NOT EXISTS "students" (...)</code> (though not explicitly used in the provided <code>students</code> table creation, it's standard).</li>
+<li><strong><abbr title="An advanced open-source relational database">PostgreSQL</abbr>:</strong> <code>CREATE TABLE IF NOT EXISTS "students" (...)</code></li>
+<li><strong><abbr title="An open-source relational database management system">MySQL</abbr>:</strong> <code>CREATE TABLE IF NOT EXISTS `students` (...)</code></li>
+</ul>
+<h3 id="9-comments">9. Comments<a class="headerlink" href="#9-comments" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr>, <abbr title="An advanced open-source relational database">PostgreSQL</abbr>, <abbr title="An open-source relational database management system">MySQL</abbr>:</strong> All support <code>--</code> for single-line comments.</li>
+<li><strong><abbr title="An open-source relational database management system">MySQL</abbr>:</strong> Also supports <code>#</code> for single-line comments.</li>
+</ul>
+<h3 id="10-index-creation">10. Index Creation<a class="headerlink" href="#10-index-creation" title="Permanent link">&para;</a></h3>
+<p>The basic syntax is similar, but quoting and specific features (like conditional indexing) can differ.</p>
+<ul>
+<li>
+<p><strong><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr> &amp; <abbr title="An advanced open-source relational database">PostgreSQL</abbr>:</strong></p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="c1">-- SQLite &amp; PostgreSQL</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="ss">&quot;idx_tests&quot;</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="ss">&quot;tests&quot;</span><span class="w"> </span><span class="p">(</span><span class="ss">&quot;title&quot;</span><span class="p">);</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="c1">-- PostgreSQL specific (SQLite also supports WHERE in index but syntax might differ slightly)</span>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="ss">&quot;idx_questions_options_is_correct&quot;</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="ss">&quot;questions_options&quot;</span><span class="w"> </span><span class="p">(</span><span class="ss">&quot;is_correct&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="ss">&quot;is_correct&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><strong><abbr title="An open-source relational database management system">MySQL</abbr>:</strong></p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="c1">-- MySQL</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="o">`</span><span class="n">idx_tests</span><span class="o">`</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="o">`</span><span class="n">tests</span><span class="o">`</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">title</span><span class="o">`</span><span class="p">);</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="c1">-- MySQL does not directly support WHERE clauses in CREATE INDEX like PostgreSQL/SQLite.</span>
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="c1">-- For conditional indexing, you might index the column and rely on the optimizer,</span>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="c1">-- or use generated columns if applicable.</span>
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="o">`</span><span class="n">idx_questions_options_is_correct</span><span class="o">`</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="o">`</span><span class="n">questions_options</span><span class="o">`</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">is_correct</span><span class="o">`</span><span class="p">);</span>
+</span></code></pre></div>
+</li>
+</ul>
+<h3 id="11-time-zone-handling">11. Time Zone Handling<a class="headerlink" href="#11-time-zone-handling" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr>:</strong> <code>DATETIME('now', 'localtime')</code> attempts to use local time. Time storage is less strict.</li>
+<li><strong><abbr title="An advanced open-source relational database">PostgreSQL</abbr>:</strong> Very robust. <code>TIMESTAMP WITH TIME ZONE</code> stores timestamps in UTC and converts them to the client's/session's time zone on retrieval. <code>SET TIME ZONE LOCAL;</code> can be used.</li>
+<li><strong><abbr title="An open-source relational database management system">MySQL</abbr>:</strong> <code>DATETIME</code> stores "wall clock" time without time zone info. <code>TIMESTAMP</code> converts from current time zone to UTC for storage, and back on retrieval. Session time zone can be set.</li>
+</ul>
+<h2 id="quick-cheatsheet-sqlite-vs-postgresql-vs-mysql">Quick Cheatsheet: <abbr title="A lightweight, file-based SQL database engine">SQLite</abbr> vs. <abbr title="An advanced open-source relational database">PostgreSQL</abbr> vs. <abbr title="An open-source relational database management system">MySQL</abbr><a class="headerlink" href="#quick-cheatsheet-sqlite-vs-postgresql-vs-mysql" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr></th>
+<th><abbr title="An advanced open-source relational database">PostgreSQL</abbr></th>
+<th><abbr title="An open-source relational database management system">MySQL</abbr></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Identifier Quoting</strong></td>
+<td><code>"optional"</code></td>
+<td><code>"optional/case-sensitive"</code></td>
+<td><code>`optional`</code></td>
+</tr>
+<tr>
+<td><strong>Auto Increment</strong></td>
+<td><code>INTEGER PRIMARY KEY [AUTOINCREMENT]</code></td>
+<td><code>SERIAL</code> or <code>IDENTITY</code></td>
+<td><code>INT AUTO_INCREMENT</code></td>
+</tr>
+<tr>
+<td><strong>Data Types (General)</strong></td>
+<td>Flexible typing (TEXT, NUMERIC, INTEGER)</td>
+<td>Strict, rich types (VARCHAR, TEXT, INT, BIGINT, BOOLEAN, <abbr title="JavaScript Object Notation">JSON</abbr>, ARRAY, INTERVAL, ENUM)</td>
+<td>Strict types (VARCHAR, TEXT, INT, TINYINT, DATETIME, ENUM, <abbr title="JavaScript Object Notation">JSON</abbr>)</td>
+</tr>
+<tr>
+<td><strong>ENUMs</strong></td>
+<td><code>CHECK</code> constraint</td>
+<td><code>CREATE TYPE ... AS ENUM</code></td>
+<td><code>ENUM(...)</code> column type</td>
+</tr>
+<tr>
+<td><strong>Triggers</strong></td>
+<td><code>BEGIN...END</code></td>
+<td>Function-based (<code>CREATE FUNCTION ... EXECUTE FUNCTION</code>)</td>
+<td><code>DELIMITER $$ BEGIN...END$$</code></td>
+</tr>
+<tr>
+<td><strong>Default Timestamp</strong></td>
+<td><code>DATETIME('now', 'localtime')</code></td>
+<td><code>CURRENT_TIMESTAMP</code></td>
+<td><code>CURRENT_TIMESTAMP</code> / <code>NOW()</code></td>
+</tr>
+<tr>
+<td><strong>Interval Arithmetic</strong></td>
+<td>String manipulation with <code>datetime()</code></td>
+<td><code>+ INTERVAL '...'</code></td>
+<td><code>DATE_ADD(date, INTERVAL value unit)</code></td>
+</tr>
+<tr>
+<td><strong>Function for NULLs</strong></td>
+<td><code>IFNULL(val, default)</code> (or <code>COALESCE</code>)</td>
+<td><code>COALESCE(val, default)</code></td>
+<td><code>IFNULL(val, default)</code> or <code>COALESCE(val, default)</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="why-this-matters">Why This Matters<a class="headerlink" href="#why-this-matters" title="Permanent link">&para;</a></h2>
+<p><strong>For Developers:</strong></p>
+<ul>
+<li><strong>Adaptability:</strong> Understanding these differences allows you to switch between database systems more fluidly.</li>
+<li><strong>Debugging:</strong> Syntax errors are common when moving <abbr title="Structured Query Language">SQL</abbr> code; knowing the nuances helps pinpoint issues faster.</li>
+<li><strong>Database Design:</strong> Choosing the right data types and features (like native ENUMs or interval types) can lead to a more efficient and maintainable schema.</li>
+<li><strong>ORM Configuration:</strong> When using Object-Relational Mappers (ORMs), these differences are often abstracted, but knowing what's happening under the hood is invaluable for optimization and complex queries.</li>
+</ul>
+<p><strong>Learnings:</strong></p>
+<ul>
+<li><strong>Depth of Understanding:</strong> Articulating these differences helps demonstrating a deeper-than-surface-level understanding of <abbr title="Structured Query Language">SQL</abbr> and database systems.</li>
+<li><strong>Practical Experience:</strong> It often indicates hands-on experience with multiple databases, which is a valuable asset in diverse tech environments.</li>
+<li><strong>Problem-Solving:</strong> The ability to adapt a schema or queries for different <abbr title="Structured Query Language">SQL</abbr> dialects showcases problem-solving skills.</li>
+</ul>
+<h2 id="next-read">Next Read<a class="headerlink" href="#next-read" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><em><strong>For Debunking</strong> <code>sql queries</code> and <code>clients interaction</code> differences b/w <abbr title="A lightweight, file-based SQL database engine">SQLite</abbr>, <abbr title="An open-source relational database management system">MySQL</abbr>, and <abbr title="An advanced open-source relational database">PostgreSQL</abbr>,</em></p>
+</blockquote>
+<ul>
+<li><code>Part-2</code> <strong><a href="../beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql--postgresql/">Beyond the Schema: A Practical Guide to Querying and Interacting with <abbr title="A lightweight, file-based SQL database engine">SQLite</abbr>, <abbr title="An open-source relational database management system">MySQL</abbr>, &amp; <abbr title="An advanced open-source relational database">PostgreSQL</abbr></a></strong></li>
+</ul>
+<blockquote>
+<p><strong>Note :</strong> It's build upon where this post left.</p>
+</blockquote>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
+<p>While <code>SQL</code> is a "standard," its implementations across different RDBMSs like <abbr title="A lightweight, file-based SQL database engine">SQLite</abbr>, <abbr title="An open-source relational database management system">MySQL</abbr>, and <abbr title="An advanced open-source relational database">PostgreSQL</abbr> have distinct personalities.</p>
+<p>The journey of creating a consistent schema for my <a href="https://github.com/mrxsierra/ems-db/"><code>EMS project</code></a> across these three was a great learning experience. <strong>Remember, always check the documentation for the specific dialect you're working with.</strong></p>
+<p>I hope this comparative overview helps you in your database endeavors! <strong><em>Happy coding</em></strong>!</p>
+<hr />
+<blockquote>
+<p><em><strong>Disclaimer</strong> : The examples are drawn from specific schema files and might not cover every single difference or advanced feature of each <abbr title="Relational Database Management System">RDBMS</abbr>.</em></p>
+</blockquote>
+<h2 id="references-resources">References &amp; Resources<a class="headerlink" href="#references-resources" title="Permanent link">&para;</a></h2>
+<p>This section compiles useful links found within the <a href="https://github.com/mrxsierra/ems-db/"><code>ems-db</code></a> project's documentation (<code>usage.md</code>, <code>README.Docker.md</code> files), categorized for easier navigation.</p>
+<h3 id="general">General<a class="headerlink" href="#general" title="Permanent link">&para;</a></h3>
+<p><em>CS50 <abbr title="Structured Query Language">SQL</abbr> Notes (General Syntax Differences):</em></p>
+<ul>
+<li><a href="https://cs50.harvard.edu/sql/2024/notes/6/#mysql"><abbr title="An open-source relational database management system">MySQL</abbr> Differences</a></li>
+<li><a href="https://cs50.harvard.edu/sql/2024/notes/6/#postgresql"><abbr title="An advanced open-source relational database">PostgreSQL</abbr> Differences</a></li>
+</ul>
+<h3 id="sqlite"><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr><a class="headerlink" href="#sqlite" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://sqlite.org/lang.html"><abbr title="Structured Query Language">SQL</abbr> As Understood By <abbr title="A lightweight, file-based SQL database engine">SQLite</abbr></a></li>
+<li><a href="https://docs.python.org/3/library/sqlite3.html"><abbr title="A high-level programming language">Python</abbr> <code>sqlite3</code> Module</a></li>
+</ul>
+<h3 id="postgresql"><abbr title="An advanced open-source relational database">PostgreSQL</abbr><a class="headerlink" href="#postgresql" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.postgresql.org/docs/current/sql-commands.html">Postgres <abbr title="Structured Query Language">SQL</abbr> Commands</a></li>
+<li><a href="https://www.postgresql.org/docs/current/datatype.html">Postgres Data Types</a></li>
+<li><a href="https://www.postgresql.org/docs/17/functions-datetime.html">Postgres Date and Time Functions</a></li>
+<li><a href="https://www.postgresql.org/docs/17/plpgsql-trigger.html">Postgres Triggers and Trigger Functions</a></li>
+</ul>
+<h3 id="mysql"><abbr title="An open-source relational database management system">MySQL</abbr><a class="headerlink" href="#mysql" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://dev.mysql.com/doc/refman/8.0/en/other-vendor-data-types.html">Using Data Types from Other Database Engines</a></li>
+<li><a href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html">Date and Time Functions</a></li>
+<li><a href="https://dev.mysql.com/doc/refman/8.0/en/sql-data-definition-statements.html">Data Definition Statements</a></li>
+<li><a href="https://dev.mysql.com/doc/refman/8.4/en/docker-mysql-getting-started.html"><abbr title="A containerization platform">Docker</abbr> <abbr title="An open-source relational database management system">MySQL</abbr> Basic Steps</a></li>
+</ul>
+<!-- markdownlint-disable -->
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 7, 2025 18:56:21">May 7, 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql--postgresql/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Beyond the Schema: A Practical Guide to Querying and Interacting with SQLite, MySQL, &amp;amp; PostgreSQL">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Beyond the Schema: A Practical Guide to Querying and Interacting with SQLite, MySQL, &amp; PostgreSQL
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2025 mrxsierra. All rights reserved.
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://www.linkedin.com/in/sunilsharma97/" target="_blank" rel="noopener" title="LinkedIn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/mrxsierra/" target="_blank" rel="noopener" title="Github" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://hub.docker.com/u/mrxsierra" target="_blank" rel="noopener" title="DockerHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M349.9 236.3h-66.1v-59.4h66.1zm0-204.3h-66.1v60.7h66.1zm78.2 144.8H362v59.4h66.1zm-156.3-72.1h-66.1v60.1h66.1zm78.1 0h-66.1v60.1h66.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1zm78.1 0h-66.1v59.4h66.1zm-78.1-72.1h-66.1v60.1h66.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.footer", "navigation.instant.progress", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "header.autohide", "content.code.copy", "content.code.annotate", "content.tooltips", "content.footnote.tooltips"], "search": "../../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": {"C": "c", "CSS": "css", "HTML5": "html", "Home": "home", "JavaScript": "js", "Python": "python", "Welcome": "home", "blog": "blog", "latest": "latest", "project": "project"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../../../../javascripts/index.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
