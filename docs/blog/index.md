@@ -19,16 +19,4 @@ Welcome to my blog! Here you will find my latest posts and updates.
 
 ---
 
-## Featured
-
-### [Blog 1](posts/b-1.md)
-
-Short excerpt or description of the post.
-
-### [Blog 2](posts/b-2.md)
-
-Short excerpt or description of the post.
-
----
-
 ## Latest Blogs
