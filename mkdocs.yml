@@ -1,7 +1,7 @@
 site_name: mrxsierra | Sunil Sharma
 site_author: mrxsierra
 site_url: https://mrxsierra.github.io/
-repo_url: https://github.com/mrxsierra/mrxsierra.github.io/
+# repo_url: https://github.com/mrxsierra/mrxsierra.github.io/   
 # edit_uri: 'blob/main/docs/'
 # edit_uri_template: 'blob/main/docs/{path}'
 site_description: "Welcome to my personal website. Here you will find my projects, blogs, and more."
@@ -20,7 +20,8 @@ nav:
       - QA Docx to Excel: projects/paraxcel.md
       - Test Management Site: projects/test-site.md
       - Fake Data Generator: projects/s3-faker.md
-  - Blogs: blog/index.md
+  - Blog:
+      - Blogs: blog/index.md
   - About: about.md
   - Resume: resume.md
   - Contact: contact.md

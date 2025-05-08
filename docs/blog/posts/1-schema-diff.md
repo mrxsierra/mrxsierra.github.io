@@ -1,6 +1,6 @@
 ---
 date:
-  created: 2025-05-25
+  created: 2025-05-7
 ---
 
 # Navigating the Nuances: A Developer's Guide to SQL Dialects (SQLite, MySQL, PostgreSQL)
@@ -386,7 +386,7 @@ The basic syntax is similar, but quoting and specific features (like conditional
 
 > ***For Debunking** `sql queries` and `clients interaction` differences b/w SQLite, MySQL, and PostgreSQL,*
 
-- `Part-2` **[Beyond the Schema: A Practical Guide to Querying and Interacting with SQLite, MySQL, & PostgreSQL](2-query-interection-diff.md)**
+- `Part-2` **[Beyond the Schema: A Practical Guide to Querying and Interacting with SQLite, MySQL, & PostgreSQL](2-query-interaction-diff.md)**
 
 > **Note :** It's build upon where this post left.
 

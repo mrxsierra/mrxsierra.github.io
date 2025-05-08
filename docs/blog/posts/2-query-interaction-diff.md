@@ -1,6 +1,6 @@
 ---
 date:
-  created: 2025-05-25
+  created: 2025-05-7
 ---
 # Beyond the Schema: A Practical Guide to Querying and Interacting with SQLite, MySQL, & PostgreSQL
 <!-- markdownlint-disable MD041 -->
