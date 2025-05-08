@@ -141,7 +141,12 @@ The database provides a structured and efficient way to manage tests and examina
 
 ## ***Links***
 
-- [GitHub Repository](https://github.com/mrxsierra/ems-db)
+[GitHub Repository](https://github.com/mrxsierra/ems-db)
+
+### ***Read Studies & Insights***
+
+- [Navigating the Nuances: A Developer's Guide to SQL Dialects (SQLite, MySQL, PostgreSQL)](../blog/posts/1-schema-diff.md).
+- [Beyond the Schema: A Practical Guide to Querying and Interacting with SQLite, MySQL, & PostgreSQL](../blog/posts/2-query-interaction-diff.md)
 
 ## ***Conclusion***
 

@@ -1,6 +1,6 @@
 ---
 date:
-  created: 2025-05-7
+  created: 2025-05-07
 ---
 # Beyond the Schema: A Practical Guide to Querying and Interacting with SQLite, MySQL, & PostgreSQL
 <!-- markdownlint-disable MD041 -->
@@ -16,17 +16,19 @@ This companion blog post will use the **`queries.sql`, `README.Docker.md`, and `
 
 This post will serve as another handy reference, highlighting the practical differences you'll encounter when running queries and managing these databases, especially useful for both day-to-day development and for showcasing practical database skills.
 
-> **Drill**
->
-> - ***Warning :*** Refer to `Official Docs`, when in doubt. **`"Its not ultimate source of truth. It could be good starting point."`**
-> - ***Understanding :*** Use [this project](https://github.com/mrxsierra/ems-db/) as reference.
-> - ***Prerequisites :*** Familiar with `sql syntax`, `client interaction`, `Docker`, and `Python` (language of choice).
+!!! tip "Drill"
+
+    > **`⚠️Warning` :** ***Refer to `Official Docs`, when in doubt. `"Its not ultimate source of truth. It could be good starting point."`***
+    
+    ---
+    - ***Understanding :*** Use [this project](https://github.com/mrxsierra/ems-db/) as reference.
+    - ***Prerequisites :*** Familiar with `sql syntax`, `client interaction`, `Docker`, and `Python` (language of choice).
 
 In our [previous post](1-schema-diff.md), we explored the key differences in schema definitions across `SQLite`, `MySQL`, and `PostgreSQL` using the [Exam Management System (EMS)](https://github.com/mrxsierra/ems-db/) project as a case study.
 
 Now, let's shift our focus to the equally important aspects of how we *interact* with these databases: ***running queries, using their command-line interfaces (CLIs), and understanding connection nuances, especially in a Dockerized environment.***
 
-> *This guide draws insights from the following project files (within the [ems-db](https://github.com/mrxsierra/ems-db/) repository)*:
+> **`ℹ️Note` :** **This guide draws insights from the following project files (within the [ems-db](https://github.com/mrxsierra/ems-db/) repository)**:
 
 - **Query Scripts:**
     - [sqlite/queries.sql](https://github.com/mrxsierra/ems-db/blob/main/sqlite/queries.sql)
@@ -94,7 +96,7 @@ Running a series of SQL commands from a `.sql` file is a common task.
     - Shell command: `source ./queries.sql`
     - CLI redirection: `mysql -tv -uroot -psecret ems < ./queries.sql`
 
-> 🧩 **Important**: When schema files contain stored procedures, triggers, or functions that require `DELIMITER`, executing them inside the `mysql` CLI is more reliable than using `mysql-connector-python` (which doesn't support `DELIMITER`). This limitation makes shell execution the preferred approach for complex DDL.
+> ✨ **Important**: When schema files contain stored procedures, triggers, or functions that require `DELIMITER`, executing them inside the `mysql` CLI is more reliable than using `mysql-connector-python` (which doesn't support `DELIMITER`). This limitation makes shell execution the preferred approach for complex DDL.
 >
 > As seen in [`mysql/usage.md`](https://github.com/mrxsierra/ems-db/blob/main/mysql/usage.md#step-2-create-database-schema) and [`mysql/queries.sql`](https://github.com/mrxsierra/ems-db/blob/main/mysql/queries.sql)
 
@@ -297,9 +299,11 @@ By familiarizing yourself with these practical aspects, you become a more well-r
 
 ---
 
-> ***Disclaimer**: The examples are drawn from specific project files and general knowledge. Always refer to the official documentation for the most comprehensive and up-to-date information.*
+!!! warning "Disclaimer"
 
-## References & Resources
+    *The examples are drawn from specific project files and general knowledge. Always refer to the official documentation for the most comprehensive and up-to-date information.*
+
+## References & Resources 🔗
 
 This section compiles useful links found within the [`ems-db`](https://github.com/mrxsierra/ems-db/) project's documentation (`usage.md`, `README.Docker.md` files), categorized for easier navigation.
 

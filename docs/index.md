@@ -7,7 +7,7 @@ hide:
   - toc
 tags:
   - Welcome
-background: none
+# background: none
 ---
 <!-- markdownlint-disable MD041 -->
 <div class="main-body">
@@ -112,17 +112,17 @@ background: none
                 <h3>Navigating the Nuances: SQL</h3>
                 <p>A Developer's Guide to SQL Dialects (SQLite, MySQL, PostgreSQL)</p>
             </div>
-            <a class="blog-link" href="blog/2025/05/25/navigating-the-nuances-a-developers-guide-to-sql-dialects-sqlite-mysql-postgresql/#navigating-the-nuances-a-developers-guide-to-sql-dialects-sqlite-mysql-postgresql">
-                <i class="fas fa-database"></i>
+            <a class="blog-link" href="blog/2025/05/07/navigating-the-nuances-a-developers-guide-to-sql-dialects-sqlite-mysql-postgresql/#navigating-the-nuances-a-developers-guide-to-sql-dialects-sqlite-mysql-postgresql">
+                <i class="fas fa-book-open"></i>
             </a>
         </div>
         <div class="blog-card">
             <div class="blog-content">
-                <h3>Beyond the Schema</h3>
+                <h3>Beyond the Schema: SQL</h3>
                 <p>A Practical Guide to Querying and Interacting with SQLite, MySQL, & PostgreSQL Databases</p>
             </div>
-            <a class="blog-link" href="blog/posts/1-schema-diff">
-                <i class="fas fa-database"></i>
+            <a class="blog-link" href="blog/2025/05/07/beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql--postgresql/#beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql--postgresql">
+                <i class="fas fa-terminal"></i>
             </a>
         </div>
     </div>
