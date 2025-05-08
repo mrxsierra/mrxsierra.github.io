@@ -2,8 +2,9 @@
 date:
   created: 2025-05-07
 ---
+<!-- markdownlint-disable MD041 MD046 -->
 # Beyond the Schema: A Practical Guide to Querying and Interacting with SQLite, MySQL, & PostgreSQL
-<!-- markdownlint-disable MD041 -->
+
 Okay, building on our previous discussion about SQL schema differences, let's dive into how we interact with `SQLite`, `MySQL`, and `PostgreSQL`, focusing on query execution, CLI usage, and connection methods.
 <!-- more -->
 This companion blog post will use the **`queries.sql`, `README.Docker.md`, and `usage.md`** files from the [Exam Management System (EMS)](https://github.com/mrxsierra/ems-db/) project as our practical examples.
@@ -176,27 +177,27 @@ Standard `SELECT` statements with `JOINs`, `WHERE` clauses, and subqueries are l
         - View DDL: `\d+ table_name` or for indexes/views: `\d+ index_name`, `\d+ view_name`
         - SQL alternatives:
 
-          ```sql
-          SELECT * FROM information_schema.tables WHERE table_schema='public';
-          SELECT * FROM pg_indexes WHERE schemaname = 'public';
-          ```
+            ```sql
+            SELECT * FROM information_schema.tables WHERE table_schema='public';
+            SELECT * FROM pg_indexes WHERE schemaname = 'public';
+            ```
 
     - **MySQL**:
         - List tables: `SHOW TABLES;`
         - List indexes: `SHOW INDEX FROM table_name;`
         - List views:
 
-          ```sql
-          SHOW FULL TABLES WHERE TABLE_TYPE = 'VIEW';
-          SHOW CREATE VIEW view_name;
-          ```
+            ```sql
+            SHOW FULL TABLES WHERE TABLE_TYPE = 'VIEW';
+            SHOW CREATE VIEW view_name;
+            ```
 
         - SQL alternatives via `information_schema`:
 
-          ```sql
-          SELECT * FROM information_schema.tables WHERE table_schema = 'your_db';
-          SELECT * FROM information_schema.statistics WHERE table_schema = 'your_db';
-          ```
+            ```sql
+            SELECT * FROM information_schema.tables WHERE table_schema = 'your_db';
+            SELECT * FROM information_schema.statistics WHERE table_schema = 'your_db';
+            ```
 
 - **Query Plan Analysis:**
     - **SQLite:** `EXPLAIN QUERY PLAN SELECT ...;` (as used in comments in [`sqlite/queries.sql`](https://github.com/mrxsierra/ems-db/blob/main/sqlite/queries.sql) `#Line-151 or below`).
@@ -206,7 +207,7 @@ Standard `SELECT` statements with `JOINs`, `WHERE` clauses, and subqueries are l
 
 While core SQL is similar, some functions or commands are unique.
 
-- **SQLite:** Uses functions like `STRFTIME()` and `DATETIME()` for date/time manipulations (more prominent in its [`schema.sql`](https://github.com/mrxsierra/ems-db/blob/main/sqlite/schema.sql)) triggers).
+- **SQLite:** Uses functions like `STRFTIME()` and `DATETIME()` for date/time manipulations (more prominent in its [`schema.sql`](https://github.com/mrxsierra/ems-db/blob/main/sqlite/schema.sql)) triggers.
 - **PostgreSQL:** Rich set of functions; `INTERVAL` arithmetic is a key feature (seen in its `schema.sql` triggers). The [`queries.sql`](https://github.com/mrxsierra/ems-db/blob/main/psql/queries.sql) uses standard SQL.
 - **MySQL:**
     - `SLEEP(seconds)`: Used in [`mysql/queries.sql`](https://github.com/mrxsierra/ems-db/blob/main/mysql/queries.sql) (`SELECT SLEEP(3);`) to pause execution, often for testing or simulation.

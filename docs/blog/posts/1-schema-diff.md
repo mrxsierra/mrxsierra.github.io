@@ -2,7 +2,7 @@
 date:
   created: 2025-05-07
 ---
-
+<!-- markdownlint-disable MD041 MD046 -->
 # Navigating the Nuances: A Developer's Guide to SQL Dialects (SQLite, MySQL, PostgreSQL)
 
 As developers, we often encounter various SQL databases, each with its own flavor of `SQL`. **While the core concepts remain similar, the devil is in the details – especially when it comes to schema definitions, data types, and procedural extensions like triggers.**
