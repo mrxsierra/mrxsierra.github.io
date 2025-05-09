@@ -12,11 +12,11 @@
         <meta name="author" content="mrxsierra">
       
       
-        <link rel="canonical" href="https://mrxsierra.github.io/blog/2025/05/07/2-query-interaction-diff/">
+        <link rel="canonical" href="https://mrxsierra.github.io/blog/2025/05/07/beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql--postgresql/">
       
       
       
-        <link rel="next" href="../1-schema-diff/">
+        <link rel="next" href="../navigating-the-nuances-a-developers-guide-to-sql-dialects-sqlite-mysql-postgresql/">
       
       
       <link rel="icon" href="../../../../../assets/img/favicon.ico">
@@ -24,7 +24,7 @@
     
     
       
-        <title>2 query interaction diff - mrxsierra | Sunil Sharma</title>
+        <title>Beyond the Schema: A Practical Guide to Querying and Interacting with SQLite, MySQL, & PostgreSQL - mrxsierra | Sunil Sharma</title>
       
     
     
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2 query interaction diff
+              Beyond the Schema: A Practical Guide to Querying and Interacting with SQLite, MySQL, &amp; PostgreSQL
             
           </span>
         </div>
@@ -632,6 +632,8 @@
       
         
       
+        
+      
     
     
     
@@ -747,6 +749,91 @@
   
   <span class="md-ellipsis">
     2025
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Categories
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/database/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    database
     
   </span>
   
@@ -1083,6 +1170,25 @@
               </div>
             </div>
             
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://avatars.githubusercontent.com/u/9698455" alt="Sunil Sharma">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          <a href="https://github.com/mrxsierra">Sunil Sharma</a>
+                        
+                      </strong>
+                      <br>
+                      Creator
+                    </span>
+                  </div>
+                
+              </div>
+            
             <ul class="md-post__meta md-nav__list">
               <li class="md-nav__item md-nav__item--section">
                 <div class="md-post__title">
@@ -1099,6 +1205,16 @@
                       </div>
                     </li>
                     
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../../../../category/database/">database</a></span>
+                        </div>
+                      </li>
                     
                     
                       
@@ -1131,8 +1247,9 @@
 
 
 
-<!-- markdownlint-disable MD041 MD046 -->
 <h1 id="beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql-postgresql">Beyond the Schema: A Practical Guide to Querying and Interacting with <abbr title="A lightweight, file-based SQL database engine">SQLite</abbr>, <abbr title="An open-source relational database management system">MySQL</abbr>, &amp; <abbr title="An advanced open-source relational database">PostgreSQL</abbr><a class="headerlink" href="#beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql-postgresql" title="Permanent link">&para;</a></h1>
+<!-- markdownlint-disable MD041 MD046 -->
+
 <p>Okay, building on our previous discussion about <abbr title="Structured Query Language">SQL</abbr> schema differences, let's dive into how we interact with <code>SQLite</code>, <code>MySQL</code>, and <code>PostgreSQL</code>, focusing on query execution, <abbr title="Command Line Interface">CLI</abbr> usage, and connection methods.</p>
 <!-- more -->
 <p>This companion blog post will use the <strong><code>queries.sql</code>, <code>README.Docker.md</code>, and <code>usage.md</code></strong> files from the <a href="https://github.com/mrxsierra/ems-db/">Exam Management System (EMS)</a> project as our practical examples.</p>
@@ -1143,7 +1260,7 @@
 <p>If you missed the first part on schema definitions, you can catch up here:</p>
 </blockquote>
 <ul>
-<li><a href="../1-schema-diff/">Navigating the Nuances: A Developer's Guide to <abbr title="Structured Query Language">SQL</abbr> Dialects (<abbr title="A lightweight, file-based SQL database engine">SQLite</abbr>, <abbr title="An open-source relational database management system">MySQL</abbr>, <abbr title="An advanced open-source relational database">PostgreSQL</abbr>)</a>.</li>
+<li><a href="../navigating-the-nuances-a-developers-guide-to-sql-dialects-sqlite-mysql-postgresql/">Navigating the Nuances: A Developer's Guide to <abbr title="Structured Query Language">SQL</abbr> Dialects (<abbr title="A lightweight, file-based SQL database engine">SQLite</abbr>, <abbr title="An open-source relational database management system">MySQL</abbr>, <abbr title="An advanced open-source relational database">PostgreSQL</abbr>)</a>.</li>
 </ul>
 <p>This post will serve as another handy reference, highlighting the practical differences you'll encounter when running queries and managing these databases, especially useful for both day-to-day development and for showcasing practical database skills.</p>
 <div class="admonition tip">
@@ -1157,7 +1274,7 @@
 <li><strong><em>Prerequisites :</em></strong> Familiar with <code>sql syntax</code>, <code>client interaction</code>, <code>Docker</code>, and <code>Python</code> (language of choice).</li>
 </ul>
 </div>
-<p>In our <a href="../1-schema-diff/">previous post</a>, we explored the key differences in schema definitions across <code>SQLite</code>, <code>MySQL</code>, and <code>PostgreSQL</code> using the <a href="https://github.com/mrxsierra/ems-db/">Exam Management System (EMS)</a> project as a case study.</p>
+<p>In our <a href="../navigating-the-nuances-a-developers-guide-to-sql-dialects-sqlite-mysql-postgresql/">previous post</a>, we explored the key differences in schema definitions across <code>SQLite</code>, <code>MySQL</code>, and <code>PostgreSQL</code> using the <a href="https://github.com/mrxsierra/ems-db/">Exam Management System (EMS)</a> project as a case study.</p>
 <p>Now, let's shift our focus to the equally important aspects of how we <em>interact</em> with these databases: <strong><em>running queries, using their command-line interfaces (CLIs), and understanding connection nuances, especially in a Dockerized environment.</em></strong></p>
 <blockquote>
 <p><strong><code>ℹ️Note</code> :</strong> <strong>This guide draws insights from the following project files (within the <a href="https://github.com/mrxsierra/ems-db/">ems-db</a> repository)</strong>:</p>
@@ -1316,7 +1433,7 @@
 </li>
 </ul>
 <blockquote>
-<p><strong><em>Identifier quoting :</em></strong> <code>Double quotes for SQLite/PostgreSQL</code>, <code>backticks for MySQL</code> discussed in the <a href="../1-schema-diff/#1-dropping-objects-tables-views-indexes">schema blog</a> post also applies here.</p>
+<p><strong><em>Identifier quoting :</em></strong> <code>Double quotes for SQLite/PostgreSQL</code>, <code>backticks for MySQL</code> discussed in the <a href="../navigating-the-nuances-a-developers-guide-to-sql-dialects-sqlite-mysql-postgresql/#1-dropping-objects-tables-views-indexes">schema blog</a> post also applies here.</p>
 </blockquote>
 <h3 id="5-querying-data-analysis-select-explain">5. Querying Data &amp; Analysis (SELECT, EXPLAIN)<a class="headerlink" href="#5-querying-data-analysis-select-explain" title="Permanent link">&para;</a></h3>
 <p>Standard <code>SELECT</code> statements with <code>JOINs</code>, <code>WHERE</code> clauses, and subqueries are largely portable.</p>
@@ -1642,6 +1759,8 @@ These libraries handle connection and query execution, abstracting some dialect 
     
   
   
+    
+  
 
 
   <aside class="md-source-file">
@@ -1651,12 +1770,44 @@ These libraries handle connection and query execution, abstracting some dialect 
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 8, 2025 15:34:16">May 8, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 9, 2025 10:53:36">May 9, 2025</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 7, 2025 18:56:21">May 7, 2025</span>
   </span>
 
     
     
     
+      
+  <span class="md-source-file__fact">
+    
+      
+  <span class="md-icon" title="Contributors">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+  </span>
+  <span>GitHub</span>
+
+    
+    <nav>
+      
+        <a href="https://github.com/mrxsierra" class="md-author" title="@mrxsierra">
+          
+          <img src="https://avatars.githubusercontent.com/u/9698455?v=4&size=72" alt="mrxsierra">
+        </a>
+      
+      
+      
+    </nav>
+  </span>
+
     
   </aside>
 
@@ -1692,13 +1843,13 @@ These libraries handle connection and query execution, abstracting some dialect 
         
         
           
-          <a href="../1-schema-diff/" class="md-footer__link md-footer__link--next" aria-label="Next: 1 schema diff">
+          <a href="../navigating-the-nuances-a-developers-guide-to-sql-dialects-sqlite-mysql-postgresql/" class="md-footer__link md-footer__link--next" aria-label="Next: Navigating the Nuances: A Developer&#39;s Guide to SQL Dialects (SQLite, MySQL, PostgreSQL)">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                1 schema diff
+                Navigating the Nuances: A Developer's Guide to SQL Dialects (SQLite, MySQL, PostgreSQL)
               </div>
             </div>
             <div class="md-footer__button md-icon">
