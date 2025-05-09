@@ -1,11 +1,17 @@
+# project information
 site_name: mrxsierra | Sunil Sharma
 site_author: mrxsierra
 site_url: https://mrxsierra.github.io/
-# repo_url: https://github.com/mrxsierra/mrxsierra.github.io/   
+site_description: "Welcome to my personal website. Here you will find my projects, blogs, and more."
+
+# repository
+# repo_url: https://github.com/mrxsierra/mrxsierra.github.io/
 # edit_uri: 'blob/main/docs/'
 # edit_uri_template: 'blob/main/docs/{path}'
-site_description: "Welcome to my personal website. Here you will find my projects, blogs, and more."
+
+# copyright
 copyright: "© 2025 mrxsierra. All rights reserved."
+
 # docs_dir: "docs"
 watch:
   - includes
@@ -129,8 +135,15 @@ plugins:
       enabled: true
       blog_dir: blog
       blog_toc: false
+  - git-committers:
+      enabled: !ENV [CI, false]
+      repository: mrxsierra/mrxsierra.github.io
+      branch: main
   - git-revision-date-localized:
+      enable_creation_date: true
       type: date
+      exclude:
+          - index.md
   - glightbox:
       auto_caption: true
   - search
@@ -210,7 +223,9 @@ extra:
     - icon: fontawesome/brands/docker
       link: https://hub.docker.com/u/mrxsierra
       name: DockerHub
-  
+    # - icon: fontawesome/brands/x-twitter
+    #   link: https://x.com/mrxsierra
+    #   name: X (formerly Twitter)
   
   status:
     new: Recently added

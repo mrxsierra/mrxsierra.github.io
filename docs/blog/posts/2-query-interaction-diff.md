@@ -1,9 +1,12 @@
 ---
 date:
   created: 2025-05-07
+authors: [mrxsierra]
+categories:
+  - database
 ---
-<!-- markdownlint-disable MD041 MD046 -->
 # Beyond the Schema: A Practical Guide to Querying and Interacting with SQLite, MySQL, & PostgreSQL
+<!-- markdownlint-disable MD041 MD046 -->
 
 Okay, building on our previous discussion about SQL schema differences, let's dive into how we interact with `SQLite`, `MySQL`, and `PostgreSQL`, focusing on query execution, CLI usage, and connection methods.
 <!-- more -->

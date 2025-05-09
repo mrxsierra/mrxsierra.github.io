@@ -63,15 +63,17 @@ tags:
             <div class="project-content">
                 <h3>Examination Management System DB</h3>
                 <p>Multi-RDBMS exam/test management, automation, Docker, Python, CI-ready.</p>
+                <a class="read-more" href="projects/ems-db/#examination-management-system-database">Know More</a>
             </div>
             <a class="project-link" href="projects/ems-db#examination-management-system-database">
-                <i class="fas fa-database"></i>
+                <i class="fas fa-tasks"></i>
             </a>
         </div>
         <div class="project-card">
             <div class="project-content">
                 <h3>S3 Faker</h3>
                 <p>Fake data generator with S3/LocalStack integration for cloud testing.</p>
+                <a class="read-more" href="projects/s3-faker/#s3-faker">Know More</a>
             </div>
             <a class="project-link" href="projects/s3-faker#s3-faker">
                 <i class="fas fa-cloud-upload-alt"></i>
@@ -81,6 +83,7 @@ tags:
             <div class="project-content">
                 <h3>Paraxcel</h3>
                 <p>Excel data extraction, transformation, and visualization toolkit.</p>
+                <a class="read-more" href="projects/paraxcel/#paraxcel">Know More</a>
             </div>
             <a class="project-link" href="projects/paraxcel#paraxcel">
                 <i class="fas fa-file-excel"></i>
@@ -90,9 +93,10 @@ tags:
             <div class="project-content">
                 <h3>Test Management Site</h3>
                 <p>Frontend web app for test management and result tracking.</p>
+                <a class="read-more" href="projects/test-site/#test-management-site">Know More</a>
             </div>
             <a class="project-link" href="projects/test-site#test-management-site">
-                <i class="fas fa-robot"></i>
+                <i class="fas fa-clipboard-list"></i>
             </a>
         </div>
     </div>
@@ -109,20 +113,23 @@ tags:
     <div class="blog-cards">
         <div class="blog-card">
             <div class="blog-content">
-                <h3>Navigating the Nuances: SQL</h3>
+                <h3>Navigating the Nuances: database</h3>
                 <p>A Developer's Guide to SQL Dialects (SQLite, MySQL, PostgreSQL)</p>
+                <a class="read-more" href="blog/2025/05/07/navigating-the-nuances-a-developers-guide-to-sql-dialects-sqlite-mysql-postgresql/">Read More</a>
             </div>
-            <a class="blog-link" href="blog/2025/05/07/navigating-the-nuances-a-developers-guide-to-sql-dialects-sqlite-mysql-postgresql/#navigating-the-nuances-a-developers-guide-to-sql-dialects-sqlite-mysql-postgresql">
-                <i class="fas fa-book-open"></i>
+            <a class="blog-link" href="blog/2025/05/07/navigating-the-nuances-a-developers-guide-to-sql-dialects-sqlite-mysql-postgresql/">
+                <!-- <i class="fas fa-book-open"></i> -->
+                <i class="fas fa-code-branch"></i>
             </a>
         </div>
         <div class="blog-card">
             <div class="blog-content">
-                <h3>Beyond the Schema: SQL</h3>
+                <h3>Beyond the Schema: database</h3>
                 <p>A Practical Guide to Querying and Interacting with SQLite, MySQL, & PostgreSQL Databases</p>
+                <a class="read-more" href="blog/2025/05/07/beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql--postgresql/">Read More</a>
             </div>
-            <a class="blog-link" href="blog/2025/05/07/beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql--postgresql/#beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql--postgresql">
-                <i class="fas fa-terminal"></i>
+            <a class="blog-link" href="blog/2025/05/07/beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql--postgresql/">
+                <i class="fas fa-magnifying-glass"></i>
             </a>
         </div>
     </div>
@@ -139,9 +146,11 @@ tags:
             <div class="content">
                 <h3>Programming Languages</h3>
                 <p class="skill-list">
+                    SQL,
                     Python,
+                    HTML,
+                    CSS,
                     JavaScript,
-                    SQL
                 </p>
             </div>
             <i class="fas fa-code skill-icon"></i>
@@ -152,7 +161,9 @@ tags:
                 <p class="skill-list">
                     Machine Learning,
                     Data Visualization,
-                    Statistical Analysis
+                    Statistical Analysis,
+                    Data Extraction,
+                    Data Transformation
                 </p>
             </div>
             <i class="fas fa-chart-bar skill-icon"></i>
@@ -161,9 +172,9 @@ tags:
             <div class="content">
                 <h3>Frameworks & Libraries</h3>
                 <p class="skill-list">
-                    React,
-                    TensorFlow,
-                    Pandas
+                    Numpy,
+                    Pandas,
+                    Scikit-Learn,
                 </p>
             </div>
             <i class="fas fa-toolbox skill-icon"></i>
@@ -174,7 +185,10 @@ tags:
                 <p class="skill-list">
                     Git,
                     Docker,
-                    AWS
+                    AWS,
+                    CI/CD,
+                    LocalStack,
+                    Microsoft Excel
                 </p>
             </div>
             <i class="fas fa-terminal skill-icon"></i>

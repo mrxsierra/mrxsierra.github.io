@@ -1,9 +1,17 @@
 ---
 date:
   created: 2025-05-07
+authors: [mrxsierra]
+categories:
+  - database
+# title: Adding a badge to your project
+# slug: adding-a-badge-to-your-project
+# description: >
+#   Share the love – you can now add a badge to your README, showing that your
+#   project is built with Material for MkDocs
 ---
-<!-- markdownlint-disable MD041 MD046 -->
 # Navigating the Nuances: A Developer's Guide to SQL Dialects (SQLite, MySQL, PostgreSQL)
+<!-- markdownlint-disable MD041 MD046 -->
 
 As developers, we often encounter various SQL databases, each with its own flavor of `SQL`. **While the core concepts remain similar, the devil is in the details – especially when it comes to schema definitions, data types, and procedural extensions like triggers.**
 <!-- more -->
