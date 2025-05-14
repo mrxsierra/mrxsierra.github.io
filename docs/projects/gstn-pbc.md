@@ -197,8 +197,6 @@ The workflow covers the full ML lifecycle: data integrity checks, EDA, preproces
     ![Precision-Recall Curve](https://raw.githubusercontent.com/mrxsierra/gstn_dsp_pbc/main/3-submission/static/prc.png)
 - Confusion Matrix  
     ![Confusion Matrix](https://raw.githubusercontent.com/mrxsierra/gstn_dsp_pbc/main/3-submission/static/cm.png)
-- Feature Importance  
-    ![Feature Importance](https://raw.githubusercontent.com/mrxsierra/gstn_dsp_pbc/main/3-submission/static/__MODEL__.jpg)
 
 ## **Links**
 
