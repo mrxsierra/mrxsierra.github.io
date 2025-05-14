@@ -16,7 +16,7 @@ tags:
     **Naukri Webscraper**  
     A Python tool that automates job searches on Naukri.com, enabling users to filter listings by skills and export structured data for analysis.
 
-    - **Context:** `Personal Project`, `Mar 2024 – Mar 2025`, `Python`, `Selenium`, `Pandas`
+    - **Context:** `Personal Project`, `Mar 2024`, `Python`, `Selenium`, `Pandas`
     - **Role:** Sole developer—designed, implemented, tested, and documented the project
     - **Impact:** Automated skill-based job search and CSV export, validated by automated tests and real-world data extraction
 
