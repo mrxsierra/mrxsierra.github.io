@@ -77,6 +77,14 @@ The project was developed independently as a personal automation and data analys
 4. **Documentation:**  
     - Documented setup, usage, and troubleshooting in `README.md`.
 
+## **Recognition**
+
+I am proud to share that I have successfully completed the `CS50P - Introduction to Programming with Python` course.
+
+### Certificate
+
+![CS50P - Introduction to Programming with Python](https://media.licdn.com/dms/image/v2/D562DAQH67rsjAX763w/profile-treasury-image-shrink_1920_1920/profile-treasury-image-shrink_1920_1920/0/1708063772979?e=1747832400&v=beta&t=W0ZkkvY7QYZbOHVDCEfLzxvUo3N0CqLoQV3Y3whZ0YM)
+
 ## ***:crossed_swords: Challenges & :star2: Solutions***
 
 1. **Dynamic Content Loading**

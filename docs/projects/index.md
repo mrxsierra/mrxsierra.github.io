@@ -10,6 +10,14 @@ Welcome to my project portfolio! Here you'll find a curated selection of my best
 
 <div class="grid cards" markdown>
 
+- :material-brain:{ .lg .middle } __GSTN Hackathon: Predictive Binary Classification__
+
+    ---
+
+    Robust, interpretable ML pipeline for binary classification on anonymized GSTN data. Achieved >97% accuracy, strong F1/MCC, and strict compliance with competition rules. Python, scikit-learn, XGBoost/LightGBM, SHAP, and reproducibility scripts.
+
+    [:octicons-arrow-right-24: Read More](gstn-pbc.md#gstn-hackathon-predictive-binary-classification-project)
+
 - :material-database-cog:{ .lg .middle } __Examination Management System DB__
 
     ---
@@ -74,13 +82,17 @@ Welcome to my project portfolio! Here you'll find a curated selection of my best
     * [:octicons-arrow-right-24: __Test Management Site__](test-site.md#test-management-site)  
       <br>Frontend web app for test management and result tracking.
 
+    * [:octicons-arrow-right-24: __GSTN Hackathon: Predictive Binary Classification__](gstn-pbc.md#gstn-hackathon-predictive-binary-classification-project)  
+      <br>Robust, interpretable ML pipeline for binary classification on anonymized GSTN data. >97% accuracy, strong F1/MCC, reproducibility, and compliance.
+
 === "A–Z"
 
     1. [:octicons-arrow-right-24: __Examination Management System DB__](ems-db.md#examination-management-system-database)
-    2. [:octicons-arrow-right-24: __Naukri Webscraper__](naukri-webscraper.md#naukri-webscraper)
-    3. [:octicons-arrow-right-24: __Paraxcel__](paraxcel.md#paraxcel)
-    4. [:octicons-arrow-right-24: __S3 Faker__](s3-faker.md#s3-faker)
-    5. [:octicons-arrow-right-24: __Test Management Site__](test-site.md#test-management-site)
+    2. [:octicons-arrow-right-24: __GSTN Hackathon: Predictive Binary Classification__](gstn-pbc.md#gstn-hackathon-predictive-binary-classification-project)
+    3. [:octicons-arrow-right-24: __Naukri Webscraper__](naukri-webscraper.md#naukri-webscraper)
+    4. [:octicons-arrow-right-24: __Paraxcel__](paraxcel.md#paraxcel)
+    5. [:octicons-arrow-right-24: __S3 Faker__](s3-faker.md#s3-faker)
+    6. [:octicons-arrow-right-24: __Test Management Site__](test-site.md#test-management-site)
 
 ---
 

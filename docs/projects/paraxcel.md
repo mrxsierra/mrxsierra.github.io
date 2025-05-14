@@ -73,6 +73,14 @@ The development process involved identifying the need for a simple DOCX-to-Excel
 5. **Documentation**: Created user and technical guides to support adoption and understanding.
 6. **Packaging**: Prepared the application for distribution as a single executable.
 
+## **Recognition**
+
+I am proud to share that I have successfully completed the `CS50x - Introduction to Computer Science` course.
+
+### Certificate
+
+![CS50x - Introduction to Computer Science](https://media.licdn.com/dms/image/v2/D562DAQF-y6wX6lgfzA/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1738690195028?e=1747832400&v=beta&t=vFRTo5td7uE51CE8Ebl-lyEuJYsVSOBKf0P_e3D_67E)
+
 ## :crossed_swords: Challenges & :star2: Solutions
 
 1. **Handling Varied DOCX Formatting**

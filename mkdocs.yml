@@ -21,6 +21,7 @@ nav:
   - Welcome: index.md
   - Projects:
       - Overview: projects/index.md
+      - GSTN Hackathon: projects/gstn-pbc.md
       - Naukri Web Scraper: projects/naukri-webscraper.md
       - Exam Management System Database: projects/ems-db.md
       - QA Docx to Excel: projects/paraxcel.md
@@ -162,6 +163,9 @@ plugins:
         - Web Scraping
         - Selenium
         - Automation
+        - Hackathon
+        - Binary Classification
+        - Machine Learning
 # Extensions
 markdown_extensions:
   - abbr

@@ -90,6 +90,14 @@ The project followed a structured approach:
 6. **Automation:** Developed Python-based scripts and test suites for all variants.
 7. **Containerization:** Provided Docker Compose files for reproducible development environments.
 
+## **Recognition**
+
+I am proud to share that I have successfully completed the `CS50 SQL - Introduction to Databases with SQL` course.
+
+### Certificate
+
+![CS50 SQL - Introduction to Databases with SQL](https://media.licdn.com/dms/image/v2/D4E2DAQH02gfznWb4Zw/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1713864822125?e=1747832400&v=beta&t=41-v8CjprOhpreJBJu04kZNHydL4ikkC4wZeoxpUFJ8)
+
 ## ***:crossed_swords: Challenges & :star2: Solutions***
 
 1. **Multi-Database Support**  
