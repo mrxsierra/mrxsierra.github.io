@@ -1,7 +1,7 @@
 ---
 date:
   created: Mar 2024
-  updated: Mar 2025
+  updated: Apr 2025
 tags:
     - Python
     - Web Scraping
