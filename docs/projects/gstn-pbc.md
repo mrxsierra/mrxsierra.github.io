@@ -1,7 +1,6 @@
 ---
 date:
   created: 2025-05-14
-  updated: 2025-05-14
 tags:
     - Machine Learning
     - Binary Classification
@@ -31,7 +30,7 @@ The workflow covers the full ML lifecycle: data integrity checks, EDA, preproces
     - All data files excluded for compliance.
     - Extensive documentation and reproducibility scripts added.
 
-!!! info "**About the GSTN Hackathon**"
+??? info "**About the GSTN Hackathon**"
 
     The Government of India hosted an AI/ML-based Hackathon to develop predictive models for GST analytics. This initiative was designed to engage students, researchers, and professionals in designing innovative AI/ML solutions using a large, anonymized dataset of approximately 900,000 records with 21 attributes.
 
