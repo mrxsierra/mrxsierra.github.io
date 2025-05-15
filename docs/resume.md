@@ -3,11 +3,11 @@
 <!-- You can either embed your resume directly or, better yet, provide a link to download it as a PDF. -->
 
 <!-- markdownlint-disable MD001 -->
-#### Download my Resume/CV {: .contact-heading}
+#### Resume {: .contact-heading}
 
 <div class="social-links">
-    <a href="resume" class="social-link">
-        <i class="fas fa-file-pdf"></i> Resume
+    <a href="/cert/main_resume.pdf" class="social-link" download>
+        <i class="fas fa-file-pdf"></i> Download
     </a>
 </div>
 
