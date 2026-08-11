@@ -5,7 +5,7 @@ Feel free to reach out to me for any inquiries, technical consulting, or collabo
 ## Email {: .contact-heading}
 
 <a href="mailto:9.sunilsharma@gmail.com" class="social-link">
-    <i class="fas fa-envelope"></i> 9.sunilsharma@gmail.com
+    <i class="fas fa-envelope"></i> Send Direct Email
 </a>
 
 ## Social & Platform Links {: .contact-heading}
