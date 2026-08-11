@@ -1,5 +1,5 @@
 ---
-description: Personal & Portfolio website of Sunil Sharma - Python Developer and Data Scientist
+description: Personal & Portfolio website of Sunil Sharma - Full-Stack & AI Systems Engineer
 hide:
   - tags
   - footer
@@ -16,7 +16,7 @@ tags:
 <blockquote id="wel-quote">
     <h3 id="welcome">
     <i class="fas fa-quote-left"></i>
-    Hey there Hello..! Welcome to my Portfolio
+    Welcome to my Engineering Portfolio
     <i class="fas fa-quote-right"></i>
     </h3>
 </blockquote>
@@ -25,9 +25,14 @@ tags:
 <section>
     <div class="hero-content">
         <h1 id="intro">Hi, I'm <span class="highlight" style="font-size: 2.8em;" id="name">Sunil Sharma</span></h1>
+        <h2>Engineering High-Performance Web Apps &amp; Autonomous AI Systems</h2>
         <p>
-            I’m a passionate <span style="background-color: yellow; color:black;">Python Developer</span> and <span style="background-color: yellow; color:black;">Data Scientist</span> who loves crafting innovative solutions and sharing my journey through engaging stories.
+            I turn complex engineering problems into clean, scalable software, intelligent agent workflows, and intuitive user experiences.
         </p>
+        <div style="margin-top: 20px; display: flex; gap: 15px; flex-wrap: wrap;">
+            <a href="#projects" class="md-button md-button--primary" style="font-weight: 700;">View Proof of Work</a>
+            <a href="mailto:9.sunilsharma@gmail.com" class="md-button" style="font-weight: 700;">Get in Touch</a>
+        </div>
     </div>
 </section>
 
