@@ -223,13 +223,31 @@ extra:
       name: LinkedIn
     - icon: fontawesome/brands/github
       link: https://github.com/mrxsierra/
-      name: Github
+      name: GitHub
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/mrxsierra
+      name: X (formerly Twitter)
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/mrxsierra/
+      name: Instagram
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@mrxsierra
+      name: YouTube
+    - icon: fontawesome/brands/reddit-alien
+      link: https://www.reddit.com/user/mrxsierra/
+      name: Reddit
+    - icon: fontawesome/brands/dev
+      link: https://dev.to/mrxsierra
+      name: Dev.to
+    - icon: fontawesome/brands/medium
+      link: https://medium.com/@mrxsierra
+      name: Medium
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/user/mrxsierra/
+      name: PyPI
     - icon: fontawesome/brands/docker
       link: https://hub.docker.com/u/mrxsierra
       name: DockerHub
-    # - icon: fontawesome/brands/x-twitter
-    #   link: https://x.com/mrxsierra
-    #   name: X (formerly Twitter)
   
   status:
     new: Recently added
