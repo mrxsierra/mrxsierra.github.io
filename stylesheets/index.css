@@ -620,3 +620,122 @@ h2 .social-link:hover {
     width: calc(50% - 1em);
   }
 }
+
+/* Terminal Summary Preview Widget */
+.terminal-widget {
+  background: #1e1e2e;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  max-width: 650px;
+  margin: 1.5em auto 1em auto;
+  overflow: hidden;
+  text-align: left;
+  font-family: 'Fira Code', 'Courier New', monospace;
+}
+
+.terminal-header {
+  background: #181825;
+  padding: 0.6em 1em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.terminal-header .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.terminal-header .dot.red { background: #ff5f56; }
+.terminal-header .dot.yellow { background: #ffbd2e; }
+.terminal-header .dot.green { background: #27c93f; }
+
+.terminal-header .terminal-title {
+  color: #cdd6f4;
+  font-size: 0.85em;
+  font-weight: 600;
+  margin-left: 8px;
+  opacity: 0.8;
+}
+
+.terminal-body {
+  padding: 1.2em 1.5em;
+  color: #cdd6f4;
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
+.terminal-body .cmd {
+  color: #a6e3a1;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.terminal-body .cmd .prompt {
+  color: #f38ba8;
+}
+
+.terminal-body .res {
+  margin: 0.3em 0;
+  color: #bac2de;
+}
+
+.terminal-body .key {
+  color: #89b4fa;
+  font-weight: 600;
+}
+
+/* Skill Pills & Badge Containers */
+.pill-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0.8em 0;
+}
+
+.skill-pill {
+  background: var(--skill-hover-bg, rgba(137, 43, 226, 0.15));
+  color: var(--primary-color);
+  font-size: 0.75em;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 15px;
+  border: 1px solid var(--accent-color);
+  display: inline-block;
+}
+
+/* Social Grid & Chips */
+.social-links-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin: 1.2em 0;
+}
+
+.social-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: var(--bg-overlay);
+  color: var(--text-color);
+  font-size: 0.85em;
+  font-weight: 600;
+  border-radius: 20px;
+  border: 1px solid var(--accent-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-chip:hover {
+  background: var(--primary-color);
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
