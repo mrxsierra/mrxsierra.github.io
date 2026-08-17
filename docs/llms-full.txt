@@ -21,10 +21,10 @@ Systems Architecture • Autonomous Agents • Distributed Data
       ](#projects)
       [
         <i class="fas fa-file-lines"></i> Credentials &amp; Resume
-      ](resume.md)
+      ](resume/)
       [
         <i class="fas fa-paper-plane"></i> Contact
-      ](contact.md)
+      ](contact/)
     
   
 
@@ -79,7 +79,7 @@ Systems Architecture • Autonomous Agents • Distributed Data
       </h2>
       Production software, ML classification pipelines, and cloud developer tools.
     
-    [All Projects <i class="fas fa-arrow-right"></i>](projects/index.md)
+    [All Projects <i class="fas fa-arrow-right"></i>](projects/)
   
 
   
@@ -301,7 +301,7 @@ Systems Architecture • Autonomous Agents • Distributed Data
       </h2>
       Practical architectural guides, SQL deep dives, and programmatic data tutorials.
     
-    [All Articles <i class="fas fa-arrow-right"></i>](blog/index.md)
+    [All Articles <i class="fas fa-arrow-right"></i>](blog/)
   
 
   
@@ -330,7 +330,7 @@ Systems Architecture • Autonomous Agents • Distributed Data
         A practical guide to querying, parameterizing, and automating SQLite, MySQL, &amp; PostgreSQL databases programmatically in Python.
       
       Read Full Guide <i class="fas fa-arrow-right"></i>
-    ](blog/2025/05/07/beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql--postgresql/)
+    ](blog/2025/05/07/beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql-postgresql/)
 
   
 
@@ -358,13 +358,13 @@ Systems Architecture • Autonomous Agents • Distributed Data
       
         [
           <i class="fas fa-id-card"></i> Read Full Bio
-        ](about.md)
+        ](about/)
         [
           <i class="fas fa-file-pdf"></i> Verified Credentials
-        ](resume.md)
+        ](resume/)
         [
           <i class="fas fa-paper-plane"></i> Initiate Contact
-        ](contact.md)
+        ](contact/)
       
     
 

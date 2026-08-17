@@ -32,10 +32,10 @@ tags:
       <a href="#projects" class="btn btn-primary">
         <i class="fas fa-layer-group"></i> Proof of Work
       </a>
-      <a href="resume.md" class="btn btn-secondary">
+      <a href="resume/" class="btn btn-secondary">
         <i class="fas fa-file-lines"></i> Credentials &amp; Resume
       </a>
-      <a href="contact.md" class="btn btn-ghost">
+      <a href="contact/" class="btn btn-ghost">
         <i class="fas fa-paper-plane"></i> Contact
       </a>
     </div>
@@ -98,7 +98,7 @@ tags:
       </h2>
       <p class="home-section-desc">Production software, ML classification pipelines, and cloud developer tools.</p>
     </div>
-    <a href="projects/index.md" class="home-section-action">All Projects <i class="fas fa-arrow-right"></i></a>
+    <a href="projects/" class="home-section-action">All Projects <i class="fas fa-arrow-right"></i></a>
   </div>
 
   <div class="card-grid-2">
@@ -326,7 +326,7 @@ tags:
       </h2>
       <p class="home-section-desc">Practical architectural guides, SQL deep dives, and programmatic data tutorials.</p>
     </div>
-    <a href="blog/index.md" class="home-section-action">All Articles <i class="fas fa-arrow-right"></i></a>
+    <a href="blog/" class="home-section-action">All Articles <i class="fas fa-arrow-right"></i></a>
   </div>
 
   <div class="card-grid-2">
@@ -344,7 +344,7 @@ tags:
       <span class="card-footer-link">Read Full Guide <i class="fas fa-arrow-right"></i></span>
     </a>
 
-    <a class="article-card" href="blog/2025/05/07/beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql--postgresql/">
+    <a class="article-card" href="blog/2025/05/07/beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql-postgresql/">
       <div class="article-meta">
         <span class="article-tag">Python &amp; SQL</span>
         <span>•</span>
@@ -384,13 +384,13 @@ tags:
         Committed to reproducible software engineering, data-driven automation, and active open-source contribution.
       </p>
       <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: auto;">
-        <a href="about.md" class="btn btn-secondary">
+        <a href="about/" class="btn btn-secondary">
           <i class="fas fa-id-card"></i> Read Full Bio
         </a>
-        <a href="resume.md" class="btn btn-secondary">
+        <a href="resume/" class="btn btn-secondary">
           <i class="fas fa-file-pdf"></i> Verified Credentials
         </a>
-        <a href="contact.md" class="btn btn-primary">
+        <a href="contact/" class="btn btn-primary">
           <i class="fas fa-paper-plane"></i> Initiate Contact
         </a>
       </div>
