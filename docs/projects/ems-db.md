@@ -96,25 +96,25 @@ I am proud to share that I have successfully completed the `CS50 SQL - Introduct
 
 ### Certificate
 
-![CS50 SQL - Introduction to Databases with SQL](https://media.licdn.com/dms/image/v2/D4E2DAQH02gfznWb4Zw/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1713864822125?e=1747832400&v=beta&t=41-v8CjprOhpreJBJu04kZNHydL4ikkC4wZeoxpUFJ8)
+![CS50 SQL - Introduction to Databases with SQL](../cert/1713864822125-cs50s.jpeg)
 
-## ***:crossed_swords: Challenges & :star2: Solutions***
+## Technical Challenges & Architectural Solutions
 
 1. **Multi-Database Support**  
-    - **:crossed_swords:** Ensuring consistent schema and logic across SQLite, MySQL, and PostgreSQL.  
-    - **:star2:** Modularized schema and queries, and used automated tests to validate behavior across all supported databases.
+    - **Challenge:** Ensuring consistent schema and relational logic across SQLite, MySQL, and PostgreSQL.  
+    - **Solution:** Modularized schema and queries, using automated pytest suites to validate identical behavior across all supported database engines.
 
-2. **Data Consistency and Integrity**  
-    - **:crossed_swords:** Maintaining data integrity with complex triggers and relationships.  
-    - **:star2:** Implemented advanced triggers and constraints in each variant, with automated testing for validation.
+2. **Data Consistency & Integrity**  
+    - **Challenge:** Maintaining strict referential integrity with complex cascade triggers and temporal relationships.  
+    - **Solution:** Implemented engine-native triggers and check constraints in each variant, with automated CI validation.
 
 3. **Query Performance Optimization**  
-    - **:crossed_swords:** Optimizing query performance for complex reporting and history tracking.  
-    - **:star2:** Created targeted indexes and materialized complex logic into views for efficient access.
+    - **Challenge:** Optimizing execution latency for analytical reporting and history tracking.  
+    - **Solution:** Created targeted composite indexes and materialized complex aggregation logic into parameterized views for rapid data access.
 
-4. **Automation and Environment Consistency**  
-    - **:crossed_swords:** Ensuring reliable development and testing environments across platforms.  
-    - **:star2:** Used Docker Compose for each variant and automated CI/CD with GitHub Actions.
+4. **Automation & Environment Reproducibility**  
+    - **Challenge:** Providing deterministic local development and continuous integration environments across RDBMS variants.  
+    - **Solution:** Built Docker Compose services for PostgreSQL and MySQL, orchestrated via Python test harnesses and GitHub Actions.
 
 ## ***Achievements***
 

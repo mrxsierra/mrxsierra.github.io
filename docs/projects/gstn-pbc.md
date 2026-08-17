@@ -148,25 +148,25 @@ The workflow covers the full ML lifecycle: data integrity checks, EDA, preproces
 
 ### Certificate
 
-![Certificate](/cert/GSTN_Team_137.jpg)
+![Certificate](../cert/GSTN_Team_137.jpg)
 
-## **:crossed_swords: Challenges & :star2: Solutions**
+## Technical Challenges & Architectural Solutions
 
 1. **Severe Class Imbalance**
-    - :crossed_swords: 91%/9% class split risked model bias.
-    - :star2: Used RUS, SMOTE, and tuned `scale_pos_weight` to balance classes and maximize recall/F1.
+    - **Challenge:** A 91%/9% class distribution posed high risk of majority-class prediction bias.
+    - **Solution:** Evaluated Random Under-Sampling (RUS), SMOTE, and tuned gradient boosting `scale_pos_weight` to optimize the Precision-Recall trade-off and maximize F1/MCC scores.
 
-2. **Missing Values & Outliers**
-    - :crossed_swords: Columns with >50% missing; outliers in many features.
-    - :star2: Dropped high-missing columns, used median imputation, and Winsorized outliers.
+2. **Missing Data & Outlier Management**
+    - **Challenge:** Multiple feature columns exhibited >50% missing values and extreme skewness.
+    - **Solution:** Removed features exceeding the missingness threshold, applied robust median imputation, and performed Winsorization on heavy-tailed numeric distributions.
 
-3. **Data Leakage Risk**
-    - :crossed_swords: Potential for train-test contamination and target leakage.
-    - :star2: Strict separation of train/test, careful pipeline design, and validation of all preprocessing steps.
+3. **Data Leakage & Generalization Safeguards**
+    - **Challenge:** Risk of subtle target leakage across pre-processing and feature selection steps.
+    - **Solution:** Enforced strict nested cross-validation and pipeline encapsulation to prevent data contamination between train and evaluation partitions.
 
-4. **Compliance & Anonymization**
-    - :crossed_swords: Competition required anonymized model names/params and no data sharing.
-    - :star2: Before sharing code and documentation publicly, randomized/anonymized all model identifiers and parameters; excluded all data files.
+4. **Competition Compliance & Anonymization**
+    - **Challenge:** Strict compliance mandate requiring zero data leakage and anonymized model identifiers.
+    - **Solution:** Developed an automated parameter obfuscation routine and excluded all raw dataset artifacts prior to public repository release.
 
 ## **Achievements**
 

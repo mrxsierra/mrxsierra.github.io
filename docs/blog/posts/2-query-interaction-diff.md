@@ -22,7 +22,7 @@ This post will serve as another handy reference, highlighting the practical diff
 
 !!! tip "Drill"
 
-    > **`⚠️Warning` :** ***Refer to `Official Docs`, when in doubt. `"Its not ultimate source of truth. It could be good starting point."`***
+    > **Warning:** Always refer to official database documentation when evaluating dialect differences.
     
     ---
     - ***Understanding :*** Use [this project](https://github.com/mrxsierra/ems-db/) as reference.
@@ -32,7 +32,7 @@ In our [previous post](1-schema-diff.md), we explored the key differences in sch
 
 Now, let's shift our focus to the equally important aspects of how we *interact* with these databases: ***running queries, using their command-line interfaces (CLIs), and understanding connection nuances, especially in a Dockerized environment.***
 
-> **`ℹ️Note` :** **This guide draws insights from the following project files (within the [ems-db](https://github.com/mrxsierra/ems-db/) repository)**:
+> **Note:** This guide draws insights from the following project files within the [ems-db](https://github.com/mrxsierra/ems-db/) repository:
 
 - **Query Scripts:**
     - [sqlite/queries.sql](https://github.com/mrxsierra/ems-db/blob/main/sqlite/queries.sql)
@@ -78,7 +78,7 @@ Each database has its own command-line tool for direct interaction.
         - `ems`: Database name (as defined in `compose.yml` `MYSQL_DATABASE` env var).
     - MySQL's [`README.Docker.md`](https://github.com/mrxsierra/ems-db/blob/main/mysql/README.Docker.md#app-service-too-has-mysqlsh-mysql-shell-install-for-quick-interaction) also mentions `mysqlsh` as a more powerful alternative shell, aliased as `mysql` in the `app` service. Often used for connecting with `cloud native mysql server` from `client machines`.
 
-> 🔍 **Tip**: All three databases differ significantly in how they let you inspect objects (like tables, views, indexes) from shell clients—see section 5 and beyond.
+> **Tip:** All three databases differ significantly in how they let you inspect objects (like tables, views, indexes) from shell clients—see section 5 and beyond.
 
 ### 2. Executing SQL Scripts from Files
 
@@ -100,7 +100,7 @@ Running a series of SQL commands from a `.sql` file is a common task.
     - Shell command: `source ./queries.sql`
     - CLI redirection: `mysql -tv -uroot -psecret ems < ./queries.sql`
 
-> ✨ **Important**: When schema files contain stored procedures, triggers, or functions that require `DELIMITER`, executing them inside the `mysql` CLI is more reliable than using `mysql-connector-python` (which doesn't support `DELIMITER`). This limitation makes shell execution the preferred approach for complex DDL.
+> **Important:** When schema files contain stored procedures, triggers, or functions that require `DELIMITER`, executing them inside the `mysql` CLI is more reliable than using `mysql-connector-python` (which doesn't support `DELIMITER`). This limitation makes shell execution the preferred approach for complex DDL.
 >
 > As seen in [`mysql/usage.md`](https://github.com/mrxsierra/ems-db/blob/main/mysql/usage.md#step-2-create-database-schema) and [`mysql/queries.sql`](https://github.com/mrxsierra/ems-db/blob/main/mysql/queries.sql)
 
@@ -307,7 +307,7 @@ By familiarizing yourself with these practical aspects, you become a more well-r
 
     *The examples are drawn from specific project files and general knowledge. Always refer to the official documentation for the most comprehensive and up-to-date information.*
 
-## References & Resources 🔗
+## References &amp; Technical Documentation
 
 This section compiles useful links found within the [`ems-db`](https://github.com/mrxsierra/ems-db/) project's documentation (`usage.md`, `README.Docker.md` files), categorized for easier navigation.
 

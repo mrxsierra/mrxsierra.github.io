@@ -17,7 +17,7 @@ As developers, we often encounter various SQL databases, each with its own flavo
 <!-- more -->
 **Recently**, while working on an [***`Exam Management System (EMS)`***](https://github.com/mrxsierra/ems-db/), I had the opportunity to define the database schema for `SQLite`, `MySQL`, and `PostgreSQL`. This exercise highlighted some fascinating and crucial differences between these popular relational database management systems (RDBMS).
 
-> **`ℹ️Note`:** **This post aims to serve as a `practical guide` and a bit of a `cheatsheet`, drawing `insights` directly from the `schema` files of project.**
+> **Note:** This guide provides a comparative technical reference drawing insights directly from production schema files.
 
 ***Project Repo :*** [ems-db](https://github.com/mrxsierra/ems-db/) **`<-- root-dir-name`**
 
@@ -33,7 +33,7 @@ Let's dive into the specific areas where these `SQL dialects` diverge:
 
 !!! tip "Drill"
 
-    > **`⚠️Warning` :** ***Always Refer to `Official Docs`, when in doubt. "`Its not ultimate source of truth. It could be good starting point.`"***
+    > **Warning:** Always refer to official documentation when evaluating dialect differences.
 
     ---
     - **Understanding :** Use [project](https://github.com/mrxsierra/ems-db/) as reference.
@@ -392,29 +392,13 @@ The basic syntax is similar, but quoting and specific features (like conditional
 - **Practical Experience:** It often indicates hands-on experience with multiple databases, which is a valuable asset in diverse tech environments.
 - **Problem-Solving:** The ability to adapt a schema or queries for different SQL dialects showcases problem-solving skills.
 
-## Next Read 📖
+## Recommended Next Reading
 
-> ***For Debunking** `sql queries` and `clients interaction` differences b/w SQLite, MySQL, and PostgreSQL,*
+> ***For deeper exploration of** `sql queries` and `client interaction` nuances across SQLite, MySQL, and PostgreSQL:*
 
-- `Part-2` **[Beyond the Schema: A Practical Guide to Querying and Interacting with SQLite, MySQL, & PostgreSQL](2-query-interaction-diff.md)**
+- `Part-2`: **[Beyond the Schema: A Practical Guide to Querying and Interacting with SQLite, MySQL, & PostgreSQL](2-query-interaction-diff.md)**
 
-> **Note :** It's build upon where this post left.
-
-## Conclusion
-
-While `SQL` is a "standard," its implementations across different RDBMSs like SQLite, MySQL, and PostgreSQL have distinct personalities.
-
-The journey of creating a consistent schema for my [`EMS project`](https://github.com/mrxsierra/ems-db/) across these three was a great learning experience. **Remember, always check the documentation for the specific dialect you're working with.**
-
-I hope this comparative overview helps you in your database endeavors! ***Happy coding***!
-
----
-
-!!! warning "Disclaimer"
-
-    *The examples are drawn from specific project files and general knowledge. Always refer to the official documentation for the most comprehensive and up-to-date information.*
-
-## References & Resources 🔗
+## References &amp; Technical Documentation
 
 This section compiles useful links found within the [`ems-db`](https://github.com/mrxsierra/ems-db/) project's documentation (`usage.md`, `README.Docker.md` files), categorized for easier navigation.
 

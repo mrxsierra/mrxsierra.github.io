@@ -1,0 +1,40 @@
+# Sunil Sharma (mrxsierra) — AI & Full-Stack Systems Portfolio
+> Standard: llmstxt.org Specification. High-density machine-readable index for LLMs, autonomous coding agents, and search engines.
+
+## Developer Overview
+- **Name**: Sunil Sharma
+- **Handle**: @mrxsierra
+- **Title**: Full-Stack & AI Systems Specialist
+- **Website**: https://mrxsierra.github.io/
+- **GitHub**: https://github.com/mrxsierra
+- **Primary Specializations**: Autonomous Agent Architectures, Multi-RDBMS Database Engineering (PostgreSQL, MySQL, SQLite), Machine Learning Competition Pipelines, Cloud Tooling (AWS S3, LocalStack, Docker).
+
+## Verified Accreditations & Credentials
+- **GSTN National Hackathon Finalist**: Goods and Services Tax Network (GSTN) • Machine Learning Predictive Binary Classification (900K+ records)
+- **Harvard CS50x**: Introduction to Computer Science • C, Python, SQL, Memory Management & Data Structures
+- **Harvard CS50 SQL**: Introduction to Databases with SQL • Normalization, Views, Triggers, Optimization
+- **Harvard CS50P**: Introduction to Programming with Python • OOP, Pytest, Regex, Package Architecture
+- **IIRS (ISRO)**: AI/ML for Geospatial Data Analysis • Machine Learning & Spatial Data Science
+
+---
+
+## Featured Engineering Projects
+
+- [GSTN Predictive Binary Classification](https://mrxsierra.github.io/projects/gstn-pbc/): National-level hackathon finalist machine learning pipeline analyzing 900,000+ real-world GST records. Implemented XGBoost, LightGBM, Random Under-Sampling, and SHAP explainability.
+- [Examination Management System DB (EMS DB)](https://mrxsierra.github.io/projects/ems-db/): Production-grade multi-RDBMS architecture with parity across PostgreSQL, MySQL, and SQLite. Features automated Python database migrations, Docker Compose isolation, and GitHub Actions CI validation.
+- [S3 Faker Mock Data Generator](https://mrxsierra.github.io/projects/s3-faker/): Developer-first high-throughput synthetic dataset generator with native Amazon S3 and LocalStack emulator support.
+- [Paraxcel Document Toolkit](https://mrxsierra.github.io/projects/paraxcel/): High-performance DOCX-to-Excel tabular extraction engine with Pydantic validation and Tkinter desktop GUI.
+- [Naukri Market Data Scraper](https://mrxsierra.github.io/projects/naukri-webscraper/): Resilient Selenium & BeautifulSoup web scraping engine with pytest test benches and Pandas export for tech hiring telemetry.
+- [Real-Time Test Management Interface](https://mrxsierra.github.io/projects/test-site/): Dynamic client-side test taking application with session serialization and responsive UI.
+
+---
+
+## Technical Articles & Architecture Deep Dives
+
+- [Navigating the Nuances: A Developer's Guide to SQL Dialects (SQLite, MySQL, PostgreSQL)](https://mrxsierra.github.io/blog/2025/05/07/navigating-the-nuances-a-developers-guide-to-sql-dialects-sqlite-mysql-postgresql/): Comprehensive breakdown of SQL dialect differences across DDL, triggers, data types, and index strategies.
+- [Beyond the Schema: A Practical Guide to Querying and Interacting with SQLite, MySQL, & PostgreSQL](https://mrxsierra.github.io/blog/2025/05/07/beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql--postgresql/): Practical patterns for CLI interaction, Dockerized connection debugging, and Python multi-database automation.
+
+---
+
+## Full Knowledge Base
+- [Full Text Knowledge Base (llms-full.txt)](https://mrxsierra.github.io/llms-full.txt): Complete concatenated raw markdown containing full project architectures, schema scripts, and guides in a single file for direct prompt context injection.

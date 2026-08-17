@@ -1,340 +1,471 @@
 ---
-description: Personal & Portfolio website of Sunil Sharma - Full-Stack & AI Systems Engineer
+description: Sunil Sharma (mrxsierra) - Full-Stack & AI Systems Specialist. Technical architecture, autonomous agent workflows, distributed databases, and cloud systems.
 hide:
   - tags
   - footer
   - navigation
   - toc
+  - edit
+  - action.view
+  - action.edit
+  - content.action.view
 tags:
   - Welcome
 ---
+
 <!-- markdownlint-disable MD041 -->
 <div class="main-body">
 
-<!-- Welcome Banner Quote -->
-<blockquote id="wel-quote">
-    <h3 id="welcome">
-    <i class="fas fa-quote-left"></i>
-    Welcome to my Engineering Portfolio &amp; Technical Hub
-    <i class="fas fa-quote-right"></i>
-    </h3>
-</blockquote>
-
 <!-- Hero Section -->
-<section>
-    <div class="hero-content">
-        <h1 id="intro">Hi, I'm <span class="highlight" style="font-size: 2.8em;" id="name">Sunil Sharma</span> 👋</h1>
-        <h2>Full-Stack &amp; AI Systems Engineer</h2>
-        <p>
-            Architecting autonomous agent workflows, high-performance web applications, and scalable developer tools.
-        </p>
-        
-        <!-- Terminal Summary Preview Widget -->
-        <div class="terminal-widget">
-            <div class="terminal-header">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-                <span class="terminal-title">mrxsierra ~ bash</span>
-            </div>
-            <div class="terminal-body">
-                <p class="cmd"><span class="prompt">$</span> npx mrxsierra --summary</p>
-                <p class="res"><span class="key">&gt; Role   :</span> Full-Stack &amp; AI Systems Specialist</p>
-                <p class="res"><span class="key">&gt; Stack  :</span> Python • TypeScript • React • LangGraph • FastAPI • Docker</p>
-                <p class="res"><span class="key">&gt; Status :</span> Open for High-Impact Projects &amp; Remote Roles 🚀</p>
-            </div>
-        </div>
-
-        <div style="margin-top: 25px; display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
-            <a href="#projects" class="md-button md-button--primary" style="font-weight: 700;">View Proof of Work</a>
-            <a href="mailto:9.sunilsharma@gmail.com" class="md-button" style="font-weight: 700;"><i class="fas fa-envelope"></i> Get in Touch</a>
-            <a href="resume" class="md-button" style="font-weight: 700;"><i class="fas fa-file-alt"></i> Resume</a>
-        </div>
+<section id="intro" class="hero-container">
+  <div class="hero-main">
+    <div class="hero-status-pill">
+      <span class="hero-status-indicator"></span>
+      <span>Systems Architecture • Autonomous Agents • Distributed Data</span>
     </div>
+    <h1 class="hero-title">Sunil Sharma</h1>
+    <div class="hero-role">Full-Stack &amp; AI Systems Specialist</div>
+    <p class="hero-bio">
+      Engineering autonomous agent architectures, high-performance web systems, and reproducible cloud automation pipelines. Specializing in AI systems orchestration and multi-RDBMS database optimization.
+    </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">
+        <i class="fas fa-layer-group"></i> Proof of Work
+      </a>
+      <a href="resume.md" class="btn btn-secondary">
+        <i class="fas fa-file-lines"></i> Credentials &amp; Resume
+      </a>
+      <a href="contact.md" class="btn btn-ghost">
+        <i class="fas fa-paper-plane"></i> Contact
+      </a>
+    </div>
+  </div>
+
+  <!-- Terminal Preview Widget -->
+  <div class="terminal-widget">
+    <div class="terminal-header">
+      <div class="terminal-controls">
+        <span class="terminal-dot red"></span>
+        <span class="terminal-dot yellow"></span>
+        <span class="terminal-dot green"></span>
+      </div>
+      <span class="terminal-title">mrxsierra ~ bash</span>
+      <span></span>
+    </div>
+    <div class="terminal-body">
+      <div class="terminal-line">
+        <span class="terminal-prompt">$</span>
+        <span class="terminal-command">npx mrxsierra --summary</span>
+      </div>
+      <div class="terminal-line">
+        <span class="terminal-key">&gt; Focus</span>
+        <span class="terminal-val">Autonomous Agents &amp; AI Orchestration</span>
+      </div>
+      <div class="terminal-line">
+        <span class="terminal-key">&gt; Stack</span>
+        <span class="terminal-val">Python • TypeScript • React • LangGraph</span>
+      </div>
+      <div class="terminal-line">
+        <span class="terminal-key">&gt; Backend</span>
+        <span class="terminal-val">FastAPI • PostgreSQL • Docker • AWS S3</span>
+      </div>
+      <div class="terminal-line">
+        <span class="terminal-key">&gt; System</span>
+        <span class="terminal-val">Production-grade &amp; verified <span class="terminal-cursor"></span></span>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- Navigation Bar Sticky -->
-<div class="hero-links-container">
-    <div class="hero-links">
-        <a class="hero-link" href="#intro">Intro</a>
-        <a class="hero-link" href="#projects">Projects</a>
-        <a class="hero-link" href="#skills">Skills</a>
-        <a class="hero-link" href="#blogs">Blogs</a>
-        <a class="hero-link" href="#about">About</a>
-        <a class="hero-link" href="#contact">Connect</a>
-    </div>
+<!-- Quiet Sticky Sub-Navigation Bar -->
+<div class="subnav-sticky">
+  <nav class="subnav-pills" aria-label="Page Sections">
+    <a class="subnav-pill active" href="#intro">Overview</a>
+    <a class="subnav-pill" href="#projects">Proof of Work</a>
+    <a class="subnav-pill" href="#capabilities">Capabilities</a>
+    <a class="subnav-pill" href="#writing">Writing</a>
+    <a class="subnav-pill" href="#connect">Network</a>
+  </nav>
 </div>
 
-<!-- Featured Projects Section -->
-<section>
-    <h2 id="projects"><i class="fas fa-rocket" style="color: var(--primary-color);"></i> Featured Projects</h2>
-    <p>Production-grade software, ML pipelines, and cloud automation tools.</p>
+<!-- Featured Projects / Proof of Work -->
+<section id="projects" class="home-section">
+  <div class="home-section-header">
+    <div class="home-section-title-wrap">
+      <span class="home-section-tag">Case Studies</span>
+      <h2 class="home-section-title">
+        <i class="fas fa-cubes-stacked"></i> Featured Proof of Work
+      </h2>
+      <p class="home-section-desc">Production software, ML classification pipelines, and cloud developer tools.</p>
+    </div>
+    <a href="projects/index.md" class="home-section-action">All Projects <i class="fas fa-arrow-right"></i></a>
+  </div>
+
+  <div class="card-grid-2">
     
-    <div class="project-cards">
-        
-        <!-- Project 1: GSTN Hackathon -->
-        <div class="project-card">
-            <div class="project-content">
-                <h3>GSTN Predictive Binary Classification</h3>
-                <p>National-level hackathon finalist project — interpretable ML pipeline analyzing 900,000+ GST records.</p>
-                <div class="pill-container">
-                    <span class="skill-pill">Python</span>
-                    <span class="skill-pill">Scikit-Learn</span>
-                    <span class="skill-pill">XGBoost</span>
-                </div>
-                <a class="read-more" href="projects/gstn-pbc/#gstn-predictive-binary-classification">Case Study &rarr;</a>
-            </div>
-            <a class="project-link" href="projects/gstn-pbc/#gstn-predictive-binary-classification">
-                <i class="fas fa-trophy"></i>
-            </a>
+    <!-- Project 1: GSTN Hackathon -->
+    <a class="clean-card" href="projects/gstn-pbc/">
+      <div class="project-card-header">
+        <span class="project-category-badge">Machine Learning</span>
+        <div class="project-icon-box">
+          <i class="fas fa-award"></i>
         </div>
+      </div>
+      <h3 class="project-card-title">GSTN Predictive Binary Classification</h3>
+      <p class="project-card-desc">
+        National-level hackathon finalist project — interpretable gradient boosted ML pipeline analyzing 900,000+ real-world GST records.
+      </p>
+      <div class="tag-list">
+        <span class="tag-item">Python</span>
+        <span class="tag-item">Scikit-Learn</span>
+        <span class="tag-item">XGBoost</span>
+        <span class="tag-item">SHAP</span>
+      </div>
+      <span class="card-footer-link">Case Study <i class="fas fa-arrow-right"></i></span>
+    </a>
 
-        <!-- Project 2: EMS DB -->
-        <div class="project-card">
-            <div class="project-content">
-                <h3>Examination Management System DB</h3>
-                <p>Multi-RDBMS exam management system with Python automation, Dockerized environments &amp; CI support.</p>
-                <div class="pill-container">
-                    <span class="skill-pill">PostgreSQL</span>
-                    <span class="skill-pill">MySQL</span>
-                    <span class="skill-pill">Docker</span>
-                </div>
-                <a class="read-more" href="projects/ems-db/#examination-management-system-database">Case Study &rarr;</a>
-            </div>
-            <a class="project-link" href="projects/ems-db/#examination-management-system-database">
-                <i class="fas fa-database"></i>
-            </a>
+    <!-- Project 2: EMS DB -->
+    <a class="clean-card" href="projects/ems-db/">
+      <div class="project-card-header">
+        <span class="project-category-badge">Database Architecture</span>
+        <div class="project-icon-box">
+          <i class="fas fa-database"></i>
         </div>
+      </div>
+      <h3 class="project-card-title">Examination Management System DB</h3>
+      <p class="project-card-desc">
+        Multi-RDBMS academic examination platform with Python database automation, Dockerized environments, and CI pipeline validation.
+      </p>
+      <div class="tag-list">
+        <span class="tag-item">PostgreSQL</span>
+        <span class="tag-item">MySQL</span>
+        <span class="tag-item">Docker</span>
+        <span class="tag-item">CI/CD</span>
+      </div>
+      <span class="card-footer-link">Case Study <i class="fas fa-arrow-right"></i></span>
+    </a>
 
-        <!-- Project 3: S3 Faker -->
-        <div class="project-card">
-            <div class="project-content">
-                <h3>S3 Faker Data Generator</h3>
-                <p>High-performance mock data generator with direct AWS S3 and LocalStack integration for cloud testing.</p>
-                <div class="pill-container">
-                    <span class="skill-pill">Python</span>
-                    <span class="skill-pill">AWS S3</span>
-                    <span class="skill-pill">Boto3</span>
-                </div>
-                <a class="read-more" href="projects/s3-faker/#s3-faker">Case Study &rarr;</a>
-            </div>
-            <a class="project-link" href="projects/s3-faker/#s3-faker">
-                <i class="fas fa-cloud-upload-alt"></i>
-            </a>
+    <!-- Project 3: S3 Faker -->
+    <a class="clean-card" href="projects/s3-faker/">
+      <div class="project-card-header">
+        <span class="project-category-badge">Cloud Tooling</span>
+        <div class="project-icon-box">
+          <i class="fas fa-cloud-arrow-up"></i>
         </div>
+      </div>
+      <h3 class="project-card-title">S3 Faker Mock Data Generator</h3>
+      <p class="project-card-desc">
+        High-throughput synthetic data generation suite with native AWS S3 and LocalStack integration for cloud testing pipelines.
+      </p>
+      <div class="tag-list">
+        <span class="tag-item">Python</span>
+        <span class="tag-item">AWS S3</span>
+        <span class="tag-item">LocalStack</span>
+        <span class="tag-item">Boto3</span>
+      </div>
+      <span class="card-footer-link">Case Study <i class="fas fa-arrow-right"></i></span>
+    </a>
 
-        <!-- Project 4: Paraxcel -->
-        <div class="project-card">
-            <div class="project-content">
-                <h3>Paraxcel Toolkit</h3>
-                <p>Python engine for high-throughput Excel data extraction, complex transformation, and automated reporting.</p>
-                <div class="pill-container">
-                    <span class="skill-pill">Python</span>
-                    <span class="skill-pill">Pandas</span>
-                    <span class="skill-pill">OpenPyXL</span>
-                </div>
-                <a class="read-more" href="projects/paraxcel/#paraxcel">Case Study &rarr;</a>
-            </div>
-            <a class="project-link" href="projects/paraxcel/#paraxcel">
-                <i class="fas fa-file-excel"></i>
-            </a>
+    <!-- Project 4: Paraxcel -->
+    <a class="clean-card" href="projects/paraxcel/">
+      <div class="project-card-header">
+        <span class="project-category-badge">Data Automation</span>
+        <div class="project-icon-box">
+          <i class="fas fa-file-excel"></i>
         </div>
+      </div>
+      <h3 class="project-card-title">Paraxcel Document Toolkit</h3>
+      <p class="project-card-desc">
+        High-performance document parsing engine for complex Docx-to-Excel extraction, tabular data normalization, and reporting.
+      </p>
+      <div class="tag-list">
+        <span class="tag-item">Python</span>
+        <span class="tag-item">Pandas</span>
+        <span class="tag-item">OpenPyXL</span>
+      </div>
+      <span class="card-footer-link">Case Study <i class="fas fa-arrow-right"></i></span>
+    </a>
 
-        <!-- Project 5: Naukri Scraper -->
-        <div class="project-card">
-            <div class="project-content">
-                <h3>Naukri Web Scraper</h3>
-                <p>Automated Selenium scraper for job market data extraction, telemetry analysis &amp; job aggregation.</p>
-                <div class="pill-container">
-                    <span class="skill-pill">Python</span>
-                    <span class="skill-pill">Selenium</span>
-                    <span class="skill-pill">BeautifulSoup</span>
-                </div>
-                <a class="read-more" href="projects/naukri-webscraper/#naukri-web-scraper">Case Study &rarr;</a>
-            </div>
-            <a class="project-link" href="projects/naukri-webscraper/#naukri-web-scraper">
-                <i class="fas fa-spider"></i>
-            </a>
+    <!-- Project 5: Naukri Scraper -->
+    <a class="clean-card" href="projects/naukri-webscraper/">
+      <div class="project-card-header">
+        <span class="project-category-badge">Web Automation</span>
+        <div class="project-icon-box">
+          <i class="fas fa-spider"></i>
         </div>
+      </div>
+      <h3 class="project-card-title">Naukri Market Data Scraper</h3>
+      <p class="project-card-desc">
+        Automated Selenium &amp; BeautifulSoup extraction engine for tech hiring telemetry, salary benchmarking, and role aggregation.
+      </p>
+      <div class="tag-list">
+        <span class="tag-item">Python</span>
+        <span class="tag-item">Selenium</span>
+        <span class="tag-item">BeautifulSoup</span>
+      </div>
+      <span class="card-footer-link">Case Study <i class="fas fa-arrow-right"></i></span>
+    </a>
 
-        <!-- Project 6: Test Site -->
-        <div class="project-card">
-            <div class="project-content">
-                <h3>Test Management Web Site</h3>
-                <p>Responsive web interface for real-time exam management, test scheduling, and student result tracking.</p>
-                <div class="pill-container">
-                    <span class="skill-pill">JavaScript</span>
-                    <span class="skill-pill">HTML5</span>
-                    <span class="skill-pill">CSS3</span>
-                </div>
-                <a class="read-more" href="projects/test-site/#test-management-site">Case Study &rarr;</a>
-            </div>
-            <a class="project-link" href="projects/test-site/#test-management-site">
-                <i class="fas fa-clipboard-list"></i>
-            </a>
+    <!-- Project 6: Test Site -->
+    <a class="clean-card" href="projects/test-site/">
+      <div class="project-card-header">
+        <span class="project-category-badge">Web Application</span>
+        <div class="project-icon-box">
+          <i class="fas fa-clipboard-check"></i>
         </div>
+      </div>
+      <h3 class="project-card-title">Real-Time Test Management Interface</h3>
+      <p class="project-card-desc">
+        Responsive frontend application for live examination management, test scheduling, student authentication, and scoring.
+      </p>
+      <div class="tag-list">
+        <span class="tag-item">JavaScript</span>
+        <span class="tag-item">HTML5</span>
+        <span class="tag-item">CSS3</span>
+      </div>
+      <span class="card-footer-link">Case Study <i class="fas fa-arrow-right"></i></span>
+    </a>
 
-    </div>
-    <div class="explore-button">
-        <a href="projects/">Explore All Projects &rarr;</a>
-    </div>
+  </div>
 </section>
 
-<!-- Skills Section -->
-<section class="skill-section">
-    <h2 id="skills"><i class="fas fa-microchip" style="color: var(--primary-color);"></i> Technical Stack &amp; Capabilities</h2>
-    <p>Core engineering competencies across modern full-stack &amp; AI architectures.</p>
-    <div class="skills-grid">
-        
-        <div class="skill-card">
-            <div class="content">
-                <h3>🤖 AI &amp; Autonomous Systems</h3>
-                <p class="skill-list">
-                    LLM Orchestration, Autonomous Agents, LangGraph, Scikit-Learn, XGBoost, Machine Learning Pipelines, Kaggle Tabular Modeling
-                </p>
-            </div>
-            <i class="fas fa-robot skill-icon"></i>
-        </div>
-
-        <div class="skill-card">
-            <div class="content">
-                <h3>⚡ Full-Stack &amp; Web Engineering</h3>
-                <p class="skill-list">
-                    Python (FastAPI, Flask, Django), JavaScript, TypeScript, React, HTML5, CSS3, REST &amp; GraphQL APIs, Microservices
-                </p>
-            </div>
-            <i class="fas fa-code skill-icon"></i>
-        </div>
-
-        <div class="skill-card">
-            <div class="content">
-                <h3>🗄️ Databases &amp; Storage Architecture</h3>
-                <p class="skill-list">
-                    PostgreSQL, MySQL, SQLite, MongoDB, AWS S3, Relational Schema Design, Query Optimization, Multi-RDBMS Automation
-                </p>
-            </div>
-            <i class="fas fa-database skill-icon"></i>
-        </div>
-
-        <div class="skill-card">
-            <div class="content">
-                <h3>🛠️ DevOps &amp; Container Registries</h3>
-                <p class="skill-list">
-                    Docker, Git, GitHub Actions, Linux, Cloud Automation, LocalStack, PyPI Package Publishing, DockerHub
-                </p>
-            </div>
-            <i class="fas fa-terminal skill-icon"></i>
-        </div>
-
+<!-- Technical Capabilities & Stack Matrix -->
+<section id="capabilities" class="home-section">
+  <div class="home-section-header">
+    <div class="home-section-title-wrap">
+      <span class="home-section-tag">Competencies</span>
+      <h2 class="home-section-title">
+        <i class="fas fa-microchip"></i> System Capabilities &amp; Architecture
+      </h2>
+      <p class="home-section-desc">Core competencies across autonomous AI architectures, distributed databases, and cloud engineering.</p>
     </div>
+  </div>
+
+  <div class="card-grid-2">
+    
+    <div class="capability-card">
+      <div class="capability-header">
+        <div class="capability-icon">
+          <i class="fas fa-brain"></i>
+        </div>
+        <h3 class="capability-title">AI &amp; Autonomous Systems</h3>
+      </div>
+      <div class="capability-tags">
+        <span class="capability-tag">LLM Orchestration</span>
+        <span class="capability-tag">Autonomous Agents</span>
+        <span class="capability-tag">LangGraph</span>
+        <span class="capability-tag">Scikit-Learn</span>
+        <span class="capability-tag">XGBoost</span>
+        <span class="capability-tag">ML Pipelines</span>
+        <span class="capability-tag">Kaggle Tabular Modeling</span>
+      </div>
+    </div>
+
+    <div class="capability-card">
+      <div class="capability-header">
+        <div class="capability-icon">
+          <i class="fas fa-code"></i>
+        </div>
+        <h3 class="capability-title">Full-Stack &amp; Web Systems</h3>
+      </div>
+      <div class="capability-tags">
+        <span class="capability-tag">Python (FastAPI, Flask)</span>
+        <span class="capability-tag">TypeScript</span>
+        <span class="capability-tag">JavaScript (ES6+)</span>
+        <span class="capability-tag">React</span>
+        <span class="capability-tag">REST &amp; GraphQL APIs</span>
+        <span class="capability-tag">Modern CSS3</span>
+      </div>
+    </div>
+
+    <div class="capability-card">
+      <div class="capability-header">
+        <div class="capability-icon">
+          <i class="fas fa-database"></i>
+        </div>
+        <h3 class="capability-title">Databases &amp; Storage Architecture</h3>
+      </div>
+      <div class="capability-tags">
+        <span class="capability-tag">PostgreSQL</span>
+        <span class="capability-tag">MySQL</span>
+        <span class="capability-tag">SQLite</span>
+        <span class="capability-tag">MongoDB</span>
+        <span class="capability-tag">AWS S3</span>
+        <span class="capability-tag">Schema Optimization</span>
+        <span class="capability-tag">Multi-RDBMS Automation</span>
+      </div>
+    </div>
+
+    <div class="capability-card">
+      <div class="capability-header">
+        <div class="capability-icon">
+          <i class="fas fa-terminal"></i>
+        </div>
+        <h3 class="capability-title">DevOps &amp; Infrastructure</h3>
+      </div>
+      <div class="capability-tags">
+        <span class="capability-tag">Docker &amp; Compose</span>
+        <span class="capability-tag">GitHub Actions CI/CD</span>
+        <span class="capability-tag">Linux / Bash</span>
+        <span class="capability-tag">LocalStack</span>
+        <span class="capability-tag">PyPI Packaging</span>
+        <span class="capability-tag">DockerHub Registries</span>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-<!-- Blogs Section -->
-<section>
-    <h2 id="blogs"><i class="fas fa-book-open" style="color: var(--primary-color);"></i> Featured Technical Writing</h2>
-    <p>In-depth engineering post-mortems, database guides, and architectural breakdowns.</p>
-    <div class="blog-cards">
-        <div class="blog-card">
-            <div class="blog-content">
-                <h3>Navigating the Nuances: SQL Dialects</h3>
-                <p>A Developer's Guide to SQL Dialects (SQLite, MySQL, PostgreSQL) — performance trade-offs, syntax nuances, and schema design.</p>
-                <a class="read-more" href="blog/2025/05/07/navigating-the-nuances-a-developers-guide-to-sql-dialects-sqlite-mysql-postgresql/">Read Full Guide &rarr;</a>
-            </div>
-            <a class="blog-link" href="blog/2025/05/07/navigating-the-nuances-a-developers-guide-to-sql-dialects-sqlite-mysql-postgresql/">
-                <i class="fas fa-code-branch"></i>
-            </a>
-        </div>
-        <div class="blog-card">
-            <div class="blog-content">
-                <h3>Beyond the Schema: Database Querying</h3>
-                <p>A Practical Guide to Querying and Interacting with SQLite, MySQL, &amp; PostgreSQL Databases programmatically in Python.</p>
-                <a class="read-more" href="blog/2025/05/07/beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql--postgresql/">Read Full Guide &rarr;</a>
-            </div>
-            <a class="blog-link" href="blog/2025/05/07/beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql--postgresql/">
-                <i class="fas fa-magnifying-glass"></i>
-            </a>
-        </div>
+<!-- Technical Writing & Guides -->
+<section id="writing" class="home-section">
+  <div class="home-section-header">
+    <div class="home-section-title-wrap">
+      <span class="home-section-tag">Publications</span>
+      <h2 class="home-section-title">
+        <i class="fas fa-book-open"></i> Technical Writing
+      </h2>
+      <p class="home-section-desc">Practical architectural guides, SQL deep dives, and programmatic data tutorials.</p>
     </div>
-    <div class="explore-button">
-        <a href="blog/">Read All Blog Posts &rarr;</a>
-    </div>
+    <a href="blog/index.md" class="home-section-action">All Articles <i class="fas fa-arrow-right"></i></a>
+  </div>
+
+  <div class="card-grid-2">
+    
+    <a class="article-card" href="blog/2025/05/07/navigating-the-nuances-a-developers-guide-to-sql-dialects-sqlite-mysql-postgresql/">
+      <div class="article-meta">
+        <span class="article-tag">Database Architecture</span>
+        <span>•</span>
+        <span>Technical Guide</span>
+      </div>
+      <h3 class="article-title">Navigating the Nuances: SQL Dialects</h3>
+      <p class="article-excerpt">
+        A Developer's Guide to SQL Dialects (SQLite, MySQL, PostgreSQL) — performance trade-offs, syntax nuances, and cross-engine portability.
+      </p>
+      <span class="card-footer-link">Read Full Guide <i class="fas fa-arrow-right"></i></span>
+    </a>
+
+    <a class="article-card" href="blog/2025/05/07/beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql--postgresql/">
+      <div class="article-meta">
+        <span class="article-tag">Python &amp; SQL</span>
+        <span>•</span>
+        <span>Tutorial</span>
+      </div>
+      <h3 class="article-title">Beyond the Schema: Practical Database Querying</h3>
+      <p class="article-excerpt">
+        A practical guide to querying, parameterizing, and automating SQLite, MySQL, &amp; PostgreSQL databases programmatically in Python.
+      </p>
+      <span class="card-footer-link">Read Full Guide <i class="fas fa-arrow-right"></i></span>
+    </a>
+
+  </div>
 </section>
 
-<!-- Connect & Social Grid Section -->
-<section class="about-connect">
-    <div class="about-section">
-        <h2 id="about"><i class="fas fa-user-circle"></i> About Sunil Sharma</h2>
-        <p>Full-Stack &amp; AI Systems Engineer passionate about high-leverage software, agentic workflows, and open-source development.</p>
-        <div class="resume-link">
-            <a href="resume">
-                <i class="fas fa-file-alt"></i>
-                Download Resume (PDF)
-            </a>
-        </div>
-        <div class="explore-button">
-            <a href="about">
-                <i class="fas fa-id-card"></i>
-            Full Story &amp; Bio &rarr;</a>
-        </div>
+<!-- Connect & Background Workspace -->
+<section id="connect" class="home-section">
+  <div class="home-section-header">
+    <div class="home-section-title-wrap">
+      <span class="home-section-tag">Identity</span>
+      <h2 class="home-section-title">
+        <i class="fas fa-network-wired"></i> Background &amp; Developer Network
+      </h2>
+      <p class="home-section-desc">Engineering credentials, verified certifications, and online developer footprints.</p>
+    </div>
+  </div>
+
+  <div class="workspace-grid">
+    
+    <!-- Background Panel -->
+    <div class="workspace-panel">
+      <h3><i class="fas fa-user-gear"></i> Technical Focus</h3>
+      <p>
+        Full-Stack &amp; AI Systems Specialist with a focus on scalable web services, autonomous agent pipelines, and high-performance database architectures.
+      </p>
+      <p>
+        Committed to reproducible software engineering, data-driven automation, and active open-source contribution.
+      </p>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: auto;">
+        <a href="about.md" class="btn btn-secondary">
+          <i class="fas fa-id-card"></i> Read Full Bio
+        </a>
+        <a href="resume.md" class="btn btn-secondary">
+          <i class="fas fa-file-pdf"></i> Verified Credentials
+        </a>
+        <a href="contact.md" class="btn btn-primary">
+          <i class="fas fa-paper-plane"></i> Initiate Contact
+        </a>
+      </div>
     </div>
 
-    <div class="connect-section">
-        <h2 id="contact"><i class="fas fa-paper-plane"></i> Let's Connect</h2>
-        <p>Explore my open-source code, developer profiles, and media channels across the web.</p>
-        
-        <div class="social-links-grid">
-            <a href="https://github.com/mrxsierra" target="_blank" class="social-chip">
-                <i class="fab fa-github"></i> GitHub
-            </a>
-            <a href="https://www.linkedin.com/in/sunilsharma97" target="_blank" class="social-chip">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://x.com/mrxsierra" target="_blank" class="social-chip">
-                <i class="fab fa-x-twitter"></i> Twitter/X
-            </a>
-            <a href="https://kaggle.com/mrxsierra" target="_blank" class="social-chip">
-                <i class="fab fa-kaggle"></i> Kaggle
-            </a>
-            <a href="https://dev.to/mrxsierra" target="_blank" class="social-chip">
-                <i class="fab fa-dev"></i> Dev.to
-            </a>
-            <a href="https://medium.com/@mrxsierra" target="_blank" class="social-chip">
-                <i class="fab fa-medium"></i> Medium
-            </a>
-            <a href="https://pypi.org/user/mrxsierra/" target="_blank" class="social-chip">
-                <i class="fab fa-python"></i> PyPI
-            </a>
-            <a href="https://hub.docker.com/u/mrxsierra" target="_blank" class="social-chip">
-                <i class="fab fa-docker"></i> DockerHub
-            </a>
-            <a href="https://www.youtube.com/@mrxsierra" target="_blank" class="social-chip">
-                <i class="fab fa-youtube"></i> YouTube
-            </a>
-            <a href="https://www.reddit.com/user/mrxsierra/" target="_blank" class="social-chip">
-                <i class="fab fa-reddit-alien"></i> Reddit
-            </a>
-            <a href="https://www.instagram.com/mrxsierra/" target="_blank" class="social-chip">
-                <i class="fab fa-instagram"></i> Instagram
-            </a>
+    <!-- Developer Profiles Grid (Categorized) -->
+    <div class="workspace-panel">
+      <h3><i class="fas fa-share-nodes"></i> Developer Profiles</h3>
+      
+      <div class="profile-category-block">
+        <span class="profile-category-label">Code &amp; Architecture</span>
+        <div class="social-chips-grid">
+          <a href="https://github.com/mrxsierra" target="_blank" rel="noopener" class="social-chip">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="https://hub.docker.com/u/mrxsierra" target="_blank" rel="noopener" class="social-chip">
+            <i class="fab fa-docker"></i> DockerHub
+          </a>
+          <a href="https://pypi.org/user/mrxsierra/" target="_blank" rel="noopener" class="social-chip">
+            <i class="fab fa-python"></i> PyPI
+          </a>
+          <a href="https://kaggle.com/mrxsierra" target="_blank" rel="noopener" class="social-chip">
+            <i class="fab fa-kaggle"></i> Kaggle
+          </a>
         </div>
+      </div>
 
-        <div class="explore-button" style="margin-top: 15px;">
-            <a href="mailto:9.sunilsharma@gmail.com">
-                <i class="fas fa-envelope"></i> Send Direct Email &rarr;
-            </a>
+      <div class="profile-category-block">
+        <span class="profile-category-label">Professional &amp; Network</span>
+        <div class="social-chips-grid">
+          <a href="https://www.linkedin.com/in/sunilsharma97/" target="_blank" rel="noopener" class="social-chip">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://x.com/mrxsierra" target="_blank" rel="noopener" class="social-chip">
+            <i class="fab fa-x-twitter"></i> X / Twitter
+          </a>
+          <a href="https://dev.to/mrxsierra" target="_blank" rel="noopener" class="social-chip">
+            <i class="fab fa-dev"></i> Dev.to
+          </a>
+          <a href="https://medium.com/@mrxsierra" target="_blank" rel="noopener" class="social-chip">
+            <i class="fab fa-medium"></i> Medium
+          </a>
         </div>
+      </div>
+
+      <div class="profile-category-block">
+        <span class="profile-category-label">Media &amp; Community</span>
+        <div class="social-chips-grid">
+          <a href="https://www.youtube.com/@mrxsierra" target="_blank" rel="noopener" class="social-chip">
+            <i class="fab fa-youtube"></i> YouTube
+          </a>
+          <a href="https://www.reddit.com/user/mrxsierra/" target="_blank" rel="noopener" class="social-chip">
+            <i class="fab fa-reddit-alien"></i> Reddit
+          </a>
+          <a href="https://www.instagram.com/mrxsierra/" target="_blank" rel="noopener" class="social-chip">
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+        </div>
+      </div>
+
+      <div class="profile-category-block" style="margin-top: 10px;">
+        <span class="profile-category-label">Machine &amp; AI Endpoints</span>
+        <div class="social-chips-grid">
+          <a href="llms.txt" target="_blank" rel="noopener" class="social-chip">
+            <i class="fas fa-robot"></i> llms.txt
+          </a>
+          <a href="llms-full.txt" target="_blank" rel="noopener" class="social-chip">
+            <i class="fas fa-file-code"></i> llms-full.txt
+          </a>
+        </div>
+      </div>
+
     </div>
+
+  </div>
 </section>
 
 </div>
-
-<script>
-window.addEventListener('scroll', function() {
-    const nav = document.querySelector('.hero-links-container');
-    if (window.scrollY > 100) {
-        nav.classList.add('scrolled');
-    } else {
-        nav.classList.remove('scrolled');
-    }
-});
-</script>

@@ -79,52 +79,31 @@ I am proud to share that I have successfully completed the `CS50x - Introduction
 
 ### Certificate
 
-![CS50x - Introduction to Computer Science](https://media.licdn.com/dms/image/v2/D562DAQF-y6wX6lgfzA/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1738690195028?e=1747832400&v=beta&t=vFRTo5td7uE51CE8Ebl-lyEuJYsVSOBKf0P_e3D_67E)
+![CS50x - Introduction to Computer Science](../cert/1738690195028-cs50x.jpeg)
 
-## :crossed_swords: Challenges & :star2: Solutions
+## Technical Challenges & Architectural Solutions
 
 1. **Handling Varied DOCX Formatting**
-    - :crossed_swords: Parsing semi-structured DOCX files presented challenges due to inconsistencies in formatting, numbering, and spacing. Reliably detecting the correct answer based on subtle formatting like font color or highlighting was a key challenge.
-    - :star2: Developed flexible parsing logic (`parse_para`) designed to accommodate common variations. Implemented specialized utility functions (`remove_prefix`, `find_marked_answer`) that leverage python-docx's capabilities to accurately identify marked answers by inspecting run-level formatting properties. Documented input format expectations clearly to guide users.
+    - **Challenge:** Parsing semi-structured DOCX files presented challenges due to inconsistencies in formatting, numbering, and spacing. Reliably detecting correct answers based on run-level highlighting required granular XML traversal.
+    - **Solution:** Developed flexible parsing heuristics (`parse_para`) designed to accommodate common formatting variations, inspecting font colors and highlight metadata directly via python-docx.
 
-2. **Ensuring Data Quality and Consistency**
-    - :crossed_swords: Extracting data from a semi-structured format like DOCX risked incomplete or malformed records before export.
-    - :star2: Integrated Pydantic models (`Question`) to enforce a strict schema for extracted data. This validation step acts as a safeguard, ensuring that only correctly structured and typed data proceeds to the `Excel` export, preventing errors and ensuring reliable output.
+2. **Ensuring Data Quality & Schema Rigor**
+    - **Challenge:** Extracting unstructured DOCX content risked generating malformed or incomplete records.
+    - **Solution:** Integrated Pydantic models (`Question`) to enforce strict type validation and structural integrity prior to downstream Excel workbook generation.
 
-3. **Creating an Accessible Tool for Non-Technical Users**
-    - :crossed_swords: The goal was a tool usable by educators without programming knowledge, requiring a simple interface and easy installation.
-    - :star2: Built a straightforward and intuitive GUI using Tkinter, Python's standard library, minimizing external dependencies. Used `PyInstaller` to bundle the application and all its dependencies into a single, easy-to-distribute executable (`paraxcel.exe`), significantly lowering the barrier to entry for end-users.
+3. **Accessibility for Non-Technical Users**
+    - **Challenge:** Enabling non-developer educators to utilize the tool with zero CLI prerequisites.
+    - **Solution:** Built a responsive desktop GUI with standard Tkinter components and packaged the distribution into a standalone binary using PyInstaller.
 
 ## Achievements
 
-- Developed and launched Paraxcel, a functional desktop application, automating the conversion of MCQs from DOCX to a structured Excel format.
-- Implemented advanced parsing features, including the ability to detect correct answers based on font color or highlighting within the DOCX file.
-- Incorporated basic text formatting handling (superscript/subscript) during extraction for improved data fidelity.
-- Provided clear, user-focused documentation (`README.md`) and technical insights (`doc.md`).
-- Packaged the application into a convenient standalone executable using PyInstaller, simplifying deployment and usage.
+- Developed and launched Paraxcel, automating MCQ extraction from raw DOCX documents into structured Excel format.
+- Implemented robust run-level styling extraction (superscript, subscript, highlight detection).
+- Packaged the Python application into a standalone executable with zero external runtime dependencies.
 
-> **Impact**: Enabled educators and content creators to save significant time and effort (quantified by reduced manual data entry hours) previously spent on manual data entry.
+## Visual Artifacts & Pipeline Flow
 
-## Key Learnings
-
-- Gained practical experience using the `python-docx` library to parse the structure and formatting of Word documents programmatically.
-- Developed skills in building simple desktop GUIs with Python's built-in `Tkinter` library.
-- Applied `Pydantic` for robust data validation in a data processing pipeline.
-- Utilized `pandas` for efficient data structuring and exporting to Excel formats.
-- Learned the process of packaging Python applications into standalone executables using `PyInstaller`, including handling dependencies and data files.
-- Understood the challenges and importance of defining clear input format expectations when parsing semi-structured documents like DOCX.
-
-## Outcomes
-
-- A working, local-first desktop application (`paraxcel.exe`) capable of converting DOCX files (containing questions and 4 options) into structured Excel (`.xlsx`) files.
-- Source code is available on GitHub, along with documentation and sample files.
-- A video demonstration showcasing the application's functionality.
-
-## Visuals
-
-<!-- ```docx title="Docx Input" hl_lines="3" -->
-
-!!! info "Docx Input"
+!!! info "Sample Input Format"
     **Q1. What is the capital of France?**  
     A. Berlin  
     B. Madrid  
@@ -132,7 +111,7 @@ I am proud to share that I have successfully completed the `CS50x - Introduction
     D. Rome  
 
 <div class="result" markdown>
-✅ **Excel Output**
+**Structured Excel Export**
 
 | Question                       | Option 1 | Option 2 | Option 3 | Option 4 | Answer Index |
 | ------------------------------ | -------- | -------- | -------- | -------- | ------------ |
@@ -142,26 +121,26 @@ I am proud to share that I have successfully completed the `CS50x - Introduction
 
 ---
 
-### **🖼️ Screenshots**
+### Application Screenshots
 
 ![Tkinter GUI - Screenshot of the Paraxcel Tkinter GUI showing file/folder selection fields and buttons.](https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/ui.jpg)
 /// caption
-Paraxcel Tkinter GUI showing file/folder selection fields and buttons.
+Paraxcel Tkinter GUI showing file and folder selection controls.
 ///
 
 ![Docx Sample - Screenshot of a sample input DOCX file snippet showing question/option format.](https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/sample.jpg)
 /// caption
-Sample input DOCX file snippet showing question/option format.
+Sample input DOCX file showing question and highlighted answer formatting.
 ///
 
 ![Output Excel - Screenshot of the resulting Excel file snippet showing structured data.](https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/excel.jpg)
 /// caption
-Resulting Excel file snippet showing structured data.
+Normalized output Excel workbook.
 ///
 
 ---
 
-### 🔗 **Video Demo**
+### Video Demonstration
 
 [![Video Demo](https://img.youtube.com/vi/btjMeafD0vU/maxresdefault.jpg)](https://www.youtube.com/watch?v=btjMeafD0vU)
 

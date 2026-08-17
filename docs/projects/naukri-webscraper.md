@@ -83,25 +83,25 @@ I am proud to share that I have successfully completed the `CS50P - Introduction
 
 ### Certificate
 
-![CS50P - Introduction to Programming with Python](https://media.licdn.com/dms/image/v2/D562DAQH67rsjAX763w/profile-treasury-image-shrink_1920_1920/profile-treasury-image-shrink_1920_1920/0/1708063772979?e=1747832400&v=beta&t=W0ZkkvY7QYZbOHVDCEfLzxvUo3N0CqLoQV3Y3whZ0YM)
+![CS50P - Introduction to Programming with Python](../cert/1708063772979-cs50p.jpeg)
 
-## ***:crossed_swords: Challenges & :star2: Solutions***
+## Technical Challenges & Architectural Solutions
 
-1. **Dynamic Content Loading**
-    - **:crossed_swords:** Naukri.com uses JavaScript to render job listings, causing timing issues for scraping.
-    - **:star2:** Used Selenium's `WebDriverWait` to ensure elements are loaded before extraction.
+1. **Dynamic Client-Side Content Rendering**
+    - **Challenge:** Target pages use asynchronous JavaScript hydration, causing race conditions for static extraction.
+    - **Solution:** Implemented explicit polling with Selenium `WebDriverWait` and expected conditions before accessing DOM elements.
 
-2. **Complex HTML Structures**
-    - **:crossed_swords:** Extracting data from inconsistent or nested HTML elements.
-    - **:star2:** Implemented a helper function (`get_text_or_default`) for robust text extraction.
+2. **Inconsistent DOM Structures**
+    - **Challenge:** Nested and varied HTML layout across different employer listing templates.
+    - **Solution:** Created resilient fallback selector helpers (`get_text_or_default`) to normalize heterogeneous DOM nodes without throwing fatal unhandled exceptions.
 
-3. **Performance Bottlenecks**
-    - **:crossed_swords:** Slow scraping due to large result sets and dynamic content.
-    - **:star2:** Optimized data extraction loops and used efficient Pandas operations for filtering/export.
+3. **Throughput & Extraction Efficiency**
+    - **Challenge:** High latency when parsing hundreds of multi-page job listings.
+    - **Solution:** Optimized pagination loops, decoupled DOM extraction from tabular transformation, and utilized vectorized Pandas operations for filtering and dataset serialization.
 
-4. **Testing Automation**
-    - **:crossed_swords:** Ensuring scraping logic remains reliable as site structure changes.
-    - **:star2:** Developed automated tests with `pytest` to validate core logic and catch regressions.
+4. **Reliability & Regression Testing**
+    - **Challenge:** Ensuring scraper resilience against minor structural markup adjustments.
+    - **Solution:** Authoring a comprehensive `pytest` test bench to validate parsing rules against offline fixtures.
 
 ??? warning "***Note :*** On Site Changes and Locators"
     - The HTML structure and element locators (CSS selectors, XPaths) used in `project.py` are based on the current version of Naukri.com.  

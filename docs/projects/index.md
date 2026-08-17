@@ -1,104 +1,172 @@
 ---
-date: 2024
+description: Engineering portfolio of Sunil Sharma - Full-stack web applications, machine learning systems, database architectures, and automation tools.
 ---
 
-# Projects
+# Engineering Projects
 
-Welcome to my project portfolio! Here you'll find a curated selection of my best work, spanning data engineering, automation, web development, and more. Explore featured highlights or browse the full list below.
+<div class="page-intro">
+  <h2 class="page-intro-title">Proof of Work &amp; Case Studies</h2>
+  <p class="page-intro-desc">
+    A curated index of production software, machine learning competition pipelines, and developer-first data extraction tooling. Each project contains architecture breakdowns, technical rationales, and source repositories.
+  </p>
+</div>
 
-## 🚀 Featured Projects
+---
 
-<div class="grid cards" markdown>
+## Featured Project Case Studies
 
-- :material-brain:{ .lg .middle } __GSTN Hackathon: Predictive Binary Classification__
+<div class="card-grid-2" style="margin: 24px 0;">
 
-    ---
+  <!-- Project 1: GSTN Hackathon -->
+  <a class="clean-card" href="gstn-pbc/">
+    <div class="project-card-header">
+      <span class="project-category-badge">Machine Learning</span>
+      <div class="project-icon-box"><i class="fas fa-award"></i></div>
+    </div>
+    <h3 class="project-card-title">GSTN Predictive Binary Classification</h3>
+    <p class="project-card-desc">
+      National-level hackathon finalist project — interpretable gradient boosted ML pipeline analyzing 900,000+ real-world GST records with strict reproducibility.
+    </p>
+    <div class="tag-list">
+      <span class="tag-item">Python</span>
+      <span class="tag-item">Scikit-Learn</span>
+      <span class="tag-item">XGBoost</span>
+      <span class="tag-item">SHAP</span>
+    </div>
+    <span class="card-footer-link">Read Case Study <i class="fas fa-arrow-right"></i></span>
+  </a>
 
-    Robust, interpretable ML pipeline for binary classification on anonymized GSTN data. Achieved >97% accuracy, strong F1/MCC, and strict compliance with competition rules. Python, scikit-learn, XGBoost/LightGBM, SHAP, and reproducibility scripts.
+  <!-- Project 2: EMS DB -->
+  <a class="clean-card" href="ems-db/">
+    <div class="project-card-header">
+      <span class="project-category-badge">Database Architecture</span>
+      <div class="project-icon-box"><i class="fas fa-database"></i></div>
+    </div>
+    <h3 class="project-card-title">Examination Management System DB</h3>
+    <p class="project-card-desc">
+      Modular, production-ready multi-RDBMS architecture (PostgreSQL, MySQL, SQLite) with Python automation, Dockerized environments, and CI pipeline validation.
+    </p>
+    <div class="tag-list">
+      <span class="tag-item">PostgreSQL</span>
+      <span class="tag-item">MySQL</span>
+      <span class="tag-item">Docker</span>
+      <span class="tag-item">Python</span>
+    </div>
+    <span class="card-footer-link">Read Case Study <i class="fas fa-arrow-right"></i></span>
+  </a>
 
-    [:octicons-arrow-right-24: Read More](gstn-pbc.md#gstn-hackathon-predictive-binary-classification-project)
+  <!-- Project 3: S3 Faker -->
+  <a class="clean-card" href="s3-faker/">
+    <div class="project-card-header">
+      <span class="project-category-badge">Cloud Tooling</span>
+      <div class="project-icon-box"><i class="fas fa-cloud-arrow-up"></i></div>
+    </div>
+    <h3 class="project-card-title">S3 Faker Mock Data Generator</h3>
+    <p class="project-card-desc">
+      High-throughput synthetic data generation suite with native AWS S3 and LocalStack integration for cloud testing pipelines.
+    </p>
+    <div class="tag-list">
+      <span class="tag-item">Python</span>
+      <span class="tag-item">AWS S3</span>
+      <span class="tag-item">LocalStack</span>
+      <span class="tag-item">Boto3</span>
+    </div>
+    <span class="card-footer-link">Read Case Study <i class="fas fa-arrow-right"></i></span>
+  </a>
 
-- :material-database-cog:{ .lg .middle } __Examination Management System DB__
+  <!-- Project 4: Paraxcel -->
+  <a class="clean-card" href="paraxcel/">
+    <div class="project-card-header">
+      <span class="project-category-badge">Data Automation</span>
+      <div class="project-icon-box"><i class="fas fa-file-excel"></i></div>
+    </div>
+    <h3 class="project-card-title">Paraxcel Document Toolkit</h3>
+    <p class="project-card-desc">
+      High-performance document parsing engine for complex Docx-to-Excel extraction, tabular data normalization, and automated reporting.
+    </p>
+    <div class="tag-list">
+      <span class="tag-item">Python</span>
+      <span class="tag-item">Pandas</span>
+      <span class="tag-item">OpenPyXL</span>
+      <span class="tag-item">Tkinter</span>
+    </div>
+    <span class="card-footer-link">Read Case Study <i class="fas fa-arrow-right"></i></span>
+  </a>
 
-    ---
+  <!-- Project 5: Naukri Scraper -->
+  <a class="clean-card" href="naukri-webscraper/">
+    <div class="project-card-header">
+      <span class="project-category-badge">Web Automation</span>
+      <div class="project-icon-box"><i class="fas fa-spider"></i></div>
+    </div>
+    <h3 class="project-card-title">Naukri Market Data Scraper</h3>
+    <p class="project-card-desc">
+      Automated Selenium &amp; BeautifulSoup extraction engine for tech hiring telemetry, salary benchmarking, and role aggregation.
+    </p>
+    <div class="tag-list">
+      <span class="tag-item">Python</span>
+      <span class="tag-item">Selenium</span>
+      <span class="tag-item">BeautifulSoup</span>
+      <span class="tag-item">pytest</span>
+    </div>
+    <span class="card-footer-link">Read Case Study <i class="fas fa-arrow-right"></i></span>
+  </a>
 
-    Robust, production-ready database system for managing exams, students, proctoring, and results. Multi-RDBMS support (SQLite, MySQL, PostgreSQL), Python automation, Dockerized environments, and automated testing.
-
-    [:octicons-arrow-right-24: Read More](ems-db.md#examination-management-system-database)
-
-- :material-cloud-upload:{ .lg .middle } __S3 Faker__
-
-    ---
-
-    Fake data generator with AWS S3 (LocalStack) integration. Generates large datasets using Python & Faker, supports CSV/JSON/Parquet, and automates uploads for testing cloud pipelines.
-
-    [:octicons-arrow-right-24: Read More](s3-faker.md#s3-faker)
-
-- :material-file-excel:{ .lg .middle } __Paraxcel__
-
-    ---
-
-    Python toolkit for advanced Excel data extraction, transformation, and visualization. Built with Pandas, Openpyxl, Matplotlib, and Seaborn for seamless spreadsheet analytics.
-
-    [:octicons-arrow-right-24: Read More](paraxcel.md#paraxcel)
-
-- :material-robot:{ .lg .middle } __Naukri Webscraper__
-
-    ---
-
-    Selenium-powered Python tool to automate job search and data extraction from Naukri.com. Features skill-based filtering, CSV export, and robust automated testing with pytest.
-
-    [:octicons-arrow-right-24: Read More](naukri-webscraper.md#naukri-webscraper)
-
-- :material-clipboard-list-outline:{ .lg .middle } __Test Management Site__
-
-    ---
-
-    Dynamic, responsive web app for test creation, execution, and result tracking. Built with vanilla JS, HTML, CSS, Bootstrap, and localStorage for a seamless frontend experience.
-
-    [:octicons-arrow-right-24: Read More](test-site.md#test-management-site)
+  <!-- Project 6: Test Site -->
+  <a class="clean-card" href="test-site/">
+    <div class="project-card-header">
+      <span class="project-category-badge">Web Application</span>
+      <div class="project-icon-box"><i class="fas fa-clipboard-check"></i></div>
+    </div>
+    <h3 class="project-card-title">Real-Time Test Management Interface</h3>
+    <p class="project-card-desc">
+      Responsive frontend application for live examination management, test scheduling, student authentication, and scoring.
+    </p>
+    <div class="tag-list">
+      <span class="tag-item">JavaScript</span>
+      <span class="tag-item">HTML5</span>
+      <span class="tag-item">CSS3</span>
+      <span class="tag-item">Bootstrap</span>
+    </div>
+    <span class="card-footer-link">Read Case Study <i class="fas fa-arrow-right"></i></span>
+  </a>
 
 </div>
 
 ---
 
-## 📚 All Projects
+## Architectural Principles
 
-<!-- Tabbed view: Latest (by impact), then Alphabetical -->
-=== "Latest"
+<div class="card-grid-3" style="margin: 24px 0;">
 
-    * [:octicons-arrow-right-24: __Examination Management System DB__](ems-db.md#examination-management-system-database)  
-      <br>Multi-RDBMS exam/test management, automation, Docker, Python, CI-ready.
+  <div class="capability-card">
+    <div class="capability-header">
+      <div class="capability-icon"><i class="fas fa-chart-line"></i></div>
+      <h3 class="capability-title">Interpretable ML Systems</h3>
+    </div>
+    <p style="margin: 0; font-size: 13.5px; color: var(--color-text-secondary); line-height: 1.55;">
+      Prioritizing feature explainability (SHAP, permutation importance) and strict data isolation to eliminate target leakage in production models.
+    </p>
+  </div>
 
-    * [:octicons-arrow-right-24: __S3 Faker__](s3-faker.md#s3-faker)  
-      <br>Fake data generator with S3/LocalStack integration for cloud testing.
+  <div class="capability-card">
+    <div class="capability-header">
+      <div class="capability-icon"><i class="fas fa-scale-balanced"></i></div>
+      <h3 class="capability-title">Multi-RDBMS Parity</h3>
+    </div>
+    <p style="margin: 0; font-size: 13.5px; color: var(--color-text-secondary); line-height: 1.55;">
+      Enforcing strict relational integrity, trigger parity, and automated query validation across PostgreSQL, MySQL, and SQLite.
+    </p>
+  </div>
 
-    * [:octicons-arrow-right-24: __Paraxcel__](paraxcel.md#paraxcel)  
-      <br>Excel data extraction, transformation, and visualization toolkit.
+  <div class="capability-card">
+    <div class="capability-header">
+      <div class="capability-icon"><i class="fas fa-cloud-bolt"></i></div>
+      <h3 class="capability-title">Zero-Spend Cloud Simulation</h3>
+    </div>
+    <p style="margin: 0; font-size: 13.5px; color: var(--color-text-secondary); line-height: 1.55;">
+      Leveraging containerized LocalStack emulation and automated Docker workflows to validate cloud storage logic locally.
+    </p>
+  </div>
 
-    * [:octicons-arrow-right-24: __Naukri Webscraper__](naukri-webscraper.md#naukri-webscraper)  
-      <br>Automated job scraping, filtering, and CSV export from Naukri.com.
-
-    * [:octicons-arrow-right-24: __Test Management Site__](test-site.md#test-management-site)  
-      <br>Frontend web app for test management and result tracking.
-
-    * [:octicons-arrow-right-24: __GSTN Hackathon: Predictive Binary Classification__](gstn-pbc.md#gstn-hackathon-predictive-binary-classification-project)  
-      <br>Robust, interpretable ML pipeline for binary classification on anonymized GSTN data. >97% accuracy, strong F1/MCC, reproducibility, and compliance.
-
-=== "A–Z"
-
-    1. [:octicons-arrow-right-24: __Examination Management System DB__](ems-db.md#examination-management-system-database)
-    2. [:octicons-arrow-right-24: __GSTN Hackathon: Predictive Binary Classification__](gstn-pbc.md#gstn-hackathon-predictive-binary-classification-project)
-    3. [:octicons-arrow-right-24: __Naukri Webscraper__](naukri-webscraper.md#naukri-webscraper)
-    4. [:octicons-arrow-right-24: __Paraxcel__](paraxcel.md#paraxcel)
-    5. [:octicons-arrow-right-24: __S3 Faker__](s3-faker.md#s3-faker)
-    6. [:octicons-arrow-right-24: __Test Management Site__](test-site.md#test-management-site)
-
----
-
-## 🌟 Why These Projects?
-
-Each featured project demonstrates a unique blend of technical depth, problem-solving, and real-world impact—from scalable database design and cloud automation to advanced data analytics and modern web development.  
-Explore the detailed write-ups for code samples, visuals, and outcomes.
-
----
+</div>

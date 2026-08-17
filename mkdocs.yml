@@ -5,16 +5,21 @@ site_url: https://mrxsierra.github.io/
 site_description: "Welcome to my personal website. Here you will find my projects, blogs, and more."
 
 # repository
-# repo_url: https://github.com/mrxsierra/mrxsierra.github.io/
-# edit_uri: 'blob/main/docs/'
-# edit_uri_template: 'blob/main/docs/{path}'
+repo_url: https://github.com/mrxsierra/mrxsierra.github.io
+repo_name: mrxsierra/mrxsierra.github.io
+edit_uri: https://raw.githubusercontent.com/mrxsierra/mrxsierra.github.io/main/docs/
+
+# Automated Build Hooks
+hooks:
+  - hooks/generate_ai_docs.py
 
 # copyright
-copyright: "© 2025 mrxsierra. All rights reserved."
+copyright: "© 2025 Sunil Sharma (mrxsierra). All rights reserved."
 
 # docs_dir: "docs"
 watch:
   - includes
+  - hooks
 
 # Navigation
 nav:
@@ -36,6 +41,9 @@ nav:
 not_in_nav: |
   test.md
   tags.md
+  llms.txt
+  llms-full.txt
+  robots.txt
 
 # exclude
 exclude_docs: |
@@ -63,6 +71,9 @@ theme:
   name: material
   # custom_dir: overrides
   favicon: assets/img/favicon.ico
+  font:
+    text: Inter
+    code: JetBrains Mono
   
   features:
     - navigation.instant
@@ -79,9 +90,7 @@ theme:
     - content.code.annotate
     - content.tooltips
     - content.footnote.tooltips
-    # - content.action.edit
-    # - content.action.view
-    # - navigation.tabs.sticky
+    - content.action.view
   
   icon:
     # admonition:

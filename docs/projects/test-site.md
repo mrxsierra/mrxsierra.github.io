@@ -48,19 +48,19 @@ The Test Management Site is a demo vanilla javascripts application developed in 
 
 The project followed an iterative development approach. Initially, the basic HTML structure and CSS styling were set up. JavaScript was then used to dynamically load content, manage user sessions, and handle data storage. Bootstrap was integrated to ensure a responsive design. Challenges were addressed through continuous debugging and refinement of the code.
 
-## ***:crossed_swords: Challenges & :star2: Solutions***
+## Technical Challenges & Architectural Solutions
 
-1. **Dynamic Content Loading**  
-    - **:crossed_swords:** Loading and updating content dynamically using JavaScript.  
-    - **:star2:** Used `fetch` API to load HTML templates and JavaScript to manipulate the DOM, ensuring smooth transitions and updates.
+1. **Dynamic Content Loading & DOM Hydration**  
+    - **Challenge:** Rendering modular views dynamically without full page reloads.  
+    - **Solution:** Utilized native `fetch` APIs with template fragment caching and DOM manipulation to ensure seamless client-side transitions.
 
-2. **Data Management with `localStorage`**  
-    - **:crossed_swords:** Managing and persisting data using `localStorage`.  
-    - **:star2:** Implemented functions to serialize and deserialize data, ensuring data integrity and persistence across sessions.
+2. **Client-Side State Persistence**  
+    - **Challenge:** Managing test sessions, timers, and scoring in-browser reliably.  
+    - **Solution:** Implemented structured serialization mechanisms over `localStorage` with error boundary fallbacks and schema versioning.
 
-3. **Responsive Design**  
-    - **:crossed_swords:** Ensuring the application is responsive across different devices.  
-    - **:star2:** Utilized Bootstrap's grid system and CSS media queries to create a responsive layout.
+3. **Multi-Device Responsive Layout**  
+    - **Challenge:** Maintaining readable test controls across varied screen viewports.  
+    - **Solution:** Combined fluid CSS grid systems, modern flexbox rules, and media query breakpoints for responsive layout parity.
 
 ## ***Achievements***
 

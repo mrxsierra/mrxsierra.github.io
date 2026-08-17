@@ -1,41 +1,106 @@
-# Resume/CV
+---
+description: Verified technical certifications and credentials of Sunil Sharma - Full-Stack & AI Systems Specialist.
+---
 
-<!-- You can either embed your resume directly or, better yet, provide a link to download it as a PDF. -->
+# Credentials &amp; Certifications
 
-<!-- markdownlint-disable MD001 -->
-#### Resume {: .contact-heading}
-
-<div class="social-links">
-    <a href="/cert/main_resume.pdf" class="social-link" download>
-        <i class="fas fa-file-pdf"></i> Download
-    </a>
+<div class="page-intro">
+  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+    <div>
+      <h2 class="page-intro-title">Technical Credentials</h2>
+      <p class="page-intro-desc">
+        Verified accreditations across computer science fundamentals, machine learning systems, relational database architecture, and spatial analytics.
+      </p>
+    </div>
+    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+      <a href="../cert/main_resume.pdf" class="btn btn-primary" download>
+        <i class="fas fa-file-pdf"></i> Download Resume (PDF)
+      </a>
+      <a href="https://www.linkedin.com/in/sunilsharma97/details/certifications/" target="_blank" rel="noopener" class="btn btn-secondary">
+        <i class="fab fa-linkedin"></i> LinkedIn Accreditations
+      </a>
+    </div>
+  </div>
 </div>
 
-## Know more about me
+---
 
-<div class="social-links">
-    <a href="/about" class="social-link">
-        <i class="fas fa-user-circle"></i> Know More
-    </a>
+## Verified Credentials &amp; Accreditations
+
+<div class="certificate-grid">
+
+  <!-- Certificate 1: GSTN Hackathon -->
+  <div class="certificate-card">
+    <div class="certificate-image-wrap">
+      <img src="../cert/GSTN_Team_137.jpg" alt="GSTN Hackathon Finalist Certificate" loading="lazy">
+    </div>
+    <div class="certificate-content">
+      <h3 class="certificate-title">GSTN National Hackathon Finalist</h3>
+      <div class="certificate-issuer">Goods and Services Tax Network (GSTN)</div>
+      <div class="certificate-date">Predictive Binary Classification • 2024</div>
+    </div>
+  </div>
+
+  <!-- Certificate 2: CS50x -->
+  <div class="certificate-card">
+    <div class="certificate-image-wrap">
+      <img src="../cert/1738690195028-cs50x.jpeg" alt="CS50x Introduction to Computer Science" loading="lazy">
+    </div>
+    <div class="certificate-content">
+      <h3 class="certificate-title">CS50x: Introduction to Computer Science</h3>
+      <div class="certificate-issuer">Harvard University / edX</div>
+      <div class="certificate-date">C, Python, SQL, Algorithms &amp; Data Structures</div>
+    </div>
+  </div>
+
+  <!-- Certificate 3: CS50 SQL -->
+  <div class="certificate-card">
+    <div class="certificate-image-wrap">
+      <img src="../cert/1713864822125-cs50s.jpeg" alt="CS50 SQL Databases" loading="lazy">
+    </div>
+    <div class="certificate-content">
+      <h3 class="certificate-title">CS50 SQL: Databases with SQL</h3>
+      <div class="certificate-issuer">Harvard University / edX</div>
+      <div class="certificate-date">Relational Schema Design, Normalization, Views &amp; Triggers</div>
+    </div>
+  </div>
+
+  <!-- Certificate 4: CS50P -->
+  <div class="certificate-card">
+    <div class="certificate-image-wrap">
+      <img src="../cert/1708063772979-cs50p.jpeg" alt="CS50P Programming with Python" loading="lazy">
+    </div>
+    <div class="certificate-content">
+      <h3 class="certificate-title">CS50P: Programming with Python</h3>
+      <div class="certificate-issuer">Harvard University / edX</div>
+      <div class="certificate-date">Unit Testing, Object-Oriented Design, Regex &amp; Libraries</div>
+    </div>
+  </div>
+
+  <!-- Certificate 5: IIRS ISRO -->
+  <div class="certificate-card">
+    <div class="certificate-image-wrap">
+      <img src="../cert/IIRS.jpg" alt="AI/ML for Geodata Analysis" loading="lazy">
+    </div>
+    <div class="certificate-content">
+      <h3 class="certificate-title">AI/ML for Geodata Analysis</h3>
+      <div class="certificate-issuer">Indian Institute of Remote Sensing (IIRS - ISRO)</div>
+      <div class="certificate-date">Machine Learning &amp; Spatial Data Science</div>
+    </div>
+  </div>
+
 </div>
 
-## Certifications
+---
 
-- ***GSTN Hackathon***
-![GSTN Hackathon](/cert/GSTN_Team_137.jpg)
-
-- ***CS50x - Introduction to Computer Science***
-![CS50x - Introduction to Computer Science](https://media.licdn.com/dms/image/v2/D562DAQF-y6wX6lgfzA/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1738690195028?e=1747832400&v=beta&t=vFRTo5td7uE51CE8Ebl-lyEuJYsVSOBKf0P_e3D_67E)
-
-- ***CS50 SQL - Introduction to Databases with SQL***
-![CS50 SQL - Introduction to Databases with SQL](https://media.licdn.com/dms/image/v2/D4E2DAQH02gfznWb4Zw/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1713864822125?e=1747832400&v=beta&t=41-v8CjprOhpreJBJu04kZNHydL4ikkC4wZeoxpUFJ8)
-
-- ***CS50P - Introduction to Programming with Python***
-![CS50P - Introduction to Programming with Python](https://media.licdn.com/dms/image/v2/D562DAQH67rsjAX763w/profile-treasury-image-shrink_1920_1920/profile-treasury-image-shrink_1920_1920/0/1708063772979?e=1747832400&v=beta&t=W0ZkkvY7QYZbOHVDCEfLzxvUo3N0CqLoQV3Y3whZ0YM)
-
-- ***AI/ML for Geodata Analysis***
-![AI/ML for Geodata Analysis](/cert/IIRS.jpg)
-
-### Explore More
-
-[:material-linkedin: Licenses & certifications](https://www.linkedin.com/in/sunilsharma97/details/certifications/)
+<div style="margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap;">
+  <a href="../about/" class="btn btn-secondary">
+    <i class="fas fa-user"></i> Full Engineering Story
+  </a>
+  <a href="../projects/" class="btn btn-secondary">
+    <i class="fas fa-cubes"></i> View Projects Portfolio
+  </a>
+  <a href="../contact/" class="btn btn-primary">
+    <i class="fas fa-paper-plane"></i> Contact
+  </a>
+</div>
