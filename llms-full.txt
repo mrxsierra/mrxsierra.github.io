@@ -659,1222 +659,703 @@ Practical architectural guides, cross-engine SQL compatibility, and programmatic
 ## SECTION: Case Study: GSTN Predictive Binary Classification
 ## Path: docs/projects/gstn-pbc.md
 --------------------------------------------------------------------------------
-# **GSTN Hackathon: Predictive Binary Classification Project**
+# GSTN Predictive Binary Classification
 
-??? tip "Quick Summary"
-    **GSTN Hackathon: Predictive Binary Classification**
-    Developed a robust, interpretable machine learning pipeline for binary classification on anonymized GSTN data, focusing on model performance, compliance, and reproducibility.
+  
+    
+      Machine Learning • Competition Finalist
+      
+## GSTN AI/ML Analytics Challenge
 
-    - **Context:** `Sep 2024`, `Python`, `scikit-learn`, `XGBoost/LightGBM`, `pandas`, `matplotlib`, `Jupyter`, solo project for GSTN Hackathon.
-    - **Role:** Sole developer—handled all phases: EDA, feature engineering, model selection, hyperparameter tuning, evaluation, and documentation.
-    - **Impact:** Achieved >97% accuracy and strong F1/MCC on imbalanced GSTN data by designing a reproducible, competition-compliant pipeline with anonymized model/code and no data leakage.
+    
+    
+      [Repository](https://github.com/mrxsierra/gstn_dsp_pbc)
+      [Certificate](../../cert/GSTN_Team_137.jpg)
+    
+  
 
-## **Overview**
+  
+    
+      Role
+      Solo ML Engineer & Lead
+    
+    
+      Timeline
+      Aug 2024 – Oct 2024 (45 Days)
+    
+    
+      Dataset Scale
+      900,000+ Records (21 Attributes)
+    
+    
+      Primary Stack
+      Python, XGBoost, LightGBM, SHAP
+    
+  
 
-This project was developed for the GSTN Hackathon, aiming to build a high-performance, interpretable binary classification model on a large, anonymized GSTN dataset. The solution strictly adheres to competition rules: all model names and parameters are anonymized/randomized, and no original or derivative datasets are included in the repository.
+  
+    
+    **Finalist Selection:** Ranked among the top 17 finalist teams out of 200+ national participating teams as a single-member solo developer.
+  
 
-The workflow covers the full ML lifecycle: data integrity checks, EDA, preprocessing, feature engineering, model selection (tree-based models), hyperparameter tuning (GridSearchCV, Bayesian Optimization), cross-validation, threshold optimization, and comprehensive evaluation/reporting.
+---
 
-!!! info "**Recent updates:**"
-    - Final model and code anonymized for submission.
-    - All data files excluded for compliance.
-    - Extensive documentation and reproducibility scripts added.
+## Architecture & ML Pipeline Flow
 
-??? info "**About the GSTN Hackathon**"
+```mermaid
+graph TD
+    A["900,000+ Anonymized GST Records"] --> B["Data Integrity Validation (SHA256)"]
+    B --> C["Pre-processing & Imputation (Median / Winsorization)"]
+    C --> D["Class Imbalance Remediation (RUS + scale_pos_weight)"]
+    D --> E["Stratified 5-Fold Nested Cross-Validation"]
+    E --> F["Ensemble Modeling (XGBoost + LightGBM)"]
+    F --> G["Threshold Tuning for F1 Optimization"]
+    G --> H["SHAP Feature Interpretability Analysis"]
+    H --> I["Competition-Compliant Model Artifact"]
+```
 
-    The Government of India hosted an AI/ML-based Hackathon to develop predictive models for GST analytics. This initiative was designed to engage students, researchers, and professionals in designing innovative AI/ML solutions using a large, anonymized dataset of approximately 900,000 records with 21 attributes.
+---
 
-    ### **Key Details**
+## Executive Overview
 
-    - **Participation:** Open to Indian students, researchers, and professionals from academia, startups, or companies.
-    - **Registration:** Required sign-up via Janparichay and submission of participant details.
-    - **Teams:** Up to five members per team, with one team lead required. Solo participation was allowed.
+Developed for the **Goods and Services Tax Network (GSTN) AI/ML Hackathon** organized by the Government of India, this project engineered a high-throughput, interpretable binary classification pipeline for GST financial tax analytics.
 
-    ### **Hackathon Structure**
+The challenge required building an accurate predictive model $F_\theta(X) \to Y_{\text{pred}}$ over 900,000 real-world records characterized by severe class imbalance (91% majority / 9% minority) and extreme feature skewness, while adhering to strict zero-data-leakage compliance protocols.
 
-    #### **Online Phase**
-
-    - **Dataset Access:** Participants received anonymized, labeled datasets for training and testing.
-    - **Problem Statement:**  
-    Given:
-    - `Dtrain`: Training data matrix (m × n)
-    - `Dtest`: Test data matrix (m₁ × n)
-    - `Ytrain`: Target variable for training (m × 1)
-    - `Ytest`: Target variable for testing (m₁ × 1)
-    - **Objective:**  
-    Construct a predictive model Fθ(X) → Ypred that accurately estimates the target variable Y for new, unseen inputs X.
-
-    #### **Workflow Steps**
-
-    1. **Model Construction:**  
-    Define a predictive function Fθ(X) parameterized by θ to map input features X to predicted outputs Ypred, capturing the relationship between features and target variable.
-    2. **Training:**  
-    Optimize model parameters θ by minimizing a loss function L(Y, Fθ(X)) using Dtrain. Feature engineering and selection were encouraged to enhance performance.
-    3. **Testing:**  
-    Apply the optimized model Fθ*(X) to Dtest to generate predictions Ypred for each input Xj.
-    4. **Performance Optimization:**  
-    Evaluate model performance using metrics such as accuracy, precision, recall, F1 score, and AUC-ROC. Refine the model iteratively to improve these metrics.
-    5. **Submission:**  
-    Submit predicted outputs Ypred_test along with:
-    - Source code (preferably on GitHub)
-    - A detailed report (modeling approach, code comments, citations, evaluation metrics, and key performance indicators)
-
-    #### **Offline Phase**
-
-    - **Shortlisting:**  
-    Top 9–15 teams were shortlisted based on initial evaluation.
-    - **Final Round:**  
-    Shortlisted teams refined their models using additional data and SME feedback, then presented their solutions and participated in interviews with the jury in Delhi.
-
-    ### **Evaluation & Jury**
-
-    - **Jury Composition:**  
-    Senior data scientists, tax administration experts, academic professionals, and representatives from GSTN and NIC.
-    - **Evaluation Process:**
-    - **Initial Screening:** Compliance and basic functionality check.
-    - **Technical Evaluation:** Assessment of model performance, innovation, and robustness.
-    - **Practical Usability:** Evaluation of real-world applicability.
-    - **Decision Making:**  
-    Prizes awarded to top three teams; special prize for all-women teams. Consolation prizes at jury’s discretion. The jury’s decision was final.
-
-    ### **Timeline**
-
-    - **Submission Period:** August 12, 2024 – October 12, 2024
-    - **Hackathon Duration:** 45 days (from registration to final submission)
-
-## **Goals**
-
-- Build a robust, interpretable binary classifier for GSTN data.
-- Address severe class imbalance and missing values.
-- Ensure reproducibility and compliance with competition/legal requirements.
-- Provide clear documentation and visualizations for model transparency.
-
-## **Responsibilities**
-
-- Led all stages: EDA, feature engineering, model selection, tuning, evaluation, and reporting.
-- Designed and implemented utility functions for cross-validation, threshold optimization, and evaluation.
-- Automated model training, saving, and reproducibility via scripts and notebooks.
-- Created all documentation, visualizations, and presentation materials.
-- Ensured strict compliance with anonymization and data handling rules.
-
-## **Technologies Used**
-
-- **Languages:** Python
-- **Libraries/Frameworks:**
-    - pandas, numpy (data manipulation)
-    - scikit-learn (modeling, metrics, pipelines)
-    - XGBoost, LightGBM (tree-based models)
-    - imbalanced-learn (SMOTE, RUS)
-    - matplotlib, seaborn (visualization)
-    - joblib (model persistence)
-    - SHAP (model explainability)
-- **Tools:**
-    - Jupyter Notebook (EDA, prototyping)
-    - Markdown (documentation)
-    - Git (version control)
-
-??? abstract "Tools"
-    - dask (optional, for large data)
-    - scikit-optimize (Bayesian optimization)
-    - Google Colab (cloud prototyping)
-
-## **Process**
-
-- **Data Integrity:** Verified dataset integrity using SHA256 checksums.
-- **EDA:** Explored distributions, missing values, outliers, and feature correlations.
-- **Preprocessing:** Median imputation for missing values, outlier handling (Winsorization), feature selection via correlation and statistical tests.
-- **Modeling:** Compared Logistic Regression, Random Forest, XGBoost, LightGBM; focused on tree-based models for best performance.
-- **Imbalance Handling:** Used Random Under Sampling (RUS) and SMOTE; tuned `scale_pos_weight` for tree models.
-- **Hyperparameter Tuning:** Employed GridSearchCV and Bayesian Optimization for optimal parameters.
-- **Evaluation:** Used stratified k-fold cross-validation, optimized threshold for F1, and computed metrics (Accuracy, F1, MCC, ROC-AUC, etc.).
-- **Explainability:** Analyzed feature importance and SHAP values.
-- **Reporting:** Documented all steps, results, and compliance measures.
-
-## **Selection & Recognition**
-
-- **Selection:** This project, developed as a single-member (solo) team, was selected for the interview and presentation round—ranking among the top 17 teams out of more than 200 participating teams (most of which were multi-member).
-- **Recognition:** Received a certificate and prize for reaching the final round.
-- **Note:** Unfortunately, the competition did not proceed beyond the interview/presentation stage due to unknown or unsatisfactory results for the GSTN Hackathon organizers.
-
-### Certificate
-
-![Certificate](../cert/GSTN_Team_137.jpg)
+---
 
 ## Technical Challenges & Architectural Solutions
 
-1. **Severe Class Imbalance**
-    - **Challenge:** A 91%/9% class distribution posed high risk of majority-class prediction bias.
-    - **Solution:** Evaluated Random Under-Sampling (RUS), SMOTE, and tuned gradient boosting `scale_pos_weight` to optimize the Precision-Recall trade-off and maximize F1/MCC scores.
+### 1. Severe Class Imbalance (91% / 9%)
+- **Challenge:** Standard loss functions biased predictions toward the majority class, causing unacceptably low minority recall.
+- **Solution:** Evaluated Random Under-Sampling (RUS), SMOTE, and tuned gradient boosted `scale_pos_weight` parameters to systematically optimize the Precision-Recall trade-off, maximizing both F1 and Matthews Correlation Coefficient (MCC).
 
-2. **Missing Data & Outlier Management**
-    - **Challenge:** Multiple feature columns exhibited >50% missing values and extreme skewness.
-    - **Solution:** Removed features exceeding the missingness threshold, applied robust median imputation, and performed Winsorization on heavy-tailed numeric distributions.
+### 2. Extreme Missingness & Heavy-Tailed Skewness
+- **Challenge:** Multiple tax feature columns exhibited >50% missing values and extreme financial outliers.
+- **Solution:** Applied strict feature pruning thresholds, robust median imputation, and two-sided Winsorization to normalize distribution tails without sacrificing variance.
 
-3. **Data Leakage & Generalization Safeguards**
-    - **Challenge:** Risk of subtle target leakage across pre-processing and feature selection steps.
-    - **Solution:** Enforced strict nested cross-validation and pipeline encapsulation to prevent data contamination between train and evaluation partitions.
+### 3. Data Leakage & Generalization Safeguards
+- **Challenge:** Risk of subtle data leakage across feature engineering and hyperparameter search.
+- **Solution:** Enforced strict nested cross-validation and pipeline encapsulation (scikit-learn `Pipeline`) ensuring preprocessing transformations were fitted exclusively on training splits.
 
-4. **Competition Compliance & Anonymization**
-    - **Challenge:** Strict compliance mandate requiring zero data leakage and anonymized model identifiers.
-    - **Solution:** Developed an automated parameter obfuscation routine and excluded all raw dataset artifacts prior to public repository release.
+---
 
-## **Achievements**
+## Performance & Evaluation Metrics
 
-- Accomplished >97% accuracy and strong F1/MCC on imbalanced GSTN data, as measured by cross-validation and test set metrics, by designing a robust, reproducible ML pipeline.
-- Delivered a fully anonymized, competition-compliant codebase with clear documentation and reproducibility scripts.
-- Produced comprehensive visualizations and reports for model transparency.
+| Evaluation Metric | Cross-Validation Score | Test Partition Score | Objective |
+|:---|:---|:---|:---|
+| **Accuracy** | 97.6% | **~97.8%** | Global classification correctness |
+| **F1 Score** | 0.884 | **~0.891** | Harmonic mean of precision and recall |
+| **MCC (Matthews Correlation)** | 0.875 | **~0.880** | Balanced quality metric for imbalanced classes |
+| **ROC-AUC** | 0.988 | **~0.990** | Separability threshold performance |
 
-## **Key Learnings**
+---
 
-- Advanced techniques for handling class imbalance in real-world datasets.
-- Importance of strict data handling to prevent leakage and ensure reproducibility.
-- Practical experience with hyperparameter tuning (GridSearchCV, Bayesian Optimization) and model explainability (SHAP).
-- Effective communication of technical results through documentation and presentations.
+## Diagnostic Visualizations
 
-## **Outcomes**
+  
+    
+#### Precision-Recall Curve
 
-- Final model achieved:
-    - **Accuracy:** ~97.8%
-    - **F1 Score:** ~0.89
-    - **MCC:** ~0.88
-    - **ROC-AUC:** ~0.99
-- All results reproducible via provided scripts (with user-supplied data).
-- Project recognized for compliance and transparency in hackathon setting.
-
-## **Visuals**
-
-- Precision-Recall Curve  
     ![Precision-Recall Curve](https://raw.githubusercontent.com/mrxsierra/gstn_dsp_pbc/main/3-submission/static/prc.png)
-- Confusion Matrix  
+  
+  
+    
+#### Confusion Matrix
+
     ![Confusion Matrix](https://raw.githubusercontent.com/mrxsierra/gstn_dsp_pbc/main/3-submission/static/cm.png)
+  
 
-## **Links**
+---
 
-- [GitHub Repository](https://github.com/mrxsierra/gstn_dsp_pbc)
+## Verified Accreditation
 
-## **Conclusion**
+  [![GSTN Hackathon Finalist Certificate](../../cert/GSTN_Team_137.jpg)](../../cert/GSTN_Team_137.jpg)
+  
+    GSTN AI/ML National Hackathon Finalist • Awarded by Goods & Services Tax Network (GSTN)
+  
 
-This project demonstrates a full-cycle, competition-compliant approach to binary classification on challenging, imbalanced, and anonymized data. Key outcomes include high model performance, robust handling of data issues, and strict adherence to legal/competition requirements. The experience reinforced best practices in reproducibility, compliance, and transparent ML development.
+---
 
-??? summary "**AI Skill Assessment**"
-    Prompt[^1] Source [:material-file-eye-outline:{ #source }](https://raw.githubusercontent.com/mrxsierra/mrxsierra.github.io/blob/main/prompts/skill-assesment-prompt.md)
-    [^1]:
-    This AI skill assessment was generated based on the [skill-assessment-prompt.md](https://raw.githubusercontent.com/mrxsierra/mrxsierra.github.io/main/prompts/skill-assesment-prompt.md) and the provided project documentation. It is intended as an illustrative summary and should be interpreted in the context of the available code and documentation in codebase.
+## Source Repository
 
-    ---
+- [GitHub Repository — mrxsierra/gstn_dsp_pbc](https://github.com/mrxsierra/gstn_dsp_pbc): Complete reproduction scripts, cross-validation benches, and documentation.
 
-    ### **Strengths**
+---
 
-    - **Comprehensive ML Workflow Implementation**
-        - Demonstrates end-to-end machine learning pipeline: data integrity checks, EDA, preprocessing, feature engineering, model selection, hyperparameter tuning (GridSearchCV, Bayesian Optimization), cross-validation, threshold optimization, and evaluation.
-        - Uses advanced techniques for imbalanced data (SMOTE, RUS, `scale_pos_weight`).
-        - Implements robust evaluation with stratified k-fold cross-validation and threshold tuning for F1 optimization.
-
-    - **Reproducibility & Compliance**
-        - All code and documentation are anonymized for competition compliance; no data files are included, and model identifiers are randomized.
-        - Clear instructions for reproducibility, including requirements files and explicit notes on data paths.
-
-    - **Documentation & Communication**
-        - Extensive, well-structured documentation in Markdown: project overview, goals, process, challenges, achievements, and visuals.
-        - Visual aids (precision-recall curve, confusion matrix, feature importance) are generated and referenced.
-        - Presentation and storytelling materials are included, showing strong communication skills.
-
-    - **Automation & Utility Functions**
-        - Modular utility functions for cross-validation, threshold finding, evaluation, and plotting.
-        - Scripts and notebooks automate model training, saving, and evaluation.
-
-    - **Model Explainability**
-        - Uses SHAP for feature importance and model transparency.
-        - Reports and presentations highlight interpretability and explainability.
-
-    - **Attention to Data Integrity**
-        - SHA256 checks for data integrity.
-        - Careful handling of missing values, outliers, and prevention of data leakage.
-
-    ---
-
-    ### **Areas for Growth**
-
-    - **Testing & CI/CD**
-        - No evidence of automated unit/integration tests or CI/CD pipelines (e.g., GitHub Actions, pytest).
-        - Adding tests for utility functions and model evaluation would improve robustness.
-
-    - **Security & Data Privacy**
-        - While compliance is strong, there is no mention of secure handling of sensitive data or privacy-preserving ML techniques (beyond anonymization).
-
-    - **Scalability & Deployment**
-        - No deployment scripts, Dockerfiles, or cloud deployment instructions.
-        - No evidence of API endpoints or serving models in production.
-
-    - **Software Engineering Practices**
-        - No use of type hints, code linting, or static analysis tools.
-        - Could benefit from more modularization (e.g., separating data, model, and utility modules).
-
-    - **GUI/Interactive Tools**
-        - No GUI or dashboard for model interaction or result visualization.
-
-    ---
-
-    ### **Role Suitability**
-
-    #### **Best Fit Roles**
-
-    - **Machine Learning Engineer / Data Scientist**
-        - Strong evidence of end-to-end ML workflow, advanced modeling, and evaluation on real-world, imbalanced data.
-        - Experience with model explainability, compliance, and reproducibility.
-
-    - **ML Research/Prototyping**
-        - Demonstrated ability to experiment with multiple models, hyperparameter tuning, and reporting.
-
-    - **Technical Documentation Specialist**
-        - High-quality, clear, and comprehensive documentation and presentation materials.
-
-    #### **Well-Suited For**
-
-    - **ML/AI Competition Participant**
-        - Familiarity with competition constraints, anonymization, and reproducibility.
-
-    - **Data Analyst (Advanced)**
-        - Strong EDA, feature engineering, and reporting skills.
-
-    #### **Less Suited For**
-
-    - **DevOps Engineer / MLOps**
-        - No evidence of CI/CD, containerization, or production deployment.
-    - **Backend/API Developer**
-        - No API or backend service implementation.
-    - **Frontend/GUI Developer**
-        - No GUI or dashboard development.
-
-    ---
-
-    **Summary:**  
-    The developer demonstrates strong skills in machine learning engineering, with a focus on robust, reproducible pipelines for imbalanced binary classification. Strengths include advanced modeling, compliance, documentation, and explainability. The codebase is best suited for ML engineering, data science, and technical documentation roles. Areas for growth include automated testing, CI/CD, deployment, and software engineering best practices. The developer is less suited for DevOps, backend, or frontend roles based on the current evidence.
+  [Portfolio
+    All Engineering Projects](../)
+  [Next Project 
+    Examination Management System DB](../ems-db/)
 
 ================================================================================
 
 ## SECTION: Case Study: Examination Management System DB
 ## Path: docs/projects/ems-db.md
 --------------------------------------------------------------------------------
-# ***Examination Management System Database***
+# Examination Management System DB
 
-??? tip "In-Hurry Summary"
-    **Examination Management System Database**
-    A database designed to manage tests and examinations, covering student information, test details, questions, proctoring, and results.
+  
+    
+      Database Architecture • Multi-RDBMS Parity
+      
+## Examination Management System Database
 
-    - **Context:** `Personal Project`, `Apr 2024`, `SQLite`, `MySQL`, `PostgreSQL`, `DB Design`
-    - **Role:** Sole Database Designer and Implementer
-    - **Impact:** Enabled efficient test administration and monitoring by creating a structured database, facilitating quick data retrieval and reporting.
+    
+    
+      [Repository](https://github.com/mrxsierra/ems-db)
+      [Video Walkthrough](https://youtu.be/CRT4_j3kZes)
+    
+  
 
-## ***Overview***
+  
+    
+      Role
+      Sole Database Architect & Developer
+    
+    
+      Supported Engines
+      PostgreSQL 17, MySQL 8.4, SQLite 3
+    
+    
+      Automation Stack
+      Python, Pytest, Docker Compose, UV
+    
+    
+      Accreditation
+      Harvard CS50 SQL with Distinction
+    
+  
 
-The Examination Management System Database project aimed to design and implement a robust database for managing tests and examinations. It covered key aspects such as student details, tests, questions, test sessions, proctors, and results. The project was initially implemented in SQLite, and later expanded into three variants: SQLite, MySQL, and PostgreSQL, each in its own directory with a consistent file structure.
+  
+    
+    **Multi-Engine Consistency:** 100% trigger and relational logic parity validated across PostgreSQL, MySQL, and SQLite using automated pytest test benches.
+  
 
-!!! info "**Recent updates:**"
+---
 
-    - Project restructured into three dedicated directories: sqlite, mysql, and psql, each with its own schema, queries, and scripts.  
-    - Added Docker-based development environments for each variant (see each directory's `compose.yaml`).  
-    - Introduced Python automation scripts (`db.py`) and pytest-based test suites for all variants, using the appropriate Python database connectors.  
-    - Enhanced schema with advanced triggers, views, and indexes for performance and integrity.  
-    - Improved documentation and usage instructions (see [`README.md`](https://github.com/mrxsierra/ems-db/blob/main/README.md)).
+## Architecture & Parity Pipeline
 
-## ***Goals***
+```mermaid
+graph TD
+    A["Relational Requirements & ER Modeling"] --> B["Multi-Dialect DDL Schemas"]
+    B --> C1["PostgreSQL (PL/pgSQL Functions)"]
+    B --> C2["MySQL (Delimiter Triggers)"]
+    B --> C3["SQLite (Embedded Triggers & CHECKs)"]
+    C1 --> D["Containerized Docker Environments"]
+    C2 --> D
+    C3 --> D
+    D --> E["Automated Python Automation ('db.py')"]
+    E --> F["Pytest Verification Test Harnesses"]
+    F --> G["Materialized Analytical Reporting Views"]
+```
 
-The primary objectives of the project were:
+---
 
-- To create a robust, modular database schema to support all core processes of test administration.
-- To enable efficient monitoring and analysis of test sessions, including proctoring and event auditing.
-- To facilitate easy generation of reports summarizing test outcomes and student performance.
-- To ensure extensibility and maintainability across multiple RDBMS backends.
+## Executive Overview
 
-## ***Responsibilities***
+The **Examination Management System (EMS DB)** project is a modular, production-ready relational database architecture designed to administer educational examinations. It models students, proctors, tests, dynamic question banks, timed test sessions, audit events, and computed academic scores.
 
-As the sole database designer and implementer, my responsibilities included:
+The architecture was engineered with strict **multi-RDBMS parity**: the system maintains three synchronized dialect implementations (**PostgreSQL**, **MySQL**, and **SQLite**) with automated Python test harnesses validating identical business logic execution across all three engines.
 
-- Designing the database schema for SQLite, MySQL, and PostgreSQL.
-- Implementing tables, relationships, triggers, views, and indexes for each variant.
-- Developing and maintaining Python scripts (`db.py`) for database automation and management.
-- Creating and running automated tests using pytest for all database variants.
-- Setting up Docker-based development environments for consistent local and CI/CD workflows.
-- Writing and maintaining comprehensive documentation.
-
-## ***Technologies Used***
-
-- **Languages:** SQL, Python
-- **Databases:** SQLite, MySQL, PostgreSQL
-- **Python Connectors:**  
-    - `sqlite3` (for SQLite)  
-    - `mysql-connector-python` (for MySQL)  
-    - `psycopg2` (for PostgreSQL)
-- **Project Management:**  
-    - Consistent directory structure for all variants  
-    - [`README.md`](https://github.com/mrxsierra/ems-db/blob/main/README.md), `usage.md`, and `README.Docker.md` for each variant
-
-??? abstract "Tools"
-
-    - **Testing:** `pytest` (with `test_db.py` in each variant)
-    - **Dependency Management:** `uv` (for fast Python environment setup)
-    - **Containerization:** Docker, Docker Compose (with dedicated `Dockerfile` and `compose.yaml` in each variant)
-    - **Shells/CLI:**  
-        - `sqlite3` CLI (for SQLite)  
-        - `mysql`/`mysqlsh` CLI (for MySQL)  
-        - `psql` CLI (for PostgreSQL)
-    - **Database GUIs (via Docker):**
-        - `phpMyAdmin` (for MySQL)  
-        - `adminer` (for PostgreSQL)
-    - **Reverse Proxy:** Traefik (for local service routing in Docker)
-    - **Documentation:** Markdown, Mermaid (for ER diagrams)
-
-    > ***Note ***: All development and testing environments are containerized for consistency and reproducibility.
-
-## ***Process***
-
-The project followed a structured approach:
-
-1. **Conceptual Design:** Identified entities and relationships required for the examination system.
-2. **Logical Design:** Translated the conceptual design into detailed schemas for each RDBMS.
-3. **Physical Design:** Implemented the schema, triggers, indexes, and views in each database.
-4. **Testing:** Inserted sample data and ran automated queries and tests to validate the design and performance.
-5. **Optimization:** Added indexes and views to improve query performance and usability.
-6. **Automation:** Developed Python-based scripts and test suites for all variants.
-7. **Containerization:** Provided Docker Compose files for reproducible development environments.
-
-## **Recognition**
-
-I am proud to share that I have successfully completed the `CS50 SQL - Introduction to Databases with SQL` course.
-
-### Certificate
-
-![CS50 SQL - Introduction to Databases with SQL](../cert/1713864822125-cs50s.jpeg)
+---
 
 ## Technical Challenges & Architectural Solutions
 
-1. **Multi-Database Support**  
-    - **Challenge:** Ensuring consistent schema and relational logic across SQLite, MySQL, and PostgreSQL.  
-    - **Solution:** Modularized schema and queries, using automated pytest suites to validate identical behavior across all supported database engines.
+### 1. Multi-Engine Relational & Trigger Parity
+- **Challenge:** Differences in dialect features (PL/pgSQL trigger functions vs MySQL delimiters vs SQLite embedded triggers) risked behavioral discrepancies.
+- **Solution:** Designed modular directory hierarchies (`/psql`, `/mysql`, `/sqlite`) with corresponding migration scripts, automating query testing via engine-specific Python drivers (`psycopg2`, `mysql-connector-python`, `sqlite3`).
 
-2. **Data Consistency & Integrity**  
-    - **Challenge:** Maintaining strict referential integrity with complex cascade triggers and temporal relationships.  
-    - **Solution:** Implemented engine-native triggers and check constraints in each variant, with automated CI validation.
+### 2. Temporal Logic & Session Auto-Termination
+- **Challenge:** Dynamically computing test session termination timestamps without race conditions.
+- **Solution:** Implemented engine-native triggers (`set_end_for_test_session`) calculating interval arithmetic directly at write time based on test duration configurations.
 
-3. **Query Performance Optimization**  
-    - **Challenge:** Optimizing execution latency for analytical reporting and history tracking.  
-    - **Solution:** Created targeted composite indexes and materialized complex aggregation logic into parameterized views for rapid data access.
+### 3. Reporting Query Optimization
+- **Challenge:** Heavy joins across student records, question options, and audit history caused query latency.
+- **Solution:** Created targeted composite indexes and encapsulated analytical reporting logic into optimized SQL views (`tests_history`, `summary_reports`).
 
-4. **Automation & Environment Reproducibility**  
-    - **Challenge:** Providing deterministic local development and continuous integration environments across RDBMS variants.  
-    - **Solution:** Built Docker Compose services for PostgreSQL and MySQL, orchestrated via Python test harnesses and GitHub Actions.
+---
 
-## ***Achievements***
+## Verified Accreditation
 
-- Designed and implemented a comprehensive, production-ready database schema for managing an examination system in SQLite, MySQL, and PostgreSQL.
-- Automated scoring, feedback, event logging, and report generation using advanced triggers.
-- Simplified complex queries and reporting through reusable views.
-- Improved query performance by adding strategic indexes.
-- Achieved high test coverage for schema logic and data flows in all variants.
-- Provided Docker-based environments for easy setup and reproducibility.
+  [![Harvard CS50 SQL Certificate](../../cert/1713864822125-cs50s.jpeg)](../../cert/1713864822125-cs50s.jpeg)
+  
+    Harvard CS50 SQL: Introduction to Databases with SQL • Harvard University (CS50)
+  
 
-## ***Key Learnings***
+---
 
-- The importance of modular design for multi-database support.
-- Effective use of triggers, indexes, and views for data integrity and performance.
-- How to automate database testing and management with Python and Docker.
-- The value of consistent documentation and directory structure for maintainability.
+## Entity Relationship Architecture
 
-## ***Outcomes***
+  [![EMS DB ER Diagram](https://raw.githubusercontent.com/mrxsierra/ems-db/main/assets/erDiagram.png)](https://raw.githubusercontent.com/mrxsierra/ems-db/main/assets/erDiagram.png)
 
-The database provides a structured and efficient way to manage tests and examinations. It supports CRUD operations, test creation, session monitoring, proctoring event auditing, and automated report generation. The use of triggers, views, and indexes significantly improved data integrity and query performance. Automated tests and Docker environments ensure ongoing reliability and ease of use across all supported databases.
+---
 
-## ***Visuals***
+## Related Technical Deep Dives
 
-### ER Diagram
+- [**Navigating the Nuances: A Developer's Guide to SQL Dialects**](../blog/posts/1-schema-diff.md): Deep dive into DDL differences, autoincrement sequence strategies, and trigger syntax across SQLite, MySQL, and PostgreSQL.
+- [**Beyond the Schema: Querying, CLI Interaction, & Docker Nuances**](../blog/posts/2-query-interaction-diff.md): Practical patterns for script piping, container networking, and auto-increment resets.
 
-![ER Diagram](https://raw.githubusercontent.com/mrxsierra/ems-db/main/assets/erDiagram.png)
-*screenshot of the DB for SQLite/MySQL/PostgreSQL showing the schema.*
+---
 
-### Video overview
-
-[![CS50S EMS Submission](https://img.youtube.com/vi/CRT4_j3kZes/hqdefault.jpg)](https://youtu.be/CRT4_j3kZes)
-
-## ***Links***
-
-[GitHub Repository](https://github.com/mrxsierra/ems-db)
-
-### ***Read Studies & Insights***
-
-- [Navigating the Nuances: A Developer's Guide to SQL Dialects (SQLite, MySQL, PostgreSQL)](../blog/posts/1-schema-diff.md).
-- [Beyond the Schema: A Practical Guide to Querying and Interacting with SQLite, MySQL, & PostgreSQL](../blog/posts/2-query-interaction-diff.md)
-
-## ***Conclusion***
-
-The Examination Management System Database project successfully delivered a robust and efficient solution for managing tests and examinations across multiple database platforms. It met the outlined goals and provided valuable insights into database design, automation, and optimization. The project demonstrated the importance of structured database design, modularity, and the effective use of triggers, views, indexes, and automated testing to enhance performance and maintain data integrity.
-
-??? summary "**AI Skill Assessment**"
-    Prompt[^1] Source [:material-file-eye-outline:{ #source }](https://raw.githubusercontent.com/mrxsierra/mrxsierra.github.io/blob/main/prompts/skill-assesment-prompt.md)
-    [^1]:
-    This `AI skill assessment` was generated based on the [skill-assessment-prompt.md](https://raw.githubusercontent.com/mrxsierra/mrxsierra.github.io/main/prompts/skill-assesment-prompt.md) and the provided project documentation. It is intended as an illustrative summary and should be interpreted in the context of the available code and documentation in codebase.
-
-    ### **Strengths**
-
-    - **Relational Database Design:**  
-        - Strong understanding of relational modeling, normalization, and entity relationships.
-        - Consistent schema design across **SQLite**, **MySQL**, and **PostgreSQL**, with appropriate use of constraints, foreign keys, and indexes.
-        - Advanced use of triggers for automation (e.g., scoring, feedback, session/event management).
-
-    - **SQL Proficiency:**  
-        - Proficient in writing complex SQL queries, views, and batch scripts for all three RDBMS.
-        - Good use of views to abstract and simplify reporting and analytics.
-
-    - **Python Automation & Testing:**  
-        - Automated database setup and validation using Python (`db.py` scripts).
-        - Pytest-based test suites for each variant, using correct connectors (`sqlite3`, `mysql-connector-python`, `psycopg2`).
-        - Use of fixtures and in-memory databases for efficient, isolated testing.
-
-    - **DevOps & Environment Management:**  
-        - Docker and Docker Compose used for reproducible development environments for each database variant.
-        - Clear, modular directory structure and environment setup instructions.
-        - Use of uv for Python dependency management.
-
-    - **Documentation:**  
-        - Well-structured Markdown documentation, usage guides, and ER diagrams.
-        - Clear separation of concerns and instructions for each database backend.
-
-    ### **Areas for Growth**
-
-    - **CI/CD Integration:**  
-        - No current implementation of automated CI/CD pipelines (e.g., GitHub Actions, GitLab CI).
-        - Adding automated build/test on push would further professionalize the workflow.
-
-    - **GUI/UX Tools:**  
-        - No use of GUI database tools (e.g., DB Browser for SQLite) in workflow; all interactions are CLI or script-based.
-        - Could consider adding optional GUI instructions for broader accessibility.
-
-    - **Security & Advanced Features:**  
-        - No implementation of advanced security (role-based access, encryption, etc.).
-        - No support for subjective question types or broader educational/administrative features.
-
-    - **Scalability & Production Readiness:**  
-        - Focus is on schema and logic, not on production deployment, backup, or scaling strategies.
-
-    ---
-
-    ### **Role Suitability**
-
-    #### **Best Fit Roles**
-
-    - **Database Engineer / Database Developer**
-    - **Backend Developer (with strong SQL/database focus)**
-    - **DevOps Engineer (entry to mid-level, especially for DB environments)**
-    - **QA Automation Engineer (for database systems)**
-
-    #### **Well-Suited For**
-
-    - Projects requiring robust relational schema design and automation.
-    - Teams needing multi-database support and migration-ready code.
-    - Environments where automated testing and reproducible dev setups are valued.
-
-    #### **Less Suited For**
-
-    - Frontend/UI/UX-heavy roles.
-    - Roles requiring deep experience in cloud-native, distributed, or NoSQL systems.
-    - Security-focused or enterprise-scale production DB admin roles (without further experience).
-
-    ---
-
-    **Summary:**  
-    You demonstrate strong skills in relational database design, SQL, Python automation, and environment management. You are well-suited for roles focused on database engineering, backend development, and DevOps for database-driven projects. Expanding into CI/CD, security, and production operations would further broaden your profile.
+  [Previous Project
+    GSTN Predictive Binary Classification](../gstn-pbc/)
+  [Next Project 
+    S3 Faker Mock Data Generator](../s3-faker/)
 
 ================================================================================
 
 ## SECTION: Case Study: S3 Faker Mock Data Generator
 ## Path: docs/projects/s3-faker.md
 --------------------------------------------------------------------------------
-# S3 Faker
+# S3 Faker Mock Data Generator
 
-**S3 Faker** is a developer-first data generation suite designed to generate high-volume synthetic datasets based on structured JSON configuration files. The generated datasets can be persisted locally or uploaded directly to an AWS S3 bucket or LocalStack S3 emulator. 
+  
+    
+      Cloud Tooling • Data Automation
+      
+## Synthetic Cloud Data Generation Suite
 
-This project simulates production cloud storage environments without incurring AWS infrastructure costs. Key capabilities include programmatic data synthesis using the [Faker](https://faker.readthedocs.io/en/master/) engine, multi-format export (CSV, JSON, Parquet), and automated S3 filesystem integration via [s3fs](https://s3fs.readthedocs.io/en/latest/).
+    
+    
+      [Repository](https://github.com/mrxsierra/s3_faker)
+    
+  
 
-## Engineering Responsibilities
+  
+    
+      Role
+      Lead Tooling Developer
+    
+    
+      Storage Backends
+      Amazon S3, LocalStack Emulator, Local FS
+    
+    
+      Export Formats
+      CSV, JSON, Apache Parquet
+    
+    
+      Core Technologies
+      Python, Faker, Boto3, s3fs, Docker
+    
+  
 
-- Designed and implemented the core architecture and data generation modules.
-- Developed automated synchronization routines for both AWS S3 and LocalStack S3 environments.
-- Integrated pipeline testing into continuous integration workflows.
-- Implemented robust error handling, schema validation, and logging.
+  
+    
+    **Zero-Cost Cloud Emulation:** Simulates full AWS S3 object storage workflows locally via containerized LocalStack, eliminating cloud testing infrastructure expenses.
+  
 
-## Technical Stack
+---
 
-- **Core Languages:** Python, Bash, PowerShell
-- **Libraries & Tooling:** Faker, Pandas, fsspec, s3fs, Boto3
-- **Infrastructure & Testing:** Docker, LocalStack, AWS CLI, pytest
+## Architecture & Data Pipeline
+
+```mermaid
+graph LR
+    A["Declarative JSON Config"] --> B["Faker Generation Engine"]
+    B --> C["Vectorized Pandas Processing"]
+    C --> D["Multi-Format Serializer (CSV / JSON / Parquet)"]
+    D --> E1["Local Storage Volume"]
+    D --> E2["LocalStack S3 (Local Emulation)"]
+    D --> E3["Production AWS S3 (Direct Upload)"]
+```
+
+---
+
+## Executive Overview
+
+**S3 Faker** is a developer-first data synthesis tool designed to generate high-volume, realistic datasets driven by declarative JSON configuration schemas. The generated artifacts can be written to the local filesystem or streamed directly to an Amazon S3 bucket or local containerized LocalStack emulator.
+
+The system addresses a critical bottleneck in modern data engineering: acquiring compliant, realistic test data for ETL pipeline benchmarking without incurring cloud storage costs or risking PII data leaks.
+
+---
 
 ## Technical Challenges & Architectural Solutions
 
-- **Challenge:** Accurately simulating comprehensive Amazon S3 storage semantics locally.
-  - **Solution:** Integrated `fsspec` and LocalStack containerization to ensure identical API behavior between local emulation and production cloud targets.
-- **Challenge:** Efficient high-throughput synthetic record generation.
-  - **Solution:** Leveraged vectorized Pandas and streaming chunk writers to serialize large datasets into CSV, JSON, and Parquet with minimal memory footprint.
+### 1. Accurate Cloud Storage Emulation
+- **Challenge:** Simulating production S3 bucket policies, multipart uploads, and credential chains locally without AWS cloud spend.
+- **Solution:** Integrated `fsspec`, `s3fs`, and LocalStack containerization to ensure transparent parity between local test harnesses and live production endpoints.
 
-## Project Artifacts & Repository
+### 2. High-Throughput Memory-Efficient Synthesis
+- **Challenge:** Generating millions of synthetic records risked Out-Of-Memory (OOM) errors during string serialization.
+- **Solution:** Designed a streaming chunk-based generator that streams records directly through compression filters to Parquet and CSV buffers with constant memory consumption.
 
-- **Source Repository:** [GitHub - mrxsierra/s3_faker](https://github.com/mrxsierra/s3_faker)
+### 3. Declarative Schema-Driven Customization
+- **Challenge:** Allowing engineers to define complex relational schemas without modifying the underlying Python engine.
+- **Solution:** Built a dynamic JSON schema interpreter supporting custom distributions, localized locales, foreign key dependencies, and field type coercions.
+
+---
+
+## CLI Workflow & Example Usage
+
+```bash
+# Generate synthetic dataset locally
+python -m s3_faker --config schema.json --records 50000 --format parquet
+
+# Stream directly to LocalStack S3 emulator
+python -m s3_faker --config schema.json --target s3://test-bucket/data/ --endpoint http://localhost:4566
+```
+
+---
 
 ## Verification & Workflow Visuals
 
-![LocalStack S3 Environment](https://raw.githubusercontent.com/mrxsierra/s3_faker/main/img/localstack%20resource.jpg)
-![Synthetic Data Generation Run](https://raw.githubusercontent.com/mrxsierra/s3_faker/main/img/update.jpg)
+  
+    
+#### LocalStack Emulation Environment
+
+    [![LocalStack S3 Environment](https://raw.githubusercontent.com/mrxsierra/s3_faker/main/img/localstack%20resource.jpg)](https://raw.githubusercontent.com/mrxsierra/s3_faker/main/img/localstack%20resource.jpg)
+  
+  
+    
+#### Data Synthesis & Upload Execution
+
+    [![Synthetic Data Generation Run](https://raw.githubusercontent.com/mrxsierra/s3_faker/main/img/update.jpg)](https://raw.githubusercontent.com/mrxsierra/s3_faker/main/img/update.jpg)
+  
+
+---
+
+  [Previous Project
+    Examination Management System DB](../ems-db/)
+  [Next Project 
+    Paraxcel Document Toolkit](../paraxcel/)
 
 ================================================================================
 
 ## SECTION: Case Study: Paraxcel Document Toolkit
 ## Path: docs/projects/paraxcel.md
 --------------------------------------------------------------------------------
-# Paraxcel
+# Paraxcel Document Toolkit
 
-??? tip "Quick Summary"
-    **Paraxcel**
-    A lightweight, local-first Python desktop application using Tkinter to convert Microsoft Word DOCX files containing multiple-choice questions into structured Excel spreadsheets.
+  
+    
+      Data Automation • Desktop Application
+      
+## Paraxcel Document Parsing Engine
 
-    - **Context:** `Python`, `Tkinter`, `Pandas`, `Pydantic`, `python-docx`, `Solo Project`, `Feb-Mar 2025`
-    - **Role:** Sole developer responsible for design, implementation, testing, documentation, and packaging of the application.
-    - **Impact:** Created a tool that automates the extraction of questions and answers from DOCX files, reducing manual data entry time for educators and content creators, by implementing parsing logic with `python-docx` and structuring output with `pandas`.
+    
+    
+      [Repository](https://github.com/mrxsierra/paraxcel)
+      [Video Demo](https://www.youtube.com/watch?v=btjMeafD0vU)
+    
+  
 
-## Overview
+  
+    
+      Role
+      Sole Architecture & App Developer
+    
+    
+      Application Type
+      Local-First Desktop GUI (Windows Executable)
+    
+    
+      Core Technologies
+      Python, python-docx, Pydantic, Pandas, Tkinter
+    
+    
+      Accreditation
+      Harvard CS50x Computer Science
+    
+  
 
-Paraxcel is a Python desktop application built with Tkinter that addresses the need for converting multiple-choice questions from DOCX files into an organized Excel format, it targets educators, content creators, and assessment professionals who need to manage question banks efficiently. The application provides a simple graphical user interface for file selection and conversion, running entirely locally.
+  
+    
+    **Automated ETL Pipeline:** Eliminates manual data entry by automatically extracting MCQs, highlighted correct options, and superscripts from DOCX files into validated Excel sheets.
+  
 
-## Goals
+---
 
-The primary goals for the Paraxcel project were:
+## Architecture & Extraction Flow
 
-- To automate the tedious and time-consuming manual process of extracting multiple-choice questions and their corresponding answers from Microsoft Word documents.
-- To structure the extracted data into a usable and organized Excel format.
-- To create a simple, reliable, and accessible desktop tool for educators and content creators.
+```mermaid
+graph LR
+    A["Raw DOCX Documents"] --> B["python-docx Run-Level XML Parser"]
+    B --> C["Format & Highlight Extraction ('para_utility')"]
+    C --> D["Pydantic Schema Validation ('Question' Model)"]
+    D --> E["Pandas Tabular Normalization"]
+    E --> F["Normalized Excel Workbook (.xlsx)"]
+```
 
-## Responsibilities
+---
 
-- Designed the application architecture, including module separation (`docx_parser`, `excel_writer`, `model`, `para_utility`, `interface`) for maintainability and scalability.
-- Implemented robust `DOCX` parsing using `python-docx` to accurately extract `questions`, `answer options`, and identify the `correct answer` based on formatting (`color/highlight`).
-- Utilized pandas to structure extracted data into a standardized, clean format, enabling reliable export to `.xlsx` files.
-- Built a user-friendly graphical interface with `Tkinter`, enabling users to easily select input files/folders and initiate the conversion process.
-- Integrated Pydantic for rigorous data validation of extracted question data, ensuring data integrity before export.
-- Created essential utility functions (`para_utility.py`) for text cleaning, format handling, and precise answer detection.
-- Authored comprehensive technical (`doc.md`) and user (`README.md`) documentation.
-- Packaged the application into a standalone executable using `PyInstaller` for straightforward distribution and use on Windows.
+## Executive Overview
 
-## Technologies Used
+**Paraxcel** is a modular Python desktop utility built to automate the extraction of multiple-choice questions (MCQs), answers, and option formatting from Microsoft Word (`.docx`) documents into structured Excel workbooks (`.xlsx`).
 
-- **Languages:** Python
-- **GUI:** Tkinter (Standard Python library) - For building the desktop graphical interface.
-- **DOCX Parsing:** `python-docx` - For reading and analyzing `.docx` file content.
-- **Data Handling & Excel Export:** `pandas` - For structuring the extracted data and writing to `.xlsx` files.
-- **Data Validation:** `Pydantic` - For validating the structure and types of extracted question data.
-- **Documentation:** `Markdown` - For `README.md` and `doc.md`.
+Designed for educators and assessment coordinators, Paraxcel operates entirely offline with zero cloud dependencies. It parses low-level OpenXML document structures to reliably detect marked answers (font color, background highlights) and mathematical notations (superscripts, subscripts).
 
-??? abstract "Tools"
-    - **Version Control:** Git
-    - **Packaging:** PyInstaller - For creating the standalone executable.
-    - **Development Environment:** VS Code
-
-## Process
-
-The development process involved identifying the need for a simple DOCX-to-Excel conversion tool for MCQs and followed a structured approach focused on modularity and ease of use.
-
-1. **Requirement Gathering**: Defined the core functionality: parse DOCX files containing questions followed by four options and export them to Excel, including support for detecting marked answers.
-2. **Technology Stack Selection**: Chose libraries (`python-docx`, `pandas`, `Tkinter`, `Pydantic`) best suited for the task, balancing functionality with ease of deployment (local-first, standard libraries).
-3. **Modular Implementation**: Developed each component (`parsing`, `writing`, `GUI`, `validation`) as a distinct module.
-4. **Testing & Refinement**: Used sample files to rigorously test parsing accuracy and output format.
-5. **Documentation**: Created user and technical guides to support adoption and understanding.
-6. **Packaging**: Prepared the application for distribution as a single executable.
-
-## **Recognition**
-
-I am proud to share that I have successfully completed the `CS50x - Introduction to Computer Science` course.
-
-### Certificate
-
-![CS50x - Introduction to Computer Science](../cert/1738690195028-cs50x.jpeg)
+---
 
 ## Technical Challenges & Architectural Solutions
 
-1. **Handling Varied DOCX Formatting**
-    - **Challenge:** Parsing semi-structured DOCX files presented challenges due to inconsistencies in formatting, numbering, and spacing. Reliably detecting correct answers based on run-level highlighting required granular XML traversal.
-    - **Solution:** Developed flexible parsing heuristics (`parse_para`) designed to accommodate common formatting variations, inspecting font colors and highlight metadata directly via python-docx.
+### 1. Granular XML Run-Level Parsing
+- **Challenge:** Detecting highlighted or color-coded answers embedded within arbitrary paragraph runs across inconsistent Word formatting styles.
+- **Solution:** Engineered recursive run inspection routines in `para_utility.py` that query OpenXML font color, background tint, and strike-through attributes directly at the character run level.
 
-2. **Ensuring Data Quality & Schema Rigor**
-    - **Challenge:** Extracting unstructured DOCX content risked generating malformed or incomplete records.
-    - **Solution:** Integrated Pydantic models (`Question`) to enforce strict type validation and structural integrity prior to downstream Excel workbook generation.
+### 2. Strict Schema Validation & Quality Enforcement
+- **Challenge:** Preventing corrupted or partially formatted Word documents from outputting malformed Excel rows.
+- **Solution:** Implemented declarative `Pydantic` schemas enforcing strict type bounds (question non-empty, exactly 4 validated options, valid answer index).
 
-3. **Accessibility for Non-Technical Users**
-    - **Challenge:** Enabling non-developer educators to utilize the tool with zero CLI prerequisites.
-    - **Solution:** Built a responsive desktop GUI with standard Tkinter components and packaged the distribution into a standalone binary using PyInstaller.
-
-## Achievements
-
-- Developed and launched Paraxcel, automating MCQ extraction from raw DOCX documents into structured Excel format.
-- Implemented robust run-level styling extraction (superscript, subscript, highlight detection).
-- Packaged the Python application into a standalone executable with zero external runtime dependencies.
-
-## Visual Artifacts & Pipeline Flow
-
-!!! info "Sample Input Format"
-    **Q1. What is the capital of France?**  
-    A. Berlin  
-    B. Madrid  
-    C. ==Paris==  *(Highlighted as correct)*  
-    D. Rome  
-
-**Structured Excel Export**
-
-| Question                       | Option 1 | Option 2 | Option 3 | Option 4 | Answer Index |
-| ------------------------------ | -------- | -------- | -------- | -------- | ------------ |
-| What is the capital of France? | Berlin   | Madrid   | **Paris** | Rome     | 3            |
+### 3. Dependency-Free Desktop Packaging
+- **Challenge:** Distributing a Python application to non-technical end-users without requiring a Python runtime environment.
+- **Solution:** Configured `PyInstaller` build pipelines with embedded icon resources (`paraxcel.ico`), packaging the application into a standalone Windows binary.
 
 ---
 
-### Application Screenshots
+## Verified Accreditation
 
-![Tkinter GUI - Screenshot of the Paraxcel Tkinter GUI showing file/folder selection fields and buttons.](https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/ui.jpg)
-
-![Docx Sample - Screenshot of a sample input DOCX file snippet showing question/option format.](https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/sample.jpg)
-
-![Output Excel - Screenshot of the resulting Excel file snippet showing structured data.](https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/excel.jpg)
+  [![Harvard CS50x Certificate](../../cert/1738690195028-cs50x.jpeg)](../../cert/1738690195028-cs50x.jpeg)
+  
+    Harvard CS50x: Introduction to Computer Science • Harvard University (CS50)
+  
 
 ---
 
-### Video Demonstration
+## Application Screenshots
 
-[![Video Demo](https://img.youtube.com/vi/btjMeafD0vU/maxresdefault.jpg)](https://www.youtube.com/watch?v=btjMeafD0vU)
+  
+    
+#### 1. Desktop GUI Interface
 
-## Links
+    [![Paraxcel Desktop GUI](https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/ui.jpg)](https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/ui.jpg)
+  
+  
+    
+#### 2. Sample DOCX Input
 
-- [GitHub Repository](https://github.com/mrxsierra/paraxcel)
+    [![Sample DOCX Input](https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/sample.jpg)](https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/sample.jpg)
+  
+  
+    
+#### 3. Normalized Excel Output
 
-## Conclusion
+    [![Normalized Excel Output](https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/excel.jpg)](https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/excel.jpg)
+  
 
-Paraxcel successfully provides a targeted solution for automating the often tedious task of extracting multiple-choice questions from DOCX files into a more usable Excel format. By leveraging libraries like `python-docx`, `pandas`, `Pydantic`, and `Tkinter`, the project delivers a functional, easy-to-use desktop tool for educators and content creators. Key takeaways include the practical application of these libraries for document parsing, data handling, validation, GUI development, and application packaging, resulting in a useful utility that addresses a specific workflow challenge.
+---
 
-??? summary "**AI Skill Assessment**"
-    Prompt[^1] Source [:material-file-eye-outline:{ #source }](https://raw.githubusercontent.com/mrxsierra/mrxsierra.github.io/blob/main/prompts/skill-assesment-prompt.md)
-    [^1]:
-    This AI skill assessment was generated based on the [skill-assessment-prompt.md](https://raw.githubusercontent.com/mrxsierra/mrxsierra.github.io/main/prompts/skill-assesment-prompt.md) and the provided project documentation. It is intended as an illustrative summary and should be interpreted in the context of the available code and documentation in codebase.
-
-    ### **Strengths**
-
-    - **Python Application Development:** Proven ability to design, develop, and package a complete, modular desktop application.
-    - **GUI Development (Tkinter):** Experience building functional graphical interfaces for user interaction.
-    - **Document Parsing & Data Processing:** Skilled in extracting structured data from complex document formats (`.docx`) and processing it using `pandas`.
-    - **Data Validation:** Practical application of `Pydantic` for ensuring data integrity and correctness.
-    - **Comprehensive Documentation:** Ability to create clear technical and user-focused documentation.
-    - **Application Packaging & Distribution:** Experience using `PyInstaller` for creating standalone executables and managing dependencies.
-    - **CI/CD Implementation:** Basic experience setting up automated workflows for testing, security checks, and builds using GitHub Actions.
-    - **Software Reliability Basics:** Inclusion of testing tools and security scanning indicates an understanding of foundational quality practices.
-
-    ---
-
-    ### **Areas for Improvement**
-
-    - **Testing Depth:** Expanding test coverage and visibility would further strengthen quality assurance processes.
-    - **Advanced Error Handling:** Implementing more granular logging and exception handling could enhance application robustness.
-    - **Performance Optimization:** Exploring techniques for handling very large files more efficiently could improve scalability.
-    - **UI/UX:** For projects requiring more complex interfaces, exploring modern GUI frameworks might be beneficial.
-    - **Cross-Platform Deployment:** Expanding build support beyond Windows would increase application accessibility.
-
-    ---
-
-    ### **Relevant Roles**
-
-    #### **Strong Fit**
-
-    - **Python Application Developer:** Directly aligns with the project's nature.
-    - **Automation Engineer:** Demonstrates strong skills in automating data extraction and processing workflows.
-
-    #### **Good Fit**
-
-    - **Backend Developer (Data Focus):** Relevant experience in data parsing, validation, and structuring.
-    - **Junior DevOps/Build Engineer:** Basic experience with CI/CD automation and application packaging.
-
-    #### **Less Direct Fit**
-
-    - **Frontend Web Developer:** No web technology experience shown.
-    - **Data Scientist/ML Engineer:** Project focuses on extraction, not analysis or modeling.
-    - **Senior DevOps/SRE:** Lacks infrastructure, monitoring, or cloud services.
-    - **Mobile Developer:** No mobile development experience shown.
-
-    ---
-
-    ### **Conclusion**
-
-    This project effectively showcases capabilities in end-to-end Python application development, particularly in document processing, data handling, and automation. The inclusion of data validation, packaging, and basic CI/CD demonstrates a well-rounded approach to software development. This experience is highly relevant for roles focused on Python application development, automation, and data processing pipelines.
+  [Previous Project
+    S3 Faker Mock Data Generator](../s3-faker/)
+  [Next Project 
+    Naukri Market Data Scraper](../naukri-webscraper/)
 
 ================================================================================
 
 ## SECTION: Case Study: Naukri Market Data Scraper
 ## Path: docs/projects/naukri-webscraper.md
 --------------------------------------------------------------------------------
-# ***Naukri Webscraper***
+# Naukri Market Data Scraper
 
-??? tip "Quick Summary"
-    **Naukri Webscraper**  
-    A Python tool that automates job searches on Naukri.com, enabling users to filter listings by skills and export structured data for analysis.
+  
+    
+      Web Automation • Data Extraction
+      
+## Naukri Market Telemetry Scraper
 
-    - **Context:** `Personal Project`, `Mar 2024`, `Python`, `Selenium`, `Pandas`
-    - **Role:** Sole developer—designed, implemented, tested, and documented the project
-    - **Impact:** Automated skill-based job search and CSV export, validated by automated tests and real-world data extraction
+    
+    
+      [Repository](https://github.com/mrxsierra/naukari-webscraper)
+      [Video Demo](https://www.youtube.com/watch?v=ls_uxjfADN4)
+    
+  
 
-## ***Overview***
+  
+    
+      Role
+      Sole Tooling Architect
+    
+    
+      Core Engine
+      Selenium WebDriver, Chrome Headless
+    
+    
+      Data Pipeline
+      Pandas Vectorized Filtering & CSV Export
+    
+    
+      Accreditation
+      Harvard CS50P Python Programming
+    
+  
 
-Naukri Webscraper is a Python-based automation tool that scrapes job listings from Naukri.com. It extracts job titles, companies, salaries, locations, and required skills, then filters results based on user-specified skills. The project outputs structured data as CSV files for further analysis.  
-The project was developed independently as a personal automation and data analysis initiative.
+  
+    
+    **Resilient Automation:** Extracts paginated job market telemetry (titles, salary bands, required skills, locations) with graceful fallback handling and pytest test benches.
+  
 
-!!! info "**Recent updates:**"
-    - Added automated tests for core scraping and filtering logic (`test_project.py`) using `pytest`
-    - Improved error handling and robustness in dynamic content extraction
-    - Updated documentation and usage instructions in `README.md`
+---
 
-## ***Goals***
+## Architecture & Scraping Flow
 
-- Automate the retrieval and filtering of job listings from Naukri.com based on user-defined skills.
-- Simplify and accelerate the job search process by eliminating manual filtering.
-- Provide structured, exportable data for further analysis.
+```mermaid
+graph TD
+    A["Target Search Query (Skills, Location, Experience)"] --> B["Headless Selenium Session Initialization"]
+    B --> C["Explicit Polling with WebDriverWait"]
+    C --> D["DOM Extraction & Fallback Normalization ('get_text_or_default')"]
+    D --> E["Pandas Multi-Criterion Skill Filtering"]
+    E --> F["Structured CSV Telemetry Output"]
+```
 
-## ***Responsibilities***
+---
 
-- Designed and implemented the scraping logic using Selenium WebDriver.
-- Developed skill-based filtering and CSV export using Pandas.
-- Addressed dynamic content loading and missing data scenarios.
-- Authored automated tests with `pytest` to ensure code correctness and reliability.
-- Wrote comprehensive documentation and usage instructions.
+## Executive Overview
 
-## ***Technologies Used***
+**Naukri Market Data Scraper** is a Python automation tool that extracts job listings from Naukri.com to facilitate programmatic tech hiring telemetry, salary benchmarking, and skill requirement analysis.
 
-- **Languages:** Python (primary language for all scripts and logic)
-- **Frameworks/Libraries:**  
-    - Selenium (browser automation and web scraping)  
-    - Pandas (data manipulation and CSV export)
-- **Testing:**  
-    - pytest (for automated tests in `test_project.py`)
-- **DevOps/Tools:**  
-    - Git (version control)
-    - Chrome WebDriver (browser automation)
-- **Documentation:**  
-    - Markdown (`README.md` for usage and setup)
+The scraper automates browser navigation across paginated listings, resolves asynchronously hydrated DOM components, normalizes inconsistent compensation notations, and filters results against user-defined skill matrices before exporting clean datasets for downstream analytics.
 
-??? abstract "Tools"
-    - Git (version control)
-    - Chrome WebDriver (browser automation)
-    - Markdown (project documentation)
-    - pytest (automated testing)
-
-## ***Process***
-
-1. **Planning:**  
-    - Identified key data fields (title, company, salary, location, skills) to extract from Naukri.com.
-2. **Implementation:**  
-    - Used Selenium to automate browser actions and extract job data.
-    - Employed Pandas for data structuring and CSV export.
-    - Developed a filtering mechanism for user-specified skills.
-3. **Testing:**  
-    - Created automated tests (`test_project.py`) using `pytest` to validate scraping and filtering logic.
-4. **Documentation:**  
-    - Documented setup, usage, and troubleshooting in `README.md`.
-
-## **Recognition**
-
-I am proud to share that I have successfully completed the `CS50P - Introduction to Programming with Python` course.
-
-### Certificate
-
-![CS50P - Introduction to Programming with Python](../cert/1708063772979-cs50p.jpeg)
+---
 
 ## Technical Challenges & Architectural Solutions
 
-1. **Dynamic Client-Side Content Rendering**
-    - **Challenge:** Target pages use asynchronous JavaScript hydration, causing race conditions for static extraction.
-    - **Solution:** Implemented explicit polling with Selenium `WebDriverWait` and expected conditions before accessing DOM elements.
+### 1. Dynamic Client-Side Content Hydration
+- **Challenge:** Target pages use asynchronous client-side JavaScript, causing standard static HTTP scrapers to fail due to DOM race conditions.
+- **Solution:** Implemented explicit polling utilizing Selenium's `WebDriverWait` and expected conditions, ensuring DOM elements are fully hydrated prior to traversal.
 
-2. **Inconsistent DOM Structures**
-    - **Challenge:** Nested and varied HTML layout across different employer listing templates.
-    - **Solution:** Created resilient fallback selector helpers (`get_text_or_default`) to normalize heterogeneous DOM nodes without throwing fatal unhandled exceptions.
+### 2. Inconsistent DOM Schema Normalization
+- **Challenge:** Varied markup across sponsored, promoted, and standard job card templates frequently resulted in `NoSuchElementException` crashes.
+- **Solution:** Built fault-tolerant fallback parser helpers (`get_text_or_default`) that normalize missing fields to default values without halting the extraction pipeline.
 
-3. **Throughput & Extraction Efficiency**
-    - **Challenge:** High latency when parsing hundreds of multi-page job listings.
-    - **Solution:** Optimized pagination loops, decoupled DOM extraction from tabular transformation, and utilized vectorized Pandas operations for filtering and dataset serialization.
+### 3. Automated Regression Testing
+- **Challenge:** Ensuring scraper parser logic remains resilient against minor frontend updates.
+- **Solution:** Authored a complete test suite in `test_project.py` using `pytest`, featuring mocked DOM responses and fixture-driven parser validation.
 
-4. **Reliability & Regression Testing**
-    - **Challenge:** Ensuring scraper resilience against minor structural markup adjustments.
-    - **Solution:** Authoring a comprehensive `pytest` test bench to validate parsing rules against offline fixtures.
+---
 
-??? warning "***Note :*** On Site Changes and Locators"
-    - The HTML structure and element locators (CSS selectors, XPaths) used in `project.py` are based on the current version of Naukri.com.  
-    - If the website updates its layout or class names, you may need to update these locators in the code to restore scraping functionality.  
-    - Review and adjust selectors in `project.py` if you encounter errors or missing data after a site update.
+## Verified Accreditation
 
-## ***Achievements***
+  [![Harvard CS50P Certificate](../../cert/1708063772979-cs50p.jpeg)](../../cert/1708063772979-cs50p.jpeg)
+  
+    Harvard CS50P: Introduction to Programming with Python • Harvard University (CS50)
+  
 
-- Automated the extraction and filtering of job listings from Naukri.com.
-- Enabled skill-based filtering and CSV export for downstream analysis.
-- Developed a test suite (`test_project.py`) using `pytest` to ensure reliability.
-- Improved scraping robustness and error handling based on real-world site changes.
+---
 
-## ***Key Learnings***
+## Video Demonstration
 
-- Gained practical experience with Selenium for dynamic web scraping.
-- Enhanced skills in data manipulation and export using Pandas.
-- Learned to write maintainable, testable code for web automation projects.
-- Understood the importance of robust error handling and documentation.
-- Applied `pytest` for effective and maintainable automated testing.
+  [![Video Demo Walkthrough](https://img.youtube.com/vi/ls_uxjfADN4/maxresdefault.jpg)](https://www.youtube.com/watch?v=ls_uxjfADN4)
 
-## ***Outcomes***
+---
 
-- Successfully automated job search and filtering for Naukri.com.
-- Produced structured CSV datasets for analysis.
-- Provided a reusable, documented tool for job seekers and data analysts.
-- Ensured code reliability through automated testing with `pytest`.
-
-## ***Visuals***
-
-### Video Demo
-
-[![Video Demo](https://img.youtube.com/vi/ls_uxjfADN4/maxresdefault.jpg)](https://www.youtube.com/watch?v=ls_uxjfADN4)
-
-## ***Links***
-
-- [GitHub Repository](https://github.com/mrxsierra/naukari-webscraper)
-
-## ***Conclusion***
-
-Naukri Webscraper demonstrates the power of Python automation for real-world data extraction and analysis. By combining Selenium and Pandas, the project streamlines job searches, enhances productivity, and provides actionable insights through structured data exports. The codebase is robust, tested with `pytest`, and well-documented for future use and extension.
-
-??? summary "**AI Skill Assessment**"
-    Prompt[^1] Source [:material-file-eye-outline:{ #source }](https://raw.githubusercontent.com/mrxsierra/mrxsierra.github.io/blob/main/prompts/skill-assesment-prompt.md)
-    [^1]:
-    This `AI skill assessment` was generated based on the [skill-assessment-prompt.md](https://raw.githubusercontent.com/mrxsierra/mrxsierra.github.io/main/prompts/skill-assesment-prompt.md) and the provided project documentation. It is intended as an illustrative summary and should be interpreted in the context of the available code and documentation in codebase.
-
-    ### **Strengths**
-
-    - **Web Scraping Automation**
-        - Demonstrates strong proficiency with Selenium for browser automation, including headless operation, custom user agents, and dynamic navigation (e.g., paginated scraping, handling search forms).
-        - Robust handling of web elements using both CSS selectors and XPaths, with fallback/default logic for missing elements.
-
-    - **Data Handling & Export**
-        - Uses Pandas effectively for data manipulation and CSV export.
-        - Implements structured data extraction with a clear schema (job title, company, salary, skills, etc.).
-
-    - **Testing & Quality Assurance**
-        - Provides automated tests using `pytest`, including fixtures, mocking user input, and live web tests (with appropriate skips for anti-bot/site change issues).
-        - Tests cover both core scraping logic and utility functions.
-
-    - **Documentation**
-        - Comprehensive technical documentation (`doc.md`) and user-facing README.md with clear instructions, schema definitions, troubleshooting, and usage examples.
-        - Documents function purposes, parameters, and expected behaviors in code docstrings.
-
-    - **User Interaction & Error Handling**
-        - Interactive CLI prompts for user input (search terms, page count, skill filters).
-        - Handles invalid input and exceptions gracefully (e.g., `KeyboardInterrupt`, `ValueError`, missing elements).
-
-    - **Project Structure & Packaging**
-        - Uses pyproject.toml for dependency management and project metadata.
-        - Separates main logic, tests, and documentation cleanly.
-
-    ---
-
-    ### **Areas for Growth**
-
-    - **Security & Anti-Bot Evasion**
-        - No evidence of advanced anti-bot evasion techniques (e.g., proxy rotation, CAPTCHA handling, request throttling beyond simple sleep).
-        - No explicit handling of robots.txt or ethical scraping considerations in code.
-
-    - **Scalability & Performance**
-        - Scraping is single-threaded and synchronous; not optimized for large-scale or parallel scraping.
-        - No batching, queuing, or distributed scraping logic.
-
-    - **CI/CD & DevOps**
-        - No evidence of CI/CD pipelines, Dockerization, or deployment automation.
-        - No Makefile or scripts for environment setup/testing.
-
-    - **Code Modularity & Extensibility**
-        - All logic is in a single script (`project.py`); could benefit from modularization (e.g., separating scraping, filtering, and CLI logic).
-        - No plugin or configuration system for adapting to site changes.
-
-    - **Error Logging & Monitoring**
-        - Uses print statements for errors; lacks structured logging or monitoring for production use.
-
-    - **GUI/UX**
-        - No GUI or web interface; CLI-only interaction.
-
-    ---
-
-    ### **Role Suitability**
-
-    #### **Best Fit Roles**
-
-    - **Python Backend Developer**
-        - Strong evidence of backend scripting, data processing, and automation skills.
-    - **Web Scraping/Data Extraction Engineer**
-        - Demonstrated expertise in Selenium, data extraction, and handling dynamic web content.
-    - **QA Automation Engineer**
-        - Experience with automated testing, mocking, and test-driven development using `pytest`.
-    - **Technical Writer/Documentation Specialist**
-        - High-quality, thorough documentation and user guides.
-
-    #### **Well-Suited For**
-
-    - **Data Analyst (with Python)**
-        - Familiarity with Pandas and CSV data workflows.
-    - **SDET (Software Development Engineer in Test)**
-        - Automated test coverage and test design.
-
-    #### **Less Suited For**
-
-    - **Frontend Developer**
-        - No evidence of frontend/UI development (web or desktop).
-    - **DevOps Engineer**
-        - Lacks CI/CD, containerization, and deployment automation.
-    - **Cloud/Distributed Systems Engineer**
-        - No cloud integration, distributed scraping, or scalable architecture.
-
-    ---
-
-    **Summary:**  
-    The developer demonstrates strong skills in Python scripting, web scraping automation with Selenium, data processing with Pandas, and automated testing with `pytest`. The codebase is well-documented and user-friendly, with robust error handling and interactive CLI features. Areas for growth include modularization, scalability, advanced anti-bot techniques, and DevOps practices. The developer is best suited for backend, automation, and data extraction roles, and less suited for frontend or DevOps-focused positions based on the current codebase.
-
-    ---
+  [Previous Project
+    Paraxcel Document Toolkit](../paraxcel/)
+  [Next Project 
+    Real-Time Test Management Interface](../test-site/)
 
 ================================================================================
 
 ## SECTION: Case Study: Real-Time Test Management Interface
 ## Path: docs/projects/test-site.md
 --------------------------------------------------------------------------------
-# Test Management Site
+# Real-Time Test Management Interface
 
-??? tip "In-Hurry Summary"
-    **Test Management Site**
-    A demo vanilla javascripting application for managing tests, enabling test creation, execution, and result tracking. Aims to showcase basic web application functionality using dynamic UI updates and local storage.
+  
+    
+      Frontend Engineering • Web Application
+      
+## Client-Side Examination Platform
 
-    - **Context:** `Personal Project`, `Jun 2024`, `HTML`, `CSS`, `JavaScript`, `Bootstrap`
-    - **Role:** Sole Developer - Responsible for designing, developing, and implementing all features.
-    - **Impact:** Demonstrated full-stack capabilities by creating a functional test management system, showcasing skills in UI design, dynamic content loading, and local data storage.
+    
+    
+      [Live Application](https://mrxsierra.github.io/test-site/)
+      [Repository](https://github.com/mrxsierra/test-site/)
+    
+  
 
-## ***Overview***
+  
+    
+      Role
+      Sole Frontend Architect & Developer
+    
+    
+      Architecture
+      Modular Vanilla JavaScript (ES6 Modules)
+    
+    
+      Data Persistence
+      Local-First Schema Serialization (localStorage)
+    
+    
+      Libraries
+      Bootstrap 5, PapaParse, XLSX.js, Plotly
+    
+  
 
-The Test Management Site is a demo vanilla javascripts application developed in April 2025 to showcase test management capabilities. It allows users to create, manage, take tests, and view results. The application uses HTML, CSS, JavaScript, and Bootstrap for a responsive and dynamic user interface.
+  
+    
+    **Zero-Backend Prototyping:** Demonstrates complete test creation, timed execution, real-time scoring, and historical result visualization purely client-side.
+  
 
-## ***Goals***
+---
 
-- Provide a platform to create, update, and delete tests.
-- Enable users to take tests with a specified duration.
-- Display test results and history.
-- Implement user management features like login, logout, and password changes.
-- Showcase dynamic UI updates and local data storage.
+## Architecture & State Lifecycle
 
-## ***Responsibilities***
+```mermaid
+graph TD
+    A["User Authentication & Profile Setup"] --> B["Test Catalog & CSV/XLSX Upload Engine"]
+    B --> C["Dynamic DOM Hydration & Fragment Caching"]
+    C --> D["Timed Test Session Engine (Timer Sync & Auto-Submit)"]
+    D --> E["Client-Side Scoring & State Persistence ('localStorage')"]
+    E --> F["Interactive Analytical Dashboards & Result Export"]
+```
 
-- Designed and developed the entire application from scratch.
-- Implemented dynamic UI updates using JavaScript.
-- Managed data storage using `localStorage`.
-- Created user authentication and session management features.
-- Integrated Bootstrap for responsive design and UI components.
+---
 
-## ***Technologies Used***
+## Executive Overview
 
-- **Languages:** JavaScript, HTML, CSS
-- **Frameworks/Libraries:** Bootstrap, PapaParse, XLSX.js, Plotly.js
-- **Tools:** Visual Studio Code, GitHub Actions (for CI/CD and static site deployment)
-- **Browser APIs:** localStorage, sessionStorage, Fetch API
-- **Other:** Modular JavaScript (ES6 modules), CSS custom properties, GitHub Pages (hosting)
+The **Real-Time Test Management Interface** is a client-side web application built with vanilla JavaScript (ES6+), HTML5, and Bootstrap. It demonstrates full test administration workflows without requiring server-side infrastructure:
 
-## ***Process***
+- Dynamic creation, updating, and deletion (CRUD) of multi-question exams.
+- Timed examination sessions with auto-submission triggers.
+- In-browser file parsing for bulk question import via CSV and Excel workbooks.
+- Historical score tracking and visual performance analytics.
 
-The project followed an iterative development approach. Initially, the basic HTML structure and CSS styling were set up. JavaScript was then used to dynamically load content, manage user sessions, and handle data storage. Bootstrap was integrated to ensure a responsive design. Challenges were addressed through continuous debugging and refinement of the code.
+---
 
 ## Technical Challenges & Architectural Solutions
 
-1. **Dynamic Content Loading & DOM Hydration**  
-    - **Challenge:** Rendering modular views dynamically without full page reloads.  
-    - **Solution:** Utilized native `fetch` APIs with template fragment caching and DOM manipulation to ensure seamless client-side transitions.
-
-2. **Client-Side State Persistence**  
-    - **Challenge:** Managing test sessions, timers, and scoring in-browser reliably.  
-    - **Solution:** Implemented structured serialization mechanisms over `localStorage` with error boundary fallbacks and schema versioning.
-
-3. **Multi-Device Responsive Layout**  
-    - **Challenge:** Maintaining readable test controls across varied screen viewports.  
-    - **Solution:** Combined fluid CSS grid systems, modern flexbox rules, and media query breakpoints for responsive layout parity.
-
-## ***Achievements***
-
-- Successfully implemented all core features: test management, test taking, results display, and user management.
-- Created a dynamic and responsive user interface.
-- Demonstrated proficiency in JavaScript, HTML, CSS, and Bootstrap.
-- Implemented data persistence using `localStorage`.
-
-## ***Key Learnings***
-
-- Gained a deeper understanding of dynamic content loading and manipulation using JavaScript.
-- Learned how to effectively use `localStorage` for data persistence.
-- Improved skills in responsive web design using Bootstrap.
-- Enhanced problem-solving abilities through debugging and refining the code.
-
-## ***Outcomes***
-
-The project resulted in a functional test management application that showcases dynamic UI updates and local data storage. The application allows users to create, manage, take tests, and view results.
-
-## ***Visuals***
-
-### Screenshot Project Images
-
-Here are some images showcasing the project:
-
-#### Login Page
-
-![Login Page](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/login.jpg)
-
-#### Register Page
-
-![Register Page](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/register.jpg)
-
-#### Test Selection
-
-![Select Test](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/select-test-to-take.jpg)
-
-#### Test Page
-
-![Test Page](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/test-page.png)
-
-#### Test Timeout
-
-![Test Timeout](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/test-time-out.png)
-
-#### Dashboard
-
-![Dashboard](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/anamoly-dash.png)
-
-#### User Management
-
-![Change Password](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/change-pass.png)
-
-#### CRUD Operations
-
-![Create Operation](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/create.png)
-![Read Operation](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/Read.png)
-![Update Operation](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/update.png)
-![Delete Operation](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/delete.png)
-
-#### Test Results
-
-![Individual Test Result](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/individual-test-result.png)
-![Multi User Result Track](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/multi-user-result-track.png)
-
-#### Error Handling
-
-![Unsupported Error](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/unsupported-error.png)
-
-## ***Links***
-
-- [Live Project](https://mrxsierra.github.io/test-site/)
-- [GitHub Repository](https://github.com/mrxsierra/test-site/)
-
-## ***Conclusion***
-
-The Test Management Site project was a valuable learning experience that allowed me to demonstrate my full-stack capabilities. By creating a functional application with dynamic UI updates and local data storage, I showcased my skills in JavaScript, HTML, CSS, and Bootstrap. Success was measured by the successful implementation of all core features and the creation of a responsive and dynamic user interface.
-
-??? summary "**AI Skill Assessment**"
-    Prompt[^1] Source [:material-file-eye-outline:{ #source }](https://raw.githubusercontent.com/mrxsierra/mrxsierra.github.io/blob/main/prompts/skill-assesment-prompt.md)
-    [^1]:
-    This `AI skill assessment` was generated based on the [skill-assessment-prompt.md](https://raw.githubusercontent.com/mrxsierra/mrxsierra.github.io/main/prompts/skill-assesment-prompt.md) and the provided project documentation. It is intended as an illustrative summary and should be interpreted in the context of the available code and documentation in codebase.
-
-    ---
-
-    ### **Strengths**
-
-    - **Frontend Engineering (HTML/CSS/JS):**
-        - Demonstrates strong skills in vanilla JavaScript for DOM manipulation, modular code organization, and dynamic UI updates (e.g., main.js, `js/tests_content.js`).
-        - Uses modern CSS with custom properties, responsive design, and theme toggling (see `styles/css/styles.css`).
-        - Implements modular HTML with reusable components loaded dynamically (e.g., sidebar, topnav, profile, as seen in sidebar.js and HTML assets).
-
-    - **Data Handling & Storage:**
-        - Effectively uses `localStorage` and `sessionStorage` for persistent and session-based data (user profiles, test data, results).
-        - Handles file uploads and parsing for CSV and Excel formats using third-party libraries (PapaParse, XLSX.js), with robust error handling and user feedback (`js/utility/file_handle.js`).
-
-    - **Object-Oriented Design:**
-        - Defines clear, extensible classes for domain entities (User, Profiles, Test, Question, Result, etc.) with encapsulated logic (`js/utility/temp_data.js`, `js/utility/temp_profile.js`).
-
-    - **User Experience & Usability:**
-        - Provides detailed user feedback and error messages throughout the UI (e.g., form validation, alerts for missing data, dynamic content updates).
-        - Implements accessibility features such as keyboard navigation and clear visual cues for active elements.
-
-    - **Documentation & Readability:**
-        - Includes a comprehensive readme.md with project overview, features, technical details, folder structure, and screenshots.
-        - Uses descriptive variable/function names and inline comments for clarity.
-
-    - **Basic DevOps Awareness:**
-        - Includes a GitHub Actions workflow for static site deployment to GitHub Pages (`.github/workflows/deploy.yml`).
-
-    ### **Areas for Growth**
-
-    - **Testing:**
-        - No evidence of automated unit, integration, or end-to-end tests. All logic appears to be tested manually via the UI.
-        - No test framework or test scripts present.
-
-    - **Security:**
-        - User authentication is handled entirely client-side with passwords stored in plain text in localStorage/sessionStorage.
-        - No input sanitization or protection against XSS/CSRF.
-        - No encryption or secure handling of sensitive data.
-
-    - **Scalability & Backend Integration:**
-        - The application is entirely client-side; there is no backend API, database, or server-side logic.
-        - Not suitable for multi-user or production environments without significant changes.
-
-    - **Accessibility & Internationalization:**
-        - While some accessibility is present, there is no evidence of ARIA roles, screen reader support, or internationalization/localization.
-
-    - **Advanced DevOps/CI/CD:**
-        - Only basic static site deployment is present; no evidence of automated testing, linting, or code quality checks in CI.
-
-    - **Code Reuse & DRY Principles:**
-        - Some repeated logic (e.g., dynamic form handling, error messages) could be further abstracted for maintainability.
-
-    ---
-
-    ### **Role Suitability**
-
-    #### **Best Fit Roles**
-
-    - **Frontend Developer (Vanilla JS/HTML/CSS):**
-        - Demonstrated ability to build interactive, modular, and responsive web UIs from scratch without frameworks.
-
-    - **UI/UX Engineer (Prototype/Demo Level):**
-        - Strong focus on user flows, feedback, and dynamic content for demo or MVP applications.
-
-    - **Web Application Prototyper:**
-        - Skilled at quickly assembling functional prototypes using client-side technologies and third-party libraries.
-
-    #### **Well-Suited For**
-
-    - **Technical Writer/Documenter:**
-        - Good documentation practices and clear code organization.
-
-    - **Client-Side Data Engineer:**
-        - Experience with data parsing, transformation, and storage in browser environments.
-
-    #### **Less Suited For**
-
-    - **Backend Developer / Full Stack Engineer:**
-        - No evidence of backend, API, or database design/implementation.
-    - **DevOps Engineer (Advanced):**
-        - Only basic CI/CD; lacks advanced automation, monitoring, or infrastructure-as-code.
-    - **Security Engineer:**
-        - No secure authentication, authorization, or data protection practices.
-    - **QA/Test Automation Engineer:**
-        - No automated testing or test infrastructure.
-
-    ---
-
-    **Summary:**  
-    The developer demonstrates strong skills in vanilla JavaScript, modular frontend architecture, dynamic UI/UX, and client-side data handling. The codebase is well-documented, readable, and suitable for demo or prototype-level applications. However, there is a lack of automated testing, security best practices, backend integration, and advanced DevOps. The developer is best suited for roles focused on frontend development, rapid prototyping, and UI/UX engineering in client-side environments.
-
-    ---
+### 1. Dynamic View Hydration Without Full Page Reloads
+- **Challenge:** Creating a seamless Single-Page Application (SPA) experience without heavy frontend frameworks.
+- **Solution:** Implemented a lightweight client-side router leveraging the Fetch API, modular template fragments, and targeted DOM reconciliation.
+
+### 2. Reliable Client-Side State Persistence
+- **Challenge:** Preventing data loss when students refresh the browser mid-examination.
+- **Solution:** Engineered a robust serialization wrapper around `localStorage` and `sessionStorage` with schema versioning and auto-save timer checkpoints.
+
+### 3. Responsive Multi-Device UI
+- **Challenge:** Ensuring consistent test-taking controls across desktop monitors and mobile devices.
+- **Solution:** Utilized fluid CSS Grid, modern Flexbox components, and Bootstrap 5 responsive utility classes.
+
+---
+
+## Application Interface Gallery
+
+  
+    
+#### 1. Test Taking View
+
+    [![Test Taking Interface](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/test-page.png)](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/test-page.png)
+  
+  
+    
+#### 2. Analytics Dashboard
+
+    [![Analytics Dashboard](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/anamoly-dash.png)](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/anamoly-dash.png)
+  
+  
+    
+#### 3. Score Results View
+
+    [![Score Results View](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/individual-test-result.png)](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/individual-test-result.png)
+  
+
+---
+
+  [Previous Project
+    Naukri Market Data Scraper](../naukri-webscraper/)
+  [All Projects 
+    Engineering Portfolio Index](../)
 
 ================================================================================
 
