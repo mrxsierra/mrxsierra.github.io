@@ -1,240 +1,130 @@
 ---
 date:
-  created: Mar 2024
-  updated: Apr 2025
+  created: 2024-03-10
+  updated: 2025-04-05
 tags:
-    - Python
-    - Web Scraping
-    - Selenium
-    - Automation
-    - Data Analysis
+  - Python
+  - Web Scraping
+  - Selenium
+  - Automation
+  - Data Analysis
+description: >
+  Automated job market telemetry and data extraction pipeline using Selenium WebDriver, BeautifulSoup, and Pandas with comprehensive pytest test coverage.
 ---
 
-# ***Naukri Webscraper***
-
-??? tip "Quick Summary"
-    **Naukri Webscraper**  
-    A Python tool that automates job searches on Naukri.com, enabling users to filter listings by skills and export structured data for analysis.
-
-    - **Context:** `Personal Project`, `Mar 2024`, `Python`, `Selenium`, `Pandas`
-    - **Role:** Sole developer—designed, implemented, tested, and documented the project
-    - **Impact:** Automated skill-based job search and CSV export, validated by automated tests and real-world data extraction
-
-## ***Overview***
-
-Naukri Webscraper is a Python-based automation tool that scrapes job listings from Naukri.com. It extracts job titles, companies, salaries, locations, and required skills, then filters results based on user-specified skills. The project outputs structured data as CSV files for further analysis.  
-The project was developed independently as a personal automation and data analysis initiative.
-
-!!! info "**Recent updates:**"
-    - Added automated tests for core scraping and filtering logic (`test_project.py`) using `pytest`
-    - Improved error handling and robustness in dynamic content extraction
-    - Updated documentation and usage instructions in `README.md`
-
-## ***Goals***
-
-- Automate the retrieval and filtering of job listings from Naukri.com based on user-defined skills.
-- Simplify and accelerate the job search process by eliminating manual filtering.
-- Provide structured, exportable data for further analysis.
-
-## ***Responsibilities***
-
-- Designed and implemented the scraping logic using Selenium WebDriver.
-- Developed skill-based filtering and CSV export using Pandas.
-- Addressed dynamic content loading and missing data scenarios.
-- Authored automated tests with `pytest` to ensure code correctness and reliability.
-- Wrote comprehensive documentation and usage instructions.
-
-## ***Technologies Used***
-
-- **Languages:** Python (primary language for all scripts and logic)
-- **Frameworks/Libraries:**  
-    - Selenium (browser automation and web scraping)  
-    - Pandas (data manipulation and CSV export)
-- **Testing:**  
-    - pytest (for automated tests in `test_project.py`)
-- **DevOps/Tools:**  
-    - Git (version control)
-    - Chrome WebDriver (browser automation)
-- **Documentation:**  
-    - Markdown (`README.md` for usage and setup)
-
-??? abstract "Tools"
-    - Git (version control)
-    - Chrome WebDriver (browser automation)
-    - Markdown (project documentation)
-    - pytest (automated testing)
-
-## ***Process***
-
-1. **Planning:**  
-    - Identified key data fields (title, company, salary, location, skills) to extract from Naukri.com.
-2. **Implementation:**  
-    - Used Selenium to automate browser actions and extract job data.
-    - Employed Pandas for data structuring and CSV export.
-    - Developed a filtering mechanism for user-specified skills.
-3. **Testing:**  
-    - Created automated tests (`test_project.py`) using `pytest` to validate scraping and filtering logic.
-4. **Documentation:**  
-    - Documented setup, usage, and troubleshooting in `README.md`.
-
-## **Recognition**
-
-I am proud to share that I have successfully completed the `CS50P - Introduction to Programming with Python` course.
-
-### Certificate
-
-![CS50P - Introduction to Programming with Python](../cert/1708063772979-cs50p.jpeg)
-
-## Technical Challenges & Architectural Solutions
-
-1. **Dynamic Client-Side Content Rendering**
-    - **Challenge:** Target pages use asynchronous JavaScript hydration, causing race conditions for static extraction.
-    - **Solution:** Implemented explicit polling with Selenium `WebDriverWait` and expected conditions before accessing DOM elements.
-
-2. **Inconsistent DOM Structures**
-    - **Challenge:** Nested and varied HTML layout across different employer listing templates.
-    - **Solution:** Created resilient fallback selector helpers (`get_text_or_default`) to normalize heterogeneous DOM nodes without throwing fatal unhandled exceptions.
-
-3. **Throughput & Extraction Efficiency**
-    - **Challenge:** High latency when parsing hundreds of multi-page job listings.
-    - **Solution:** Optimized pagination loops, decoupled DOM extraction from tabular transformation, and utilized vectorized Pandas operations for filtering and dataset serialization.
-
-4. **Reliability & Regression Testing**
-    - **Challenge:** Ensuring scraper resilience against minor structural markup adjustments.
-    - **Solution:** Authoring a comprehensive `pytest` test bench to validate parsing rules against offline fixtures.
-
-??? warning "***Note :*** On Site Changes and Locators"
-    - The HTML structure and element locators (CSS selectors, XPaths) used in `project.py` are based on the current version of Naukri.com.  
-    - If the website updates its layout or class names, you may need to update these locators in the code to restore scraping functionality.  
-    - Review and adjust selectors in `project.py` if you encounter errors or missing data after a site update.
-
-## ***Achievements***
-
-- Automated the extraction and filtering of job listings from Naukri.com.
-- Enabled skill-based filtering and CSV export for downstream analysis.
-- Developed a test suite (`test_project.py`) using `pytest` to ensure reliability.
-- Improved scraping robustness and error handling based on real-world site changes.
-
-## ***Key Learnings***
-
-- Gained practical experience with Selenium for dynamic web scraping.
-- Enhanced skills in data manipulation and export using Pandas.
-- Learned to write maintainable, testable code for web automation projects.
-- Understood the importance of robust error handling and documentation.
-- Applied `pytest` for effective and maintainable automated testing.
-
-## ***Outcomes***
-
-- Successfully automated job search and filtering for Naukri.com.
-- Produced structured CSV datasets for analysis.
-- Provided a reusable, documented tool for job seekers and data analysts.
-- Ensured code reliability through automated testing with `pytest`.
-
-## ***Visuals***
-
-### Video Demo
-
-[![Video Demo](https://img.youtube.com/vi/ls_uxjfADN4/maxresdefault.jpg)](https://www.youtube.com/watch?v=ls_uxjfADN4)
-
-## ***Links***
-
-- [GitHub Repository](https://github.com/mrxsierra/naukari-webscraper)
-
-## ***Conclusion***
-
-Naukri Webscraper demonstrates the power of Python automation for real-world data extraction and analysis. By combining Selenium and Pandas, the project streamlines job searches, enhances productivity, and provides actionable insights through structured data exports. The codebase is robust, tested with `pytest`, and well-documented for future use and extension.
-
-??? summary "**AI Skill Assessment**"
-    Prompt[^1] Source [:material-file-eye-outline:{ #source }](https://raw.githubusercontent.com/mrxsierra/mrxsierra.github.io/blob/main/prompts/skill-assesment-prompt.md)
-    [^1]:
-    This `AI skill assessment` was generated based on the [skill-assessment-prompt.md](https://raw.githubusercontent.com/mrxsierra/mrxsierra.github.io/main/prompts/skill-assesment-prompt.md) and the provided project documentation. It is intended as an illustrative summary and should be interpreted in the context of the available code and documentation in codebase.
-
-    ### **Strengths**
-
-    - **Web Scraping Automation**
-        - Demonstrates strong proficiency with Selenium for browser automation, including headless operation, custom user agents, and dynamic navigation (e.g., paginated scraping, handling search forms).
-        - Robust handling of web elements using both CSS selectors and XPaths, with fallback/default logic for missing elements.
-
-    - **Data Handling & Export**
-        - Uses Pandas effectively for data manipulation and CSV export.
-        - Implements structured data extraction with a clear schema (job title, company, salary, skills, etc.).
-
-    - **Testing & Quality Assurance**
-        - Provides automated tests using `pytest`, including fixtures, mocking user input, and live web tests (with appropriate skips for anti-bot/site change issues).
-        - Tests cover both core scraping logic and utility functions.
-
-    - **Documentation**
-        - Comprehensive technical documentation (`doc.md`) and user-facing README.md with clear instructions, schema definitions, troubleshooting, and usage examples.
-        - Documents function purposes, parameters, and expected behaviors in code docstrings.
-
-    - **User Interaction & Error Handling**
-        - Interactive CLI prompts for user input (search terms, page count, skill filters).
-        - Handles invalid input and exceptions gracefully (e.g., `KeyboardInterrupt`, `ValueError`, missing elements).
-
-    - **Project Structure & Packaging**
-        - Uses pyproject.toml for dependency management and project metadata.
-        - Separates main logic, tests, and documentation cleanly.
-
-    ---
-
-    ### **Areas for Growth**
-
-    - **Security & Anti-Bot Evasion**
-        - No evidence of advanced anti-bot evasion techniques (e.g., proxy rotation, CAPTCHA handling, request throttling beyond simple sleep).
-        - No explicit handling of robots.txt or ethical scraping considerations in code.
-
-    - **Scalability & Performance**
-        - Scraping is single-threaded and synchronous; not optimized for large-scale or parallel scraping.
-        - No batching, queuing, or distributed scraping logic.
-
-    - **CI/CD & DevOps**
-        - No evidence of CI/CD pipelines, Dockerization, or deployment automation.
-        - No Makefile or scripts for environment setup/testing.
-
-    - **Code Modularity & Extensibility**
-        - All logic is in a single script (`project.py`); could benefit from modularization (e.g., separating scraping, filtering, and CLI logic).
-        - No plugin or configuration system for adapting to site changes.
-
-    - **Error Logging & Monitoring**
-        - Uses print statements for errors; lacks structured logging or monitoring for production use.
-
-    - **GUI/UX**
-        - No GUI or web interface; CLI-only interaction.
-
-    ---
-
-    ### **Role Suitability**
-
-    #### **Best Fit Roles**
-
-    - **Python Backend Developer**
-        - Strong evidence of backend scripting, data processing, and automation skills.
-    - **Web Scraping/Data Extraction Engineer**
-        - Demonstrated expertise in Selenium, data extraction, and handling dynamic web content.
-    - **QA Automation Engineer**
-        - Experience with automated testing, mocking, and test-driven development using `pytest`.
-    - **Technical Writer/Documentation Specialist**
-        - High-quality, thorough documentation and user guides.
-
-    #### **Well-Suited For**
-
-    - **Data Analyst (with Python)**
-        - Familiarity with Pandas and CSV data workflows.
-    - **SDET (Software Development Engineer in Test)**
-        - Automated test coverage and test design.
-
-    #### **Less Suited For**
-
-    - **Frontend Developer**
-        - No evidence of frontend/UI development (web or desktop).
-    - **DevOps Engineer**
-        - Lacks CI/CD, containerization, and deployment automation.
-    - **Cloud/Distributed Systems Engineer**
-        - No cloud integration, distributed scraping, or scalable architecture.
-
-    ---
-
-    **Summary:**  
-    The developer demonstrates strong skills in Python scripting, web scraping automation with Selenium, data processing with Pandas, and automated testing with `pytest`. The codebase is well-documented and user-friendly, with robust error handling and interactive CLI features. Areas for growth include modularization, scalability, advanced anti-bot techniques, and DevOps practices. The developer is best suited for backend, automation, and data extraction roles, and less suited for frontend or DevOps-focused positions based on the current codebase.
-
-    ---
+# Naukri Market Data Scraper
+
+<div class="project-header-card">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px;">
+    <div>
+      <span class="project-category-badge">Web Automation • Data Extraction</span>
+      <h2 style="margin: 6px 0 0 0; font-size: 22px; font-weight: 700;">Naukri Market Telemetry Scraper</h2>
+    </div>
+    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+      <a href="https://github.com/mrxsierra/naukari-webscraper" target="_blank" rel="noopener" class="btn btn-primary">
+        <i class="fab fa-github"></i> Repository
+      </a>
+      <a href="https://www.youtube.com/watch?v=ls_uxjfADN4" target="_blank" rel="noopener" class="btn btn-secondary">
+        <i class="fab fa-youtube"></i> Video Demo
+      </a>
+    </div>
+  </div>
+
+  <div class="project-meta-grid">
+    <div class="project-meta-item">
+      <span class="project-meta-label">Role</span>
+      <span class="project-meta-val">Sole Tooling Architect</span>
+    </div>
+    <div class="project-meta-item">
+      <span class="project-meta-label">Core Engine</span>
+      <span class="project-meta-val">Selenium WebDriver, Chrome Headless</span>
+    </div>
+    <div class="project-meta-item">
+      <span class="project-meta-label">Data Pipeline</span>
+      <span class="project-meta-val">Pandas Vectorized Filtering &amp; CSV Export</span>
+    </div>
+    <div class="project-meta-item">
+      <span class="project-meta-label">Accreditation</span>
+      <span class="project-meta-val">Harvard CS50P Python Programming</span>
+    </div>
+  </div>
+
+  <div class="project-impact-box">
+    <i class="fas fa-spider"></i>
+    <span><strong>Resilient Automation:</strong> Extracts paginated job market telemetry (titles, salary bands, required skills, locations) with graceful fallback handling and pytest test benches.</span>
+  </div>
+</div>
+
+---
+
+## Architecture &amp; Scraping Flow
+
+```mermaid
+graph TD
+    A["Target Search Query (Skills, Location, Experience)"] --> B["Headless Selenium Session Initialization"]
+    B --> C["Explicit Polling with WebDriverWait"]
+    C --> D["DOM Extraction &amp; Fallback Normalization ('get_text_or_default')"]
+    D --> E["Pandas Multi-Criterion Skill Filtering"]
+    E --> F["Structured CSV Telemetry Output"]
+```
+
+---
+
+## Executive Overview
+
+**Naukri Market Data Scraper** is a Python automation tool that extracts job listings from Naukri.com to facilitate programmatic tech hiring telemetry, salary benchmarking, and skill requirement analysis.
+
+The scraper automates browser navigation across paginated listings, resolves asynchronously hydrated DOM components, normalizes inconsistent compensation notations, and filters results against user-defined skill matrices before exporting clean datasets for downstream analytics.
+
+---
+
+## Technical Challenges &amp; Architectural Solutions
+
+### 1. Dynamic Client-Side Content Hydration
+- **Challenge:** Target pages use asynchronous client-side JavaScript, causing standard static HTTP scrapers to fail due to DOM race conditions.
+- **Solution:** Implemented explicit polling utilizing Selenium's `WebDriverWait` and expected conditions, ensuring DOM elements are fully hydrated prior to traversal.
+
+### 2. Inconsistent DOM Schema Normalization
+- **Challenge:** Varied markup across sponsored, promoted, and standard job card templates frequently resulted in `NoSuchElementException` crashes.
+- **Solution:** Built fault-tolerant fallback parser helpers (`get_text_or_default`) that normalize missing fields to default values without halting the extraction pipeline.
+
+### 3. Automated Regression Testing
+- **Challenge:** Ensuring scraper parser logic remains resilient against minor frontend updates.
+- **Solution:** Authored a complete test suite in `test_project.py` using `pytest`, featuring mocked DOM responses and fixture-driven parser validation.
+
+---
+
+## Verified Accreditation
+
+<div style="max-width: 650px; margin: 20px 0;">
+  <a href="../../cert/1708063772979-cs50p.jpeg" class="glightbox" data-gallery="certs" data-title="Harvard CS50P Certificate">
+    <img src="../../cert/1708063772979-cs50p.jpeg" alt="Harvard CS50P Certificate" style="border-radius: 8px; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm);" loading="lazy">
+  </a>
+  <p style="font-size: 12.5px; color: var(--color-text-muted); margin-top: 6px; text-align: center;">
+    Harvard CS50P: Introduction to Programming with Python • Harvard University (CS50)
+  </p>
+</div>
+
+---
+
+## Video Demonstration
+
+<div style="max-width: 650px; margin: 20px 0;">
+  <a href="https://www.youtube.com/watch?v=ls_uxjfADN4" target="_blank" rel="noopener">
+    <img src="https://img.youtube.com/vi/ls_uxjfADN4/maxresdefault.jpg" alt="Video Demo Walkthrough" style="border-radius: 8px; border: 1px solid var(--color-border);" loading="lazy">
+  </a>
+</div>
+
+---
+
+<!-- Sequential Case Study Navigation -->
+<div class="project-nav-footer">
+  <a href="../paraxcel/" class="project-nav-card">
+    <span class="project-nav-dir"><i class="fas fa-arrow-left"></i> Previous Project</span>
+    <span class="project-nav-title">Paraxcel Document Toolkit</span>
+  </a>
+  <a href="../test-site/" class="project-nav-card" style="text-align: right;">
+    <span class="project-nav-dir" style="justify-content: flex-end;">Next Project <i class="fas fa-arrow-right"></i></span>
+    <span class="project-nav-title">Real-Time Test Management Interface</span>
+  </a>
+</div>

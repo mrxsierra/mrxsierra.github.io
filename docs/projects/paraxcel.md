@@ -1,206 +1,144 @@
 ---
-status: new
 date:
-  created: Feb 2025
-  updated: Mar 2025
+  created: 2025-02-15
+  updated: 2025-03-15
 tags:
-    - Python
-    # - Tkinter
-    # - Pandas
-    # - Pydantic
-    # - python-docx
-    # - Data Extraction
-    # - Automation
-    # - Education Technology
-    # - GUI
+  - Python
+  - Automation
+  - Data Extraction
+  - Desktop GUI
+description: >
+  High-performance DOCX-to-Excel document extraction suite featuring run-level formatting parser, Pydantic validation, and Tkinter desktop GUI.
 ---
 
-# Paraxcel
+# Paraxcel Document Toolkit
 
-??? tip "Quick Summary"
-    **Paraxcel**
-    A lightweight, local-first Python desktop application using Tkinter to convert Microsoft Word DOCX files containing multiple-choice questions into structured Excel spreadsheets.
+<div class="project-header-card">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px;">
+    <div>
+      <span class="project-category-badge">Data Automation • Desktop Application</span>
+      <h2 style="margin: 6px 0 0 0; font-size: 22px; font-weight: 700;">Paraxcel Document Parsing Engine</h2>
+    </div>
+    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+      <a href="https://github.com/mrxsierra/paraxcel" target="_blank" rel="noopener" class="btn btn-primary">
+        <i class="fab fa-github"></i> Repository
+      </a>
+      <a href="https://www.youtube.com/watch?v=btjMeafD0vU" target="_blank" rel="noopener" class="btn btn-secondary">
+        <i class="fab fa-youtube"></i> Video Demo
+      </a>
+    </div>
+  </div>
 
-    - **Context:** `Python`, `Tkinter`, `Pandas`, `Pydantic`, `python-docx`, `Solo Project`, `Feb-Mar 2025`
-    - **Role:** Sole developer responsible for design, implementation, testing, documentation, and packaging of the application.
-    - **Impact:** Created a tool that automates the extraction of questions and answers from DOCX files, reducing manual data entry time for educators and content creators, by implementing parsing logic with `python-docx` and structuring output with `pandas`.
+  <div class="project-meta-grid">
+    <div class="project-meta-item">
+      <span class="project-meta-label">Role</span>
+      <span class="project-meta-val">Sole Architecture &amp; App Developer</span>
+    </div>
+    <div class="project-meta-item">
+      <span class="project-meta-label">Application Type</span>
+      <span class="project-meta-val">Local-First Desktop GUI (Windows Executable)</span>
+    </div>
+    <div class="project-meta-item">
+      <span class="project-meta-label">Core Technologies</span>
+      <span class="project-meta-val">Python, python-docx, Pydantic, Pandas, Tkinter</span>
+    </div>
+    <div class="project-meta-item">
+      <span class="project-meta-label">Accreditation</span>
+      <span class="project-meta-val">Harvard CS50x Computer Science</span>
+    </div>
+  </div>
 
-## Overview
-
-Paraxcel is a Python desktop application built with Tkinter that addresses the need for converting multiple-choice questions from DOCX files into an organized Excel format, it targets educators, content creators, and assessment professionals who need to manage question banks efficiently. The application provides a simple graphical user interface for file selection and conversion, running entirely locally.
-
-## Goals
-
-The primary goals for the Paraxcel project were:
-
-- To automate the tedious and time-consuming manual process of extracting multiple-choice questions and their corresponding answers from Microsoft Word documents.
-- To structure the extracted data into a usable and organized Excel format.
-- To create a simple, reliable, and accessible desktop tool for educators and content creators.
-
-## Responsibilities
-
-- Designed the application architecture, including module separation (`docx_parser`, `excel_writer`, `model`, `para_utility`, `interface`) for maintainability and scalability.
-- Implemented robust `DOCX` parsing using `python-docx` to accurately extract `questions`, `answer options`, and identify the `correct answer` based on formatting (`color/highlight`).
-- Utilized pandas to structure extracted data into a standardized, clean format, enabling reliable export to `.xlsx` files.
-- Built a user-friendly graphical interface with `Tkinter`, enabling users to easily select input files/folders and initiate the conversion process.
-- Integrated Pydantic for rigorous data validation of extracted question data, ensuring data integrity before export.
-- Created essential utility functions (`para_utility.py`) for text cleaning, format handling, and precise answer detection.
-- Authored comprehensive technical (`doc.md`) and user (`README.md`) documentation.
-- Packaged the application into a standalone executable using `PyInstaller` for straightforward distribution and use on Windows.
-
-## Technologies Used
-
-- **Languages:** Python
-- **GUI:** Tkinter (Standard Python library) - For building the desktop graphical interface.
-- **DOCX Parsing:** `python-docx` - For reading and analyzing `.docx` file content.
-- **Data Handling & Excel Export:** `pandas` - For structuring the extracted data and writing to `.xlsx` files.
-- **Data Validation:** `Pydantic` - For validating the structure and types of extracted question data.
-- **Documentation:** `Markdown` - For `README.md` and `doc.md`.
-
-??? abstract "Tools"
-    - **Version Control:** Git
-    - **Packaging:** PyInstaller - For creating the standalone executable.
-    - **Development Environment:** VS Code
-
-## Process
-
-The development process involved identifying the need for a simple DOCX-to-Excel conversion tool for MCQs and followed a structured approach focused on modularity and ease of use.
-
-1. **Requirement Gathering**: Defined the core functionality: parse DOCX files containing questions followed by four options and export them to Excel, including support for detecting marked answers.
-2. **Technology Stack Selection**: Chose libraries (`python-docx`, `pandas`, `Tkinter`, `Pydantic`) best suited for the task, balancing functionality with ease of deployment (local-first, standard libraries).
-3. **Modular Implementation**: Developed each component (`parsing`, `writing`, `GUI`, `validation`) as a distinct module.
-4. **Testing & Refinement**: Used sample files to rigorously test parsing accuracy and output format.
-5. **Documentation**: Created user and technical guides to support adoption and understanding.
-6. **Packaging**: Prepared the application for distribution as a single executable.
-
-## **Recognition**
-
-I am proud to share that I have successfully completed the `CS50x - Introduction to Computer Science` course.
-
-### Certificate
-
-![CS50x - Introduction to Computer Science](../cert/1738690195028-cs50x.jpeg)
-
-## Technical Challenges & Architectural Solutions
-
-1. **Handling Varied DOCX Formatting**
-    - **Challenge:** Parsing semi-structured DOCX files presented challenges due to inconsistencies in formatting, numbering, and spacing. Reliably detecting correct answers based on run-level highlighting required granular XML traversal.
-    - **Solution:** Developed flexible parsing heuristics (`parse_para`) designed to accommodate common formatting variations, inspecting font colors and highlight metadata directly via python-docx.
-
-2. **Ensuring Data Quality & Schema Rigor**
-    - **Challenge:** Extracting unstructured DOCX content risked generating malformed or incomplete records.
-    - **Solution:** Integrated Pydantic models (`Question`) to enforce strict type validation and structural integrity prior to downstream Excel workbook generation.
-
-3. **Accessibility for Non-Technical Users**
-    - **Challenge:** Enabling non-developer educators to utilize the tool with zero CLI prerequisites.
-    - **Solution:** Built a responsive desktop GUI with standard Tkinter components and packaged the distribution into a standalone binary using PyInstaller.
-
-## Achievements
-
-- Developed and launched Paraxcel, automating MCQ extraction from raw DOCX documents into structured Excel format.
-- Implemented robust run-level styling extraction (superscript, subscript, highlight detection).
-- Packaged the Python application into a standalone executable with zero external runtime dependencies.
-
-## Visual Artifacts & Pipeline Flow
-
-!!! info "Sample Input Format"
-    **Q1. What is the capital of France?**  
-    A. Berlin  
-    B. Madrid  
-    C. ==Paris==  *(Highlighted as correct)*  
-    D. Rome  
-
-<div class="result" markdown>
-**Structured Excel Export**
-
-| Question                       | Option 1 | Option 2 | Option 3 | Option 4 | Answer Index |
-| ------------------------------ | -------- | -------- | -------- | -------- | ------------ |
-| What is the capital of France? | Berlin   | Madrid   | **Paris** | Rome     | 3            |
-
+  <div class="project-impact-box">
+    <i class="fas fa-file-excel"></i>
+    <span><strong>Automated ETL Pipeline:</strong> Eliminates manual data entry by automatically extracting MCQs, highlighted correct options, and superscripts from DOCX files into validated Excel sheets.</span>
+  </div>
 </div>
 
 ---
 
-### Application Screenshots
+## Architecture &amp; Extraction Flow
 
-![Tkinter GUI - Screenshot of the Paraxcel Tkinter GUI showing file/folder selection fields and buttons.](https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/ui.jpg)
-/// caption
-Paraxcel Tkinter GUI showing file and folder selection controls.
-///
-
-![Docx Sample - Screenshot of a sample input DOCX file snippet showing question/option format.](https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/sample.jpg)
-/// caption
-Sample input DOCX file showing question and highlighted answer formatting.
-///
-
-![Output Excel - Screenshot of the resulting Excel file snippet showing structured data.](https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/excel.jpg)
-/// caption
-Normalized output Excel workbook.
-///
+```mermaid
+graph LR
+    A["Raw DOCX Documents"] --> B["python-docx Run-Level XML Parser"]
+    B --> C["Format &amp; Highlight Extraction ('para_utility')"]
+    C --> D["Pydantic Schema Validation ('Question' Model)"]
+    D --> E["Pandas Tabular Normalization"]
+    E --> F["Normalized Excel Workbook (.xlsx)"]
+```
 
 ---
 
-### Video Demonstration
+## Executive Overview
 
-[![Video Demo](https://img.youtube.com/vi/btjMeafD0vU/maxresdefault.jpg)](https://www.youtube.com/watch?v=btjMeafD0vU)
+**Paraxcel** is a modular Python desktop utility built to automate the extraction of multiple-choice questions (MCQs), answers, and option formatting from Microsoft Word (`.docx`) documents into structured Excel workbooks (`.xlsx`).
 
-## Links
+Designed for educators and assessment coordinators, Paraxcel operates entirely offline with zero cloud dependencies. It parses low-level OpenXML document structures to reliably detect marked answers (font color, background highlights) and mathematical notations (superscripts, subscripts).
 
-- [GitHub Repository](https://github.com/mrxsierra/paraxcel)
+---
 
-## Conclusion
+## Technical Challenges &amp; Architectural Solutions
 
-Paraxcel successfully provides a targeted solution for automating the often tedious task of extracting multiple-choice questions from DOCX files into a more usable Excel format. By leveraging libraries like `python-docx`, `pandas`, `Pydantic`, and `Tkinter`, the project delivers a functional, easy-to-use desktop tool for educators and content creators. Key takeaways include the practical application of these libraries for document parsing, data handling, validation, GUI development, and application packaging, resulting in a useful utility that addresses a specific workflow challenge.
+### 1. Granular XML Run-Level Parsing
+- **Challenge:** Detecting highlighted or color-coded answers embedded within arbitrary paragraph runs across inconsistent Word formatting styles.
+- **Solution:** Engineered recursive run inspection routines in `para_utility.py` that query OpenXML font color, background tint, and strike-through attributes directly at the character run level.
 
-??? summary "**AI Skill Assessment**"
-    Prompt[^1] Source [:material-file-eye-outline:{ #source }](https://raw.githubusercontent.com/mrxsierra/mrxsierra.github.io/blob/main/prompts/skill-assesment-prompt.md)
-    [^1]:
-    This AI skill assessment was generated based on the [skill-assessment-prompt.md](https://raw.githubusercontent.com/mrxsierra/mrxsierra.github.io/main/prompts/skill-assesment-prompt.md) and the provided project documentation. It is intended as an illustrative summary and should be interpreted in the context of the available code and documentation in codebase.
+### 2. Strict Schema Validation &amp; Quality Enforcement
+- **Challenge:** Preventing corrupted or partially formatted Word documents from outputting malformed Excel rows.
+- **Solution:** Implemented declarative `Pydantic` schemas enforcing strict type bounds (question non-empty, exactly 4 validated options, valid answer index).
 
-    ### **Strengths**
+### 3. Dependency-Free Desktop Packaging
+- **Challenge:** Distributing a Python application to non-technical end-users without requiring a Python runtime environment.
+- **Solution:** Configured `PyInstaller` build pipelines with embedded icon resources (`paraxcel.ico`), packaging the application into a standalone Windows binary.
 
-    - **Python Application Development:** Proven ability to design, develop, and package a complete, modular desktop application.
-    - **GUI Development (Tkinter):** Experience building functional graphical interfaces for user interaction.
-    - **Document Parsing & Data Processing:** Skilled in extracting structured data from complex document formats (`.docx`) and processing it using `pandas`.
-    - **Data Validation:** Practical application of `Pydantic` for ensuring data integrity and correctness.
-    - **Comprehensive Documentation:** Ability to create clear technical and user-focused documentation.
-    - **Application Packaging & Distribution:** Experience using `PyInstaller` for creating standalone executables and managing dependencies.
-    - **CI/CD Implementation:** Basic experience setting up automated workflows for testing, security checks, and builds using GitHub Actions.
-    - **Software Reliability Basics:** Inclusion of testing tools and security scanning indicates an understanding of foundational quality practices.
+---
 
-    ---
+## Verified Accreditation
 
-    ### **Areas for Improvement**
+<div style="max-width: 650px; margin: 20px 0;">
+  <a href="../../cert/1738690195028-cs50x.jpeg" class="glightbox" data-gallery="certs" data-title="Harvard CS50x Certificate">
+    <img src="../../cert/1738690195028-cs50x.jpeg" alt="Harvard CS50x Certificate" style="border-radius: 8px; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm);" loading="lazy">
+  </a>
+  <p style="font-size: 12.5px; color: var(--color-text-muted); margin-top: 6px; text-align: center;">
+    Harvard CS50x: Introduction to Computer Science • Harvard University (CS50)
+  </p>
+</div>
 
-    - **Testing Depth:** Expanding test coverage and visibility would further strengthen quality assurance processes.
-    - **Advanced Error Handling:** Implementing more granular logging and exception handling could enhance application robustness.
-    - **Performance Optimization:** Exploring techniques for handling very large files more efficiently could improve scalability.
-    - **UI/UX:** For projects requiring more complex interfaces, exploring modern GUI frameworks might be beneficial.
-    - **Cross-Platform Deployment:** Expanding build support beyond Windows would increase application accessibility.
+---
 
-    ---
+## Application Screenshots
 
-    ### **Relevant Roles**
+<div class="card-grid-3" style="margin: 20px 0;">
+  <div>
+    <h4 style="margin: 0 0 8px 0; font-size: 13px;">1. Desktop GUI Interface</h4>
+    <a href="https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/ui.jpg" class="glightbox" data-gallery="paraxcel" data-title="Paraxcel Desktop GUI">
+      <img src="https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/ui.jpg" alt="Paraxcel Desktop GUI" style="border-radius: 8px; border: 1px solid var(--color-border);" loading="lazy">
+    </a>
+  </div>
+  <div>
+    <h4 style="margin: 0 0 8px 0; font-size: 13px;">2. Sample DOCX Input</h4>
+    <a href="https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/sample.jpg" class="glightbox" data-gallery="paraxcel" data-title="Sample DOCX Input">
+      <img src="https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/sample.jpg" alt="Sample DOCX Input" style="border-radius: 8px; border: 1px solid var(--color-border);" loading="lazy">
+    </a>
+  </div>
+  <div>
+    <h4 style="margin: 0 0 8px 0; font-size: 13px;">3. Normalized Excel Output</h4>
+    <a href="https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/excel.jpg" class="glightbox" data-gallery="paraxcel" data-title="Normalized Excel Output">
+      <img src="https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/excel.jpg" alt="Normalized Excel Output" style="border-radius: 8px; border: 1px solid var(--color-border);" loading="lazy">
+    </a>
+  </div>
+</div>
 
-    #### **Strong Fit**
+---
 
-    - **Python Application Developer:** Directly aligns with the project's nature.
-    - **Automation Engineer:** Demonstrates strong skills in automating data extraction and processing workflows.
-
-    #### **Good Fit**
-
-    - **Backend Developer (Data Focus):** Relevant experience in data parsing, validation, and structuring.
-    - **Junior DevOps/Build Engineer:** Basic experience with CI/CD automation and application packaging.
-
-    #### **Less Direct Fit**
-
-    - **Frontend Web Developer:** No web technology experience shown.
-    - **Data Scientist/ML Engineer:** Project focuses on extraction, not analysis or modeling.
-    - **Senior DevOps/SRE:** Lacks infrastructure, monitoring, or cloud services.
-    - **Mobile Developer:** No mobile development experience shown.
-
-    ---
-
-    ### **Conclusion**
-
-    This project effectively showcases capabilities in end-to-end Python application development, particularly in document processing, data handling, and automation. The inclusion of data validation, packaging, and basic CI/CD demonstrates a well-rounded approach to software development. This experience is highly relevant for roles focused on Python application development, automation, and data processing pipelines.
+<!-- Sequential Case Study Navigation -->
+<div class="project-nav-footer">
+  <a href="../s3-faker/" class="project-nav-card">
+    <span class="project-nav-dir"><i class="fas fa-arrow-left"></i> Previous Project</span>
+    <span class="project-nav-title">S3 Faker Mock Data Generator</span>
+  </a>
+  <a href="../naukri-webscraper/" class="project-nav-card" style="text-align: right;">
+    <span class="project-nav-dir" style="justify-content: flex-end;">Next Project <i class="fas fa-arrow-right"></i></span>
+    <span class="project-nav-title">Naukri Market Data Scraper</span>
+  </a>
+</div>

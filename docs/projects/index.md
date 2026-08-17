@@ -9,6 +9,13 @@ description: Engineering portfolio of Sunil Sharma - Full-stack web applications
   <p class="page-intro-desc">
     A curated index of production software, machine learning competition pipelines, and developer-first data extraction tooling. Each project contains architecture breakdowns, technical rationales, and source repositories.
   </p>
+  <div style="margin-top: 16px; display: flex; gap: 8px; flex-wrap: wrap;">
+    <span class="tag-item"><i class="fas fa-brain"></i> Machine Learning</span>
+    <span class="tag-item"><i class="fas fa-database"></i> Database Architecture</span>
+    <span class="tag-item"><i class="fas fa-cloud"></i> Cloud Emulation</span>
+    <span class="tag-item"><i class="fas fa-spider"></i> Web Automation</span>
+    <span class="tag-item"><i class="fas fa-file-excel"></i> Document Processing</span>
+  </div>
 </div>
 
 ---

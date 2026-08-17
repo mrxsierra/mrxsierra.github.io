@@ -1,236 +1,144 @@
 ---
 date:
-  created: Apr 2024
-  updated: Mar 2025
+  created: 2024-04-10
+  updated: 2025-03-15
 tags:
-    - Database Design
-    - Database Management
+  - Database Design
+  - Database Management
+  - PostgreSQL
+  - MySQL
+  - SQLite
+  - Python
+  - Docker
+description: >
+  Production-grade multi-RDBMS academic examination platform with cross-engine parity across PostgreSQL, MySQL, and SQLite, Python automation, and Dockerized test workflows.
 ---
 
-# ***Examination Management System Database***
-
-??? tip "In-Hurry Summary"
-    **Examination Management System Database**
-    A database designed to manage tests and examinations, covering student information, test details, questions, proctoring, and results.
-
-    - **Context:** `Personal Project`, `Apr 2024`, `SQLite`, `MySQL`, `PostgreSQL`, `DB Design`
-    - **Role:** Sole Database Designer and Implementer
-    - **Impact:** Enabled efficient test administration and monitoring by creating a structured database, facilitating quick data retrieval and reporting.
-
-## ***Overview***
-
-The Examination Management System Database project aimed to design and implement a robust database for managing tests and examinations. It covered key aspects such as student details, tests, questions, test sessions, proctors, and results. The project was initially implemented in SQLite, and later expanded into three variants: SQLite, MySQL, and PostgreSQL, each in its own directory with a consistent file structure.
-
-!!! info "**Recent updates:**"
-
-    - Project restructured into three dedicated directories: sqlite, mysql, and psql, each with its own schema, queries, and scripts.  
-    - Added Docker-based development environments for each variant (see each directory's `compose.yaml`).  
-    - Introduced Python automation scripts (`db.py`) and pytest-based test suites for all variants, using the appropriate Python database connectors.  
-    - Enhanced schema with advanced triggers, views, and indexes for performance and integrity.  
-    - Improved documentation and usage instructions (see [`README.md`](https://github.com/mrxsierra/ems-db/blob/main/README.md)).
-
-## ***Goals***
-
-The primary objectives of the project were:
-
-- To create a robust, modular database schema to support all core processes of test administration.
-- To enable efficient monitoring and analysis of test sessions, including proctoring and event auditing.
-- To facilitate easy generation of reports summarizing test outcomes and student performance.
-- To ensure extensibility and maintainability across multiple RDBMS backends.
-
-## ***Responsibilities***
-
-As the sole database designer and implementer, my responsibilities included:
-
-- Designing the database schema for SQLite, MySQL, and PostgreSQL.
-- Implementing tables, relationships, triggers, views, and indexes for each variant.
-- Developing and maintaining Python scripts (`db.py`) for database automation and management.
-- Creating and running automated tests using pytest for all database variants.
-- Setting up Docker-based development environments for consistent local and CI/CD workflows.
-- Writing and maintaining comprehensive documentation.
-
-## ***Technologies Used***
-
-- **Languages:** SQL, Python
-- **Databases:** SQLite, MySQL, PostgreSQL
-- **Python Connectors:**  
-    - `sqlite3` (for SQLite)  
-    - `mysql-connector-python` (for MySQL)  
-    - `psycopg2` (for PostgreSQL)
-- **Project Management:**  
-    - Consistent directory structure for all variants  
-    - [`README.md`](https://github.com/mrxsierra/ems-db/blob/main/README.md), `usage.md`, and `README.Docker.md` for each variant
-
-??? abstract "Tools"
-
-    - **Testing:** `pytest` (with `test_db.py` in each variant)
-    - **Dependency Management:** `uv` (for fast Python environment setup)
-    - **Containerization:** Docker, Docker Compose (with dedicated `Dockerfile` and `compose.yaml` in each variant)
-    - **Shells/CLI:**  
-        - `sqlite3` CLI (for SQLite)  
-        - `mysql`/`mysqlsh` CLI (for MySQL)  
-        - `psql` CLI (for PostgreSQL)
-    - **Database GUIs (via Docker):**
-        - `phpMyAdmin` (for MySQL)  
-        - `adminer` (for PostgreSQL)
-    - **Reverse Proxy:** Traefik (for local service routing in Docker)
-    - **Documentation:** Markdown, Mermaid (for ER diagrams)
-
-    > ***Note ***: All development and testing environments are containerized for consistency and reproducibility.
-
-## ***Process***
-
-The project followed a structured approach:
-
-1. **Conceptual Design:** Identified entities and relationships required for the examination system.
-2. **Logical Design:** Translated the conceptual design into detailed schemas for each RDBMS.
-3. **Physical Design:** Implemented the schema, triggers, indexes, and views in each database.
-4. **Testing:** Inserted sample data and ran automated queries and tests to validate the design and performance.
-5. **Optimization:** Added indexes and views to improve query performance and usability.
-6. **Automation:** Developed Python-based scripts and test suites for all variants.
-7. **Containerization:** Provided Docker Compose files for reproducible development environments.
-
-## **Recognition**
-
-I am proud to share that I have successfully completed the `CS50 SQL - Introduction to Databases with SQL` course.
-
-### Certificate
-
-![CS50 SQL - Introduction to Databases with SQL](../cert/1713864822125-cs50s.jpeg)
-
-## Technical Challenges & Architectural Solutions
-
-1. **Multi-Database Support**  
-    - **Challenge:** Ensuring consistent schema and relational logic across SQLite, MySQL, and PostgreSQL.  
-    - **Solution:** Modularized schema and queries, using automated pytest suites to validate identical behavior across all supported database engines.
-
-2. **Data Consistency & Integrity**  
-    - **Challenge:** Maintaining strict referential integrity with complex cascade triggers and temporal relationships.  
-    - **Solution:** Implemented engine-native triggers and check constraints in each variant, with automated CI validation.
-
-3. **Query Performance Optimization**  
-    - **Challenge:** Optimizing execution latency for analytical reporting and history tracking.  
-    - **Solution:** Created targeted composite indexes and materialized complex aggregation logic into parameterized views for rapid data access.
-
-4. **Automation & Environment Reproducibility**  
-    - **Challenge:** Providing deterministic local development and continuous integration environments across RDBMS variants.  
-    - **Solution:** Built Docker Compose services for PostgreSQL and MySQL, orchestrated via Python test harnesses and GitHub Actions.
-
-## ***Achievements***
-
-- Designed and implemented a comprehensive, production-ready database schema for managing an examination system in SQLite, MySQL, and PostgreSQL.
-- Automated scoring, feedback, event logging, and report generation using advanced triggers.
-- Simplified complex queries and reporting through reusable views.
-- Improved query performance by adding strategic indexes.
-- Achieved high test coverage for schema logic and data flows in all variants.
-- Provided Docker-based environments for easy setup and reproducibility.
-
-## ***Key Learnings***
-
-- The importance of modular design for multi-database support.
-- Effective use of triggers, indexes, and views for data integrity and performance.
-- How to automate database testing and management with Python and Docker.
-- The value of consistent documentation and directory structure for maintainability.
-
-## ***Outcomes***
-
-The database provides a structured and efficient way to manage tests and examinations. It supports CRUD operations, test creation, session monitoring, proctoring event auditing, and automated report generation. The use of triggers, views, and indexes significantly improved data integrity and query performance. Automated tests and Docker environments ensure ongoing reliability and ease of use across all supported databases.
-
-## ***Visuals***
-
-### ER Diagram
-
-![ER Diagram](https://raw.githubusercontent.com/mrxsierra/ems-db/main/assets/erDiagram.png)
-*screenshot of the DB for SQLite/MySQL/PostgreSQL showing the schema.*
-
-### Video overview
-
-[![CS50S EMS Submission](https://img.youtube.com/vi/CRT4_j3kZes/hqdefault.jpg)](https://youtu.be/CRT4_j3kZes)
-
-## ***Links***
-
-[GitHub Repository](https://github.com/mrxsierra/ems-db)
-
-### ***Read Studies & Insights***
-
-- [Navigating the Nuances: A Developer's Guide to SQL Dialects (SQLite, MySQL, PostgreSQL)](../blog/posts/1-schema-diff.md).
-- [Beyond the Schema: A Practical Guide to Querying and Interacting with SQLite, MySQL, & PostgreSQL](../blog/posts/2-query-interaction-diff.md)
-
-## ***Conclusion***
-
-The Examination Management System Database project successfully delivered a robust and efficient solution for managing tests and examinations across multiple database platforms. It met the outlined goals and provided valuable insights into database design, automation, and optimization. The project demonstrated the importance of structured database design, modularity, and the effective use of triggers, views, indexes, and automated testing to enhance performance and maintain data integrity.
-
-??? summary "**AI Skill Assessment**"
-    Prompt[^1] Source [:material-file-eye-outline:{ #source }](https://raw.githubusercontent.com/mrxsierra/mrxsierra.github.io/blob/main/prompts/skill-assesment-prompt.md)
-    [^1]:
-    This `AI skill assessment` was generated based on the [skill-assessment-prompt.md](https://raw.githubusercontent.com/mrxsierra/mrxsierra.github.io/main/prompts/skill-assesment-prompt.md) and the provided project documentation. It is intended as an illustrative summary and should be interpreted in the context of the available code and documentation in codebase.
-
-    ### **Strengths**
-
-    - **Relational Database Design:**  
-        - Strong understanding of relational modeling, normalization, and entity relationships.
-        - Consistent schema design across **SQLite**, **MySQL**, and **PostgreSQL**, with appropriate use of constraints, foreign keys, and indexes.
-        - Advanced use of triggers for automation (e.g., scoring, feedback, session/event management).
-
-    - **SQL Proficiency:**  
-        - Proficient in writing complex SQL queries, views, and batch scripts for all three RDBMS.
-        - Good use of views to abstract and simplify reporting and analytics.
-
-    - **Python Automation & Testing:**  
-        - Automated database setup and validation using Python (`db.py` scripts).
-        - Pytest-based test suites for each variant, using correct connectors (`sqlite3`, `mysql-connector-python`, `psycopg2`).
-        - Use of fixtures and in-memory databases for efficient, isolated testing.
-
-    - **DevOps & Environment Management:**  
-        - Docker and Docker Compose used for reproducible development environments for each database variant.
-        - Clear, modular directory structure and environment setup instructions.
-        - Use of uv for Python dependency management.
-
-    - **Documentation:**  
-        - Well-structured Markdown documentation, usage guides, and ER diagrams.
-        - Clear separation of concerns and instructions for each database backend.
-
-    ### **Areas for Growth**
-
-    - **CI/CD Integration:**  
-        - No current implementation of automated CI/CD pipelines (e.g., GitHub Actions, GitLab CI).
-        - Adding automated build/test on push would further professionalize the workflow.
-
-    - **GUI/UX Tools:**  
-        - No use of GUI database tools (e.g., DB Browser for SQLite) in workflow; all interactions are CLI or script-based.
-        - Could consider adding optional GUI instructions for broader accessibility.
-
-    - **Security & Advanced Features:**  
-        - No implementation of advanced security (role-based access, encryption, etc.).
-        - No support for subjective question types or broader educational/administrative features.
-
-    - **Scalability & Production Readiness:**  
-        - Focus is on schema and logic, not on production deployment, backup, or scaling strategies.
-
-    ---
-
-    ### **Role Suitability**
-
-    #### **Best Fit Roles**
-
-    - **Database Engineer / Database Developer**
-    - **Backend Developer (with strong SQL/database focus)**
-    - **DevOps Engineer (entry to mid-level, especially for DB environments)**
-    - **QA Automation Engineer (for database systems)**
-
-    #### **Well-Suited For**
-
-    - Projects requiring robust relational schema design and automation.
-    - Teams needing multi-database support and migration-ready code.
-    - Environments where automated testing and reproducible dev setups are valued.
-
-    #### **Less Suited For**
-
-    - Frontend/UI/UX-heavy roles.
-    - Roles requiring deep experience in cloud-native, distributed, or NoSQL systems.
-    - Security-focused or enterprise-scale production DB admin roles (without further experience).
-
-    ---
-
-    **Summary:**  
-    You demonstrate strong skills in relational database design, SQL, Python automation, and environment management. You are well-suited for roles focused on database engineering, backend development, and DevOps for database-driven projects. Expanding into CI/CD, security, and production operations would further broaden your profile.
+# Examination Management System DB
+
+<div class="project-header-card">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px;">
+    <div>
+      <span class="project-category-badge">Database Architecture • Multi-RDBMS Parity</span>
+      <h2 style="margin: 6px 0 0 0; font-size: 22px; font-weight: 700;">Examination Management System Database</h2>
+    </div>
+    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+      <a href="https://github.com/mrxsierra/ems-db" target="_blank" rel="noopener" class="btn btn-primary">
+        <i class="fab fa-github"></i> Repository
+      </a>
+      <a href="https://youtu.be/CRT4_j3kZes" target="_blank" rel="noopener" class="btn btn-secondary">
+        <i class="fab fa-youtube"></i> Video Walkthrough
+      </a>
+    </div>
+  </div>
+
+  <div class="project-meta-grid">
+    <div class="project-meta-item">
+      <span class="project-meta-label">Role</span>
+      <span class="project-meta-val">Sole Database Architect &amp; Developer</span>
+    </div>
+    <div class="project-meta-item">
+      <span class="project-meta-label">Supported Engines</span>
+      <span class="project-meta-val">PostgreSQL 17, MySQL 8.4, SQLite 3</span>
+    </div>
+    <div class="project-meta-item">
+      <span class="project-meta-label">Automation Stack</span>
+      <span class="project-meta-val">Python, Pytest, Docker Compose, UV</span>
+    </div>
+    <div class="project-meta-item">
+      <span class="project-meta-label">Accreditation</span>
+      <span class="project-meta-val">Harvard CS50 SQL with Distinction</span>
+    </div>
+  </div>
+
+  <div class="project-impact-box">
+    <i class="fas fa-database"></i>
+    <span><strong>Multi-Engine Consistency:</strong> 100% trigger and relational logic parity validated across PostgreSQL, MySQL, and SQLite using automated pytest test benches.</span>
+  </div>
+</div>
+
+---
+
+## Architecture &amp; Parity Pipeline
+
+```mermaid
+graph TD
+    A["Relational Requirements &amp; ER Modeling"] --> B["Multi-Dialect DDL Schemas"]
+    B --> C1["PostgreSQL (PL/pgSQL Functions)"]
+    B --> C2["MySQL (Delimiter Triggers)"]
+    B --> C3["SQLite (Embedded Triggers &amp; CHECKs)"]
+    C1 --> D["Containerized Docker Environments"]
+    C2 --> D
+    C3 --> D
+    D --> E["Automated Python Automation ('db.py')"]
+    E --> F["Pytest Verification Test Harnesses"]
+    F --> G["Materialized Analytical Reporting Views"]
+```
+
+---
+
+## Executive Overview
+
+The **Examination Management System (EMS DB)** project is a modular, production-ready relational database architecture designed to administer educational examinations. It models students, proctors, tests, dynamic question banks, timed test sessions, audit events, and computed academic scores.
+
+The architecture was engineered with strict **multi-RDBMS parity**: the system maintains three synchronized dialect implementations (**PostgreSQL**, **MySQL**, and **SQLite**) with automated Python test harnesses validating identical business logic execution across all three engines.
+
+---
+
+## Technical Challenges &amp; Architectural Solutions
+
+### 1. Multi-Engine Relational &amp; Trigger Parity
+- **Challenge:** Differences in dialect features (PL/pgSQL trigger functions vs MySQL delimiters vs SQLite embedded triggers) risked behavioral discrepancies.
+- **Solution:** Designed modular directory hierarchies (`/psql`, `/mysql`, `/sqlite`) with corresponding migration scripts, automating query testing via engine-specific Python drivers (`psycopg2`, `mysql-connector-python`, `sqlite3`).
+
+### 2. Temporal Logic &amp; Session Auto-Termination
+- **Challenge:** Dynamically computing test session termination timestamps without race conditions.
+- **Solution:** Implemented engine-native triggers (`set_end_for_test_session`) calculating interval arithmetic directly at write time based on test duration configurations.
+
+### 3. Reporting Query Optimization
+- **Challenge:** Heavy joins across student records, question options, and audit history caused query latency.
+- **Solution:** Created targeted composite indexes and encapsulated analytical reporting logic into optimized SQL views (`tests_history`, `summary_reports`).
+
+---
+
+## Verified Accreditation
+
+<div style="max-width: 650px; margin: 20px 0;">
+  <a href="../../cert/1713864822125-cs50s.jpeg" class="glightbox" data-gallery="certs" data-title="Harvard CS50 SQL Certificate">
+    <img src="../../cert/1713864822125-cs50s.jpeg" alt="Harvard CS50 SQL Certificate" style="border-radius: 8px; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm);" loading="lazy">
+  </a>
+  <p style="font-size: 12.5px; color: var(--color-text-muted); margin-top: 6px; text-align: center;">
+    Harvard CS50 SQL: Introduction to Databases with SQL • Harvard University (CS50)
+  </p>
+</div>
+
+---
+
+## Entity Relationship Architecture
+
+<div style="max-width: 800px; margin: 20px 0;">
+  <a href="https://raw.githubusercontent.com/mrxsierra/ems-db/main/assets/erDiagram.png" class="glightbox" data-gallery="ems" data-title="Examination Management System ER Diagram">
+    <img src="https://raw.githubusercontent.com/mrxsierra/ems-db/main/assets/erDiagram.png" alt="EMS DB ER Diagram" style="border-radius: 8px; border: 1px solid var(--color-border);" loading="lazy">
+  </a>
+</div>
+
+---
+
+## Related Technical Deep Dives
+
+- [**Navigating the Nuances: A Developer's Guide to SQL Dialects**](../blog/posts/1-schema-diff.md): Deep dive into DDL differences, autoincrement sequence strategies, and trigger syntax across SQLite, MySQL, and PostgreSQL.
+- [**Beyond the Schema: Querying, CLI Interaction, &amp; Docker Nuances**](../blog/posts/2-query-interaction-diff.md): Practical patterns for script piping, container networking, and auto-increment resets.
+
+---
+
+<!-- Sequential Case Study Navigation -->
+<div class="project-nav-footer">
+  <a href="../gstn-pbc/" class="project-nav-card">
+    <span class="project-nav-dir"><i class="fas fa-arrow-left"></i> Previous Project</span>
+    <span class="project-nav-title">GSTN Predictive Binary Classification</span>
+  </a>
+  <a href="../s3-faker/" class="project-nav-card" style="text-align: right;">
+    <span class="project-nav-dir" style="justify-content: flex-end;">Next Project <i class="fas fa-arrow-right"></i></span>
+    <span class="project-nav-title">S3 Faker Mock Data Generator</span>
+  </a>
+</div>

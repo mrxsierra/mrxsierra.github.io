@@ -2,301 +2,153 @@
 date:
   created: 2025-05-14
 tags:
-    - Machine Learning
-    - Binary Classification
-    - Python
-    - Data Science
-    - Hackathon
+  - Machine Learning
+  - Binary Classification
+  - Python
+  - Data Science
+  - Hackathon
+description: >
+  National-level hackathon finalist machine learning pipeline analyzing 900,000+ real-world GST records with XGBoost, LightGBM, and SHAP explainability.
 ---
 
-# **GSTN Hackathon: Predictive Binary Classification Project**
-
-??? tip "Quick Summary"
-    **GSTN Hackathon: Predictive Binary Classification**
-    Developed a robust, interpretable machine learning pipeline for binary classification on anonymized GSTN data, focusing on model performance, compliance, and reproducibility.
-
-    - **Context:** `Sep 2024`, `Python`, `scikit-learn`, `XGBoost/LightGBM`, `pandas`, `matplotlib`, `Jupyter`, solo project for GSTN Hackathon.
-    - **Role:** Sole developer—handled all phases: EDA, feature engineering, model selection, hyperparameter tuning, evaluation, and documentation.
-    - **Impact:** Achieved >97% accuracy and strong F1/MCC on imbalanced GSTN data by designing a reproducible, competition-compliant pipeline with anonymized model/code and no data leakage.
-
-## **Overview**
-
-This project was developed for the GSTN Hackathon, aiming to build a high-performance, interpretable binary classification model on a large, anonymized GSTN dataset. The solution strictly adheres to competition rules: all model names and parameters are anonymized/randomized, and no original or derivative datasets are included in the repository.
-
-The workflow covers the full ML lifecycle: data integrity checks, EDA, preprocessing, feature engineering, model selection (tree-based models), hyperparameter tuning (GridSearchCV, Bayesian Optimization), cross-validation, threshold optimization, and comprehensive evaluation/reporting.
-
-!!! info "**Recent updates:**"
-    - Final model and code anonymized for submission.
-    - All data files excluded for compliance.
-    - Extensive documentation and reproducibility scripts added.
-
-??? info "**About the GSTN Hackathon**"
-
-    The Government of India hosted an AI/ML-based Hackathon to develop predictive models for GST analytics. This initiative was designed to engage students, researchers, and professionals in designing innovative AI/ML solutions using a large, anonymized dataset of approximately 900,000 records with 21 attributes.
-
-    ### **Key Details**
-
-    - **Participation:** Open to Indian students, researchers, and professionals from academia, startups, or companies.
-    - **Registration:** Required sign-up via Janparichay and submission of participant details.
-    - **Teams:** Up to five members per team, with one team lead required. Solo participation was allowed.
-
-    ### **Hackathon Structure**
-
-    #### **Online Phase**
-
-    - **Dataset Access:** Participants received anonymized, labeled datasets for training and testing.
-    - **Problem Statement:**  
-    Given:
-    - `Dtrain`: Training data matrix (m × n)
-    - `Dtest`: Test data matrix (m₁ × n)
-    - `Ytrain`: Target variable for training (m × 1)
-    - `Ytest`: Target variable for testing (m₁ × 1)
-    - **Objective:**  
-    Construct a predictive model Fθ(X) → Ypred that accurately estimates the target variable Y for new, unseen inputs X.
-
-    #### **Workflow Steps**
-
-    1. **Model Construction:**  
-    Define a predictive function Fθ(X) parameterized by θ to map input features X to predicted outputs Ypred, capturing the relationship between features and target variable.
-    2. **Training:**  
-    Optimize model parameters θ by minimizing a loss function L(Y, Fθ(X)) using Dtrain. Feature engineering and selection were encouraged to enhance performance.
-    3. **Testing:**  
-    Apply the optimized model Fθ*(X) to Dtest to generate predictions Ypred for each input Xj.
-    4. **Performance Optimization:**  
-    Evaluate model performance using metrics such as accuracy, precision, recall, F1 score, and AUC-ROC. Refine the model iteratively to improve these metrics.
-    5. **Submission:**  
-    Submit predicted outputs Ypred_test along with:
-    - Source code (preferably on GitHub)
-    - A detailed report (modeling approach, code comments, citations, evaluation metrics, and key performance indicators)
-
-    #### **Offline Phase**
-
-    - **Shortlisting:**  
-    Top 9–15 teams were shortlisted based on initial evaluation.
-    - **Final Round:**  
-    Shortlisted teams refined their models using additional data and SME feedback, then presented their solutions and participated in interviews with the jury in Delhi.
-
-    ### **Evaluation & Jury**
-
-    - **Jury Composition:**  
-    Senior data scientists, tax administration experts, academic professionals, and representatives from GSTN and NIC.
-    - **Evaluation Process:**
-    - **Initial Screening:** Compliance and basic functionality check.
-    - **Technical Evaluation:** Assessment of model performance, innovation, and robustness.
-    - **Practical Usability:** Evaluation of real-world applicability.
-    - **Decision Making:**  
-    Prizes awarded to top three teams; special prize for all-women teams. Consolation prizes at jury’s discretion. The jury’s decision was final.
-
-    ### **Timeline**
-
-    - **Submission Period:** August 12, 2024 – October 12, 2024
-    - **Hackathon Duration:** 45 days (from registration to final submission)
-
-## **Goals**
-
-- Build a robust, interpretable binary classifier for GSTN data.
-- Address severe class imbalance and missing values.
-- Ensure reproducibility and compliance with competition/legal requirements.
-- Provide clear documentation and visualizations for model transparency.
-
-## **Responsibilities**
-
-- Led all stages: EDA, feature engineering, model selection, tuning, evaluation, and reporting.
-- Designed and implemented utility functions for cross-validation, threshold optimization, and evaluation.
-- Automated model training, saving, and reproducibility via scripts and notebooks.
-- Created all documentation, visualizations, and presentation materials.
-- Ensured strict compliance with anonymization and data handling rules.
-
-## **Technologies Used**
-
-- **Languages:** Python
-- **Libraries/Frameworks:**
-    - pandas, numpy (data manipulation)
-    - scikit-learn (modeling, metrics, pipelines)
-    - XGBoost, LightGBM (tree-based models)
-    - imbalanced-learn (SMOTE, RUS)
-    - matplotlib, seaborn (visualization)
-    - joblib (model persistence)
-    - SHAP (model explainability)
-- **Tools:**
-    - Jupyter Notebook (EDA, prototyping)
-    - Markdown (documentation)
-    - Git (version control)
-
-??? abstract "Tools"
-    - dask (optional, for large data)
-    - scikit-optimize (Bayesian optimization)
-    - Google Colab (cloud prototyping)
-
-## **Process**
-
-- **Data Integrity:** Verified dataset integrity using SHA256 checksums.
-- **EDA:** Explored distributions, missing values, outliers, and feature correlations.
-- **Preprocessing:** Median imputation for missing values, outlier handling (Winsorization), feature selection via correlation and statistical tests.
-- **Modeling:** Compared Logistic Regression, Random Forest, XGBoost, LightGBM; focused on tree-based models for best performance.
-- **Imbalance Handling:** Used Random Under Sampling (RUS) and SMOTE; tuned `scale_pos_weight` for tree models.
-- **Hyperparameter Tuning:** Employed GridSearchCV and Bayesian Optimization for optimal parameters.
-- **Evaluation:** Used stratified k-fold cross-validation, optimized threshold for F1, and computed metrics (Accuracy, F1, MCC, ROC-AUC, etc.).
-- **Explainability:** Analyzed feature importance and SHAP values.
-- **Reporting:** Documented all steps, results, and compliance measures.
-
-## **Selection & Recognition**
-
-- **Selection:** This project, developed as a single-member (solo) team, was selected for the interview and presentation round—ranking among the top 17 teams out of more than 200 participating teams (most of which were multi-member).
-- **Recognition:** Received a certificate and prize for reaching the final round.
-- **Note:** Unfortunately, the competition did not proceed beyond the interview/presentation stage due to unknown or unsatisfactory results for the GSTN Hackathon organizers.
-
-### Certificate
-
-![Certificate](../cert/GSTN_Team_137.jpg)
-
-## Technical Challenges & Architectural Solutions
-
-1. **Severe Class Imbalance**
-    - **Challenge:** A 91%/9% class distribution posed high risk of majority-class prediction bias.
-    - **Solution:** Evaluated Random Under-Sampling (RUS), SMOTE, and tuned gradient boosting `scale_pos_weight` to optimize the Precision-Recall trade-off and maximize F1/MCC scores.
-
-2. **Missing Data & Outlier Management**
-    - **Challenge:** Multiple feature columns exhibited >50% missing values and extreme skewness.
-    - **Solution:** Removed features exceeding the missingness threshold, applied robust median imputation, and performed Winsorization on heavy-tailed numeric distributions.
-
-3. **Data Leakage & Generalization Safeguards**
-    - **Challenge:** Risk of subtle target leakage across pre-processing and feature selection steps.
-    - **Solution:** Enforced strict nested cross-validation and pipeline encapsulation to prevent data contamination between train and evaluation partitions.
-
-4. **Competition Compliance & Anonymization**
-    - **Challenge:** Strict compliance mandate requiring zero data leakage and anonymized model identifiers.
-    - **Solution:** Developed an automated parameter obfuscation routine and excluded all raw dataset artifacts prior to public repository release.
-
-## **Achievements**
-
-- Accomplished >97% accuracy and strong F1/MCC on imbalanced GSTN data, as measured by cross-validation and test set metrics, by designing a robust, reproducible ML pipeline.
-- Delivered a fully anonymized, competition-compliant codebase with clear documentation and reproducibility scripts.
-- Produced comprehensive visualizations and reports for model transparency.
-
-## **Key Learnings**
-
-- Advanced techniques for handling class imbalance in real-world datasets.
-- Importance of strict data handling to prevent leakage and ensure reproducibility.
-- Practical experience with hyperparameter tuning (GridSearchCV, Bayesian Optimization) and model explainability (SHAP).
-- Effective communication of technical results through documentation and presentations.
-
-## **Outcomes**
-
-- Final model achieved:
-    - **Accuracy:** ~97.8%
-    - **F1 Score:** ~0.89
-    - **MCC:** ~0.88
-    - **ROC-AUC:** ~0.99
-- All results reproducible via provided scripts (with user-supplied data).
-- Project recognized for compliance and transparency in hackathon setting.
-
-## **Visuals**
-
-- Precision-Recall Curve  
-    ![Precision-Recall Curve](https://raw.githubusercontent.com/mrxsierra/gstn_dsp_pbc/main/3-submission/static/prc.png)
-- Confusion Matrix  
-    ![Confusion Matrix](https://raw.githubusercontent.com/mrxsierra/gstn_dsp_pbc/main/3-submission/static/cm.png)
-
-## **Links**
-
-- [GitHub Repository](https://github.com/mrxsierra/gstn_dsp_pbc)
-
-## **Conclusion**
-
-This project demonstrates a full-cycle, competition-compliant approach to binary classification on challenging, imbalanced, and anonymized data. Key outcomes include high model performance, robust handling of data issues, and strict adherence to legal/competition requirements. The experience reinforced best practices in reproducibility, compliance, and transparent ML development.
-
-??? summary "**AI Skill Assessment**"
-    Prompt[^1] Source [:material-file-eye-outline:{ #source }](https://raw.githubusercontent.com/mrxsierra/mrxsierra.github.io/blob/main/prompts/skill-assesment-prompt.md)
-    [^1]:
-    This AI skill assessment was generated based on the [skill-assessment-prompt.md](https://raw.githubusercontent.com/mrxsierra/mrxsierra.github.io/main/prompts/skill-assesment-prompt.md) and the provided project documentation. It is intended as an illustrative summary and should be interpreted in the context of the available code and documentation in codebase.
-
-    ---
-
-    ### **Strengths**
-
-    - **Comprehensive ML Workflow Implementation**
-        - Demonstrates end-to-end machine learning pipeline: data integrity checks, EDA, preprocessing, feature engineering, model selection, hyperparameter tuning (GridSearchCV, Bayesian Optimization), cross-validation, threshold optimization, and evaluation.
-        - Uses advanced techniques for imbalanced data (SMOTE, RUS, `scale_pos_weight`).
-        - Implements robust evaluation with stratified k-fold cross-validation and threshold tuning for F1 optimization.
-
-    - **Reproducibility & Compliance**
-        - All code and documentation are anonymized for competition compliance; no data files are included, and model identifiers are randomized.
-        - Clear instructions for reproducibility, including requirements files and explicit notes on data paths.
-
-    - **Documentation & Communication**
-        - Extensive, well-structured documentation in Markdown: project overview, goals, process, challenges, achievements, and visuals.
-        - Visual aids (precision-recall curve, confusion matrix, feature importance) are generated and referenced.
-        - Presentation and storytelling materials are included, showing strong communication skills.
-
-    - **Automation & Utility Functions**
-        - Modular utility functions for cross-validation, threshold finding, evaluation, and plotting.
-        - Scripts and notebooks automate model training, saving, and evaluation.
-
-    - **Model Explainability**
-        - Uses SHAP for feature importance and model transparency.
-        - Reports and presentations highlight interpretability and explainability.
-
-    - **Attention to Data Integrity**
-        - SHA256 checks for data integrity.
-        - Careful handling of missing values, outliers, and prevention of data leakage.
-
-    ---
-
-    ### **Areas for Growth**
-
-    - **Testing & CI/CD**
-        - No evidence of automated unit/integration tests or CI/CD pipelines (e.g., GitHub Actions, pytest).
-        - Adding tests for utility functions and model evaluation would improve robustness.
-
-    - **Security & Data Privacy**
-        - While compliance is strong, there is no mention of secure handling of sensitive data or privacy-preserving ML techniques (beyond anonymization).
-
-    - **Scalability & Deployment**
-        - No deployment scripts, Dockerfiles, or cloud deployment instructions.
-        - No evidence of API endpoints or serving models in production.
-
-    - **Software Engineering Practices**
-        - No use of type hints, code linting, or static analysis tools.
-        - Could benefit from more modularization (e.g., separating data, model, and utility modules).
-
-    - **GUI/Interactive Tools**
-        - No GUI or dashboard for model interaction or result visualization.
-
-    ---
-
-    ### **Role Suitability**
-
-    #### **Best Fit Roles**
-
-    - **Machine Learning Engineer / Data Scientist**
-        - Strong evidence of end-to-end ML workflow, advanced modeling, and evaluation on real-world, imbalanced data.
-        - Experience with model explainability, compliance, and reproducibility.
-
-    - **ML Research/Prototyping**
-        - Demonstrated ability to experiment with multiple models, hyperparameter tuning, and reporting.
-
-    - **Technical Documentation Specialist**
-        - High-quality, clear, and comprehensive documentation and presentation materials.
-
-    #### **Well-Suited For**
-
-    - **ML/AI Competition Participant**
-        - Familiarity with competition constraints, anonymization, and reproducibility.
-
-    - **Data Analyst (Advanced)**
-        - Strong EDA, feature engineering, and reporting skills.
-
-    #### **Less Suited For**
-
-    - **DevOps Engineer / MLOps**
-        - No evidence of CI/CD, containerization, or production deployment.
-    - **Backend/API Developer**
-        - No API or backend service implementation.
-    - **Frontend/GUI Developer**
-        - No GUI or dashboard development.
-
-    ---
-
-    **Summary:**  
-    The developer demonstrates strong skills in machine learning engineering, with a focus on robust, reproducible pipelines for imbalanced binary classification. Strengths include advanced modeling, compliance, documentation, and explainability. The codebase is best suited for ML engineering, data science, and technical documentation roles. Areas for growth include automated testing, CI/CD, deployment, and software engineering best practices. The developer is less suited for DevOps, backend, or frontend roles based on the current evidence.
+# GSTN Predictive Binary Classification
+
+<div class="project-header-card">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px;">
+    <div>
+      <span class="project-category-badge">Machine Learning • Competition Finalist</span>
+      <h2 style="margin: 6px 0 0 0; font-size: 22px; font-weight: 700;">GSTN AI/ML Analytics Challenge</h2>
+    </div>
+    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+      <a href="https://github.com/mrxsierra/gstn_dsp_pbc" target="_blank" rel="noopener" class="btn btn-primary">
+        <i class="fab fa-github"></i> Repository
+      </a>
+      <a href="../../cert/GSTN_Team_137.jpg" class="btn btn-secondary" target="_blank">
+        <i class="fas fa-award"></i> Certificate
+      </a>
+    </div>
+  </div>
+
+  <div class="project-meta-grid">
+    <div class="project-meta-item">
+      <span class="project-meta-label">Role</span>
+      <span class="project-meta-val">Solo ML Engineer &amp; Lead</span>
+    </div>
+    <div class="project-meta-item">
+      <span class="project-meta-label">Timeline</span>
+      <span class="project-meta-val">Aug 2024 – Oct 2024 (45 Days)</span>
+    </div>
+    <div class="project-meta-item">
+      <span class="project-meta-label">Dataset Scale</span>
+      <span class="project-meta-val">900,000+ Records (21 Attributes)</span>
+    </div>
+    <div class="project-meta-item">
+      <span class="project-meta-label">Primary Stack</span>
+      <span class="project-meta-val">Python, XGBoost, LightGBM, SHAP</span>
+    </div>
+  </div>
+
+  <div class="project-impact-box">
+    <i class="fas fa-trophy"></i>
+    <span><strong>Finalist Selection:</strong> Ranked among the top 17 finalist teams out of 200+ national participating teams as a single-member solo developer.</span>
+  </div>
+</div>
+
+---
+
+## Architecture &amp; ML Pipeline Flow
+
+```mermaid
+graph TD
+    A["900,000+ Anonymized GST Records"] --> B["Data Integrity Validation (SHA256)"]
+    B --> C["Pre-processing &amp; Imputation (Median / Winsorization)"]
+    C --> D["Class Imbalance Remediation (RUS + scale_pos_weight)"]
+    D --> E["Stratified 5-Fold Nested Cross-Validation"]
+    E --> F["Ensemble Modeling (XGBoost + LightGBM)"]
+    F --> G["Threshold Tuning for F1 Optimization"]
+    G --> H["SHAP Feature Interpretability Analysis"]
+    H --> I["Competition-Compliant Model Artifact"]
+```
+
+---
+
+## Executive Overview
+
+Developed for the **Goods and Services Tax Network (GSTN) AI/ML Hackathon** organized by the Government of India, this project engineered a high-throughput, interpretable binary classification pipeline for GST financial tax analytics.
+
+The challenge required building an accurate predictive model $F_\theta(X) \to Y_{\text{pred}}$ over 900,000 real-world records characterized by severe class imbalance (91% majority / 9% minority) and extreme feature skewness, while adhering to strict zero-data-leakage compliance protocols.
+
+---
+
+## Technical Challenges &amp; Architectural Solutions
+
+### 1. Severe Class Imbalance (91% / 9%)
+- **Challenge:** Standard loss functions biased predictions toward the majority class, causing unacceptably low minority recall.
+- **Solution:** Evaluated Random Under-Sampling (RUS), SMOTE, and tuned gradient boosted `scale_pos_weight` parameters to systematically optimize the Precision-Recall trade-off, maximizing both F1 and Matthews Correlation Coefficient (MCC).
+
+### 2. Extreme Missingness &amp; Heavy-Tailed Skewness
+- **Challenge:** Multiple tax feature columns exhibited >50% missing values and extreme financial outliers.
+- **Solution:** Applied strict feature pruning thresholds, robust median imputation, and two-sided Winsorization to normalize distribution tails without sacrificing variance.
+
+### 3. Data Leakage &amp; Generalization Safeguards
+- **Challenge:** Risk of subtle data leakage across feature engineering and hyperparameter search.
+- **Solution:** Enforced strict nested cross-validation and pipeline encapsulation (scikit-learn `Pipeline`) ensuring preprocessing transformations were fitted exclusively on training splits.
+
+---
+
+## Performance &amp; Evaluation Metrics
+
+| Evaluation Metric | Cross-Validation Score | Test Partition Score | Objective |
+|:---|:---|:---|:---|
+| **Accuracy** | 97.6% | **~97.8%** | Global classification correctness |
+| **F1 Score** | 0.884 | **~0.891** | Harmonic mean of precision and recall |
+| **MCC (Matthews Correlation)** | 0.875 | **~0.880** | Balanced quality metric for imbalanced classes |
+| **ROC-AUC** | 0.988 | **~0.990** | Separability threshold performance |
+
+---
+
+## Diagnostic Visualizations
+
+<div class="card-grid-2" style="margin: 20px 0;">
+  <div>
+    <h4 style="margin: 0 0 8px 0;">Precision-Recall Curve</h4>
+    <img src="https://raw.githubusercontent.com/mrxsierra/gstn_dsp_pbc/main/3-submission/static/prc.png" alt="Precision-Recall Curve" style="border-radius: 8px; border: 1px solid var(--color-border);" loading="lazy">
+  </div>
+  <div>
+    <h4 style="margin: 0 0 8px 0;">Confusion Matrix</h4>
+    <img src="https://raw.githubusercontent.com/mrxsierra/gstn_dsp_pbc/main/3-submission/static/cm.png" alt="Confusion Matrix" style="border-radius: 8px; border: 1px solid var(--color-border);" loading="lazy">
+  </div>
+</div>
+
+---
+
+## Verified Accreditation
+
+<div style="max-width: 650px; margin: 20px 0;">
+  <a href="../../cert/GSTN_Team_137.jpg" class="glightbox" data-gallery="certs" data-title="GSTN National Hackathon Finalist Certificate">
+    <img src="../../cert/GSTN_Team_137.jpg" alt="GSTN Hackathon Finalist Certificate" style="border-radius: 8px; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm);" loading="lazy">
+  </a>
+  <p style="font-size: 12.5px; color: var(--color-text-muted); margin-top: 6px; text-align: center;">
+    GSTN AI/ML National Hackathon Finalist • Awarded by Goods &amp; Services Tax Network (GSTN)
+  </p>
+</div>
+
+---
+
+## Source Repository
+
+- [GitHub Repository — mrxsierra/gstn_dsp_pbc](https://github.com/mrxsierra/gstn_dsp_pbc): Complete reproduction scripts, cross-validation benches, and documentation.
+
+---
+
+<!-- Sequential Case Study Navigation -->
+<div class="project-nav-footer">
+  <a href="../" class="project-nav-card">
+    <span class="project-nav-dir"><i class="fas fa-arrow-left"></i> Portfolio</span>
+    <span class="project-nav-title">All Engineering Projects</span>
+  </a>
+  <a href="../ems-db/" class="project-nav-card" style="text-align: right;">
+    <span class="project-nav-dir" style="justify-content: flex-end;">Next Project <i class="fas fa-arrow-right"></i></span>
+    <span class="project-nav-title">Examination Management System DB</span>
+  </a>
+</div>
