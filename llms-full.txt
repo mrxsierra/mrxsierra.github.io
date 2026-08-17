@@ -19,8 +19,8 @@ Systems Architecture • Autonomous Agents • Distributed Data
     
     
       [Proof of Work](#projects)
-      [Credentials & Resume](resume.md)
-      [Contact](contact.md)
+      [Credentials & Resume](resume/)
+      [Contact](contact/)
     
   
 
@@ -77,7 +77,7 @@ Systems Architecture • Autonomous Agents • Distributed Data
 
       Production software, ML classification pipelines, and cloud developer tools.
     
-    [All Projects](projects/index.md)
+    [All Projects](projects/)
   
 
   
@@ -305,7 +305,7 @@ Systems Architecture • Autonomous Agents • Distributed Data
 
       Practical architectural guides, SQL deep dives, and programmatic data tutorials.
     
-    [All Articles](blog/index.md)
+    [All Articles](blog/)
   
 
   
@@ -332,7 +332,7 @@ Systems Architecture • Autonomous Agents • Distributed Data
       
         A practical guide to querying, parameterizing, and automating SQLite, MySQL, & PostgreSQL databases programmatically in Python.
       
-      Read Full Guide](blog/2025/05/07/beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql--postgresql/)
+      Read Full Guide](blog/2025/05/07/beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql-postgresql/)
 
   
 
@@ -362,9 +362,9 @@ Systems Architecture • Autonomous Agents • Distributed Data
         Committed to reproducible software engineering, data-driven automation, and active open-source contribution.
       
       
-        [Read Full Bio](about.md)
-        [Verified Credentials](resume.md)
-        [Initiate Contact](contact.md)
+        [Read Full Bio](about/)
+        [Verified Credentials](resume/)
+        [Initiate Contact](contact/)
       
     
 
