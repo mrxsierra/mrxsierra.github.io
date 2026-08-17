@@ -3,7 +3,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Welcome to my personal website. Here you will find my projects, blogs, and more.">
+        <meta name="description" content="A comparative guide to SQL dialects (SQLite, MySQL, and PostgreSQL) covering schema definition, auto-increment keys, trigger procedures, and type systems.
+">
       
       
         <meta name="author" content="mrxsierra">
@@ -12,7 +13,7 @@
         <link rel="canonical" href="https://mrxsierra.github.io/blog/2025/05/07/navigating-the-nuances-a-developers-guide-to-sql-dialects-sqlite-mysql-postgresql/">
       
       
-        <link rel="prev" href="../beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql--postgresql/">
+        <link rel="prev" href="../beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql-postgresql/">
       
       
       
@@ -945,14 +946,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../category/database/" class="md-nav__link">
+      <a href="../../../../category/database-architecture/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    database
+    Database Architecture
   
 
     
@@ -1091,15 +1092,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#key-areas-of-difference-schema" class="md-nav__link">
+  <a href="#key-areas-of-schema-divergence" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Key Areas of Difference: Schema
+        Key Areas of Schema Divergence
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Key Areas of Difference: Schema">
+    <nav class="md-nav" aria-label="Key Areas of Schema Divergence">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1114,170 +1115,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-data-types-and-auto-incrementing-ids" class="md-nav__link">
+  <a href="#2-primary-keys-auto-increment-types" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Data Types and Auto-Incrementing IDs
+        2. Primary Keys, Auto-Increment, &amp; Types
       
     </span>
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-default-values-especially-timestamps" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Default Values (Especially Timestamps)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-trigger-syntax" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Trigger Syntax
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-time-and-interval-arithmetic" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Time and Interval Arithmetic
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-conditional-logic-in-triggersqueries" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. Conditional Logic in Triggers/Queries
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-handling-nulls-in-aggregate-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        7. Handling NULLs in Aggregate Functions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-create-table-if-not-exists" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        8. CREATE TABLE IF NOT EXISTS
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#9-comments" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        9. Comments
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#10-index-creation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        10. Index Creation
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#11-time-zone-handling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        11. Time Zone Handling
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-cheatsheet-sqlite-vs-postgresql-vs-mysql" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quick Cheatsheet: SQLite vs. PostgreSQL vs. MySQL
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-this-matters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why This Matters
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#recommended-next-reading" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Recommended Next Reading
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references-technical-documentation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        References &amp; Technical Documentation
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="References &amp; Technical Documentation">
+    <nav class="md-nav" aria-label="2. Primary Keys, Auto-Increment, &amp; Types">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#general" class="md-nav__link">
+  <a href="#table-id-definition" class="md-nav__link">
     <span class="md-ellipsis">
       
-        General
+        Table ID Definition
       
     </span>
   </a>
@@ -1285,32 +1138,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sqlite" class="md-nav__link">
+  <a href="#enum-constrained-types" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SQLite
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#postgresql" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        PostgreSQL
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mysql" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        MySQL
+        ENUM &amp; Constrained Types
       
     </span>
   </a>
@@ -1319,6 +1150,88 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-trigger-architecture-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Trigger Architecture &amp; Execution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-timestamp-interval-arithmetic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Timestamp &amp; Interval Arithmetic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-conditional-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Conditional Expressions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-aggregate-null-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Aggregate NULL Handling
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architectural-comparison-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architectural Comparison Matrix
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-in-the-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next in the Series
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-repositories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference Repositories
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1389,7 +1302,7 @@
                           <span class="md-ellipsis">
                             in
                             
-                              <a href="../../../../category/database/">database</a></span>
+                              <a href="../../../../category/database-architecture/">Database Architecture</a></span>
                         </div>
                       </li>
                     
@@ -1400,7 +1313,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"></path></svg>
                           <span class="md-ellipsis">
                             
-                              7 min read
+                              4 min read
                             
                           </span>
                         </div>
@@ -1422,6 +1335,60 @@
   
 
 
+  <nav class="md-tags">
+    
+      
+      
+      
+        
+        
+      
+      
+        <a href="../../../../../tags/#tag:mysql" class="md-tag md-tag-icon">MySQL</a>
+      
+    
+      
+      
+      
+        
+        
+      
+      
+        <a href="../../../../../tags/#tag:postgresql" class="md-tag md-tag-icon">PostgreSQL</a>
+      
+    
+      
+      
+      
+        
+        
+      
+      
+        <a href="../../../../../tags/#tag:sql" class="md-tag md-tag-icon">SQL</a>
+      
+    
+      
+      
+      
+        
+        
+      
+      
+        <a href="../../../../../tags/#tag:sqlite" class="md-tag md-tag-icon">SQLite</a>
+      
+    
+      
+      
+      
+        
+        
+      
+      
+        <a href="../../../../../tags/#tag:schema-design" class="md-tag md-tag-icon">Schema Design</a>
+      
+    
+  </nav>
+
 
   
   
@@ -1436,519 +1403,358 @@
 
 
 <h1 id="navigating-the-nuances-a-developers-guide-to-sql-dialects-sqlite-mysql-postgresql">Navigating the Nuances: A Developer's Guide to <abbr title="Structured Query Language">SQL</abbr> Dialects (<abbr title="A lightweight, file-based SQL database engine">SQLite</abbr>, <abbr title="An open-source relational database management system">MySQL</abbr>, <abbr title="An advanced open-source relational database">PostgreSQL</abbr>)<a class="headerlink" href="#navigating-the-nuances-a-developers-guide-to-sql-dialects-sqlite-mysql-postgresql" title="Permanent link">¶</a></h1>
-<!-- markdownlint-disable MD041 MD046 -->
-
-<p>As developers, we often encounter various <abbr title="Structured Query Language">SQL</abbr> databases, each with its own flavor of <code>SQL</code>. <strong>While the core concepts remain similar, the devil is in the details – especially when it comes to schema definitions, data types, and procedural extensions like triggers.</strong></p>
+<p>As developers, we frequently encounter diverse <abbr title="Structured Query Language">SQL</abbr> engines. While core relational concepts are standardized, critical divergences emerge in schema definitions, data types, and procedural extensions like triggers.</p>
 <!-- more -->
-<p><strong>Recently</strong>, while working on an <a href="https://github.com/mrxsierra/ems-db/"><strong><em><code>Exam Management System (EMS)</code></em></strong></a>, I had the opportunity to define the database schema for <code>SQLite</code>, <code>MySQL</code>, and <code>PostgreSQL</code>. This exercise highlighted some fascinating and crucial differences between these popular relational database management systems (<abbr title="Relational Database Management System">RDBMS</abbr>).</p>
-<blockquote>
-<p><strong>Note:</strong> This guide provides a comparative technical reference drawing insights directly from production schema files.</p>
-</blockquote>
-<p><strong><em>Project Repo :</em></strong> <a href="https://github.com/mrxsierra/ems-db/">ems-db</a> <strong><code>&lt;-- root-dir-name</code></strong></p>
-<ul>
-<li><a href="https://github.com/mrxsierra/ems-db/blob/main/sqlite/schema.sql">sqlite/schema.sql</a></li>
-<li><a href="https://github.com/mrxsierra/ems-db/blob/main/psql/schema.sql">psql/schema.sql</a></li>
-<li><a href="https://github.com/mrxsierra/ems-db/blob/main/mysql/schema.sql">mysql/schema.sql</a></li>
-</ul>
-<p>Whether you're a fellow developer looking for a quick reference or trying to gauge a database differences, I hope this comparison proves insightful!</p>
-<h2 id="key-areas-of-difference-schema">Key Areas of Difference: Schema<a class="headerlink" href="#key-areas-of-difference-schema" title="Permanent link">¶</a></h2>
-<p>Let's dive into the specific areas where these <code>SQL dialects</code> diverge:</p>
-<div class="admonition tip">
-<p class="admonition-title">Drill</p>
-<blockquote>
-<p><strong>Warning:</strong> Always refer to official documentation when evaluating dialect differences.</p>
-</blockquote>
-<hr>
-<ul>
-<li><strong>Understanding :</strong> Use <a href="https://github.com/mrxsierra/ems-db/">project</a> as reference.</li>
-<li><strong>Prerequisites :</strong> Familiar with <code>sql syntax</code>, <code>client interaction</code>, <code>Docker</code>, and <code>Python</code> (language of choice).</li>
-</ul>
+
+<div class="series-banner">
+  <div class="series-banner-header">
+    <span class="series-badge">2-Part Engineering Series</span>
+    <span style="font-size: 12.5px; color: var(--color-text-muted);">Part 1 of 2</span>
+  </div>
+  <div style="font-size: 13.5px; color: var(--color-text-secondary); line-height: 1.5;">
+    <strong>Part 1:</strong> Schema Definitions, DDL, &amp; Trigger Architecture (Current)<br>
+    <strong>Part 2:</strong> <a href="../2-query-interaction-diff/">Beyond the Schema: Querying, CLI Interaction, &amp; Docker Nuances</a>
+  </div>
 </div>
+
+<p>This technical reference draws directly from real-world multi-database migrations implemented in the <a href="https://github.com/mrxsierra/ems-db/"><strong>Examination Management System (EMS <abbr title="Database">DB</abbr>)</strong></a> repository.</p>
+<hr>
+<h2 id="key-areas-of-schema-divergence">Key Areas of Schema Divergence<a class="headerlink" href="#key-areas-of-schema-divergence" title="Permanent link">¶</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>graph LR
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    A["Relational Requirements"] --&gt; B["PostgreSQL (Strict Types &amp; Functions)"]
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    A --&gt; C["MySQL (Backticks &amp; Delimiters)"]
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    A --&gt; D["SQLite (Type Affinity &amp; CHECKs)"]
+</span></code></pre></div>
 <h3 id="1-dropping-objects-tables-views-indexes">1. Dropping Objects (Tables, Views, Indexes)<a class="headerlink" href="#1-dropping-objects-tables-views-indexes" title="Permanent link">¶</a></h3>
-<p>The syntax for dropping database objects is largely similar, but identifier quoting can vary.</p>
-<ul>
-<li>
-<p><strong><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr> &amp; <abbr title="An advanced open-source relational database">PostgreSQL</abbr>:</strong> Use double quotes for identifiers if they contain special characters or are case-sensitive (though often optional).</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">-- SQLite &amp; PostgreSQL</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">DROP</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="ss">"tests_history"</span><span class="p">;</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="ss">"students"</span><span class="p">;</span>
+<p>The syntax for dropping database objects is broadly compatible, but identifier quoting rules differ.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1"><abbr title="An advanced open-source relational database">PostgreSQL</abbr></label><label for="__tabbed_1_2"><abbr title="An open-source relational database management system">MySQL</abbr></label><label for="__tabbed_1_3"><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">-- Double quotes for case sensitivity and identifier safety</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">DROP</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="ss">"tests_history"</span><span class="p">;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="ss">"students"</span><span class="w"> </span><span class="k">CASCADE</span><span class="p">;</span>
 </span></code></pre></div>
-</li>
-<li>
-<p><strong><abbr title="An open-source relational database management system">MySQL</abbr>:</strong> Uses backticks for identifiers.</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">-- MySQL</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">DROP</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="o">`</span><span class="n">tests_history</span><span class="o">`</span><span class="p">;</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="o">`</span><span class="n">students</span><span class="o">`</span><span class="p">;</span>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">-- Backtick quoting standard</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">DROP</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="o">`</span><span class="n">tests_history</span><span class="o">`</span><span class="p">;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="o">`</span><span class="n">students</span><span class="o">`</span><span class="p">;</span>
 </span></code></pre></div>
-</li>
-</ul>
-<h3 id="2-data-types-and-auto-incrementing-ids">2. Data Types and Auto-Incrementing IDs<a class="headerlink" href="#2-data-types-and-auto-incrementing-ids" title="Permanent link">¶</a></h3>
-<p>This is a significant area of divergence.</p>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">-- Double quotes supported, basic IF EXISTS</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">DROP</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="ss">"tests_history"</span><span class="p">;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="ss">"students"</span><span class="p">;</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<hr>
+<h3 id="2-primary-keys-auto-increment-types">2. Primary Keys, Auto-Increment, &amp; Types<a class="headerlink" href="#2-primary-keys-auto-increment-types" title="Permanent link">¶</a></h3>
 <table>
 <thead>
 <tr>
-<th>Feature</th>
-<th><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr></th>
-<th><abbr title="An advanced open-source relational database">PostgreSQL</abbr></th>
-<th><abbr title="An open-source relational database management system">MySQL</abbr></th>
+<th style="text-align: left;">Feature</th>
+<th style="text-align: left;"><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr></th>
+<th style="text-align: left;"><abbr title="An advanced open-source relational database">PostgreSQL</abbr></th>
+<th style="text-align: left;"><abbr title="An open-source relational database management system">MySQL</abbr></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Auto-Increment ID</strong></td>
-<td><code>id INTEGER PRIMARY KEY</code> (implicitly <code>AUTOINCREMENT</code> if it's the primary key and integer type) or explicitly <code>id INTEGER PRIMARY KEY AUTOINCREMENT</code></td>
-<td><code>id SERIAL PRIMARY KEY</code> (creates a sequence)</td>
-<td><code>id INT AUTO_INCREMENT PRIMARY KEY</code></td>
+<td style="text-align: left;"><strong>Auto-Increment ID</strong></td>
+<td style="text-align: left;"><code>INTEGER PRIMARY KEY</code> (implicitly sequential)</td>
+<td style="text-align: left;"><code>SERIAL PRIMARY KEY</code> or <code>IDENTITY</code></td>
+<td style="text-align: left;"><code>INT AUTO_INCREMENT PRIMARY KEY</code></td>
 </tr>
 <tr>
-<td><strong>Text</strong></td>
-<td><code>TEXT</code></td>
-<td><code>VARCHAR(n)</code>, <code>TEXT</code></td>
-<td><code>VARCHAR(n)</code>, <code>TEXT</code></td>
+<td style="text-align: left;"><strong>Text Fields</strong></td>
+<td style="text-align: left;"><code>TEXT</code></td>
+<td style="text-align: left;"><code>VARCHAR(n)</code>, <code>TEXT</code></td>
+<td style="text-align: left;"><code>VARCHAR(n)</code>, <code>TEXT</code></td>
 </tr>
 <tr>
-<td><strong>Integer</strong></td>
-<td><code>INTEGER</code></td>
-<td><code>INTEGER</code>, <code>SMALLINT</code> (for <code>is_correct</code>, <code>score</code>)</td>
-<td><code>INT</code>, <code>TINYINT(1)</code> (often for booleans)</td>
+<td style="text-align: left;"><strong>Boolean</strong></td>
+<td style="text-align: left;"><code>INTEGER CHECK ("is_correct" IN (0, 1))</code></td>
+<td style="text-align: left;">Native <code>BOOLEAN</code> or <code>SMALLINT</code></td>
+<td style="text-align: left;"><code>TINYINT(1)</code></td>
 </tr>
 <tr>
-<td><strong>Boolean</strong></td>
-<td><code>INTEGER NOT NULL CHECK ("is_correct" IN (0, 1))</code></td>
-<td><code>SMALLINT NOT NULL DEFAULT 0 CHECK ("is_correct" IN (0, 1))</code> (or native <code>BOOLEAN</code>)</td>
-<td><code>TINYINT(1) NOT NULL DEFAULT '0'</code></td>
+<td style="text-align: left;"><strong>Date/Time</strong></td>
+<td style="text-align: left;"><code>NUMERIC</code> (<code>DATETIME('now', 'localtime')</code>)</td>
+<td style="text-align: left;"><code>TIMESTAMP WITH TIME ZONE</code></td>
+<td style="text-align: left;"><code>DATETIME</code>, <code>CURRENT_TIMESTAMP</code></td>
 </tr>
 <tr>
-<td><strong>Date/Time</strong></td>
-<td><code>NUMERIC</code> (stored as text, real, or int), <code>DATETIME('now', 'localtime')</code></td>
-<td><code>TIMESTAMP WITH TIME ZONE</code>, <code>CURRENT_TIMESTAMP</code></td>
-<td><code>DATETIME</code>, <code>TIME</code>, <code>CURRENT_TIMESTAMP</code>, <code>NOW()</code></td>
-</tr>
-<tr>
-<td><strong>Duration/Interval</strong></td>
-<td><code>NUMERIC</code> (e.g., storing time as text 'HH:MM:SS')</td>
-<td><code>INTERVAL</code></td>
-<td><code>TIME</code> (for durations within 24h) or calculate</td>
-</tr>
-<tr>
-<td><strong>ENUM Types</strong></td>
-<td>Simulated with <code>CHECK</code> constraint: <code>CHECK ("status" IN (...))</code></td>
-<td>Native: <code>CREATE TYPE "events_type" AS ENUM (...);</code></td>
-<td>Native: <code>status ENUM ('active', 'completed')</code></td>
+<td style="text-align: left;"><strong>ENUM Types</strong></td>
+<td style="text-align: left;">Simulated via <code>CHECK ("status" IN (...))</code></td>
+<td style="text-align: left;">Native <code>CREATE TYPE ... AS ENUM</code></td>
+<td style="text-align: left;">Inline column <code>ENUM('active', ...)</code></td>
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p><strong>Example: Students Table ID</strong></p>
-</blockquote>
-<ul>
-<li>
-<p><strong><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr>:</strong></p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="ss">"students"</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="ss">"id"</span><span class="w"> </span><span class="nb">INTEGER</span><span class="p">,</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="c1">-- ...</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="ss">"id"</span><span class="p">)</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">);</span>
+<h4 id="table-id-definition">Table ID Definition<a class="headerlink" href="#table-id-definition" title="Permanent link">¶</a></h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1"><abbr title="An advanced open-source relational database">PostgreSQL</abbr></label><label for="__tabbed_2_2"><abbr title="An open-source relational database management system">MySQL</abbr></label><label for="__tabbed_2_3"><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="ss">"students"</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="ss">"id"</span><span class="w"> </span><span class="nb">SERIAL</span><span class="p">,</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="ss">"first_name"</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="ss">"last_name"</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="ss">"id"</span><span class="p">)</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="p">);</span>
 </span></code></pre></div>
-</li>
-<li>
-<p><strong><abbr title="An advanced open-source relational database">PostgreSQL</abbr>:</strong></p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="ss">"students"</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="ss">"id"</span><span class="w"> </span><span class="nb">SERIAL</span><span class="p">,</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="c1">-- ...</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">(</span><span class="ss">"id"</span><span class="p">)</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">);</span>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="o">`</span><span class="n">students</span><span class="o">`</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="o">`</span><span class="n">first_name</span><span class="o">`</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="o">`</span><span class="n">last_name</span><span class="o">`</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">)</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="p">);</span>
 </span></code></pre></div>
-</li>
-<li>
-<p><strong><abbr title="An open-source relational database management system">MySQL</abbr>:</strong></p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="o">`</span><span class="n">students</span><span class="o">`</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="p">,</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="c1">-- ...</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">)</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">);</span>
-</span></code></pre></div>
-</li>
-</ul>
-<p><strong>Example: ENUM for <code>tests_sessions.status</code></strong></p>
-<ul>
-<li>
-<p><strong><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr>:</strong></p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="ss">"tests_sessions"</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="c1">-- ...</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="ss">"status"</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">'in-progress'</span><span class="w"> </span><span class="k">CHECK</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">        </span><span class="ss">"status"</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">'in-progress'</span><span class="p">,</span><span class="w"> </span><span class="s1">'ended'</span><span class="p">,</span><span class="w"> </span><span class="s1">'completed'</span><span class="p">)</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="p">)</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="c1">-- ...</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">);</span>
-</span></code></pre></div>
-</li>
-<li>
-<p><strong><abbr title="An advanced open-source relational database">PostgreSQL</abbr>:</strong></p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TYPE</span><span class="w"> </span><span class="ss">"tests_session_status_type"</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">ENUM</span><span class="w"> </span><span class="p">(</span><span class="s1">'in-progress'</span><span class="p">,</span><span class="w"> </span><span class="s1">'ended'</span><span class="p">,</span><span class="w"> </span><span class="s1">'completed'</span><span class="p">);</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="ss">"tests_sessions"</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="c1">-- ...</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="ss">"status"</span><span class="w"> </span><span class="ss">"tests_session_status_type"</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">'in-progress'</span><span class="p">,</span>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="c1">-- ...</span>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="ss">"students"</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="ss">"id"</span><span class="w"> </span><span class="nb">INTEGER</span><span class="p">,</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="ss">"first_name"</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="ss">"last_name"</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="ss">"id"</span><span class="p">)</span>
 </span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="p">);</span>
 </span></code></pre></div>
-</li>
-<li>
-<p><strong><abbr title="An open-source relational database management system">MySQL</abbr>:</strong></p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="o">`</span><span class="n">tests_sessions</span><span class="o">`</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="c1">-- ...</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="o">`</span><span class="n">status</span><span class="o">`</span><span class="w"> </span><span class="n">ENUM</span><span class="w"> </span><span class="p">(</span><span class="s1">'in-progress'</span><span class="p">,</span><span class="w"> </span><span class="s1">'ended'</span><span class="p">,</span><span class="w"> </span><span class="s1">'completed'</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">'in-progress'</span><span class="p">,</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="c1">-- ...</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="p">);</span>
+</div>
+</div>
+</div>
+<h4 id="enum-constrained-types">ENUM &amp; Constrained Types<a class="headerlink" href="#enum-constrained-types" title="Permanent link">¶</a></h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1"><abbr title="An advanced open-source relational database">PostgreSQL</abbr></label><label for="__tabbed_3_2"><abbr title="An open-source relational database management system">MySQL</abbr></label><label for="__tabbed_3_3"><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">-- 1. Declare domain type</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TYPE</span><span class="w"> </span><span class="ss">"tests_session_status_type"</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">ENUM</span><span class="w"> </span><span class="p">(</span><span class="s1">'in-progress'</span><span class="p">,</span><span class="w"> </span><span class="s1">'ended'</span><span class="p">,</span><span class="w"> </span><span class="s1">'completed'</span><span class="p">);</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1">-- 2. Use type in table definition</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="ss">"tests_sessions"</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="ss">"id"</span><span class="w"> </span><span class="nb">SERIAL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="ss">"status"</span><span class="w"> </span><span class="ss">"tests_session_status_type"</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">'in-progress'</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="p">);</span>
 </span></code></pre></div>
-</li>
-</ul>
-<h3 id="3-default-values-especially-timestamps">3. Default Values (Especially Timestamps)<a class="headerlink" href="#3-default-values-especially-timestamps" title="Permanent link">¶</a></h3>
-<ul>
-<li>
-<p><strong><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr>:</strong> Uses functions like <code>DATETIME('now', 'localtime')</code>.</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="ss">"start"</span><span class="w"> </span><span class="nb">NUMERIC</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="p">(</span><span class="n">DATETIME</span><span class="p">(</span><span class="s1">'now'</span><span class="p">,</span><span class="w"> </span><span class="s1">'localtime'</span><span class="p">))</span>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1">-- Native column-level ENUM definition</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="o">`</span><span class="n">tests_sessions</span><span class="o">`</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="o">`</span><span class="n">status</span><span class="o">`</span><span class="w"> </span><span class="n">ENUM</span><span class="w"> </span><span class="p">(</span><span class="s1">'in-progress'</span><span class="p">,</span><span class="w"> </span><span class="s1">'ended'</span><span class="p">,</span><span class="w"> </span><span class="s1">'completed'</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">'in-progress'</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="p">);</span>
 </span></code></pre></div>
-</li>
-<li>
-<p><strong><abbr title="An advanced open-source relational database">PostgreSQL</abbr>:</strong> Uses <code>CURRENT_TIMESTAMP</code>.</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="ss">"start"</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="k">TIME</span><span class="w"> </span><span class="k">ZONE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1">-- Simulated using TEXT with CHECK constraint</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="ss">"tests_sessions"</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="ss">"id"</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="ss">"status"</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="s1">'in-progress'</span><span class="w"> </span><span class="k">CHECK</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">        </span><span class="ss">"status"</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">'in-progress'</span><span class="p">,</span><span class="w"> </span><span class="s1">'ended'</span><span class="p">,</span><span class="w"> </span><span class="s1">'completed'</span><span class="p">)</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span><span class="p">)</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="p">);</span>
 </span></code></pre></div>
-</li>
-<li>
-<p><strong><abbr title="An open-source relational database management system">MySQL</abbr>:</strong> Uses <code>CURRENT_TIMESTAMP</code> or <code>NOW()</code>.</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="o">`</span><span class="k">start</span><span class="o">`</span><span class="w"> </span><span class="n">DATETIME</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span>
+</div>
+</div>
+</div>
+<hr>
+<h3 id="3-trigger-architecture-execution">3. Trigger Architecture &amp; Execution<a class="headerlink" href="#3-trigger-architecture-execution" title="Permanent link">¶</a></h3>
+<p>Triggers represent the most significant syntactical divide across the three engines.</p>
+<p><strong>Objective:</strong> Compute and set the <code>end</code> timestamp of a <code>tests_sessions</code> row upon creation based on test duration.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><input id="__tabbed_4_3" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1"><abbr title="An advanced open-source relational database">PostgreSQL</abbr></label><label for="__tabbed_4_2"><abbr title="An open-source relational database management system">MySQL</abbr></label><label for="__tabbed_4_3"><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1">-- PostgreSQL mandates separating procedural function from trigger binding</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="k">FUNCTION</span><span class="w"> </span><span class="n">set_end_for_test_session_fn</span><span class="p">()</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">RETURNS</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">$$</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="k">BEGIN</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="k">NEW</span><span class="p">.</span><span class="k">end</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="k">start</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="ss">"duration"</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="ss">"tests"</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="ss">"id"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">test_id</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">    </span><span class="p">);</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">    </span><span class="k">RETURN</span><span class="w"> </span><span class="k">NEW</span><span class="p">;</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="k">END</span><span class="p">;</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="err">$$</span><span class="w"> </span><span class="k">LANGUAGE</span><span class="w"> </span><span class="n">plpgsql</span><span class="p">;</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="ss">"set_end_for_test_session"</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="k">BEFORE</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="ss">"tests_sessions"</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="k">EXECUTE</span><span class="w"> </span><span class="k">FUNCTION</span><span class="w"> </span><span class="n">set_end_for_test_session_fn</span><span class="p">();</span>
 </span></code></pre></div>
-</li>
-</ul>
-<h3 id="4-trigger-syntax">4. Trigger Syntax<a class="headerlink" href="#4-trigger-syntax" title="Permanent link">¶</a></h3>
-<p>Triggers are where the syntactical differences become very pronounced.</p>
-<p><strong>Common Goal:</strong> Set the <code>end</code> time of a <code>tests_sessions</code> row upon insertion, based on the test's duration.</p>
-<ul>
-<li>
-<p><strong><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr>:</strong></p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="ss">"set_end_for_test_session"</span><span class="w"> </span><span class="k">AFTER</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="ss">"tests_sessions"</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">BEGIN</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="k">UPDATE</span><span class="w"> </span><span class="ss">"tests_sessions"</span>
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="k">SET</span>
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="ss">"end"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DATETIME</span><span class="p">(</span><span class="k">new</span><span class="p">.</span><span class="k">start</span><span class="p">,</span><span class="w"> </span><span class="s1">'+'</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">            </span><span class="k">SELECT</span><span class="w"> </span><span class="k">TIME</span><span class="p">(</span><span class="n">duration</span><span class="p">)</span>
-</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">            </span><span class="k">FROM</span><span class="w"> </span><span class="ss">"tests"</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">t</span>
-</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">            </span><span class="k">WHERE</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="ss">"id"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="p">.</span><span class="ss">"test_id"</span>
-</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">        </span><span class="p">))</span>
-</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="k">WHERE</span><span class="w"> </span><span class="ss">"id"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="p">.</span><span class="n">id</span><span class="p">;</span>
-</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="k">END</span><span class="p">;</span>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1">-- MySQL requires custom statement DELIMITERs</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">DELIMITER</span><span class="w"> </span><span class="err">$$</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="o">`</span><span class="n">set_end_for_test_session</span><span class="o">`</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="k">BEFORE</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="o">`</span><span class="n">tests_sessions</span><span class="o">`</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="k">BEGIN</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="k">end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DATE_ADD</span><span class="p">(</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">        </span><span class="n">IFNULL</span><span class="p">(</span><span class="k">NEW</span><span class="p">.</span><span class="k">start</span><span class="p">,</span><span class="w"> </span><span class="n">NOW</span><span class="p">()),</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">        </span><span class="nb">INTERVAL</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">            </span><span class="k">SELECT</span><span class="w"> </span><span class="n">TIME_TO_SEC</span><span class="p">(</span><span class="o">`</span><span class="n">duration</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">60</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="w">            </span><span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">tests</span><span class="o">`</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="w">            </span><span class="k">WHERE</span><span class="w"> </span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="o">`</span><span class="n">test_id</span><span class="o">`</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="w">        </span><span class="p">)</span><span class="w"> </span><span class="k">MINUTE</span>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="w">    </span><span class="p">);</span>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="k">END</span><span class="err">$$</span>
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span>
 </span></code></pre></div>
-<ul>
-<li>Uses <code>BEGIN...END;</code> block.</li>
-<li><code>AFTER INSERT</code>.</li>
-<li><code>new</code> refers to the inserted row.</li>
-<li>Date/time arithmetic involves string concatenation for modifiers.</li>
-</ul>
-</li>
-<li>
-<p><strong><abbr title="An advanced open-source relational database">PostgreSQL</abbr>:</strong></p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="k">FUNCTION</span><span class="w"> </span><span class="n">set_end_for_test_session_fn</span><span class="p">()</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">RETURNS</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="err">$$</span>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="k">BEGIN</span>
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span><span class="k">NEW</span><span class="p">.</span><span class="k">end</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="k">start</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="ss">"duration"</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="ss">"tests"</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="ss">"id"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">test_id</span>
-</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">    </span><span class="p">);</span>
-</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">    </span><span class="k">RETURN</span><span class="w"> </span><span class="k">NEW</span><span class="p">;</span>
-</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="k">END</span><span class="p">;</span>
-</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="err">$$</span><span class="w"> </span><span class="k">LANGUAGE</span><span class="w"> </span><span class="n">plpgsql</span><span class="p">;</span>
-</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>
-</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="ss">"set_end_for_test_session"</span><span class="w"> </span><span class="k">BEFORE</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">ON</span>
-</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="ss">"tests_sessions"</span><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span>
-</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="k">EXECUTE</span><span class="w"> </span><span class="k">FUNCTION</span><span class="w"> </span><span class="n">set_end_for_test_session_fn</span><span class="p">();</span>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1">-- SQLite embeds block logic directly in the trigger definition</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="ss">"set_end_for_test_session"</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="k">AFTER</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="ss">"tests_sessions"</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="k">BEGIN</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span><span class="k">UPDATE</span><span class="w"> </span><span class="ss">"tests_sessions"</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="ss">"end"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DATETIME</span><span class="p">(</span><span class="k">new</span><span class="p">.</span><span class="k">start</span><span class="p">,</span><span class="w"> </span><span class="s1">'+'</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="k">TIME</span><span class="p">(</span><span class="n">duration</span><span class="p">)</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">        </span><span class="k">FROM</span><span class="w"> </span><span class="ss">"tests"</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">t</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="ss">"id"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="p">.</span><span class="ss">"test_id"</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">    </span><span class="p">))</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="ss">"id"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="p">.</span><span class="n">id</span><span class="p">;</span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="k">END</span><span class="p">;</span>
 </span></code></pre></div>
-<ul>
-<li>Requires a separate trigger function written in a procedural language (e.g., <code>plpgsql</code>).</li>
-<li><code>BEFORE INSERT</code> (can modify <code>NEW</code> directly).</li>
-<li><code>FOR EACH ROW</code> is explicit.</li>
-<li><code>NEW</code> is a record variable; assignments use <code>:=</code>.</li>
-<li><code>RETURN NEW</code> is crucial for <code>BEFORE</code> triggers.</li>
-<li>Interval arithmetic is more direct (<code>+ duration</code>).</li>
-</ul>
-</li>
-<li>
-<p><strong><abbr title="An open-source relational database management system">MySQL</abbr>:</strong></p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">DELIMITER</span><span class="w"> </span><span class="err">$$</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="o">`</span><span class="n">set_end_for_test_session</span><span class="o">`</span><span class="w"> </span><span class="k">BEFORE</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">ON</span>
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="o">`</span><span class="n">tests_sessions</span><span class="o">`</span><span class="w"> </span><span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span>
-</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="k">BEGIN</span>
-</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">    </span><span class="k">SET</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="k">end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DATE_ADD</span><span class="p">(</span>
-</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">        </span><span class="n">IFNULL</span><span class="p">(</span><span class="k">NEW</span><span class="p">.</span><span class="k">start</span><span class="p">,</span><span class="w"> </span><span class="n">NOW</span><span class="p">()),</span><span class="w"> </span><span class="c1">-- NOW() if NEW.start is not yet set</span>
-</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">        </span><span class="nb">INTERVAL</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">            </span><span class="k">SELECT</span><span class="w"> </span><span class="n">TIME_TO_SEC</span><span class="p">(</span><span class="o">`</span><span class="n">duration</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">60</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">tests</span><span class="o">`</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="o">`</span><span class="n">test_id</span><span class="o">`</span>
-</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">        </span><span class="p">)</span><span class="w"> </span><span class="k">MINUTE</span>
-</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">    </span><span class="p">);</span>
-</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="k">END</span><span class="err">$$</span>
-</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span>
+</div>
+</div>
+</div>
+<hr>
+<h3 id="4-timestamp-interval-arithmetic">4. Timestamp &amp; Interval Arithmetic<a class="headerlink" href="#4-timestamp-interval-arithmetic" title="Permanent link">¶</a></h3>
+<p>How intervals and timestamps are computed across engines:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><input id="__tabbed_5_3" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1"><abbr title="An advanced open-source relational database">PostgreSQL</abbr></label><label for="__tabbed_5_2"><abbr title="An open-source relational database management system">MySQL</abbr></label><label for="__tabbed_5_3"><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1">-- Native interval arithmetic</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="k">NEW</span><span class="p">.</span><span class="k">start</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="ss">"duration"</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="ss">"tests"</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="ss">"id"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">test_id</span><span class="p">)</span>
 </span></code></pre></div>
-<ul>
-<li>Uses <code>DELIMITER</code> to define a multi-statement trigger body.</li>
-<li><code>BEFORE INSERT</code>.</li>
-<li><code>FOR EACH ROW</code> is explicit.</li>
-<li><code>SET NEW.column = ...</code> for assignments.</li>
-<li>Uses functions like <code>DATE_ADD</code> and <code>TIME_TO_SEC</code> for time arithmetic.</li>
-</ul>
-</li>
-</ul>
-<p><strong>Key Trigger Differences Summary:</strong></p>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1">-- DATE_ADD with unit keyword</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">DATE_ADD</span><span class="p">(</span><span class="k">NEW</span><span class="p">.</span><span class="k">start</span><span class="p">,</span><span class="w"> </span><span class="nb">INTERVAL</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">TIME_TO_SEC</span><span class="p">(</span><span class="o">`</span><span class="n">duration</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">60</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">tests</span><span class="o">`</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="o">`</span><span class="n">test_id</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="k">MINUTE</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1">-- String modifier concatenation inside DATETIME()</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="n">DATETIME</span><span class="p">(</span><span class="k">new</span><span class="p">.</span><span class="k">start</span><span class="p">,</span><span class="w"> </span><span class="s1">'+'</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">TIME</span><span class="p">(</span><span class="n">duration</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="ss">"tests"</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="ss">"id"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="p">.</span><span class="n">test_id</span><span class="p">))</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<hr>
+<h3 id="5-conditional-expressions">5. Conditional Expressions<a class="headerlink" href="#5-conditional-expressions" title="Permanent link">¶</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:3"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><input id="__tabbed_6_3" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1"><abbr title="An advanced open-source relational database">PostgreSQL</abbr></label><label for="__tabbed_6_2"><abbr title="An open-source relational database management system">MySQL</abbr></label><label for="__tabbed_6_3"><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1">-- Native IF/ELSE inside procedural functions</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="k">IF</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span><span class="k">NEW</span><span class="p">.</span><span class="n">feedback</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="s1">'need-improvement'</span><span class="p">;</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="k">ELSE</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">    </span><span class="k">NEW</span><span class="p">.</span><span class="n">feedback</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="s1">'great'</span><span class="p">;</span>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1">-- Standard CASE statement</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="k">SET</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">feedback</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">CASE</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">    </span><span class="k">WHEN</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">'need-improvement'</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">    </span><span class="k">ELSE</span><span class="w"> </span><span class="s1">'great'</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="k">END</span><span class="p">;</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1">-- Inline CASE expression</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="ss">"feedback"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">CASE</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">    </span><span class="k">WHEN</span><span class="w"> </span><span class="k">new</span><span class="p">.</span><span class="n">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">'need-improvement'</span>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w">    </span><span class="k">ELSE</span><span class="w"> </span><span class="s1">'great'</span>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="k">END</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<hr>
+<h3 id="6-aggregate-null-handling">6. Aggregate NULL Handling<a class="headerlink" href="#6-aggregate-null-handling" title="Permanent link">¶</a></h3>
+<p>When aggregating nullable scores (<code>SUM</code>), empty record sets return <code>NULL</code> unless coalesced:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:3"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"><input id="__tabbed_7_2" name="__tabbed_7" type="radio"><input id="__tabbed_7_3" name="__tabbed_7" type="radio"><div class="tabbed-labels"><label for="__tabbed_7_1"><abbr title="An advanced open-source relational database">PostgreSQL</abbr></label><label for="__tabbed_7_2"><abbr title="An open-source relational database management system">MySQL</abbr></label><label for="__tabbed_7_3"><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">COALESCE</span><span class="p">(</span><span class="k">SUM</span><span class="p">(</span><span class="ss">"score"</span><span class="p">),</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="ss">"results"</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="ss">"test_session_id"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">id</span><span class="p">;</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">IFNULL</span><span class="p">(</span><span class="k">SUM</span><span class="p">(</span><span class="o">`</span><span class="n">score</span><span class="o">`</span><span class="p">),</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">results</span><span class="o">`</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="o">`</span><span class="n">test_session_id</span><span class="o">`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">id</span><span class="p">;</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">IFNULL</span><span class="p">(</span><span class="k">SUM</span><span class="p">(</span><span class="ss">"score"</span><span class="p">),</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="ss">"results"</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="ss">"test_session_id"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="p">.</span><span class="n">id</span><span class="p">;</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<hr>
+<h2 id="architectural-comparison-matrix">Architectural Comparison Matrix<a class="headerlink" href="#architectural-comparison-matrix" title="Permanent link">¶</a></h2>
 <table>
 <thead>
 <tr>
-<th>Feature</th>
-<th><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr></th>
-<th><abbr title="An advanced open-source relational database">PostgreSQL</abbr></th>
-<th><abbr title="An open-source relational database management system">MySQL</abbr></th>
+<th style="text-align: left;">Feature</th>
+<th style="text-align: left;"><abbr title="An advanced open-source relational database">PostgreSQL</abbr></th>
+<th style="text-align: left;"><abbr title="An open-source relational database management system">MySQL</abbr></th>
+<th style="text-align: left;"><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Structure</strong></td>
-<td><code>BEGIN...END</code> directly in trigger</td>
-<td>Separate function + trigger definition</td>
-<td><code>DELIMITER $$ BEGIN...END$$ DELIMITER ;</code></td>
+<td style="text-align: left;"><strong>Identifier Quoting</strong></td>
+<td style="text-align: left;"><code>"identifier"</code></td>
+<td style="text-align: left;"><code>`identifier`</code></td>
+<td style="text-align: left;"><code>"identifier"</code> / <code>[identifier]</code></td>
 </tr>
 <tr>
-<td><strong>Timing</strong></td>
-<td><code>AFTER</code>/<code>BEFORE</code>/<code>INSTEAD OF</code></td>
-<td><code>AFTER</code>/<code>BEFORE</code>/<code>INSTEAD OF</code></td>
-<td><code>AFTER</code>/<code>BEFORE</code></td>
+<td style="text-align: left;"><strong>Auto-Increment Strategy</strong></td>
+<td style="text-align: left;">Sequence / <code>IDENTITY</code></td>
+<td style="text-align: left;">Table attribute <code>AUTO_INCREMENT</code></td>
+<td style="text-align: left;">Table attribute <code>AUTOINCREMENT</code></td>
 </tr>
 <tr>
-<td><strong>Row Reference</strong></td>
-<td><code>new</code>, <code>old</code></td>
-<td><code>NEW</code>, <code>OLD</code> (case-sensitive in PL/pgSQL)</td>
-<td><code>NEW</code>, <code>OLD</code></td>
+<td style="text-align: left;"><strong>Procedural Logic</strong></td>
+<td style="text-align: left;"><code>PL/pgSQL</code> (Separate function)</td>
+<td style="text-align: left;"><code>DELIMITER</code> blocks inside trigger</td>
+<td style="text-align: left;"><code>BEGIN...END</code> inside trigger</td>
 </tr>
 <tr>
-<td><strong>Modification</strong></td>
-<td><code>UPDATE</code> statement for <code>AFTER</code></td>
-<td>Direct assignment to <code>NEW</code> in <code>BEFORE</code> trigger</td>
-<td>Direct assignment to <code>NEW</code> in <code>BEFORE</code> trigger</td>
+<td style="text-align: left;"><strong>Interval Typing</strong></td>
+<td style="text-align: left;">Native <code>INTERVAL</code></td>
+<td style="text-align: left;"><code>INTERVAL val UNIT</code> functions</td>
+<td style="text-align: left;">String modifier parsing</td>
 </tr>
 <tr>
-<td><strong>Return Value</strong></td>
-<td>N/A for <code>AFTER</code></td>
-<td><code>RETURN NEW</code>/<code>OLD</code>/<code>NULL</code> for <code>BEFORE</code></td>
-<td>N/A</td>
+<td style="text-align: left;"><strong>Strict Typing</strong></td>
+<td style="text-align: left;">Highly strict &amp; extensible</td>
+<td style="text-align: left;">Strict with mode flags</td>
+<td style="text-align: left;">Type affinity (permissive)</td>
 </tr>
 </tbody>
 </table>
-<h3 id="5-time-and-interval-arithmetic">5. Time and Interval Arithmetic<a class="headerlink" href="#5-time-and-interval-arithmetic" title="Permanent link">¶</a></h3>
-<p>As seen in the trigger examples, how you add durations to timestamps varies:</p>
+<hr>
+<h2 id="next-in-the-series">Next in the Series<a class="headerlink" href="#next-in-the-series" title="Permanent link">¶</a></h2>
+<div class="series-banner" style="border-left-color: var(--color-accent);">
+  <div class="series-banner-header">
+    <span class="series-badge">Next Article</span>
+    <a href="../2-query-interaction-diff/" class="btn btn-secondary" style="padding: 4px 12px; font-size: 12.5px;">Read Part 2 →</a>
+  </div>
+  <p style="margin: 0; font-size: 13.5px; color: var(--color-text-secondary); line-height: 1.5;">
+    <strong>Beyond the Schema: A Practical Guide to Querying and Interacting with SQLite, MySQL, &amp; PostgreSQL</strong><br>
+    Explore CLI interaction patterns, script piping, Dockerized connection debugging, and Python multi-RDBMS driver integration.
+  </p>
+</div>
+
+<hr>
+<h2 id="reference-repositories">Reference Repositories<a class="headerlink" href="#reference-repositories" title="Permanent link">¶</a></h2>
 <ul>
-<li>
-<p><strong><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr>:</strong> String manipulation with <code>DATETIME</code> function modifiers.</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">DATETIME</span><span class="p">(</span><span class="k">new</span><span class="p">.</span><span class="k">start</span><span class="p">,</span><span class="w"> </span><span class="s1">'+'</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">TIME</span><span class="p">(</span><span class="n">duration</span><span class="p">)</span><span class="w"> </span><span class="p">...))</span>
-</span></code></pre></div>
-</li>
-<li>
-<p><strong><abbr title="An advanced open-source relational database">PostgreSQL</abbr>:</strong> Direct arithmetic with <code>INTERVAL</code> types.</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">NEW</span><span class="p">.</span><span class="k">start</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="ss">"duration"</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="ss">"tests"</span><span class="w"> </span><span class="p">...)</span>
-</span></code></pre></div>
-</li>
-<li>
-<p><strong><abbr title="An open-source relational database management system">MySQL</abbr>:</strong> Functions like <code>DATE_ADD()</code> and <code>INTERVAL</code> keyword.</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">DATE_ADD</span><span class="p">(</span><span class="k">NEW</span><span class="p">.</span><span class="k">start</span><span class="p">,</span><span class="w"> </span><span class="nb">INTERVAL</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="k">MINUTE</span><span class="p">)</span><span class="w"> </span><span class="c1">-- or HOUR, SECOND etc.</span>
-</span></code></pre></div>
-<p>In my schema, I converted the <code>TIME</code> duration to seconds, then to minutes for <code>DATE_ADD</code>:</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nb">INTERVAL</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">TIME_TO_SEC</span><span class="p">(</span><span class="o">`</span><span class="n">duration</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">60</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">tests</span><span class="o">`</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="o">`</span><span class="n">test_id</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="k">MINUTE</span>
-</span></code></pre></div>
-</li>
-</ul>
-<h3 id="6-conditional-logic-in-triggersqueries">6. Conditional Logic in Triggers/Queries<a class="headerlink" href="#6-conditional-logic-in-triggersqueries" title="Permanent link">¶</a></h3>
-<ul>
-<li>
-<p><strong><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr> &amp; <abbr title="An open-source relational database management system">MySQL</abbr>:</strong> <code>CASE WHEN ... THEN ... ELSE ... END</code> is standard.
-    <em><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr> example from <code>set_score_of_result</code> trigger:</em></p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="ss">"feedback"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(...)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">'need-improvement'</span><span class="w"> </span><span class="k">ELSE</span><span class="w"> </span><span class="s1">'great'</span><span class="w"> </span><span class="k">END</span>
-</span></code></pre></div>
-<p><em><abbr title="An open-source relational database management system">MySQL</abbr> example from <code>set_score_of_result</code> trigger:</em></p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">SET</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">feedback</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">CASE</span><span class="w"> </span><span class="k">WHEN</span><span class="w"> </span><span class="p">(...)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span><span class="w"> </span><span class="s1">'need-improvement'</span><span class="w"> </span><span class="k">ELSE</span><span class="w"> </span><span class="s1">'great'</span><span class="w"> </span><span class="k">END</span><span class="p">;</span>
-</span></code></pre></div>
-</li>
-<li>
-<p><strong><abbr title="An advanced open-source relational database">PostgreSQL</abbr>:</strong> Supports <code>CASE</code> expressions, but also <code>IF...THEN...ELSE...END IF;</code> in PL/pgSQL functions.
-    <em><abbr title="An advanced open-source relational database">PostgreSQL</abbr> example from <code>set_score_of_result_fn</code> trigger function:</em></p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">IF</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k">THEN</span>
-</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="k">NEW</span><span class="p">.</span><span class="n">feedback</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="s1">'need-improvement'</span><span class="p">;</span><span class="w">    </span>
-</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="k">ELSE</span>
-</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">    </span><span class="k">NEW</span><span class="p">.</span><span class="n">feedback</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="s1">'great'</span><span class="p">;</span>
-</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="k">END</span><span class="w"> </span><span class="k">IF</span><span class="p">;</span>
-</span></code></pre></div>
-</li>
-</ul>
-<h3 id="7-handling-nulls-in-aggregate-functions">7. Handling NULLs in Aggregate Functions<a class="headerlink" href="#7-handling-nulls-in-aggregate-functions" title="Permanent link">¶</a></h3>
-<p>When summing scores, if no results exist for a test session, <code>SUM()</code> might return <code>NULL</code>.</p>
-<ul>
-<li>
-<p><strong><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr>:</strong> <code>SUM()</code> on an empty set returns <code>NULL</code>. My schema doesn't explicitly handle this for <code>final_score</code> in the trigger, which might be an oversight if a report could be generated before any results.</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="ss">"results"</span><span class="p">.</span><span class="ss">"score"</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="ss">"results"</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="ss">"results"</span><span class="p">.</span><span class="ss">"test_session_id"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="p">.</span><span class="n">id</span><span class="p">)</span>
-</span></code></pre></div>
-</li>
-<li>
-<p><strong><abbr title="An advanced open-source relational database">PostgreSQL</abbr>:</strong> Uses <code>COALESCE(SUM("score"), 0)</code> to default to <code>0</code> if <code>SUM</code> is <code>NULL</code>.</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">COALESCE</span><span class="p">(</span><span class="k">SUM</span><span class="p">(</span><span class="ss">"score"</span><span class="p">),</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="ss">"results"</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="ss">"test_session_id"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">id</span><span class="p">)</span>
-</span></code></pre></div>
-</li>
-<li>
-<p><strong><abbr title="An open-source relational database management system">MySQL</abbr>:</strong> Uses <code>IFNULL(SUM(\</code>score`), 0)` for the same purpose.</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="n">IFNULL</span><span class="p">(</span><span class="k">SUM</span><span class="p">(</span><span class="o">`</span><span class="n">score</span><span class="o">`</span><span class="p">),</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">results</span><span class="o">`</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="o">`</span><span class="n">test_session_id</span><span class="o">`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">id</span><span class="p">)</span>
-</span></code></pre></div>
-</li>
-</ul>
-<h3 id="8-create-table-if-not-exists">8. <code>CREATE TABLE IF NOT EXISTS</code><a class="headerlink" href="#8-create-table-if-not-exists" title="Permanent link">¶</a></h3>
-<p>This useful clause prevents errors if a table already exists.</p>
-<ul>
-<li><strong><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr>:</strong> Supports <code>CREATE TABLE IF NOT EXISTS "students" (...)</code> (though not explicitly used in the provided <code>students</code> table creation, it's standard).</li>
-<li><strong><abbr title="An advanced open-source relational database">PostgreSQL</abbr>:</strong> <code>CREATE TABLE IF NOT EXISTS "students" (...)</code></li>
-<li><strong><abbr title="An open-source relational database management system">MySQL</abbr>:</strong> <code>CREATE TABLE IF NOT EXISTS `students` (...)</code></li>
-</ul>
-<h3 id="9-comments">9. Comments<a class="headerlink" href="#9-comments" title="Permanent link">¶</a></h3>
-<ul>
-<li><strong><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr>, <abbr title="An advanced open-source relational database">PostgreSQL</abbr>, <abbr title="An open-source relational database management system">MySQL</abbr>:</strong> All support <code>--</code> for single-line comments.</li>
-<li><strong><abbr title="An open-source relational database management system">MySQL</abbr>:</strong> Also supports <code>#</code> for single-line comments.</li>
-</ul>
-<h3 id="10-index-creation">10. Index Creation<a class="headerlink" href="#10-index-creation" title="Permanent link">¶</a></h3>
-<p>The basic syntax is similar, but quoting and specific features (like conditional indexing) can differ.</p>
-<ul>
-<li>
-<p><strong><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr> &amp; <abbr title="An advanced open-source relational database">PostgreSQL</abbr>:</strong></p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="c1">-- SQLite &amp; PostgreSQL</span>
-</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="ss">"idx_tests"</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="ss">"tests"</span><span class="w"> </span><span class="p">(</span><span class="ss">"title"</span><span class="p">);</span>
-</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="c1">-- PostgreSQL specific (SQLite also supports WHERE in index but syntax might differ slightly)</span>
-</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="ss">"idx_questions_options_is_correct"</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="ss">"questions_options"</span><span class="w"> </span><span class="p">(</span><span class="ss">"is_correct"</span><span class="p">)</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="ss">"is_correct"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-</span></code></pre></div>
-</li>
-<li>
-<p><strong><abbr title="An open-source relational database management system">MySQL</abbr>:</strong></p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="c1">-- MySQL</span>
-</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="o">`</span><span class="n">idx_tests</span><span class="o">`</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="o">`</span><span class="n">tests</span><span class="o">`</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">title</span><span class="o">`</span><span class="p">);</span>
-</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="c1">-- MySQL does not directly support WHERE clauses in CREATE INDEX like PostgreSQL/SQLite.</span>
-</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="c1">-- For conditional indexing, you might index the column and rely on the optimizer,</span>
-</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="c1">-- or use generated columns if applicable.</span>
-</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="o">`</span><span class="n">idx_questions_options_is_correct</span><span class="o">`</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="o">`</span><span class="n">questions_options</span><span class="o">`</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">is_correct</span><span class="o">`</span><span class="p">);</span>
-</span></code></pre></div>
-</li>
-</ul>
-<h3 id="11-time-zone-handling">11. Time Zone Handling<a class="headerlink" href="#11-time-zone-handling" title="Permanent link">¶</a></h3>
-<ul>
-<li><strong><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr>:</strong> <code>DATETIME('now', 'localtime')</code> attempts to use local time. Time storage is less strict.</li>
-<li><strong><abbr title="An advanced open-source relational database">PostgreSQL</abbr>:</strong> Very robust. <code>TIMESTAMP WITH TIME ZONE</code> stores timestamps in UTC and converts them to the client's/session's time zone on retrieval. <code>SET TIME ZONE LOCAL;</code> can be used.</li>
-<li><strong><abbr title="An open-source relational database management system">MySQL</abbr>:</strong> <code>DATETIME</code> stores "wall clock" time without time zone info. <code>TIMESTAMP</code> converts from current time zone to UTC for storage, and back on retrieval. Session time zone can be set.</li>
-</ul>
-<h2 id="quick-cheatsheet-sqlite-vs-postgresql-vs-mysql">Quick Cheatsheet: <abbr title="A lightweight, file-based SQL database engine">SQLite</abbr> vs. <abbr title="An advanced open-source relational database">PostgreSQL</abbr> vs. <abbr title="An open-source relational database management system">MySQL</abbr><a class="headerlink" href="#quick-cheatsheet-sqlite-vs-postgresql-vs-mysql" title="Permanent link">¶</a></h2>
-<table>
-<thead>
-<tr>
-<th>Feature</th>
-<th><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr></th>
-<th><abbr title="An advanced open-source relational database">PostgreSQL</abbr></th>
-<th><abbr title="An open-source relational database management system">MySQL</abbr></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Identifier Quoting</strong></td>
-<td><code>"optional"</code></td>
-<td><code>"optional/case-sensitive"</code></td>
-<td><code>`optional`</code></td>
-</tr>
-<tr>
-<td><strong>Auto Increment</strong></td>
-<td><code>INTEGER PRIMARY KEY [AUTOINCREMENT]</code></td>
-<td><code>SERIAL</code> or <code>IDENTITY</code></td>
-<td><code>INT AUTO_INCREMENT</code></td>
-</tr>
-<tr>
-<td><strong>Data Types (General)</strong></td>
-<td>Flexible typing (TEXT, NUMERIC, INTEGER)</td>
-<td>Strict, rich types (VARCHAR, TEXT, INT, BIGINT, BOOLEAN, <abbr title="JavaScript Object Notation">JSON</abbr>, ARRAY, INTERVAL, ENUM)</td>
-<td>Strict types (VARCHAR, TEXT, INT, TINYINT, DATETIME, ENUM, <abbr title="JavaScript Object Notation">JSON</abbr>)</td>
-</tr>
-<tr>
-<td><strong>ENUMs</strong></td>
-<td><code>CHECK</code> constraint</td>
-<td><code>CREATE TYPE ... AS ENUM</code></td>
-<td><code>ENUM(...)</code> column type</td>
-</tr>
-<tr>
-<td><strong>Triggers</strong></td>
-<td><code>BEGIN...END</code></td>
-<td>Function-based (<code>CREATE FUNCTION ... EXECUTE FUNCTION</code>)</td>
-<td><code>DELIMITER $$ BEGIN...END$$</code></td>
-</tr>
-<tr>
-<td><strong>Default Timestamp</strong></td>
-<td><code>DATETIME('now', 'localtime')</code></td>
-<td><code>CURRENT_TIMESTAMP</code></td>
-<td><code>CURRENT_TIMESTAMP</code> / <code>NOW()</code></td>
-</tr>
-<tr>
-<td><strong>Interval Arithmetic</strong></td>
-<td>String manipulation with <code>datetime()</code></td>
-<td><code>+ INTERVAL '...'</code></td>
-<td><code>DATE_ADD(date, INTERVAL value unit)</code></td>
-</tr>
-<tr>
-<td><strong>Function for NULLs</strong></td>
-<td><code>IFNULL(val, default)</code> (or <code>COALESCE</code>)</td>
-<td><code>COALESCE(val, default)</code></td>
-<td><code>IFNULL(val, default)</code> or <code>COALESCE(val, default)</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="why-this-matters">Why This Matters<a class="headerlink" href="#why-this-matters" title="Permanent link">¶</a></h2>
-<p><strong>For Developers:</strong></p>
-<ul>
-<li><strong>Adaptability:</strong> Understanding these differences allows you to switch between database systems more fluidly.</li>
-<li><strong>Debugging:</strong> Syntax errors are common when moving <abbr title="Structured Query Language">SQL</abbr> code; knowing the nuances helps pinpoint issues faster.</li>
-<li><strong>Database Design:</strong> Choosing the right data types and features (like native ENUMs or interval types) can lead to a more efficient and maintainable schema.</li>
-<li><strong>ORM Configuration:</strong> When using Object-Relational Mappers (ORMs), these differences are often abstracted, but knowing what's happening under the hood is invaluable for optimization and complex queries.</li>
-</ul>
-<p><strong>Learnings:</strong></p>
-<ul>
-<li><strong>Depth of Understanding:</strong> Articulating these differences helps demonstrating a deeper-than-surface-level understanding of <abbr title="Structured Query Language">SQL</abbr> and database systems.</li>
-<li><strong>Practical Experience:</strong> It often indicates hands-on experience with multiple databases, which is a valuable asset in diverse tech environments.</li>
-<li><strong>Problem-Solving:</strong> The ability to adapt a schema or queries for different <abbr title="Structured Query Language">SQL</abbr> dialects showcases problem-solving skills.</li>
-</ul>
-<h2 id="recommended-next-reading">Recommended Next Reading<a class="headerlink" href="#recommended-next-reading" title="Permanent link">¶</a></h2>
-<blockquote>
-<p><em><strong>For deeper exploration of</strong> <code>sql queries</code> and <code>client interaction</code> nuances across <abbr title="A lightweight, file-based SQL database engine">SQLite</abbr>, <abbr title="An open-source relational database management system">MySQL</abbr>, and <abbr title="An advanced open-source relational database">PostgreSQL</abbr>:</em></p>
-</blockquote>
-<ul>
-<li><code>Part-2</code>: <strong><a href="../beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql--postgresql/">Beyond the Schema: A Practical Guide to Querying and Interacting with <abbr title="A lightweight, file-based SQL database engine">SQLite</abbr>, <abbr title="An open-source relational database management system">MySQL</abbr>, &amp; <abbr title="An advanced open-source relational database">PostgreSQL</abbr></a></strong></li>
-</ul>
-<h2 id="references-technical-documentation">References &amp; Technical Documentation<a class="headerlink" href="#references-technical-documentation" title="Permanent link">¶</a></h2>
-<p>This section compiles useful links found within the <a href="https://github.com/mrxsierra/ems-db/"><code>ems-db</code></a> project's documentation (<code>usage.md</code>, <code>README.Docker.md</code> files), categorized for easier navigation.</p>
-<h3 id="general">General<a class="headerlink" href="#general" title="Permanent link">¶</a></h3>
-<p><em>CS50 <abbr title="Structured Query Language">SQL</abbr> Notes (General Syntax Differences):</em></p>
-<ul>
-<li><a href="https://cs50.harvard.edu/sql/2024/notes/6/#mysql"><abbr title="An open-source relational database management system">MySQL</abbr> Differences</a></li>
-<li><a href="https://cs50.harvard.edu/sql/2024/notes/6/#postgresql"><abbr title="An advanced open-source relational database">PostgreSQL</abbr> Differences</a></li>
-</ul>
-<h3 id="sqlite"><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr><a class="headerlink" href="#sqlite" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="https://sqlite.org/lang.html"><abbr title="Structured Query Language">SQL</abbr> As Understood By <abbr title="A lightweight, file-based SQL database engine">SQLite</abbr></a></li>
-<li><a href="https://docs.python.org/3/library/sqlite3.html"><abbr title="A high-level programming language">Python</abbr> <code>sqlite3</code> Module</a></li>
-</ul>
-<h3 id="postgresql"><abbr title="An advanced open-source relational database">PostgreSQL</abbr><a class="headerlink" href="#postgresql" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="https://www.postgresql.org/docs/current/sql-commands.html">Postgres <abbr title="Structured Query Language">SQL</abbr> Commands</a></li>
-<li><a href="https://www.postgresql.org/docs/current/datatype.html">Postgres Data Types</a></li>
-<li><a href="https://www.postgresql.org/docs/17/functions-datetime.html">Postgres Date and Time Functions</a></li>
-<li><a href="https://www.postgresql.org/docs/17/plpgsql-trigger.html">Postgres Triggers and Trigger Functions</a></li>
-</ul>
-<h3 id="mysql"><abbr title="An open-source relational database management system">MySQL</abbr><a class="headerlink" href="#mysql" title="Permanent link">¶</a></h3>
-<ul>
-<li><a href="https://dev.mysql.com/doc/refman/8.0/en/other-vendor-data-types.html">Using Data Types from Other Database Engines</a></li>
-<li><a href="https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html">Date and Time Functions</a></li>
-<li><a href="https://dev.mysql.com/doc/refman/8.0/en/sql-data-definition-statements.html">Data Definition Statements</a></li>
-<li><a href="https://dev.mysql.com/doc/refman/8.4/en/docker-mysql-getting-started.html"><abbr title="A containerization platform">Docker</abbr> <abbr title="An open-source relational database management system">MySQL</abbr> Basic Steps</a></li>
+<li><a href="https://github.com/mrxsierra/ems-db/">Examination Management System <abbr title="Database">DB</abbr> (EMS <abbr title="Database">DB</abbr>)</a>: Production multi-dialect repository with complete DDL schemas, seed scripts, and automated test benches.</li>
+<li><a href="https://www.postgresql.org/docs/current/"><abbr title="An advanced open-source relational database">PostgreSQL</abbr> Official Documentation</a></li>
+<li><a href="https://dev.mysql.com/doc/refman/8.4/en/"><abbr title="An open-source relational database management system">MySQL</abbr> 8.4 Reference Manual</a></li>
+<li><a href="https://sqlite.org/lang.html"><abbr title="A lightweight, file-based SQL database engine">SQLite</abbr> Documentation</a></li>
 </ul>
 <!-- markdownlint-disable -->
 
@@ -1973,7 +1779,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 17, 2026 12:38:15 UTC">August 17, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 17, 2026 13:49:32 UTC">August 17, 2026</span>
   </span>
 
     
@@ -2045,7 +1851,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql--postgresql/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Beyond the Schema: A Practical Guide to Querying and Interacting with SQLite, MySQL, &amp;amp; PostgreSQL">
+          <a href="../beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql-postgresql/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Beyond the Schema: A Practical Guide to Querying and Interacting with SQLite, MySQL, &amp;amp; PostgreSQL">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
