@@ -1,0 +1,2643 @@
+# Sunil Sharma (mrxsierra) — Full Technical Knowledge Base
+# Standard: llmstxt.org Full Ingestion Format
+# Website: https://mrxsierra.github.io/
+# Source: https://github.com/mrxsierra/mrxsierra.github.io
+
+================================================================================
+
+## SECTION: Overview & Developer Profile
+## Path: docs/index.md
+--------------------------------------------------------------------------------
+Systems Architecture • Autonomous Agents • Distributed Data
+    
+    
+# Sunil Sharma
+
+    Full-Stack & AI Systems Specialist
+    
+      Engineering autonomous agent architectures, high-performance web systems, and reproducible cloud automation pipelines. Specializing in AI systems orchestration and multi-RDBMS database optimization.
+    
+    
+      [Proof of Work](#projects)
+      [Credentials & Resume](resume.md)
+      [Contact](contact.md)
+    
+  
+
+  
+  
+    
+      
+        
+        
+        
+      
+      mrxsierra ~ bash
+      
+    
+    
+      
+        $
+        npx mrxsierra --summary
+      
+      
+        > Focus
+        Autonomous Agents & AI Orchestration
+      
+      
+        > Stack
+        Python • TypeScript • React • LangGraph
+      
+      
+        > Backend
+        FastAPI • PostgreSQL • Docker • AWS S3
+      
+      
+        > System
+        Production-grade & verified 
+      
+    
+  
+
+  
+    [Overview](#intro)
+    [Proof of Work](#projects)
+    [Capabilities](#capabilities)
+    [Writing](#writing)
+    [Network](#connect)
+  
+
+  
+    
+      Case Studies
+      
+## 
+         Featured Proof of Work
+      
+
+      Production software, ML classification pipelines, and cloud developer tools.
+    
+    [All Projects](projects/index.md)
+  
+
+  
+    
+    
+    [Machine Learning
+        
+          
+        
+      
+      
+### GSTN Predictive Binary Classification
+
+      
+        National-level hackathon finalist project — interpretable gradient boosted ML pipeline analyzing 900,000+ real-world GST records.
+      
+      
+        Python
+        Scikit-Learn
+        XGBoost
+        SHAP
+      
+      Case Study](projects/gstn-pbc/)
+
+    
+    [Database Architecture
+        
+          
+        
+      
+      
+### Examination Management System DB
+
+      
+        Multi-RDBMS academic examination platform with Python database automation, Dockerized environments, and CI pipeline validation.
+      
+      
+        PostgreSQL
+        MySQL
+        Docker
+        CI/CD
+      
+      Case Study](projects/ems-db/)
+
+    
+    [Cloud Tooling
+        
+          
+        
+      
+      
+### S3 Faker Mock Data Generator
+
+      
+        High-throughput synthetic data generation suite with native AWS S3 and LocalStack integration for cloud testing pipelines.
+      
+      
+        Python
+        AWS S3
+        LocalStack
+        Boto3
+      
+      Case Study](projects/s3-faker/)
+
+    
+    [Data Automation
+        
+          
+        
+      
+      
+### Paraxcel Document Toolkit
+
+      
+        High-performance document parsing engine for complex Docx-to-Excel extraction, tabular data normalization, and reporting.
+      
+      
+        Python
+        Pandas
+        OpenPyXL
+      
+      Case Study](projects/paraxcel/)
+
+    
+    [Web Automation
+        
+          
+        
+      
+      
+### Naukri Market Data Scraper
+
+      
+        Automated Selenium & BeautifulSoup extraction engine for tech hiring telemetry, salary benchmarking, and role aggregation.
+      
+      
+        Python
+        Selenium
+        BeautifulSoup
+      
+      Case Study](projects/naukri-webscraper/)
+
+    
+    [Web Application
+        
+          
+        
+      
+      
+### Real-Time Test Management Interface
+
+      
+        Responsive frontend application for live examination management, test scheduling, student authentication, and scoring.
+      
+      
+        JavaScript
+        HTML5
+        CSS3
+      
+      Case Study](projects/test-site/)
+
+  
+
+  
+    
+      Competencies
+      
+## 
+         System Capabilities & Architecture
+      
+
+      Core competencies across autonomous AI architectures, distributed databases, and cloud engineering.
+    
+  
+
+  
+    
+    
+      
+        
+          
+        
+        
+### AI & Autonomous Systems
+
+      
+      
+        LLM Orchestration
+        Autonomous Agents
+        LangGraph
+        Scikit-Learn
+        XGBoost
+        ML Pipelines
+        Kaggle Tabular Modeling
+      
+    
+
+    
+      
+        
+          
+        
+        
+### Full-Stack & Web Systems
+
+      
+      
+        Python (FastAPI, Flask)
+        TypeScript
+        JavaScript (ES6+)
+        React
+        REST & GraphQL APIs
+        Modern CSS3
+      
+    
+
+    
+      
+        
+          
+        
+        
+### Databases & Storage Architecture
+
+      
+      
+        PostgreSQL
+        MySQL
+        SQLite
+        MongoDB
+        AWS S3
+        Schema Optimization
+        Multi-RDBMS Automation
+      
+    
+
+    
+      
+        
+          
+        
+        
+### DevOps & Infrastructure
+
+      
+      
+        Docker & Compose
+        GitHub Actions CI/CD
+        Linux / Bash
+        LocalStack
+        PyPI Packaging
+        DockerHub Registries
+      
+    
+
+  
+
+  
+    
+      Publications
+      
+## 
+         Technical Writing
+      
+
+      Practical architectural guides, SQL deep dives, and programmatic data tutorials.
+    
+    [All Articles](blog/index.md)
+  
+
+  
+    
+    [Database Architecture
+        •
+        Technical Guide
+      
+      
+### Navigating the Nuances: SQL Dialects
+
+      
+        A Developer's Guide to SQL Dialects (SQLite, MySQL, PostgreSQL) — performance trade-offs, syntax nuances, and cross-engine portability.
+      
+      Read Full Guide](blog/2025/05/07/navigating-the-nuances-a-developers-guide-to-sql-dialects-sqlite-mysql-postgresql/)
+
+    [Python & SQL
+        •
+        Tutorial
+      
+      
+### Beyond the Schema: Practical Database Querying
+
+      
+        A practical guide to querying, parameterizing, and automating SQLite, MySQL, & PostgreSQL databases programmatically in Python.
+      
+      Read Full Guide](blog/2025/05/07/beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql--postgresql/)
+
+  
+
+  
+    
+      Identity
+      
+## 
+         Background & Developer Network
+      
+
+      Engineering credentials, verified certifications, and online developer footprints.
+    
+  
+
+  
+    
+    
+    
+      
+###  Technical Focus
+
+      
+        Full-Stack & AI Systems Specialist with a focus on scalable web services, autonomous agent pipelines, and high-performance database architectures.
+      
+      
+        Committed to reproducible software engineering, data-driven automation, and active open-source contribution.
+      
+      
+        [Read Full Bio](about.md)
+        [Verified Credentials](resume.md)
+        [Initiate Contact](contact.md)
+      
+    
+
+    
+    
+      
+###  Developer Profiles
+
+      
+      
+        Code & Architecture
+        
+          [GitHub](https://github.com/mrxsierra)
+          [DockerHub](https://hub.docker.com/u/mrxsierra)
+          [PyPI](https://pypi.org/user/mrxsierra/)
+          [Kaggle](https://kaggle.com/mrxsierra)
+        
+      
+
+      
+        Professional & Network
+        
+          [LinkedIn](https://www.linkedin.com/in/sunilsharma97/)
+          [X / Twitter](https://x.com/mrxsierra)
+          [Dev.to](https://dev.to/mrxsierra)
+          [Medium](https://medium.com/@mrxsierra)
+        
+      
+
+      
+        Media & Community
+        
+          [YouTube](https://www.youtube.com/@mrxsierra)
+          [Reddit](https://www.reddit.com/user/mrxsierra/)
+          [Instagram](https://www.instagram.com/mrxsierra/)
+        
+      
+
+      
+        Machine & AI Endpoints
+        
+          [llms.txt](llms.txt)
+          [llms-full.txt](llms-full.txt)
+
+================================================================================
+
+## SECTION: Background & Education
+## Path: docs/about.md
+--------------------------------------------------------------------------------
+# About Sunil Sharma
+
+  
+## Full-Stack & AI Systems Specialist
+
+  
+    Specializing in autonomous agent architectures, full-stack systems engineering, distributed database optimization, and cloud tooling pipelines. Focused on shipping robust, maintainable, and verifiable software.
+  
+
+---
+
+## Academic Background & Foundation
+
+  
+    
+### Bachelor of Science in Computer Science
+
+    2015 – 2018
+  
+  
+    **Devi Ahilya Vishwavidyalaya (DAVV)**, Indore • PMB Gujarati Science College
+  
+  
+    Rigorous foundation in Data Structures & Algorithms, Relational Database Management Systems (RDBMS), Object-Oriented Software Design, and Operating Systems.
+  
+
+---
+
+## Featured Engineering Case Studies
+
+  
+    
+      ML Competition Finalist
+      
+    
+    
+### GSTN Predictive Binary Classification
+
+    
+      National-level hackathon finalist project — interpretable ML pipeline analyzing 900,000+ real-world GST records with XGBoost, LightGBM, and SHAP explainability.
+    
+    [Read Full Case Study](../projects/gstn-pbc/)
+  
+
+  
+    
+      Database Architecture
+      
+    
+    
+### Examination Management System DB
+
+    
+      Modular, production-ready multi-RDBMS architecture (PostgreSQL, MySQL, SQLite) with Python automation, Dockerized environments, and CI pipeline validation.
+    
+    [Read Full Case Study](../projects/ems-db/)
+  
+
+  
+    
+      Cloud Tooling
+      
+    
+    
+### S3 Faker Data Generator
+
+    
+      High-throughput synthetic data generation suite with native AWS S3 and LocalStack integration for cloud testing pipelines.
+    
+    [Read Full Case Study](../projects/s3-faker/)
+  
+
+  
+    
+      Data Automation
+      
+    
+    
+### Paraxcel Document Toolkit
+
+    
+      Python engine for high-throughput Excel data extraction, complex transformation, and automated reporting.
+    
+    [Read Full Case Study](../projects/paraxcel/)
+  
+
+  [Browse All Projects →](../projects/)
+
+---
+
+## Technical Capabilities & System Architecture
+
+  
+    
+      
+      
+### AI & Data Science
+
+    
+    
+      Pandas
+      NumPy
+      Scikit-Learn
+      XGBoost
+      LightGBM
+      LangGraph
+      Feature Engineering
+    
+  
+
+  
+    
+      
+      
+### Full-Stack & Databases
+
+    
+    
+      Python (FastAPI, Flask)
+      PostgreSQL
+      MySQL
+      SQLite
+      JavaScript / React
+      Docker
+      AWS S3
+    
+  
+
+---
+
+## Technical Writing & Publications
+
+Practical architectural guides, cross-engine SQL compatibility, and programmatic data access patterns:
+
+  [Read Technical Blog →](../blog/)
+  [Verified Credentials →](../resume/)
+  [Get in Touch →](../contact/)
+
+================================================================================
+
+## SECTION: Verified Accreditations & Credentials
+## Path: docs/resume.md
+--------------------------------------------------------------------------------
+# Credentials & Certifications
+
+  
+    
+      
+## Technical Credentials
+
+      
+        Verified accreditations across computer science fundamentals, machine learning systems, relational database architecture, and spatial analytics.
+      
+    
+    
+      [Download Resume (PDF)](../cert/main_resume.pdf)
+      [LinkedIn Accreditations](https://www.linkedin.com/in/sunilsharma97/details/certifications/)
+    
+  
+
+---
+
+## Verified Credentials & Accreditations
+
+  
+  
+    
+      ![GSTN Hackathon Finalist Certificate](../cert/GSTN_Team_137.jpg)
+    
+    
+      
+### GSTN National Hackathon Finalist
+
+      Goods and Services Tax Network (GSTN)
+      Predictive Binary Classification • 2024
+    
+  
+
+  
+  
+    
+      ![CS50x Introduction to Computer Science](../cert/1738690195028-cs50x.jpeg)
+    
+    
+      
+### CS50x: Introduction to Computer Science
+
+      Harvard University / edX
+      C, Python, SQL, Algorithms & Data Structures
+    
+  
+
+  
+  
+    
+      ![CS50 SQL Databases](../cert/1713864822125-cs50s.jpeg)
+    
+    
+      
+### CS50 SQL: Databases with SQL
+
+      Harvard University / edX
+      Relational Schema Design, Normalization, Views & Triggers
+    
+  
+
+  
+  
+    
+      ![CS50P Programming with Python](../cert/1708063772979-cs50p.jpeg)
+    
+    
+      
+### CS50P: Programming with Python
+
+      Harvard University / edX
+      Unit Testing, Object-Oriented Design, Regex & Libraries
+    
+  
+
+  
+  
+    
+      ![AI/ML for Geodata Analysis](../cert/IIRS.jpg)
+    
+    
+      
+### AI/ML for Geodata Analysis
+
+      Indian Institute of Remote Sensing (IIRS - ISRO)
+      Machine Learning & Spatial Data Science
+    
+  
+
+---
+
+  [Full Engineering Story](../about/)
+  [View Projects Portfolio](../projects/)
+  [Contact](../contact/)
+
+================================================================================
+
+## SECTION: Case Study: GSTN Predictive Binary Classification
+## Path: docs/projects/gstn-pbc.md
+--------------------------------------------------------------------------------
+# **GSTN Hackathon: Predictive Binary Classification Project**
+
+??? tip "Quick Summary"
+    **GSTN Hackathon: Predictive Binary Classification**
+    Developed a robust, interpretable machine learning pipeline for binary classification on anonymized GSTN data, focusing on model performance, compliance, and reproducibility.
+
+    - **Context:** `Sep 2024`, `Python`, `scikit-learn`, `XGBoost/LightGBM`, `pandas`, `matplotlib`, `Jupyter`, solo project for GSTN Hackathon.
+    - **Role:** Sole developer—handled all phases: EDA, feature engineering, model selection, hyperparameter tuning, evaluation, and documentation.
+    - **Impact:** Achieved >97% accuracy and strong F1/MCC on imbalanced GSTN data by designing a reproducible, competition-compliant pipeline with anonymized model/code and no data leakage.
+
+## **Overview**
+
+This project was developed for the GSTN Hackathon, aiming to build a high-performance, interpretable binary classification model on a large, anonymized GSTN dataset. The solution strictly adheres to competition rules: all model names and parameters are anonymized/randomized, and no original or derivative datasets are included in the repository.
+
+The workflow covers the full ML lifecycle: data integrity checks, EDA, preprocessing, feature engineering, model selection (tree-based models), hyperparameter tuning (GridSearchCV, Bayesian Optimization), cross-validation, threshold optimization, and comprehensive evaluation/reporting.
+
+!!! info "**Recent updates:**"
+    - Final model and code anonymized for submission.
+    - All data files excluded for compliance.
+    - Extensive documentation and reproducibility scripts added.
+
+??? info "**About the GSTN Hackathon**"
+
+    The Government of India hosted an AI/ML-based Hackathon to develop predictive models for GST analytics. This initiative was designed to engage students, researchers, and professionals in designing innovative AI/ML solutions using a large, anonymized dataset of approximately 900,000 records with 21 attributes.
+
+    ### **Key Details**
+
+    - **Participation:** Open to Indian students, researchers, and professionals from academia, startups, or companies.
+    - **Registration:** Required sign-up via Janparichay and submission of participant details.
+    - **Teams:** Up to five members per team, with one team lead required. Solo participation was allowed.
+
+    ### **Hackathon Structure**
+
+    #### **Online Phase**
+
+    - **Dataset Access:** Participants received anonymized, labeled datasets for training and testing.
+    - **Problem Statement:**  
+    Given:
+    - `Dtrain`: Training data matrix (m × n)
+    - `Dtest`: Test data matrix (m₁ × n)
+    - `Ytrain`: Target variable for training (m × 1)
+    - `Ytest`: Target variable for testing (m₁ × 1)
+    - **Objective:**  
+    Construct a predictive model Fθ(X) → Ypred that accurately estimates the target variable Y for new, unseen inputs X.
+
+    #### **Workflow Steps**
+
+    1. **Model Construction:**  
+    Define a predictive function Fθ(X) parameterized by θ to map input features X to predicted outputs Ypred, capturing the relationship between features and target variable.
+    2. **Training:**  
+    Optimize model parameters θ by minimizing a loss function L(Y, Fθ(X)) using Dtrain. Feature engineering and selection were encouraged to enhance performance.
+    3. **Testing:**  
+    Apply the optimized model Fθ*(X) to Dtest to generate predictions Ypred for each input Xj.
+    4. **Performance Optimization:**  
+    Evaluate model performance using metrics such as accuracy, precision, recall, F1 score, and AUC-ROC. Refine the model iteratively to improve these metrics.
+    5. **Submission:**  
+    Submit predicted outputs Ypred_test along with:
+    - Source code (preferably on GitHub)
+    - A detailed report (modeling approach, code comments, citations, evaluation metrics, and key performance indicators)
+
+    #### **Offline Phase**
+
+    - **Shortlisting:**  
+    Top 9–15 teams were shortlisted based on initial evaluation.
+    - **Final Round:**  
+    Shortlisted teams refined their models using additional data and SME feedback, then presented their solutions and participated in interviews with the jury in Delhi.
+
+    ### **Evaluation & Jury**
+
+    - **Jury Composition:**  
+    Senior data scientists, tax administration experts, academic professionals, and representatives from GSTN and NIC.
+    - **Evaluation Process:**
+    - **Initial Screening:** Compliance and basic functionality check.
+    - **Technical Evaluation:** Assessment of model performance, innovation, and robustness.
+    - **Practical Usability:** Evaluation of real-world applicability.
+    - **Decision Making:**  
+    Prizes awarded to top three teams; special prize for all-women teams. Consolation prizes at jury’s discretion. The jury’s decision was final.
+
+    ### **Timeline**
+
+    - **Submission Period:** August 12, 2024 – October 12, 2024
+    - **Hackathon Duration:** 45 days (from registration to final submission)
+
+## **Goals**
+
+- Build a robust, interpretable binary classifier for GSTN data.
+- Address severe class imbalance and missing values.
+- Ensure reproducibility and compliance with competition/legal requirements.
+- Provide clear documentation and visualizations for model transparency.
+
+## **Responsibilities**
+
+- Led all stages: EDA, feature engineering, model selection, tuning, evaluation, and reporting.
+- Designed and implemented utility functions for cross-validation, threshold optimization, and evaluation.
+- Automated model training, saving, and reproducibility via scripts and notebooks.
+- Created all documentation, visualizations, and presentation materials.
+- Ensured strict compliance with anonymization and data handling rules.
+
+## **Technologies Used**
+
+- **Languages:** Python
+- **Libraries/Frameworks:**
+    - pandas, numpy (data manipulation)
+    - scikit-learn (modeling, metrics, pipelines)
+    - XGBoost, LightGBM (tree-based models)
+    - imbalanced-learn (SMOTE, RUS)
+    - matplotlib, seaborn (visualization)
+    - joblib (model persistence)
+    - SHAP (model explainability)
+- **Tools:**
+    - Jupyter Notebook (EDA, prototyping)
+    - Markdown (documentation)
+    - Git (version control)
+
+??? abstract "Tools"
+    - dask (optional, for large data)
+    - scikit-optimize (Bayesian optimization)
+    - Google Colab (cloud prototyping)
+
+## **Process**
+
+- **Data Integrity:** Verified dataset integrity using SHA256 checksums.
+- **EDA:** Explored distributions, missing values, outliers, and feature correlations.
+- **Preprocessing:** Median imputation for missing values, outlier handling (Winsorization), feature selection via correlation and statistical tests.
+- **Modeling:** Compared Logistic Regression, Random Forest, XGBoost, LightGBM; focused on tree-based models for best performance.
+- **Imbalance Handling:** Used Random Under Sampling (RUS) and SMOTE; tuned `scale_pos_weight` for tree models.
+- **Hyperparameter Tuning:** Employed GridSearchCV and Bayesian Optimization for optimal parameters.
+- **Evaluation:** Used stratified k-fold cross-validation, optimized threshold for F1, and computed metrics (Accuracy, F1, MCC, ROC-AUC, etc.).
+- **Explainability:** Analyzed feature importance and SHAP values.
+- **Reporting:** Documented all steps, results, and compliance measures.
+
+## **Selection & Recognition**
+
+- **Selection:** This project, developed as a single-member (solo) team, was selected for the interview and presentation round—ranking among the top 17 teams out of more than 200 participating teams (most of which were multi-member).
+- **Recognition:** Received a certificate and prize for reaching the final round.
+- **Note:** Unfortunately, the competition did not proceed beyond the interview/presentation stage due to unknown or unsatisfactory results for the GSTN Hackathon organizers.
+
+### Certificate
+
+![Certificate](../cert/GSTN_Team_137.jpg)
+
+## Technical Challenges & Architectural Solutions
+
+1. **Severe Class Imbalance**
+    - **Challenge:** A 91%/9% class distribution posed high risk of majority-class prediction bias.
+    - **Solution:** Evaluated Random Under-Sampling (RUS), SMOTE, and tuned gradient boosting `scale_pos_weight` to optimize the Precision-Recall trade-off and maximize F1/MCC scores.
+
+2. **Missing Data & Outlier Management**
+    - **Challenge:** Multiple feature columns exhibited >50% missing values and extreme skewness.
+    - **Solution:** Removed features exceeding the missingness threshold, applied robust median imputation, and performed Winsorization on heavy-tailed numeric distributions.
+
+3. **Data Leakage & Generalization Safeguards**
+    - **Challenge:** Risk of subtle target leakage across pre-processing and feature selection steps.
+    - **Solution:** Enforced strict nested cross-validation and pipeline encapsulation to prevent data contamination between train and evaluation partitions.
+
+4. **Competition Compliance & Anonymization**
+    - **Challenge:** Strict compliance mandate requiring zero data leakage and anonymized model identifiers.
+    - **Solution:** Developed an automated parameter obfuscation routine and excluded all raw dataset artifacts prior to public repository release.
+
+## **Achievements**
+
+- Accomplished >97% accuracy and strong F1/MCC on imbalanced GSTN data, as measured by cross-validation and test set metrics, by designing a robust, reproducible ML pipeline.
+- Delivered a fully anonymized, competition-compliant codebase with clear documentation and reproducibility scripts.
+- Produced comprehensive visualizations and reports for model transparency.
+
+## **Key Learnings**
+
+- Advanced techniques for handling class imbalance in real-world datasets.
+- Importance of strict data handling to prevent leakage and ensure reproducibility.
+- Practical experience with hyperparameter tuning (GridSearchCV, Bayesian Optimization) and model explainability (SHAP).
+- Effective communication of technical results through documentation and presentations.
+
+## **Outcomes**
+
+- Final model achieved:
+    - **Accuracy:** ~97.8%
+    - **F1 Score:** ~0.89
+    - **MCC:** ~0.88
+    - **ROC-AUC:** ~0.99
+- All results reproducible via provided scripts (with user-supplied data).
+- Project recognized for compliance and transparency in hackathon setting.
+
+## **Visuals**
+
+- Precision-Recall Curve  
+    ![Precision-Recall Curve](https://raw.githubusercontent.com/mrxsierra/gstn_dsp_pbc/main/3-submission/static/prc.png)
+- Confusion Matrix  
+    ![Confusion Matrix](https://raw.githubusercontent.com/mrxsierra/gstn_dsp_pbc/main/3-submission/static/cm.png)
+
+## **Links**
+
+- [GitHub Repository](https://github.com/mrxsierra/gstn_dsp_pbc)
+
+## **Conclusion**
+
+This project demonstrates a full-cycle, competition-compliant approach to binary classification on challenging, imbalanced, and anonymized data. Key outcomes include high model performance, robust handling of data issues, and strict adherence to legal/competition requirements. The experience reinforced best practices in reproducibility, compliance, and transparent ML development.
+
+??? summary "**AI Skill Assessment**"
+    Prompt[^1] Source [:material-file-eye-outline:{ #source }](https://raw.githubusercontent.com/mrxsierra/mrxsierra.github.io/blob/main/prompts/skill-assesment-prompt.md)
+    [^1]:
+    This AI skill assessment was generated based on the [skill-assessment-prompt.md](https://raw.githubusercontent.com/mrxsierra/mrxsierra.github.io/main/prompts/skill-assesment-prompt.md) and the provided project documentation. It is intended as an illustrative summary and should be interpreted in the context of the available code and documentation in codebase.
+
+    ---
+
+    ### **Strengths**
+
+    - **Comprehensive ML Workflow Implementation**
+        - Demonstrates end-to-end machine learning pipeline: data integrity checks, EDA, preprocessing, feature engineering, model selection, hyperparameter tuning (GridSearchCV, Bayesian Optimization), cross-validation, threshold optimization, and evaluation.
+        - Uses advanced techniques for imbalanced data (SMOTE, RUS, `scale_pos_weight`).
+        - Implements robust evaluation with stratified k-fold cross-validation and threshold tuning for F1 optimization.
+
+    - **Reproducibility & Compliance**
+        - All code and documentation are anonymized for competition compliance; no data files are included, and model identifiers are randomized.
+        - Clear instructions for reproducibility, including requirements files and explicit notes on data paths.
+
+    - **Documentation & Communication**
+        - Extensive, well-structured documentation in Markdown: project overview, goals, process, challenges, achievements, and visuals.
+        - Visual aids (precision-recall curve, confusion matrix, feature importance) are generated and referenced.
+        - Presentation and storytelling materials are included, showing strong communication skills.
+
+    - **Automation & Utility Functions**
+        - Modular utility functions for cross-validation, threshold finding, evaluation, and plotting.
+        - Scripts and notebooks automate model training, saving, and evaluation.
+
+    - **Model Explainability**
+        - Uses SHAP for feature importance and model transparency.
+        - Reports and presentations highlight interpretability and explainability.
+
+    - **Attention to Data Integrity**
+        - SHA256 checks for data integrity.
+        - Careful handling of missing values, outliers, and prevention of data leakage.
+
+    ---
+
+    ### **Areas for Growth**
+
+    - **Testing & CI/CD**
+        - No evidence of automated unit/integration tests or CI/CD pipelines (e.g., GitHub Actions, pytest).
+        - Adding tests for utility functions and model evaluation would improve robustness.
+
+    - **Security & Data Privacy**
+        - While compliance is strong, there is no mention of secure handling of sensitive data or privacy-preserving ML techniques (beyond anonymization).
+
+    - **Scalability & Deployment**
+        - No deployment scripts, Dockerfiles, or cloud deployment instructions.
+        - No evidence of API endpoints or serving models in production.
+
+    - **Software Engineering Practices**
+        - No use of type hints, code linting, or static analysis tools.
+        - Could benefit from more modularization (e.g., separating data, model, and utility modules).
+
+    - **GUI/Interactive Tools**
+        - No GUI or dashboard for model interaction or result visualization.
+
+    ---
+
+    ### **Role Suitability**
+
+    #### **Best Fit Roles**
+
+    - **Machine Learning Engineer / Data Scientist**
+        - Strong evidence of end-to-end ML workflow, advanced modeling, and evaluation on real-world, imbalanced data.
+        - Experience with model explainability, compliance, and reproducibility.
+
+    - **ML Research/Prototyping**
+        - Demonstrated ability to experiment with multiple models, hyperparameter tuning, and reporting.
+
+    - **Technical Documentation Specialist**
+        - High-quality, clear, and comprehensive documentation and presentation materials.
+
+    #### **Well-Suited For**
+
+    - **ML/AI Competition Participant**
+        - Familiarity with competition constraints, anonymization, and reproducibility.
+
+    - **Data Analyst (Advanced)**
+        - Strong EDA, feature engineering, and reporting skills.
+
+    #### **Less Suited For**
+
+    - **DevOps Engineer / MLOps**
+        - No evidence of CI/CD, containerization, or production deployment.
+    - **Backend/API Developer**
+        - No API or backend service implementation.
+    - **Frontend/GUI Developer**
+        - No GUI or dashboard development.
+
+    ---
+
+    **Summary:**  
+    The developer demonstrates strong skills in machine learning engineering, with a focus on robust, reproducible pipelines for imbalanced binary classification. Strengths include advanced modeling, compliance, documentation, and explainability. The codebase is best suited for ML engineering, data science, and technical documentation roles. Areas for growth include automated testing, CI/CD, deployment, and software engineering best practices. The developer is less suited for DevOps, backend, or frontend roles based on the current evidence.
+
+================================================================================
+
+## SECTION: Case Study: Examination Management System DB
+## Path: docs/projects/ems-db.md
+--------------------------------------------------------------------------------
+# ***Examination Management System Database***
+
+??? tip "In-Hurry Summary"
+    **Examination Management System Database**
+    A database designed to manage tests and examinations, covering student information, test details, questions, proctoring, and results.
+
+    - **Context:** `Personal Project`, `Apr 2024`, `SQLite`, `MySQL`, `PostgreSQL`, `DB Design`
+    - **Role:** Sole Database Designer and Implementer
+    - **Impact:** Enabled efficient test administration and monitoring by creating a structured database, facilitating quick data retrieval and reporting.
+
+## ***Overview***
+
+The Examination Management System Database project aimed to design and implement a robust database for managing tests and examinations. It covered key aspects such as student details, tests, questions, test sessions, proctors, and results. The project was initially implemented in SQLite, and later expanded into three variants: SQLite, MySQL, and PostgreSQL, each in its own directory with a consistent file structure.
+
+!!! info "**Recent updates:**"
+
+    - Project restructured into three dedicated directories: sqlite, mysql, and psql, each with its own schema, queries, and scripts.  
+    - Added Docker-based development environments for each variant (see each directory's `compose.yaml`).  
+    - Introduced Python automation scripts (`db.py`) and pytest-based test suites for all variants, using the appropriate Python database connectors.  
+    - Enhanced schema with advanced triggers, views, and indexes for performance and integrity.  
+    - Improved documentation and usage instructions (see [`README.md`](https://github.com/mrxsierra/ems-db/blob/main/README.md)).
+
+## ***Goals***
+
+The primary objectives of the project were:
+
+- To create a robust, modular database schema to support all core processes of test administration.
+- To enable efficient monitoring and analysis of test sessions, including proctoring and event auditing.
+- To facilitate easy generation of reports summarizing test outcomes and student performance.
+- To ensure extensibility and maintainability across multiple RDBMS backends.
+
+## ***Responsibilities***
+
+As the sole database designer and implementer, my responsibilities included:
+
+- Designing the database schema for SQLite, MySQL, and PostgreSQL.
+- Implementing tables, relationships, triggers, views, and indexes for each variant.
+- Developing and maintaining Python scripts (`db.py`) for database automation and management.
+- Creating and running automated tests using pytest for all database variants.
+- Setting up Docker-based development environments for consistent local and CI/CD workflows.
+- Writing and maintaining comprehensive documentation.
+
+## ***Technologies Used***
+
+- **Languages:** SQL, Python
+- **Databases:** SQLite, MySQL, PostgreSQL
+- **Python Connectors:**  
+    - `sqlite3` (for SQLite)  
+    - `mysql-connector-python` (for MySQL)  
+    - `psycopg2` (for PostgreSQL)
+- **Project Management:**  
+    - Consistent directory structure for all variants  
+    - [`README.md`](https://github.com/mrxsierra/ems-db/blob/main/README.md), `usage.md`, and `README.Docker.md` for each variant
+
+??? abstract "Tools"
+
+    - **Testing:** `pytest` (with `test_db.py` in each variant)
+    - **Dependency Management:** `uv` (for fast Python environment setup)
+    - **Containerization:** Docker, Docker Compose (with dedicated `Dockerfile` and `compose.yaml` in each variant)
+    - **Shells/CLI:**  
+        - `sqlite3` CLI (for SQLite)  
+        - `mysql`/`mysqlsh` CLI (for MySQL)  
+        - `psql` CLI (for PostgreSQL)
+    - **Database GUIs (via Docker):**
+        - `phpMyAdmin` (for MySQL)  
+        - `adminer` (for PostgreSQL)
+    - **Reverse Proxy:** Traefik (for local service routing in Docker)
+    - **Documentation:** Markdown, Mermaid (for ER diagrams)
+
+    > ***Note ***: All development and testing environments are containerized for consistency and reproducibility.
+
+## ***Process***
+
+The project followed a structured approach:
+
+1. **Conceptual Design:** Identified entities and relationships required for the examination system.
+2. **Logical Design:** Translated the conceptual design into detailed schemas for each RDBMS.
+3. **Physical Design:** Implemented the schema, triggers, indexes, and views in each database.
+4. **Testing:** Inserted sample data and ran automated queries and tests to validate the design and performance.
+5. **Optimization:** Added indexes and views to improve query performance and usability.
+6. **Automation:** Developed Python-based scripts and test suites for all variants.
+7. **Containerization:** Provided Docker Compose files for reproducible development environments.
+
+## **Recognition**
+
+I am proud to share that I have successfully completed the `CS50 SQL - Introduction to Databases with SQL` course.
+
+### Certificate
+
+![CS50 SQL - Introduction to Databases with SQL](../cert/1713864822125-cs50s.jpeg)
+
+## Technical Challenges & Architectural Solutions
+
+1. **Multi-Database Support**  
+    - **Challenge:** Ensuring consistent schema and relational logic across SQLite, MySQL, and PostgreSQL.  
+    - **Solution:** Modularized schema and queries, using automated pytest suites to validate identical behavior across all supported database engines.
+
+2. **Data Consistency & Integrity**  
+    - **Challenge:** Maintaining strict referential integrity with complex cascade triggers and temporal relationships.  
+    - **Solution:** Implemented engine-native triggers and check constraints in each variant, with automated CI validation.
+
+3. **Query Performance Optimization**  
+    - **Challenge:** Optimizing execution latency for analytical reporting and history tracking.  
+    - **Solution:** Created targeted composite indexes and materialized complex aggregation logic into parameterized views for rapid data access.
+
+4. **Automation & Environment Reproducibility**  
+    - **Challenge:** Providing deterministic local development and continuous integration environments across RDBMS variants.  
+    - **Solution:** Built Docker Compose services for PostgreSQL and MySQL, orchestrated via Python test harnesses and GitHub Actions.
+
+## ***Achievements***
+
+- Designed and implemented a comprehensive, production-ready database schema for managing an examination system in SQLite, MySQL, and PostgreSQL.
+- Automated scoring, feedback, event logging, and report generation using advanced triggers.
+- Simplified complex queries and reporting through reusable views.
+- Improved query performance by adding strategic indexes.
+- Achieved high test coverage for schema logic and data flows in all variants.
+- Provided Docker-based environments for easy setup and reproducibility.
+
+## ***Key Learnings***
+
+- The importance of modular design for multi-database support.
+- Effective use of triggers, indexes, and views for data integrity and performance.
+- How to automate database testing and management with Python and Docker.
+- The value of consistent documentation and directory structure for maintainability.
+
+## ***Outcomes***
+
+The database provides a structured and efficient way to manage tests and examinations. It supports CRUD operations, test creation, session monitoring, proctoring event auditing, and automated report generation. The use of triggers, views, and indexes significantly improved data integrity and query performance. Automated tests and Docker environments ensure ongoing reliability and ease of use across all supported databases.
+
+## ***Visuals***
+
+### ER Diagram
+
+![ER Diagram](https://raw.githubusercontent.com/mrxsierra/ems-db/main/assets/erDiagram.png)
+*screenshot of the DB for SQLite/MySQL/PostgreSQL showing the schema.*
+
+### Video overview
+
+[![CS50S EMS Submission](https://img.youtube.com/vi/CRT4_j3kZes/hqdefault.jpg)](https://youtu.be/CRT4_j3kZes)
+
+## ***Links***
+
+[GitHub Repository](https://github.com/mrxsierra/ems-db)
+
+### ***Read Studies & Insights***
+
+- [Navigating the Nuances: A Developer's Guide to SQL Dialects (SQLite, MySQL, PostgreSQL)](../blog/posts/1-schema-diff.md).
+- [Beyond the Schema: A Practical Guide to Querying and Interacting with SQLite, MySQL, & PostgreSQL](../blog/posts/2-query-interaction-diff.md)
+
+## ***Conclusion***
+
+The Examination Management System Database project successfully delivered a robust and efficient solution for managing tests and examinations across multiple database platforms. It met the outlined goals and provided valuable insights into database design, automation, and optimization. The project demonstrated the importance of structured database design, modularity, and the effective use of triggers, views, indexes, and automated testing to enhance performance and maintain data integrity.
+
+??? summary "**AI Skill Assessment**"
+    Prompt[^1] Source [:material-file-eye-outline:{ #source }](https://raw.githubusercontent.com/mrxsierra/mrxsierra.github.io/blob/main/prompts/skill-assesment-prompt.md)
+    [^1]:
+    This `AI skill assessment` was generated based on the [skill-assessment-prompt.md](https://raw.githubusercontent.com/mrxsierra/mrxsierra.github.io/main/prompts/skill-assesment-prompt.md) and the provided project documentation. It is intended as an illustrative summary and should be interpreted in the context of the available code and documentation in codebase.
+
+    ### **Strengths**
+
+    - **Relational Database Design:**  
+        - Strong understanding of relational modeling, normalization, and entity relationships.
+        - Consistent schema design across **SQLite**, **MySQL**, and **PostgreSQL**, with appropriate use of constraints, foreign keys, and indexes.
+        - Advanced use of triggers for automation (e.g., scoring, feedback, session/event management).
+
+    - **SQL Proficiency:**  
+        - Proficient in writing complex SQL queries, views, and batch scripts for all three RDBMS.
+        - Good use of views to abstract and simplify reporting and analytics.
+
+    - **Python Automation & Testing:**  
+        - Automated database setup and validation using Python (`db.py` scripts).
+        - Pytest-based test suites for each variant, using correct connectors (`sqlite3`, `mysql-connector-python`, `psycopg2`).
+        - Use of fixtures and in-memory databases for efficient, isolated testing.
+
+    - **DevOps & Environment Management:**  
+        - Docker and Docker Compose used for reproducible development environments for each database variant.
+        - Clear, modular directory structure and environment setup instructions.
+        - Use of uv for Python dependency management.
+
+    - **Documentation:**  
+        - Well-structured Markdown documentation, usage guides, and ER diagrams.
+        - Clear separation of concerns and instructions for each database backend.
+
+    ### **Areas for Growth**
+
+    - **CI/CD Integration:**  
+        - No current implementation of automated CI/CD pipelines (e.g., GitHub Actions, GitLab CI).
+        - Adding automated build/test on push would further professionalize the workflow.
+
+    - **GUI/UX Tools:**  
+        - No use of GUI database tools (e.g., DB Browser for SQLite) in workflow; all interactions are CLI or script-based.
+        - Could consider adding optional GUI instructions for broader accessibility.
+
+    - **Security & Advanced Features:**  
+        - No implementation of advanced security (role-based access, encryption, etc.).
+        - No support for subjective question types or broader educational/administrative features.
+
+    - **Scalability & Production Readiness:**  
+        - Focus is on schema and logic, not on production deployment, backup, or scaling strategies.
+
+    ---
+
+    ### **Role Suitability**
+
+    #### **Best Fit Roles**
+
+    - **Database Engineer / Database Developer**
+    - **Backend Developer (with strong SQL/database focus)**
+    - **DevOps Engineer (entry to mid-level, especially for DB environments)**
+    - **QA Automation Engineer (for database systems)**
+
+    #### **Well-Suited For**
+
+    - Projects requiring robust relational schema design and automation.
+    - Teams needing multi-database support and migration-ready code.
+    - Environments where automated testing and reproducible dev setups are valued.
+
+    #### **Less Suited For**
+
+    - Frontend/UI/UX-heavy roles.
+    - Roles requiring deep experience in cloud-native, distributed, or NoSQL systems.
+    - Security-focused or enterprise-scale production DB admin roles (without further experience).
+
+    ---
+
+    **Summary:**  
+    You demonstrate strong skills in relational database design, SQL, Python automation, and environment management. You are well-suited for roles focused on database engineering, backend development, and DevOps for database-driven projects. Expanding into CI/CD, security, and production operations would further broaden your profile.
+
+================================================================================
+
+## SECTION: Case Study: S3 Faker Mock Data Generator
+## Path: docs/projects/s3-faker.md
+--------------------------------------------------------------------------------
+# S3 Faker
+
+**S3 Faker** is a developer-first data generation suite designed to generate high-volume synthetic datasets based on structured JSON configuration files. The generated datasets can be persisted locally or uploaded directly to an AWS S3 bucket or LocalStack S3 emulator. 
+
+This project simulates production cloud storage environments without incurring AWS infrastructure costs. Key capabilities include programmatic data synthesis using the [Faker](https://faker.readthedocs.io/en/master/) engine, multi-format export (CSV, JSON, Parquet), and automated S3 filesystem integration via [s3fs](https://s3fs.readthedocs.io/en/latest/).
+
+## Engineering Responsibilities
+
+- Designed and implemented the core architecture and data generation modules.
+- Developed automated synchronization routines for both AWS S3 and LocalStack S3 environments.
+- Integrated pipeline testing into continuous integration workflows.
+- Implemented robust error handling, schema validation, and logging.
+
+## Technical Stack
+
+- **Core Languages:** Python, Bash, PowerShell
+- **Libraries & Tooling:** Faker, Pandas, fsspec, s3fs, Boto3
+- **Infrastructure & Testing:** Docker, LocalStack, AWS CLI, pytest
+
+## Technical Challenges & Architectural Solutions
+
+- **Challenge:** Accurately simulating comprehensive Amazon S3 storage semantics locally.
+  - **Solution:** Integrated `fsspec` and LocalStack containerization to ensure identical API behavior between local emulation and production cloud targets.
+- **Challenge:** Efficient high-throughput synthetic record generation.
+  - **Solution:** Leveraged vectorized Pandas and streaming chunk writers to serialize large datasets into CSV, JSON, and Parquet with minimal memory footprint.
+
+## Project Artifacts & Repository
+
+- **Source Repository:** [GitHub - mrxsierra/s3_faker](https://github.com/mrxsierra/s3_faker)
+
+## Verification & Workflow Visuals
+
+![LocalStack S3 Environment](https://raw.githubusercontent.com/mrxsierra/s3_faker/main/img/localstack%20resource.jpg)
+![Synthetic Data Generation Run](https://raw.githubusercontent.com/mrxsierra/s3_faker/main/img/update.jpg)
+
+================================================================================
+
+## SECTION: Case Study: Paraxcel Document Toolkit
+## Path: docs/projects/paraxcel.md
+--------------------------------------------------------------------------------
+# Paraxcel
+
+??? tip "Quick Summary"
+    **Paraxcel**
+    A lightweight, local-first Python desktop application using Tkinter to convert Microsoft Word DOCX files containing multiple-choice questions into structured Excel spreadsheets.
+
+    - **Context:** `Python`, `Tkinter`, `Pandas`, `Pydantic`, `python-docx`, `Solo Project`, `Feb-Mar 2025`
+    - **Role:** Sole developer responsible for design, implementation, testing, documentation, and packaging of the application.
+    - **Impact:** Created a tool that automates the extraction of questions and answers from DOCX files, reducing manual data entry time for educators and content creators, by implementing parsing logic with `python-docx` and structuring output with `pandas`.
+
+## Overview
+
+Paraxcel is a Python desktop application built with Tkinter that addresses the need for converting multiple-choice questions from DOCX files into an organized Excel format, it targets educators, content creators, and assessment professionals who need to manage question banks efficiently. The application provides a simple graphical user interface for file selection and conversion, running entirely locally.
+
+## Goals
+
+The primary goals for the Paraxcel project were:
+
+- To automate the tedious and time-consuming manual process of extracting multiple-choice questions and their corresponding answers from Microsoft Word documents.
+- To structure the extracted data into a usable and organized Excel format.
+- To create a simple, reliable, and accessible desktop tool for educators and content creators.
+
+## Responsibilities
+
+- Designed the application architecture, including module separation (`docx_parser`, `excel_writer`, `model`, `para_utility`, `interface`) for maintainability and scalability.
+- Implemented robust `DOCX` parsing using `python-docx` to accurately extract `questions`, `answer options`, and identify the `correct answer` based on formatting (`color/highlight`).
+- Utilized pandas to structure extracted data into a standardized, clean format, enabling reliable export to `.xlsx` files.
+- Built a user-friendly graphical interface with `Tkinter`, enabling users to easily select input files/folders and initiate the conversion process.
+- Integrated Pydantic for rigorous data validation of extracted question data, ensuring data integrity before export.
+- Created essential utility functions (`para_utility.py`) for text cleaning, format handling, and precise answer detection.
+- Authored comprehensive technical (`doc.md`) and user (`README.md`) documentation.
+- Packaged the application into a standalone executable using `PyInstaller` for straightforward distribution and use on Windows.
+
+## Technologies Used
+
+- **Languages:** Python
+- **GUI:** Tkinter (Standard Python library) - For building the desktop graphical interface.
+- **DOCX Parsing:** `python-docx` - For reading and analyzing `.docx` file content.
+- **Data Handling & Excel Export:** `pandas` - For structuring the extracted data and writing to `.xlsx` files.
+- **Data Validation:** `Pydantic` - For validating the structure and types of extracted question data.
+- **Documentation:** `Markdown` - For `README.md` and `doc.md`.
+
+??? abstract "Tools"
+    - **Version Control:** Git
+    - **Packaging:** PyInstaller - For creating the standalone executable.
+    - **Development Environment:** VS Code
+
+## Process
+
+The development process involved identifying the need for a simple DOCX-to-Excel conversion tool for MCQs and followed a structured approach focused on modularity and ease of use.
+
+1. **Requirement Gathering**: Defined the core functionality: parse DOCX files containing questions followed by four options and export them to Excel, including support for detecting marked answers.
+2. **Technology Stack Selection**: Chose libraries (`python-docx`, `pandas`, `Tkinter`, `Pydantic`) best suited for the task, balancing functionality with ease of deployment (local-first, standard libraries).
+3. **Modular Implementation**: Developed each component (`parsing`, `writing`, `GUI`, `validation`) as a distinct module.
+4. **Testing & Refinement**: Used sample files to rigorously test parsing accuracy and output format.
+5. **Documentation**: Created user and technical guides to support adoption and understanding.
+6. **Packaging**: Prepared the application for distribution as a single executable.
+
+## **Recognition**
+
+I am proud to share that I have successfully completed the `CS50x - Introduction to Computer Science` course.
+
+### Certificate
+
+![CS50x - Introduction to Computer Science](../cert/1738690195028-cs50x.jpeg)
+
+## Technical Challenges & Architectural Solutions
+
+1. **Handling Varied DOCX Formatting**
+    - **Challenge:** Parsing semi-structured DOCX files presented challenges due to inconsistencies in formatting, numbering, and spacing. Reliably detecting correct answers based on run-level highlighting required granular XML traversal.
+    - **Solution:** Developed flexible parsing heuristics (`parse_para`) designed to accommodate common formatting variations, inspecting font colors and highlight metadata directly via python-docx.
+
+2. **Ensuring Data Quality & Schema Rigor**
+    - **Challenge:** Extracting unstructured DOCX content risked generating malformed or incomplete records.
+    - **Solution:** Integrated Pydantic models (`Question`) to enforce strict type validation and structural integrity prior to downstream Excel workbook generation.
+
+3. **Accessibility for Non-Technical Users**
+    - **Challenge:** Enabling non-developer educators to utilize the tool with zero CLI prerequisites.
+    - **Solution:** Built a responsive desktop GUI with standard Tkinter components and packaged the distribution into a standalone binary using PyInstaller.
+
+## Achievements
+
+- Developed and launched Paraxcel, automating MCQ extraction from raw DOCX documents into structured Excel format.
+- Implemented robust run-level styling extraction (superscript, subscript, highlight detection).
+- Packaged the Python application into a standalone executable with zero external runtime dependencies.
+
+## Visual Artifacts & Pipeline Flow
+
+!!! info "Sample Input Format"
+    **Q1. What is the capital of France?**  
+    A. Berlin  
+    B. Madrid  
+    C. ==Paris==  *(Highlighted as correct)*  
+    D. Rome  
+
+**Structured Excel Export**
+
+| Question                       | Option 1 | Option 2 | Option 3 | Option 4 | Answer Index |
+| ------------------------------ | -------- | -------- | -------- | -------- | ------------ |
+| What is the capital of France? | Berlin   | Madrid   | **Paris** | Rome     | 3            |
+
+---
+
+### Application Screenshots
+
+![Tkinter GUI - Screenshot of the Paraxcel Tkinter GUI showing file/folder selection fields and buttons.](https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/ui.jpg)
+
+![Docx Sample - Screenshot of a sample input DOCX file snippet showing question/option format.](https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/sample.jpg)
+
+![Output Excel - Screenshot of the resulting Excel file snippet showing structured data.](https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/excel.jpg)
+
+---
+
+### Video Demonstration
+
+[![Video Demo](https://img.youtube.com/vi/btjMeafD0vU/maxresdefault.jpg)](https://www.youtube.com/watch?v=btjMeafD0vU)
+
+## Links
+
+- [GitHub Repository](https://github.com/mrxsierra/paraxcel)
+
+## Conclusion
+
+Paraxcel successfully provides a targeted solution for automating the often tedious task of extracting multiple-choice questions from DOCX files into a more usable Excel format. By leveraging libraries like `python-docx`, `pandas`, `Pydantic`, and `Tkinter`, the project delivers a functional, easy-to-use desktop tool for educators and content creators. Key takeaways include the practical application of these libraries for document parsing, data handling, validation, GUI development, and application packaging, resulting in a useful utility that addresses a specific workflow challenge.
+
+??? summary "**AI Skill Assessment**"
+    Prompt[^1] Source [:material-file-eye-outline:{ #source }](https://raw.githubusercontent.com/mrxsierra/mrxsierra.github.io/blob/main/prompts/skill-assesment-prompt.md)
+    [^1]:
+    This AI skill assessment was generated based on the [skill-assessment-prompt.md](https://raw.githubusercontent.com/mrxsierra/mrxsierra.github.io/main/prompts/skill-assesment-prompt.md) and the provided project documentation. It is intended as an illustrative summary and should be interpreted in the context of the available code and documentation in codebase.
+
+    ### **Strengths**
+
+    - **Python Application Development:** Proven ability to design, develop, and package a complete, modular desktop application.
+    - **GUI Development (Tkinter):** Experience building functional graphical interfaces for user interaction.
+    - **Document Parsing & Data Processing:** Skilled in extracting structured data from complex document formats (`.docx`) and processing it using `pandas`.
+    - **Data Validation:** Practical application of `Pydantic` for ensuring data integrity and correctness.
+    - **Comprehensive Documentation:** Ability to create clear technical and user-focused documentation.
+    - **Application Packaging & Distribution:** Experience using `PyInstaller` for creating standalone executables and managing dependencies.
+    - **CI/CD Implementation:** Basic experience setting up automated workflows for testing, security checks, and builds using GitHub Actions.
+    - **Software Reliability Basics:** Inclusion of testing tools and security scanning indicates an understanding of foundational quality practices.
+
+    ---
+
+    ### **Areas for Improvement**
+
+    - **Testing Depth:** Expanding test coverage and visibility would further strengthen quality assurance processes.
+    - **Advanced Error Handling:** Implementing more granular logging and exception handling could enhance application robustness.
+    - **Performance Optimization:** Exploring techniques for handling very large files more efficiently could improve scalability.
+    - **UI/UX:** For projects requiring more complex interfaces, exploring modern GUI frameworks might be beneficial.
+    - **Cross-Platform Deployment:** Expanding build support beyond Windows would increase application accessibility.
+
+    ---
+
+    ### **Relevant Roles**
+
+    #### **Strong Fit**
+
+    - **Python Application Developer:** Directly aligns with the project's nature.
+    - **Automation Engineer:** Demonstrates strong skills in automating data extraction and processing workflows.
+
+    #### **Good Fit**
+
+    - **Backend Developer (Data Focus):** Relevant experience in data parsing, validation, and structuring.
+    - **Junior DevOps/Build Engineer:** Basic experience with CI/CD automation and application packaging.
+
+    #### **Less Direct Fit**
+
+    - **Frontend Web Developer:** No web technology experience shown.
+    - **Data Scientist/ML Engineer:** Project focuses on extraction, not analysis or modeling.
+    - **Senior DevOps/SRE:** Lacks infrastructure, monitoring, or cloud services.
+    - **Mobile Developer:** No mobile development experience shown.
+
+    ---
+
+    ### **Conclusion**
+
+    This project effectively showcases capabilities in end-to-end Python application development, particularly in document processing, data handling, and automation. The inclusion of data validation, packaging, and basic CI/CD demonstrates a well-rounded approach to software development. This experience is highly relevant for roles focused on Python application development, automation, and data processing pipelines.
+
+================================================================================
+
+## SECTION: Case Study: Naukri Market Data Scraper
+## Path: docs/projects/naukri-webscraper.md
+--------------------------------------------------------------------------------
+# ***Naukri Webscraper***
+
+??? tip "Quick Summary"
+    **Naukri Webscraper**  
+    A Python tool that automates job searches on Naukri.com, enabling users to filter listings by skills and export structured data for analysis.
+
+    - **Context:** `Personal Project`, `Mar 2024`, `Python`, `Selenium`, `Pandas`
+    - **Role:** Sole developer—designed, implemented, tested, and documented the project
+    - **Impact:** Automated skill-based job search and CSV export, validated by automated tests and real-world data extraction
+
+## ***Overview***
+
+Naukri Webscraper is a Python-based automation tool that scrapes job listings from Naukri.com. It extracts job titles, companies, salaries, locations, and required skills, then filters results based on user-specified skills. The project outputs structured data as CSV files for further analysis.  
+The project was developed independently as a personal automation and data analysis initiative.
+
+!!! info "**Recent updates:**"
+    - Added automated tests for core scraping and filtering logic (`test_project.py`) using `pytest`
+    - Improved error handling and robustness in dynamic content extraction
+    - Updated documentation and usage instructions in `README.md`
+
+## ***Goals***
+
+- Automate the retrieval and filtering of job listings from Naukri.com based on user-defined skills.
+- Simplify and accelerate the job search process by eliminating manual filtering.
+- Provide structured, exportable data for further analysis.
+
+## ***Responsibilities***
+
+- Designed and implemented the scraping logic using Selenium WebDriver.
+- Developed skill-based filtering and CSV export using Pandas.
+- Addressed dynamic content loading and missing data scenarios.
+- Authored automated tests with `pytest` to ensure code correctness and reliability.
+- Wrote comprehensive documentation and usage instructions.
+
+## ***Technologies Used***
+
+- **Languages:** Python (primary language for all scripts and logic)
+- **Frameworks/Libraries:**  
+    - Selenium (browser automation and web scraping)  
+    - Pandas (data manipulation and CSV export)
+- **Testing:**  
+    - pytest (for automated tests in `test_project.py`)
+- **DevOps/Tools:**  
+    - Git (version control)
+    - Chrome WebDriver (browser automation)
+- **Documentation:**  
+    - Markdown (`README.md` for usage and setup)
+
+??? abstract "Tools"
+    - Git (version control)
+    - Chrome WebDriver (browser automation)
+    - Markdown (project documentation)
+    - pytest (automated testing)
+
+## ***Process***
+
+1. **Planning:**  
+    - Identified key data fields (title, company, salary, location, skills) to extract from Naukri.com.
+2. **Implementation:**  
+    - Used Selenium to automate browser actions and extract job data.
+    - Employed Pandas for data structuring and CSV export.
+    - Developed a filtering mechanism for user-specified skills.
+3. **Testing:**  
+    - Created automated tests (`test_project.py`) using `pytest` to validate scraping and filtering logic.
+4. **Documentation:**  
+    - Documented setup, usage, and troubleshooting in `README.md`.
+
+## **Recognition**
+
+I am proud to share that I have successfully completed the `CS50P - Introduction to Programming with Python` course.
+
+### Certificate
+
+![CS50P - Introduction to Programming with Python](../cert/1708063772979-cs50p.jpeg)
+
+## Technical Challenges & Architectural Solutions
+
+1. **Dynamic Client-Side Content Rendering**
+    - **Challenge:** Target pages use asynchronous JavaScript hydration, causing race conditions for static extraction.
+    - **Solution:** Implemented explicit polling with Selenium `WebDriverWait` and expected conditions before accessing DOM elements.
+
+2. **Inconsistent DOM Structures**
+    - **Challenge:** Nested and varied HTML layout across different employer listing templates.
+    - **Solution:** Created resilient fallback selector helpers (`get_text_or_default`) to normalize heterogeneous DOM nodes without throwing fatal unhandled exceptions.
+
+3. **Throughput & Extraction Efficiency**
+    - **Challenge:** High latency when parsing hundreds of multi-page job listings.
+    - **Solution:** Optimized pagination loops, decoupled DOM extraction from tabular transformation, and utilized vectorized Pandas operations for filtering and dataset serialization.
+
+4. **Reliability & Regression Testing**
+    - **Challenge:** Ensuring scraper resilience against minor structural markup adjustments.
+    - **Solution:** Authoring a comprehensive `pytest` test bench to validate parsing rules against offline fixtures.
+
+??? warning "***Note :*** On Site Changes and Locators"
+    - The HTML structure and element locators (CSS selectors, XPaths) used in `project.py` are based on the current version of Naukri.com.  
+    - If the website updates its layout or class names, you may need to update these locators in the code to restore scraping functionality.  
+    - Review and adjust selectors in `project.py` if you encounter errors or missing data after a site update.
+
+## ***Achievements***
+
+- Automated the extraction and filtering of job listings from Naukri.com.
+- Enabled skill-based filtering and CSV export for downstream analysis.
+- Developed a test suite (`test_project.py`) using `pytest` to ensure reliability.
+- Improved scraping robustness and error handling based on real-world site changes.
+
+## ***Key Learnings***
+
+- Gained practical experience with Selenium for dynamic web scraping.
+- Enhanced skills in data manipulation and export using Pandas.
+- Learned to write maintainable, testable code for web automation projects.
+- Understood the importance of robust error handling and documentation.
+- Applied `pytest` for effective and maintainable automated testing.
+
+## ***Outcomes***
+
+- Successfully automated job search and filtering for Naukri.com.
+- Produced structured CSV datasets for analysis.
+- Provided a reusable, documented tool for job seekers and data analysts.
+- Ensured code reliability through automated testing with `pytest`.
+
+## ***Visuals***
+
+### Video Demo
+
+[![Video Demo](https://img.youtube.com/vi/ls_uxjfADN4/maxresdefault.jpg)](https://www.youtube.com/watch?v=ls_uxjfADN4)
+
+## ***Links***
+
+- [GitHub Repository](https://github.com/mrxsierra/naukari-webscraper)
+
+## ***Conclusion***
+
+Naukri Webscraper demonstrates the power of Python automation for real-world data extraction and analysis. By combining Selenium and Pandas, the project streamlines job searches, enhances productivity, and provides actionable insights through structured data exports. The codebase is robust, tested with `pytest`, and well-documented for future use and extension.
+
+??? summary "**AI Skill Assessment**"
+    Prompt[^1] Source [:material-file-eye-outline:{ #source }](https://raw.githubusercontent.com/mrxsierra/mrxsierra.github.io/blob/main/prompts/skill-assesment-prompt.md)
+    [^1]:
+    This `AI skill assessment` was generated based on the [skill-assessment-prompt.md](https://raw.githubusercontent.com/mrxsierra/mrxsierra.github.io/main/prompts/skill-assesment-prompt.md) and the provided project documentation. It is intended as an illustrative summary and should be interpreted in the context of the available code and documentation in codebase.
+
+    ### **Strengths**
+
+    - **Web Scraping Automation**
+        - Demonstrates strong proficiency with Selenium for browser automation, including headless operation, custom user agents, and dynamic navigation (e.g., paginated scraping, handling search forms).
+        - Robust handling of web elements using both CSS selectors and XPaths, with fallback/default logic for missing elements.
+
+    - **Data Handling & Export**
+        - Uses Pandas effectively for data manipulation and CSV export.
+        - Implements structured data extraction with a clear schema (job title, company, salary, skills, etc.).
+
+    - **Testing & Quality Assurance**
+        - Provides automated tests using `pytest`, including fixtures, mocking user input, and live web tests (with appropriate skips for anti-bot/site change issues).
+        - Tests cover both core scraping logic and utility functions.
+
+    - **Documentation**
+        - Comprehensive technical documentation (`doc.md`) and user-facing README.md with clear instructions, schema definitions, troubleshooting, and usage examples.
+        - Documents function purposes, parameters, and expected behaviors in code docstrings.
+
+    - **User Interaction & Error Handling**
+        - Interactive CLI prompts for user input (search terms, page count, skill filters).
+        - Handles invalid input and exceptions gracefully (e.g., `KeyboardInterrupt`, `ValueError`, missing elements).
+
+    - **Project Structure & Packaging**
+        - Uses pyproject.toml for dependency management and project metadata.
+        - Separates main logic, tests, and documentation cleanly.
+
+    ---
+
+    ### **Areas for Growth**
+
+    - **Security & Anti-Bot Evasion**
+        - No evidence of advanced anti-bot evasion techniques (e.g., proxy rotation, CAPTCHA handling, request throttling beyond simple sleep).
+        - No explicit handling of robots.txt or ethical scraping considerations in code.
+
+    - **Scalability & Performance**
+        - Scraping is single-threaded and synchronous; not optimized for large-scale or parallel scraping.
+        - No batching, queuing, or distributed scraping logic.
+
+    - **CI/CD & DevOps**
+        - No evidence of CI/CD pipelines, Dockerization, or deployment automation.
+        - No Makefile or scripts for environment setup/testing.
+
+    - **Code Modularity & Extensibility**
+        - All logic is in a single script (`project.py`); could benefit from modularization (e.g., separating scraping, filtering, and CLI logic).
+        - No plugin or configuration system for adapting to site changes.
+
+    - **Error Logging & Monitoring**
+        - Uses print statements for errors; lacks structured logging or monitoring for production use.
+
+    - **GUI/UX**
+        - No GUI or web interface; CLI-only interaction.
+
+    ---
+
+    ### **Role Suitability**
+
+    #### **Best Fit Roles**
+
+    - **Python Backend Developer**
+        - Strong evidence of backend scripting, data processing, and automation skills.
+    - **Web Scraping/Data Extraction Engineer**
+        - Demonstrated expertise in Selenium, data extraction, and handling dynamic web content.
+    - **QA Automation Engineer**
+        - Experience with automated testing, mocking, and test-driven development using `pytest`.
+    - **Technical Writer/Documentation Specialist**
+        - High-quality, thorough documentation and user guides.
+
+    #### **Well-Suited For**
+
+    - **Data Analyst (with Python)**
+        - Familiarity with Pandas and CSV data workflows.
+    - **SDET (Software Development Engineer in Test)**
+        - Automated test coverage and test design.
+
+    #### **Less Suited For**
+
+    - **Frontend Developer**
+        - No evidence of frontend/UI development (web or desktop).
+    - **DevOps Engineer**
+        - Lacks CI/CD, containerization, and deployment automation.
+    - **Cloud/Distributed Systems Engineer**
+        - No cloud integration, distributed scraping, or scalable architecture.
+
+    ---
+
+    **Summary:**  
+    The developer demonstrates strong skills in Python scripting, web scraping automation with Selenium, data processing with Pandas, and automated testing with `pytest`. The codebase is well-documented and user-friendly, with robust error handling and interactive CLI features. Areas for growth include modularization, scalability, advanced anti-bot techniques, and DevOps practices. The developer is best suited for backend, automation, and data extraction roles, and less suited for frontend or DevOps-focused positions based on the current codebase.
+
+    ---
+
+================================================================================
+
+## SECTION: Case Study: Real-Time Test Management Interface
+## Path: docs/projects/test-site.md
+--------------------------------------------------------------------------------
+# Test Management Site
+
+??? tip "In-Hurry Summary"
+    **Test Management Site**
+    A demo vanilla javascripting application for managing tests, enabling test creation, execution, and result tracking. Aims to showcase basic web application functionality using dynamic UI updates and local storage.
+
+    - **Context:** `Personal Project`, `Jun 2024`, `HTML`, `CSS`, `JavaScript`, `Bootstrap`
+    - **Role:** Sole Developer - Responsible for designing, developing, and implementing all features.
+    - **Impact:** Demonstrated full-stack capabilities by creating a functional test management system, showcasing skills in UI design, dynamic content loading, and local data storage.
+
+## ***Overview***
+
+The Test Management Site is a demo vanilla javascripts application developed in April 2025 to showcase test management capabilities. It allows users to create, manage, take tests, and view results. The application uses HTML, CSS, JavaScript, and Bootstrap for a responsive and dynamic user interface.
+
+## ***Goals***
+
+- Provide a platform to create, update, and delete tests.
+- Enable users to take tests with a specified duration.
+- Display test results and history.
+- Implement user management features like login, logout, and password changes.
+- Showcase dynamic UI updates and local data storage.
+
+## ***Responsibilities***
+
+- Designed and developed the entire application from scratch.
+- Implemented dynamic UI updates using JavaScript.
+- Managed data storage using `localStorage`.
+- Created user authentication and session management features.
+- Integrated Bootstrap for responsive design and UI components.
+
+## ***Technologies Used***
+
+- **Languages:** JavaScript, HTML, CSS
+- **Frameworks/Libraries:** Bootstrap, PapaParse, XLSX.js, Plotly.js
+- **Tools:** Visual Studio Code, GitHub Actions (for CI/CD and static site deployment)
+- **Browser APIs:** localStorage, sessionStorage, Fetch API
+- **Other:** Modular JavaScript (ES6 modules), CSS custom properties, GitHub Pages (hosting)
+
+## ***Process***
+
+The project followed an iterative development approach. Initially, the basic HTML structure and CSS styling were set up. JavaScript was then used to dynamically load content, manage user sessions, and handle data storage. Bootstrap was integrated to ensure a responsive design. Challenges were addressed through continuous debugging and refinement of the code.
+
+## Technical Challenges & Architectural Solutions
+
+1. **Dynamic Content Loading & DOM Hydration**  
+    - **Challenge:** Rendering modular views dynamically without full page reloads.  
+    - **Solution:** Utilized native `fetch` APIs with template fragment caching and DOM manipulation to ensure seamless client-side transitions.
+
+2. **Client-Side State Persistence**  
+    - **Challenge:** Managing test sessions, timers, and scoring in-browser reliably.  
+    - **Solution:** Implemented structured serialization mechanisms over `localStorage` with error boundary fallbacks and schema versioning.
+
+3. **Multi-Device Responsive Layout**  
+    - **Challenge:** Maintaining readable test controls across varied screen viewports.  
+    - **Solution:** Combined fluid CSS grid systems, modern flexbox rules, and media query breakpoints for responsive layout parity.
+
+## ***Achievements***
+
+- Successfully implemented all core features: test management, test taking, results display, and user management.
+- Created a dynamic and responsive user interface.
+- Demonstrated proficiency in JavaScript, HTML, CSS, and Bootstrap.
+- Implemented data persistence using `localStorage`.
+
+## ***Key Learnings***
+
+- Gained a deeper understanding of dynamic content loading and manipulation using JavaScript.
+- Learned how to effectively use `localStorage` for data persistence.
+- Improved skills in responsive web design using Bootstrap.
+- Enhanced problem-solving abilities through debugging and refining the code.
+
+## ***Outcomes***
+
+The project resulted in a functional test management application that showcases dynamic UI updates and local data storage. The application allows users to create, manage, take tests, and view results.
+
+## ***Visuals***
+
+### Screenshot Project Images
+
+Here are some images showcasing the project:
+
+#### Login Page
+
+![Login Page](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/login.jpg)
+
+#### Register Page
+
+![Register Page](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/register.jpg)
+
+#### Test Selection
+
+![Select Test](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/select-test-to-take.jpg)
+
+#### Test Page
+
+![Test Page](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/test-page.png)
+
+#### Test Timeout
+
+![Test Timeout](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/test-time-out.png)
+
+#### Dashboard
+
+![Dashboard](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/anamoly-dash.png)
+
+#### User Management
+
+![Change Password](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/change-pass.png)
+
+#### CRUD Operations
+
+![Create Operation](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/create.png)
+![Read Operation](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/Read.png)
+![Update Operation](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/update.png)
+![Delete Operation](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/delete.png)
+
+#### Test Results
+
+![Individual Test Result](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/individual-test-result.png)
+![Multi User Result Track](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/multi-user-result-track.png)
+
+#### Error Handling
+
+![Unsupported Error](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/unsupported-error.png)
+
+## ***Links***
+
+- [Live Project](https://mrxsierra.github.io/test-site/)
+- [GitHub Repository](https://github.com/mrxsierra/test-site/)
+
+## ***Conclusion***
+
+The Test Management Site project was a valuable learning experience that allowed me to demonstrate my full-stack capabilities. By creating a functional application with dynamic UI updates and local data storage, I showcased my skills in JavaScript, HTML, CSS, and Bootstrap. Success was measured by the successful implementation of all core features and the creation of a responsive and dynamic user interface.
+
+??? summary "**AI Skill Assessment**"
+    Prompt[^1] Source [:material-file-eye-outline:{ #source }](https://raw.githubusercontent.com/mrxsierra/mrxsierra.github.io/blob/main/prompts/skill-assesment-prompt.md)
+    [^1]:
+    This `AI skill assessment` was generated based on the [skill-assessment-prompt.md](https://raw.githubusercontent.com/mrxsierra/mrxsierra.github.io/main/prompts/skill-assesment-prompt.md) and the provided project documentation. It is intended as an illustrative summary and should be interpreted in the context of the available code and documentation in codebase.
+
+    ---
+
+    ### **Strengths**
+
+    - **Frontend Engineering (HTML/CSS/JS):**
+        - Demonstrates strong skills in vanilla JavaScript for DOM manipulation, modular code organization, and dynamic UI updates (e.g., main.js, `js/tests_content.js`).
+        - Uses modern CSS with custom properties, responsive design, and theme toggling (see `styles/css/styles.css`).
+        - Implements modular HTML with reusable components loaded dynamically (e.g., sidebar, topnav, profile, as seen in sidebar.js and HTML assets).
+
+    - **Data Handling & Storage:**
+        - Effectively uses `localStorage` and `sessionStorage` for persistent and session-based data (user profiles, test data, results).
+        - Handles file uploads and parsing for CSV and Excel formats using third-party libraries (PapaParse, XLSX.js), with robust error handling and user feedback (`js/utility/file_handle.js`).
+
+    - **Object-Oriented Design:**
+        - Defines clear, extensible classes for domain entities (User, Profiles, Test, Question, Result, etc.) with encapsulated logic (`js/utility/temp_data.js`, `js/utility/temp_profile.js`).
+
+    - **User Experience & Usability:**
+        - Provides detailed user feedback and error messages throughout the UI (e.g., form validation, alerts for missing data, dynamic content updates).
+        - Implements accessibility features such as keyboard navigation and clear visual cues for active elements.
+
+    - **Documentation & Readability:**
+        - Includes a comprehensive readme.md with project overview, features, technical details, folder structure, and screenshots.
+        - Uses descriptive variable/function names and inline comments for clarity.
+
+    - **Basic DevOps Awareness:**
+        - Includes a GitHub Actions workflow for static site deployment to GitHub Pages (`.github/workflows/deploy.yml`).
+
+    ### **Areas for Growth**
+
+    - **Testing:**
+        - No evidence of automated unit, integration, or end-to-end tests. All logic appears to be tested manually via the UI.
+        - No test framework or test scripts present.
+
+    - **Security:**
+        - User authentication is handled entirely client-side with passwords stored in plain text in localStorage/sessionStorage.
+        - No input sanitization or protection against XSS/CSRF.
+        - No encryption or secure handling of sensitive data.
+
+    - **Scalability & Backend Integration:**
+        - The application is entirely client-side; there is no backend API, database, or server-side logic.
+        - Not suitable for multi-user or production environments without significant changes.
+
+    - **Accessibility & Internationalization:**
+        - While some accessibility is present, there is no evidence of ARIA roles, screen reader support, or internationalization/localization.
+
+    - **Advanced DevOps/CI/CD:**
+        - Only basic static site deployment is present; no evidence of automated testing, linting, or code quality checks in CI.
+
+    - **Code Reuse & DRY Principles:**
+        - Some repeated logic (e.g., dynamic form handling, error messages) could be further abstracted for maintainability.
+
+    ---
+
+    ### **Role Suitability**
+
+    #### **Best Fit Roles**
+
+    - **Frontend Developer (Vanilla JS/HTML/CSS):**
+        - Demonstrated ability to build interactive, modular, and responsive web UIs from scratch without frameworks.
+
+    - **UI/UX Engineer (Prototype/Demo Level):**
+        - Strong focus on user flows, feedback, and dynamic content for demo or MVP applications.
+
+    - **Web Application Prototyper:**
+        - Skilled at quickly assembling functional prototypes using client-side technologies and third-party libraries.
+
+    #### **Well-Suited For**
+
+    - **Technical Writer/Documenter:**
+        - Good documentation practices and clear code organization.
+
+    - **Client-Side Data Engineer:**
+        - Experience with data parsing, transformation, and storage in browser environments.
+
+    #### **Less Suited For**
+
+    - **Backend Developer / Full Stack Engineer:**
+        - No evidence of backend, API, or database design/implementation.
+    - **DevOps Engineer (Advanced):**
+        - Only basic CI/CD; lacks advanced automation, monitoring, or infrastructure-as-code.
+    - **Security Engineer:**
+        - No secure authentication, authorization, or data protection practices.
+    - **QA/Test Automation Engineer:**
+        - No automated testing or test infrastructure.
+
+    ---
+
+    **Summary:**  
+    The developer demonstrates strong skills in vanilla JavaScript, modular frontend architecture, dynamic UI/UX, and client-side data handling. The codebase is well-documented, readable, and suitable for demo or prototype-level applications. However, there is a lack of automated testing, security best practices, backend integration, and advanced DevOps. The developer is best suited for roles focused on frontend development, rapid prototyping, and UI/UX engineering in client-side environments.
+
+    ---
+
+================================================================================
+
+## SECTION: Technical Guide: Navigating SQL Dialects
+## Path: docs/blog/posts/1-schema-diff.md
+--------------------------------------------------------------------------------
+# Navigating the Nuances: A Developer's Guide to SQL Dialects (SQLite, MySQL, PostgreSQL)
+
+As developers, we often encounter various SQL databases, each with its own flavor of `SQL`. **While the core concepts remain similar, the devil is in the details – especially when it comes to schema definitions, data types, and procedural extensions like triggers.**
+
+**Recently**, while working on an [***`Exam Management System (EMS)`***](https://github.com/mrxsierra/ems-db/), I had the opportunity to define the database schema for `SQLite`, `MySQL`, and `PostgreSQL`. This exercise highlighted some fascinating and crucial differences between these popular relational database management systems (RDBMS).
+
+> **Note:** This guide provides a comparative technical reference drawing insights directly from production schema files.
+
+***Project Repo :*** [ems-db](https://github.com/mrxsierra/ems-db/) **` **Warning:** Always refer to official documentation when evaluating dialect differences.
+
+    ---
+    - **Understanding :** Use [project](https://github.com/mrxsierra/ems-db/) as reference.
+    - **Prerequisites :** Familiar with `sql syntax`, `client interaction`, `Docker`, and `Python` (language of choice).
+
+### 1. Dropping Objects (Tables, Views, Indexes)
+
+The syntax for dropping database objects is largely similar, but identifier quoting can vary.
+
+- **SQLite & PostgreSQL:** Use double quotes for identifiers if they contain special characters or are case-sensitive (though often optional).
+
+    ```sql
+    -- SQLite & PostgreSQL
+    DROP VIEW IF EXISTS "tests_history";
+    DROP TABLE IF EXISTS "students";
+    ```
+
+- **MySQL:** Uses backticks for identifiers.
+
+    ```sql
+    -- MySQL
+    DROP VIEW IF EXISTS `tests_history`;
+    DROP TABLE IF EXISTS `students`;
+    ```
+
+### 2. Data Types and Auto-Incrementing IDs
+
+This is a significant area of divergence.
+
+| Feature             | SQLite                                     | PostgreSQL                                       | MySQL                                           |
+|---------------------|--------------------------------------------|--------------------------------------------------|-------------------------------------------------|
+| **Auto-Increment ID** | `id INTEGER PRIMARY KEY` (implicitly `AUTOINCREMENT` if it's the primary key and integer type) or explicitly `id INTEGER PRIMARY KEY AUTOINCREMENT` | `id SERIAL PRIMARY KEY` (creates a sequence)     | `id INT AUTO_INCREMENT PRIMARY KEY`             |
+| **Text**            | `TEXT`                                     | `VARCHAR(n)`, `TEXT`                             | `VARCHAR(n)`, `TEXT`                            |
+| **Integer**         | `INTEGER`                                  | `INTEGER`, `SMALLINT` (for `is_correct`, `score`) | `INT`, `TINYINT(1)` (often for booleans)        |
+| **Boolean**         | `INTEGER NOT NULL CHECK ("is_correct" IN (0, 1))` | `SMALLINT NOT NULL DEFAULT 0 CHECK ("is_correct" IN (0, 1))` (or native `BOOLEAN`) | `TINYINT(1) NOT NULL DEFAULT '0'`               |
+| **Date/Time**       | `NUMERIC` (stored as text, real, or int), `DATETIME('now', 'localtime')` | `TIMESTAMP WITH TIME ZONE`, `CURRENT_TIMESTAMP` | `DATETIME`, `TIME`, `CURRENT_TIMESTAMP`, `NOW()` |
+| **Duration/Interval**| `NUMERIC` (e.g., storing time as text 'HH:MM:SS') | `INTERVAL`                                     | `TIME` (for durations within 24h) or calculate |
+| **ENUM Types**      | Simulated with `CHECK` constraint: `CHECK ("status" IN (...))` | Native: `CREATE TYPE "events_type" AS ENUM (...);` | Native: `status ENUM ('active', 'completed')`   |
+
+> **Example: Students Table ID**
+
+- **SQLite:**
+
+    ```sql
+    CREATE TABLE "students" (
+        "id" INTEGER,
+        -- ...
+        PRIMARY KEY ("id")
+    );
+    ```
+
+- **PostgreSQL:**
+
+    ```sql
+    CREATE TABLE IF NOT EXISTS "students" (
+        "id" SERIAL,
+        -- ...
+        PRIMARY KEY("id")
+    );
+    ```
+
+- **MySQL:**
+
+    ```sql
+    CREATE TABLE IF NOT EXISTS `students` (
+        `id` INT AUTO_INCREMENT,
+        -- ...
+        PRIMARY KEY (`id`)
+    );
+    ```
+
+**Example: ENUM for `tests_sessions.status`**
+
+- **SQLite:**
+
+    ```sql
+    CREATE TABLE "tests_sessions" (
+        -- ...
+        "status" TEXT NOT NULL DEFAULT 'in-progress' CHECK (
+            "status" IN ('in-progress', 'ended', 'completed')
+        )
+        -- ...
+    );
+    ```
+
+- **PostgreSQL:**
+
+    ```sql
+    CREATE TYPE "tests_session_status_type" AS ENUM ('in-progress', 'ended', 'completed');
+    CREATE TABLE IF NOT EXISTS "tests_sessions" (
+        -- ...
+        "status" "tests_session_status_type" NOT NULL DEFAULT 'in-progress',
+        -- ...
+    );
+    ```
+
+- **MySQL:**
+
+    ```sql
+    CREATE TABLE IF NOT EXISTS `tests_sessions` (
+        -- ...
+        `status` ENUM ('in-progress', 'ended', 'completed') NOT NULL DEFAULT 'in-progress',
+        -- ...
+    );
+    ```
+
+### 3. Default Values (Especially Timestamps)
+
+- **SQLite:** Uses functions like `DATETIME('now', 'localtime')`.
+
+    ```sql
+    "start" NUMERIC NOT NULL DEFAULT (DATETIME('now', 'localtime'))
+    ```
+
+- **PostgreSQL:** Uses `CURRENT_TIMESTAMP`.
+
+    ```sql
+    "start" TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP
+    ```
+
+- **MySQL:** Uses `CURRENT_TIMESTAMP` or `NOW()`.
+
+    ```sql
+    `start` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+    ```
+
+### 4. Trigger Syntax
+
+Triggers are where the syntactical differences become very pronounced.
+
+**Common Goal:** Set the `end` time of a `tests_sessions` row upon insertion, based on the test's duration.
+
+- **SQLite:**
+
+    ```sql
+    CREATE TRIGGER "set_end_for_test_session" AFTER INSERT ON "tests_sessions"
+    BEGIN
+    UPDATE "tests_sessions"
+    SET
+        "end" = DATETIME(new.start, '+' || (
+                SELECT TIME(duration)
+                FROM "tests" AS t
+                WHERE t."id" = new."test_id"
+            ))
+    WHERE "id" = new.id;
+    END;
+    ```
+
+    - Uses `BEGIN...END;` block.
+    - `AFTER INSERT`.
+    - `new` refers to the inserted row.
+    - Date/time arithmetic involves string concatenation for modifiers.
+
+- **PostgreSQL:**
+
+    ```sql
+    CREATE OR REPLACE FUNCTION set_end_for_test_session_fn()
+    RETURNS TRIGGER AS $$
+    BEGIN
+        NEW.end := NEW.start + (
+            SELECT "duration" FROM "tests" WHERE "id" = NEW.test_id
+        );
+        RETURN NEW;
+    END;
+    $$ LANGUAGE plpgsql;
+
+    CREATE TRIGGER "set_end_for_test_session" BEFORE INSERT ON
+    "tests_sessions" FOR EACH ROW
+    EXECUTE FUNCTION set_end_for_test_session_fn();
+    ```
+
+    - Requires a separate trigger function written in a procedural language (e.g., `plpgsql`).
+    - `BEFORE INSERT` (can modify `NEW` directly).
+    - `FOR EACH ROW` is explicit.
+    - `NEW` is a record variable; assignments use `:=`.
+    - `RETURN NEW` is crucial for `BEFORE` triggers.
+    - Interval arithmetic is more direct (`+ duration`).
+
+- **MySQL:**
+
+    ```sql
+    DELIMITER $$
+    CREATE TRIGGER `set_end_for_test_session` BEFORE INSERT ON
+    `tests_sessions` FOR EACH ROW
+    BEGIN
+        SET NEW.end = DATE_ADD(
+            IFNULL(NEW.start, NOW()), -- NOW() if NEW.start is not yet set
+            INTERVAL (
+                SELECT TIME_TO_SEC(`duration`) / 60 FROM `tests` WHERE `id` = NEW.`test_id`
+            ) MINUTE
+        );
+    END$$
+    DELIMITER ;
+    ```
+
+    - Uses `DELIMITER` to define a multi-statement trigger body.
+    - `BEFORE INSERT`.
+    - `FOR EACH ROW` is explicit.
+    - `SET NEW.column = ...` for assignments.
+    - Uses functions like `DATE_ADD` and `TIME_TO_SEC` for time arithmetic.
+
+**Key Trigger Differences Summary:**
+
+| Feature          | SQLite                               | PostgreSQL                                     | MySQL                                        |
+|------------------|--------------------------------------|------------------------------------------------|----------------------------------------------|
+| **Structure**    | `BEGIN...END` directly in trigger    | Separate function + trigger definition         | `DELIMITER $$ BEGIN...END$$ DELIMITER ;`     |
+| **Timing**       | `AFTER`/`BEFORE`/`INSTEAD OF`        | `AFTER`/`BEFORE`/`INSTEAD OF`                  | `AFTER`/`BEFORE`                             |
+| **Row Reference**| `new`, `old`                         | `NEW`, `OLD` (case-sensitive in PL/pgSQL)      | `NEW`, `OLD`                                 |
+| **Modification** | `UPDATE` statement for `AFTER`       | Direct assignment to `NEW` in `BEFORE` trigger | Direct assignment to `NEW` in `BEFORE` trigger |
+| **Return Value** | N/A for `AFTER`                      | `RETURN NEW`/`OLD`/`NULL` for `BEFORE`         | N/A                                          |
+
+### 5. Time and Interval Arithmetic
+
+As seen in the trigger examples, how you add durations to timestamps varies:
+
+- **SQLite:** String manipulation with `DATETIME` function modifiers.
+
+    ```sql
+    DATETIME(new.start, '+' || (SELECT TIME(duration) ...))
+    ```
+
+- **PostgreSQL:** Direct arithmetic with `INTERVAL` types.
+
+    ```sql
+    NEW.start + (SELECT "duration" FROM "tests" ...)
+    ```
+
+- **MySQL:** Functions like `DATE_ADD()` and `INTERVAL` keyword.
+
+    ```sql
+    DATE_ADD(NEW.start, INTERVAL X MINUTE) -- or HOUR, SECOND etc.
+    ```
+
+    In my schema, I converted the `TIME` duration to seconds, then to minutes for `DATE_ADD`:
+
+    ```sql
+    INTERVAL (SELECT TIME_TO_SEC(`duration`) / 60 FROM `tests` WHERE `id` = NEW.`test_id`) MINUTE
+    ```
+
+### 6. Conditional Logic in Triggers/Queries
+
+- **SQLite & MySQL:** `CASE WHEN ... THEN ... ELSE ... END` is standard.
+    *SQLite example from `set_score_of_result` trigger:*
+
+    ```sql
+    "feedback" = CASE WHEN (...) = 0 THEN 'need-improvement' ELSE 'great' END
+    ```
+
+    *MySQL example from `set_score_of_result` trigger:*
+
+    ```sql
+    SET NEW.feedback = CASE WHEN (...) = 0 THEN 'need-improvement' ELSE 'great' END;
+    ```
+
+- **PostgreSQL:** Supports `CASE` expressions, but also `IF...THEN...ELSE...END IF;` in PL/pgSQL functions.
+    *PostgreSQL example from `set_score_of_result_fn` trigger function:*
+
+    ```sql
+    IF NEW.score = 0 THEN
+        NEW.feedback := 'need-improvement';    
+    ELSE
+        NEW.feedback := 'great';
+    END IF;
+    ```
+
+### 7. Handling NULLs in Aggregate Functions
+
+When summing scores, if no results exist for a test session, `SUM()` might return `NULL`.
+
+- **SQLite:** `SUM()` on an empty set returns `NULL`. My schema doesn't explicitly handle this for `final_score` in the trigger, which might be an oversight if a report could be generated before any results.
+
+    ```sql
+    (SELECT SUM("results"."score") FROM "results" WHERE "results"."test_session_id" = new.id)
+    ```
+
+- **PostgreSQL:** Uses `COALESCE(SUM("score"), 0)` to default to `0` if `SUM` is `NULL`.
+
+    ```sql
+    (SELECT COALESCE(SUM("score"),0) FROM "results" WHERE "test_session_id" = NEW.id)
+    ```
+
+- **MySQL:** Uses `IFNULL(SUM(\`score\`), 0)` for the same purpose.
+
+    ```sql
+    (SELECT IFNULL(SUM(`score`),0) FROM `results` WHERE `test_session_id` = NEW.id)
+    ```
+
+### 8. `CREATE TABLE IF NOT EXISTS`
+
+This useful clause prevents errors if a table already exists.
+
+- **SQLite:** Supports `CREATE TABLE IF NOT EXISTS "students" (...)` (though not explicitly used in the provided `students` table creation, it's standard).
+- **PostgreSQL:** `CREATE TABLE IF NOT EXISTS "students" (...)`
+- **MySQL:** ```CREATE TABLE IF NOT EXISTS `students` (...)```
+
+### 9. Comments
+
+- **SQLite, PostgreSQL, MySQL:** All support `--` for single-line comments.
+- **MySQL:** Also supports `#` for single-line comments.
+
+### 10. Index Creation
+
+The basic syntax is similar, but quoting and specific features (like conditional indexing) can differ.
+
+- **SQLite & PostgreSQL:**
+
+    ```sql
+    -- SQLite & PostgreSQL
+    CREATE INDEX "idx_tests" ON "tests" ("title");
+    -- PostgreSQL specific (SQLite also supports WHERE in index but syntax might differ slightly)
+    CREATE INDEX "idx_questions_options_is_correct" ON "questions_options" ("is_correct") WHERE "is_correct" = 1;
+    ```
+
+- **MySQL:**
+
+    ```sql
+    -- MySQL
+    CREATE INDEX `idx_tests` ON `tests` (`title`);
+    -- MySQL does not directly support WHERE clauses in CREATE INDEX like PostgreSQL/SQLite.
+    -- For conditional indexing, you might index the column and rely on the optimizer,
+    -- or use generated columns if applicable.
+    CREATE INDEX `idx_questions_options_is_correct` ON `questions_options` (`is_correct`);
+    ```
+
+### 11. Time Zone Handling
+
+- **SQLite:** `DATETIME('now', 'localtime')` attempts to use local time. Time storage is less strict.
+- **PostgreSQL:** Very robust. `TIMESTAMP WITH TIME ZONE` stores timestamps in UTC and converts them to the client's/session's time zone on retrieval. `SET TIME ZONE LOCAL;` can be used.
+- **MySQL:** `DATETIME` stores "wall clock" time without time zone info. `TIMESTAMP` converts from current time zone to UTC for storage, and back on retrieval. Session time zone can be set.
+
+## Quick Cheatsheet: SQLite vs. PostgreSQL vs. MySQL
+
+| Feature                 | SQLite                                     | PostgreSQL                                                              | MySQL                                                              |
+|-------------------------|--------------------------------------------|-------------------------------------------------------------------------|--------------------------------------------------------------------|
+| **Identifier Quoting**  | `"optional"`                               | `"optional/case-sensitive"`                                             | `` `optional` ``                                                   |
+| **Auto Increment**      | `INTEGER PRIMARY KEY [AUTOINCREMENT]`      | `SERIAL` or `IDENTITY`                                                  | `INT AUTO_INCREMENT`                                               |
+| **Data Types (General)**| Flexible typing (TEXT, NUMERIC, INTEGER)   | Strict, rich types (VARCHAR, TEXT, INT, BIGINT, BOOLEAN, JSON, ARRAY, INTERVAL, ENUM) | Strict types (VARCHAR, TEXT, INT, TINYINT, DATETIME, ENUM, JSON) |
+| **ENUMs**               | `CHECK` constraint                         | `CREATE TYPE ... AS ENUM`                                               | `ENUM(...)` column type                                            |
+| **Triggers**            | `BEGIN...END`                              | Function-based (`CREATE FUNCTION ... EXECUTE FUNCTION`)                 | `DELIMITER $$ BEGIN...END$$`                                       |
+| **Default Timestamp**   | `DATETIME('now', 'localtime')`             | `CURRENT_TIMESTAMP`                                                     | `CURRENT_TIMESTAMP` / `NOW()`                                      |
+| **Interval Arithmetic** | String manipulation with `datetime()`      | `+ INTERVAL '...'`                                                      | `DATE_ADD(date, INTERVAL value unit)`                              |
+| **Function for NULLs**  | `IFNULL(val, default)` (or `COALESCE`)     | `COALESCE(val, default)`                                                | `IFNULL(val, default)` or `COALESCE(val, default)`                 |
+
+## Why This Matters
+
+**For Developers:**
+
+- **Adaptability:** Understanding these differences allows you to switch between database systems more fluidly.
+- **Debugging:** Syntax errors are common when moving SQL code; knowing the nuances helps pinpoint issues faster.
+- **Database Design:** Choosing the right data types and features (like native ENUMs or interval types) can lead to a more efficient and maintainable schema.
+- **ORM Configuration:** When using Object-Relational Mappers (ORMs), these differences are often abstracted, but knowing what's happening under the hood is invaluable for optimization and complex queries.
+
+**Learnings:**
+
+- **Depth of Understanding:** Articulating these differences helps demonstrating a deeper-than-surface-level understanding of SQL and database systems.
+- **Practical Experience:** It often indicates hands-on experience with multiple databases, which is a valuable asset in diverse tech environments.
+- **Problem-Solving:** The ability to adapt a schema or queries for different SQL dialects showcases problem-solving skills.
+
+## Recommended Next Reading
+
+> ***For deeper exploration of** `sql queries` and `client interaction` nuances across SQLite, MySQL, and PostgreSQL:*
+
+- `Part-2`: **[Beyond the Schema: A Practical Guide to Querying and Interacting with SQLite, MySQL, & PostgreSQL](2-query-interaction-diff.md)**
+
+## References & Technical Documentation
+
+This section compiles useful links found within the [`ems-db`](https://github.com/mrxsierra/ems-db/) project's documentation (`usage.md`, `README.Docker.md` files), categorized for easier navigation.
+
+### General
+
+*CS50 SQL Notes (General Syntax Differences):*
+
+- [MySQL Differences](https://cs50.harvard.edu/sql/2024/notes/6/#mysql)
+- [PostgreSQL Differences](https://cs50.harvard.edu/sql/2024/notes/6/#postgresql)
+
+### SQLite
+
+- [SQL As Understood By SQLite](https://sqlite.org/lang.html)
+- [Python `sqlite3` Module](https://docs.python.org/3/library/sqlite3.html)
+
+### PostgreSQL
+
+- [Postgres SQL Commands](https://www.postgresql.org/docs/current/sql-commands.html)
+- [Postgres Data Types](https://www.postgresql.org/docs/current/datatype.html)
+- [Postgres Date and Time Functions](https://www.postgresql.org/docs/17/functions-datetime.html)
+- [Postgres Triggers and Trigger Functions](https://www.postgresql.org/docs/17/plpgsql-trigger.html)
+
+### MySQL
+
+- [Using Data Types from Other Database Engines](https://dev.mysql.com/doc/refman/8.0/en/other-vendor-data-types.html)
+- [Date and Time Functions](https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html)
+- [Data Definition Statements](https://dev.mysql.com/doc/refman/8.0/en/sql-data-definition-statements.html)
+- [Docker MySQL Basic Steps](https://dev.mysql.com/doc/refman/8.4/en/docker-mysql-getting-started.html)
+
+================================================================================
+
+## SECTION: Technical Guide: Beyond the Schema (Querying & Docker)
+## Path: docs/blog/posts/2-query-interaction-diff.md
+--------------------------------------------------------------------------------
+# Beyond the Schema: A Practical Guide to Querying and Interacting with SQLite, MySQL, & PostgreSQL
+
+Okay, building on our previous discussion about SQL schema differences, let's dive into how we interact with `SQLite`, `MySQL`, and `PostgreSQL`, focusing on query execution, CLI usage, and connection methods.
+
+This companion blog post will use the **`queries.sql`, `README.Docker.md`, and `usage.md`** files from the [Exam Management System (EMS)](https://github.com/mrxsierra/ems-db/) project as our practical examples.
+
+- ***Project Repo :*** [ems-db](https://github.com/mrxsierra/ems-db/) **` If you missed the first part on schema definitions, you can catch up here:
+
+- [Navigating the Nuances: A Developer's Guide to SQL Dialects (SQLite, MySQL, PostgreSQL)](1-schema-diff.md).
+
+This post will serve as another handy reference, highlighting the practical differences you'll encounter when running queries and managing these databases, especially useful for both day-to-day development and for showcasing practical database skills.
+
+!!! tip "Drill"
+
+    > **Warning:** Always refer to official database documentation when evaluating dialect differences.
+    
+    ---
+    - ***Understanding :*** Use [this project](https://github.com/mrxsierra/ems-db/) as reference.
+    - ***Prerequisites :*** Familiar with `sql syntax`, `client interaction`, `Docker`, and `Python` (language of choice).
+
+In our [previous post](1-schema-diff.md), we explored the key differences in schema definitions across `SQLite`, `MySQL`, and `PostgreSQL` using the [Exam Management System (EMS)](https://github.com/mrxsierra/ems-db/) project as a case study.
+
+Now, let's shift our focus to the equally important aspects of how we *interact* with these databases: ***running queries, using their command-line interfaces (CLIs), and understanding connection nuances, especially in a Dockerized environment.***
+
+> **Note:** This guide draws insights from the following project files within the [ems-db](https://github.com/mrxsierra/ems-db/) repository:
+
+- **Query Scripts:**
+    - [sqlite/queries.sql](https://github.com/mrxsierra/ems-db/blob/main/sqlite/queries.sql)
+    - [psql/queries.sql](https://github.com/mrxsierra/ems-db/blob/main/psql/queries.sql)
+    - [mysql/queries.sql](https://github.com/mrxsierra/ems-db/blob/main/mysql/queries.sql)
+
+- **Usage & Docker Documentation:**
+    - [sqlite/usage.md](https://github.com/mrxsierra/ems-db/blob/main/sqlite/usage.md) & [sqlite/README.Docker.md](https://github.com/mrxsierra/ems-db/blob/main/sqlite/README.Docker.md)
+    - [psql/usage.md](https://github.com/mrxsierra/ems-db/blob/main/psql/usage.md) & [psql/README.Docker.md](https://github.com/mrxsierra/ems-db/blob/main/psql/README.Docker.md)
+    - [mysql/usage.md](https://github.com/mrxsierra/ems-db/blob/main/mysql/usage.md) & [mysql/README.Docker.md](https://github.com/mrxsierra/ems-db/blob/main/mysql/README.Docker.md)
+
+Understanding these practical differences can significantly boost your efficiency and adaptability as a developer.
+
+## Key Areas of Difference: Queries & Interaction
+
+### 1. CLI Shell Access & Connection
+
+Each database has its own command-line tool for direct interaction.
+
+- **SQLite:**
+    - Command: `sqlite3 ems.db [options]`
+    - Example from [`sqlite/usage.md`](https://github.com/mrxsierra/ems-db/blob/main/sqlite/usage.md#step-1-create-database-and-acivate-sqlite3-shell-in-python-env): `sqlite3 ems.db -table -echo`
+        - `-table`: Sets output mode to table format.
+        - `-echo`: Prints commands before execution.
+    - Connection is file-based; you specify the database file path.
+
+- **PostgreSQL:**
+    - Command: `psql [options] [dbname] [username]`
+    - Example from [`psql/usage.md`](https://github.com/mrxsierra/ems-db/blob/main/psql/usage.md#step-1-create-database-and-activate-psql-shell-in-python-env): `psql -a -b ems postgres`
+        - `-a`: Echoes all input from script.
+        - `-b`: Echoes failed commands.
+        - `ems`: Database name.
+        - `postgres`: Username.
+    - In Docker, from an `app` service: `psql -h db ems postgres` (where `db` is the service name of the PostgreSQL container).
+    - PostgreSQL's [`README.Docker.md`](https://github.com/mrxsierra/ems-db/blob/main/psql/README.Docker.md#extra) also mentions using `~/.pgpass` for passwordless connections in development environments.
+
+- **MySQL:**
+    - Command: `mysql [options] -u[user] -p[password] [dbname]`
+    - Example from [`mysql/usage.md`](https://github.com/mrxsierra/ems-db/blob/main/mysql/usage.md#step-1-create-database-and-activate-mysql-shell-in-python-env): `mysql -t -v -uroot -psecret ems`
+        - `-t`: Output in table format.
+        - `-v`: Verbose mode.
+        - `-uroot -psecret`: Username and password.
+        - `ems`: Database name (as defined in `compose.yml` `MYSQL_DATABASE` env var).
+    - MySQL's [`README.Docker.md`](https://github.com/mrxsierra/ems-db/blob/main/mysql/README.Docker.md#app-service-too-has-mysqlsh-mysql-shell-install-for-quick-interaction) also mentions `mysqlsh` as a more powerful alternative shell, aliased as `mysql` in the `app` service. Often used for connecting with `cloud native mysql server` from `client machines`.
+
+> **Tip:** All three databases differ significantly in how they let you inspect objects (like tables, views, indexes) from shell clients—see section 5 and beyond.
+
+### 2. Executing SQL Scripts from Files
+
+Running a series of SQL commands from a `.sql` file is a common task.
+
+- **SQLite:**
+    - Shell command: `.read ./queries.sql`
+    - CLI redirection: `sqlite3 ems.db -table -echo  As seen in [`sqlite/usage.md`](https://github.com/mrxsierra/ems-db/blob/main/sqlite/usage.md#step-2-create-database-schema) and [`sqlite/queries.sql`](https://github.com/mrxsierra/ems-db/blob/main/sqlite/queries.sql)
+
+- **PostgreSQL:**
+    - Shell command: `\i ./queries.sql`
+    - CLI redirection: `psql -a -b ems postgres  As seen in [`psql/usage.md`](https://github.com/mrxsierra/ems-db/blob/main/psql/usage.md#step-2-create-database-schema) and [`psql/queries.sql`](https://github.com/mrxsierra/ems-db/blob/main/psql/queries.sql)
+
+- **MySQL:**
+    - Shell command: `source ./queries.sql`
+    - CLI redirection: `mysql -tv -uroot -psecret ems  **Important:** When schema files contain stored procedures, triggers, or functions that require `DELIMITER`, executing them inside the `mysql` CLI is more reliable than using `mysql-connector-python` (which doesn't support `DELIMITER`). This limitation makes shell execution the preferred approach for complex DDL.
+>
+> As seen in [`mysql/usage.md`](https://github.com/mrxsierra/ems-db/blob/main/mysql/usage.md#step-2-create-database-schema) and [`mysql/queries.sql`](https://github.com/mrxsierra/ems-db/blob/main/mysql/queries.sql)
+
+### 3. Resetting Auto-Increment Values
+
+After clearing tables (e.g., with `DELETE FROM table;`), you often want to reset auto-increment counters for primary keys, especially during development or testing.
+
+- **SQLite:**
+    - If `AUTOINCREMENT` keyword is used on an `INTEGER PRIMARY KEY` column, SQLite uses an internal table `sqlite_sequence`.
+        - To reset: `DELETE FROM sqlite_sequence WHERE name='your_table_name';`
+    - The [`sqlite/queries.sql`](https://github.com/mrxsierra/ems-db/blob/main/sqlite/queries.sql) file simply uses `DELETE FROM students;`. If `AUTOINCREMENT` was *not* explicitly used (as in the `students` table in the provided schema), SQLite might reuse IDs from deleted rows. For a true reset, the `sqlite_sequence` table would need to be managed if `AUTOINCREMENT` was present.
+
+- **PostgreSQL:**
+    - Uses sequences. The `SERIAL` type automatically creates a sequence suffixed with `_id_seq`.
+    - Command from [`psql/queries.sql`](https://github.com/mrxsierra/ems-db/blob/main/psql/queries.sql): `ALTER SEQUENCE students_id_seq RESTART WITH 1;`
+
+- **MySQL:**
+    - Command from [`mysql/queries.sql`](https://github.com/mrxsierra/ems-db/blob/main/mysql/queries.sql): `ALTER TABLE students AUTO_INCREMENT = 1;`
+
+### 4. Data Manipulation Language (DML) Snippets
+
+The basic syntax for `INSERT`, `UPDATE`, and `DELETE` is highly standardized. The `queries.sql` files for all three databases demonstrate this:
+
+- **INSERT:**
+
+    ```sql
+    -- Common across SQLite, PostgreSQL, MySQL (quoting may vary per schema)
+    INSERT INTO students (first_name, last_name, password, email)
+    VALUES ('John', 'Doe', 'password123', 'john.doe@example.com');
+    ```
+
+- **UPDATE:**
+
+    ```sql
+    -- Common across SQLite, PostgreSQL, MySQL (quoting may vary per schema)
+    UPDATE tests_sessions
+    SET status = 'completed'
+    WHERE id = 1;
+    ```
+
+- **DELETE (Clearing a table):**
+
+    ```sql
+    -- Common across SQLite, PostgreSQL, MySQL
+    DELETE FROM reports;
+    ```
+
+> ***Identifier quoting :*** `Double quotes for SQLite/PostgreSQL`, `backticks for MySQL` discussed in the [schema blog](1-schema-diff.md#1-dropping-objects-tables-views-indexes) post also applies here.
+
+### 5. Querying Data & Analysis (SELECT, EXPLAIN)
+
+Standard `SELECT` statements with `JOINs`, `WHERE` clauses, and subqueries are largely portable.
+
+- **Example SELECT (from [`sqlite/queries.sql`](https://github.com/mrxsierra/ems-db/blob/main/sqlite/queries.sql), similar in others):**
+
+    ```sql
+    SELECT *
+    FROM tests_history
+    WHERE student_id = (
+        SELECT id
+        FROM students
+        WHERE email = 'john.doe@example.com'
+    );
+    ```
+
+- **Inspecting Tables/Views/Indexes (within shell clients):**
+
+    - **SQLite**:
+        - List tables: `.tables`
+        - View DDL: `.schema table_name` or full schema: `.fullschema`
+        - List indexes:  
+          `SELECT name FROM sqlite_master WHERE type='index';`
+
+    - **PostgreSQL**:
+        - List tables: `\dt`
+        - View indexes: `\di`
+        - View DDL: `\d+ table_name` or for indexes/views: `\d+ index_name`, `\d+ view_name`
+        - SQL alternatives:
+
+            ```sql
+            SELECT * FROM information_schema.tables WHERE table_schema='public';
+            SELECT * FROM pg_indexes WHERE schemaname = 'public';
+            ```
+
+    - **MySQL**:
+        - List tables: `SHOW TABLES;`
+        - List indexes: `SHOW INDEX FROM table_name;`
+        - List views:
+
+            ```sql
+            SHOW FULL TABLES WHERE TABLE_TYPE = 'VIEW';
+            SHOW CREATE VIEW view_name;
+            ```
+
+        - SQL alternatives via `information_schema`:
+
+            ```sql
+            SELECT * FROM information_schema.tables WHERE table_schema = 'your_db';
+            SELECT * FROM information_schema.statistics WHERE table_schema = 'your_db';
+            ```
+
+- **Query Plan Analysis:**
+    - **SQLite:** `EXPLAIN QUERY PLAN SELECT ...;` (as used in comments in [`sqlite/queries.sql`](https://github.com/mrxsierra/ems-db/blob/main/sqlite/queries.sql) `#Line-151 or below`).
+    - **PostgreSQL & MySQL:** `EXPLAIN SELECT ...;` (This is the standard command, though not explicitly run in the provided `queries.sql` files for PSQL/MySQL, it's the common way to analyze queries for better indexing and performance optimizations).
+
+### 6. Dialect-Specific Functions/Commands in Queries
+
+While core SQL is similar, some functions or commands are unique.
+
+- **SQLite:** Uses functions like `STRFTIME()` and `DATETIME()` for date/time manipulations (more prominent in its [`schema.sql`](https://github.com/mrxsierra/ems-db/blob/main/sqlite/schema.sql)) triggers.
+- **PostgreSQL:** Rich set of functions; `INTERVAL` arithmetic is a key feature (seen in its `schema.sql` triggers). The [`queries.sql`](https://github.com/mrxsierra/ems-db/blob/main/psql/queries.sql) uses standard SQL.
+- **MySQL:**
+    - `SLEEP(seconds)`: Used in [`mysql/queries.sql`](https://github.com/mrxsierra/ems-db/blob/main/mysql/queries.sql) (`SELECT SLEEP(3);`) to pause execution, often for testing or simulation.
+    - `TIMEDIFF()`: Used in its [`schema.sql`](https://github.com/mrxsierra/ems-db/blob/main/mysql/schema.sql) trigger.
+
+### 7. Error Handling & Diagnostics (CLI/SQL)
+
+- **SQLite:**
+    - CLI: `-echo` flag helps trace execution.
+
+- **PostgreSQL:**
+    - CLI: `-a` (echo all) and `-b` (echo errors) flags.
+    - Shell: `\set ON_ERROR_STOP on` can be useful in scripts.
+
+- **MySQL:**
+    - SQL Commands: `SHOW ERRORS;` and `SHOW WARNINGS;` are explicitly used in [`mysql/queries.sql`](https://github.com/mrxsierra/ems-db/blob/main/mysql/queries.sql) to check for issues after operations.
+    - CLI: `-v` (verbose) flag.
+
+### 8. Exiting Shells
+
+- **SQLite:** `.exit` or `.quit`
+- **PostgreSQL:** `\q` or `exit`
+- **MySQL:** `\q` or `exit` (or `quit`)
+
+### 9. Python Script Interaction (Brief)
+
+The `usage.md` files for each database mention running a `db.py` script (e.g., `uv run db.py`). While this post focuses on CLI interaction, it's important to note that these databases are typically accessed programmatically via Python using libraries:
+
+- **SQLite:** `sqlite3` (standard library)
+- **PostgreSQL:** `psycopg2` or `psycopg` (third-party)
+- **MySQL:** `mysql-connector-python` or `PyMySQL` (third-party)
+These libraries handle connection and query execution, abstracting some dialect specifics but still requiring correct SQL syntax for the target database.
+
+> **MySQL Note:** As mentioned earlier, MySQL's `mysql-connector-python` does not support the `DELIMITER` command needed for procedures/triggers. This makes CLI-based execution of `schema.sql` safer and more portable.
+
+### 10. Docker Environment Nuances
+
+The `README.Docker.md` files highlight how Docker simplifies setup and interaction:
+
+- **Universal Access:** `docker compose exec [service_name] bash` provides a shell within the container, from which you can then launch the respective database CLI.
+    - SQLite: `docker compose exec app bash` then `sqlite3 ems.db`
+    - PostgreSQL: `docker compose exec db bash` then `psql ...` or `docker compose exec app bash` then `psql -h db ...`
+    - MySQL: `docker compose exec db bash` then `mysql ...` or `docker compose exec app bash` then `mysql ...` (often `mysqlsh` aliased as `mysql`).
+    - **Service Discovery:** For PostgreSQL and MySQL, the database often runs in a service named `db` (as defined in [`compose.yml`](https://github.com/uvacw/ems/blob/main/mysql/compose.yml)), accessible from an `app` service using this hostname (e.g., `psql -h db ...`).
+- **Pre-configured Environments:** Docker setups often pre-configure users, passwords, and databases (e.g., `MYSQL_ROOT_PASSWORD`, `POSTGRES_USER`, `POSTGRES_DB` environment variables in `compose.yml`).
+- **SQL Dump Mounting:** `README.Docker.md` for PostgreSQL and MySQL mentions mounting SQL dumps for pre-seeding data, which automates schema creation and initial data insertion on container startup.
+- **GUI Tools:**
+    - PostgreSQL: `adminer` service often included for web-based DB management.
+    - MySQL: `phpmyadmin` service often included.
+
+## Quick Cheatsheet: Query & Interaction
+
+| Feature                 | SQLite                                     | PostgreSQL                                         | MySQL                                                  |
+|-------------------------|--------------------------------------------|----------------------------------------------------|-------------------------------------------------------|
+| **CLI Tool**            | `sqlite3`                                  | `psql`                                             | `mysql`, `mysqlsh`(for client)                                    |
+| **Connect (Example)**   | `sqlite3 ems.db`                           | `psql -U user -d dbname`                           | `mysql -u user -p pass dbname`                        |
+| **Run SQL File (Shell)**| `.read file.sql`                           | `\i file.sql`                                      | `source file.sql`                                     |
+| **Run SQL File (CLI)**  | `sqlite3 db < file.sql`                    | `psql ... < file.sql`                              | `mysql ... < file.sql`                                |
+| **Reset Auto-Increment**| `DELETE FROM sqlite_sequence WHERE name='tbl';` (if `AUTOINCREMENT` used) | `ALTER SEQUENCE seq_name RESTART WITH 1;`        | `ALTER TABLE tbl AUTO_INCREMENT = 1;`               |
+| **Query Plan**          | `EXPLAIN QUERY PLAN ...`                   | `EXPLAIN ...`                                      | `EXPLAIN ...`                                         |
+| **Show Errors (SQL)**   | N/A (check return codes/messages)          | N/A (check messages, `ON_ERROR_STOP`)              | `SHOW ERRORS;`, `SHOW WARNINGS;`                      |
+| **Exit Shell**          | `.exit`, `.quit`                           | `\q`, `exit`                                       | `\q`, `exit`, `quit`                                  |
+| **Docker Exec (App)**   | `docker compose exec app sqlite3 ...`      | `docker compose exec app psql -h db ...`           | `docker compose exec app mysql -h db ...`             |
+| **Docker Exec (DB)**    | `docker compose exec db sqlite3 ...`       | `docker compose exec db psql ...`                  | `docker compose exec db mysql ...`                     |
+| **View Tables (Shell)** | `.tables`                                  | `\dt`                                              | `SHOW TABLES;`                                        |
+| **View Indexes (Shell)**| Query `sqlite_master`                      | `\di`                                              | `SHOW INDEX FROM tbl;`                                |
+
+## Why This Matters
+
+**For Developers:**
+
+- **Efficiency:** Knowing the right CLI commands, flags, and shell directives saves significant time during development and debugging.
+- **Scripting & Automation:** Understanding how to execute SQL files and manage database states (like resetting sequences) is crucial for automated testing and deployment.
+- **Tooling:** Familiarity with Docker interaction patterns and GUI tools enhances the development workflow.
+- **Debugging:** Using `EXPLAIN` and error-checking commands helps optimize queries and troubleshoot issues effectively.
+
+**Learning:**
+
+- **Practical Skills:** These interaction nuances demonstrate hands-on experience beyond theoretical SQL knowledge.
+- **Versatility:** Comfort with different database CLIs and Docker environments indicates adaptability.
+- **Problem-Solving:** The ability to diagnose query performance or script execution issues points to strong troubleshooting skills.
+
+## Conclusion
+
+Mastering the art of SQL goes beyond writing `SELECT` statements. **It encompasses how you connect to your database, execute scripts, analyze performance, and manage its state through various tools and environments.** As demonstrated by the [`Exam Management System (ems-db)`](https://github.com/mrxsierra/ems-db/) project's supporting files, ***each database system—SQLite, MySQL, and PostgreSQL—offers a slightly different, yet powerful, set of tools and commands for these tasks***.
+
+By familiarizing yourself with these practical aspects, you become a more well-rounded and effective data professional.
+
+***Happy querying***!
+
+---
+
+!!! warning "Disclaimer"
+
+    *The examples are drawn from specific project files and general knowledge. Always refer to the official documentation for the most comprehensive and up-to-date information.*
+
+## References & Technical Documentation
+
+This section compiles useful links found within the [`ems-db`](https://github.com/mrxsierra/ems-db/) project's documentation (`usage.md`, `README.Docker.md` files), categorized for easier navigation.
+
+### General
+
+- **Docker:**
+    - [Docker Manuals](https://docs.docker.com/build/concepts/dockerfile/)
+    - [Docker Cheatsheet](https://docs.docker.com/get-started/docker_cheatsheet.pdf)
+    - [Docker's Python guide](https://docs.docker.com/language/python/)
+    - [Docker Quick workshop](https://docs.docker.com/get-started/workshop/)
+    - [Compose Getting Started](https://docs.docker.com/compose/gettingstarted/)
+    - [Compose Volumes](https://docs.docker.com/reference/compose-file/volumes/)
+    - [Use Compose Watch](https://docs.docker.com/compose/how-tos/file-watch/)
+- **UV (Python Packager):**
+    - [UV: Working on projects](https://docs.astral.sh/uv/guides/projects/)
+    - [UV: Docker Integration](https://docs.astral.sh/uv/guides/integration/docker/)
+- **CS50 SQL Notes (General Syntax Differences):**
+    - [MySQL Differences](https://cs50.harvard.edu/sql/2024/notes/6/#mysql)
+    - [PostgreSQL Differences](https://cs50.harvard.edu/sql/2024/notes/6/#postgresql)
+
+### SQLite
+
+- [SQLite CLI Commands](https://sqlite.org/cli.html)
+- [SQL As Understood By SQLite](https://sqlite.org/lang.html)
+- [Python `sqlite3` Module](https://docs.python.org/3/library/sqlite3.html)
+- [SQLite Download Page](https://www.sqlite.org/download.html)
+
+### PostgreSQL
+
+- **Client & Server Documentation:**
+    - [Postgres Client Reference](https://www.postgresql.org/docs/17/reference-client.html)
+    - [Postgres SQL Commands](https://www.postgresql.org/docs/current/sql-commands.html)
+    - [Postgres Date and Time Functions](https://www.postgresql.org/docs/17/functions-datetime.html)
+    - [Postgres Environment Variables](https://www.postgresql.org/docs/17/libpq-envars.html)
+    - [Postgres Connection Strings](https://www.postgresql.org/docs/17/libpq-connect.html#LIBPQ-CONNSTRING)
+    - [Postgres Passwords File (`.pgpass`)](https://www.postgresql.org/docs/17/libpq-pgpass.html)
+- **Python Driver:** [psycopg3 Documentation](https://www.psycopg.org/psycopg3/docs/basic/usage.html)
+- **Docker Hub:** [Postgres Image](https://hub.docker.com/_/postgres)
+- [Postgres Download Page](https://www.postgresql.org/download/)
+
+### MySQL
+
+- **MySQL Documentation:**
+    - [MySQL SHOW Commands](https://dev.mysql.com/doc/refman/8.0/en/show.html)
+    - [Date and Time Functions](https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html)
+    - [Docker MySQL Deployment Topics](https://dev.mysql.com/doc/refman/8.4/en/docker-mysql-more-topics.html)
+    - [mysqlsh Shell Startup](https://dev.mysql.com/doc/mysql-shell/8.4/en/mysql-shell-sessions-startup.html)
+- **Python Driver:** [mysql-connector-python](https://dev.mysql.com/doc/connector-python/en/connector-python-example-connecting.html)
+- **Docker Hub:** [MySQL Image](https://hub.docker.com/_/mysql)
+- [MySQL Server Installation](https://dev.mysql.com/doc/refman/8.4/en/installing.html)
+- [MySQL Client/Shell Installation](https://dev.mysql.com/doc/mysql-shell/8.4/en/mysql-shell-install.html)
+
+### GUI Tools (mentioned in Docker setups)
+
+- [Adminer (for PostgreSQL & others)](https://hub.docker.com/_/adminer)
+- [phpMyAdmin (for MySQL)](https://hub.docker.com/_/phpmyadmin)
+
+================================================================================
