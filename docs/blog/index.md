@@ -1,18 +1,22 @@
 ---
-# nav:
-#   - Overview: blog/index.md 
-#   - Blog 1: blog/posts/b-1.md
-#   - Blog 2: blog/posts/b-2.md
-
-tag:
-  - latest
-  - blog
+description: Technical articles, architecture breakdowns, SQL dialect comparisons, and systems automation tutorials by Sunil Sharma.
 ---
 
-# Blogs
+# Technical Publications
 
-Welcome to my blog! Here you will find my latest posts and updates.
+<div class="page-intro">
+  <h2 class="page-intro-title">Engineering Articles &amp; Architecture Guides</h2>
+  <p class="page-intro-desc">
+    Practical, deep-dive articles focusing on relational database engineering, cross-dialect SQL nuances, Dockerized development environments, and programmatic Python automation.
+  </p>
+  <div style="margin-top: 16px; display: flex; gap: 8px; flex-wrap: wrap;">
+    <span class="tag-item"><i class="fas fa-database"></i> Database Architecture</span>
+    <span class="tag-item"><i class="fab fa-python"></i> Python Automation</span>
+    <span class="tag-item"><i class="fab fa-docker"></i> Docker Infrastructure</span>
+    <span class="tag-item"><i class="fas fa-layer-group"></i> Multi-RDBMS Parity</span>
+  </div>
+</div>
 
 ---
 
-## Latest Blogs
+## Published Guides &amp; Deep Dives

@@ -332,6 +332,137 @@ body {
   padding: 2px 0;
 }
 
+/* Blog Article Cards & Feed Theming */
+.md-post {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  margin-bottom: var(--space-6);
+  transition: all var(--transition-fast);
+  text-align: left;
+}
+
+.md-post:hover {
+  border-color: var(--color-border-strong);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.md-post__meta {
+  color: var(--color-text-muted) !important;
+  font-size: 12px !important;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.md-post__title {
+  margin-top: 0 !important;
+  margin-bottom: var(--space-2) !important;
+}
+
+.md-post__title a {
+  color: var(--color-text-primary) !important;
+  font-weight: 600 !important;
+  font-size: 19px !important;
+  text-decoration: none !important;
+  line-height: 1.35 !important;
+}
+
+.md-post__title a:hover {
+  color: var(--color-accent) !important;
+}
+
+.md-post p {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Interactive Content Tabs Theming */
+.tabbed-set {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin: var(--space-4) 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.tabbed-labels {
+  background: var(--color-surface-raised);
+  border-bottom: 1px solid var(--color-border);
+  padding: 4px 8px 0;
+  display: flex;
+  gap: 4px;
+}
+
+.tabbed-labels > label {
+  color: var(--color-text-secondary) !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  padding: 6px 14px !important;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0 !important;
+  transition: all var(--transition-fast) !important;
+}
+
+.tabbed-labels > label:hover {
+  color: var(--color-text-primary) !important;
+  background: var(--color-surface-hover) !important;
+}
+
+.tabbed-set > input:nth-child(1):checked ~ .tabbed-labels > :nth-child(1),
+.tabbed-set > input:nth-child(2):checked ~ .tabbed-labels > :nth-child(2),
+.tabbed-set > input:nth-child(3):checked ~ .tabbed-labels > :nth-child(3),
+.tabbed-set > input:nth-child(4):checked ~ .tabbed-labels > :nth-child(4) {
+  color: var(--color-accent) !important;
+  font-weight: 600 !important;
+  border-bottom: 2px solid var(--color-accent) !important;
+  background: transparent !important;
+}
+
+.tabbed-content {
+  padding: var(--space-4) !important;
+}
+
+.tabbed-content pre {
+  margin: 0 !important;
+}
+
+/* Series Banner Card */
+.series-banner {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+  margin: var(--space-4) 0 var(--space-6) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.series-banner-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.series-badge {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-accent);
+  background: var(--color-accent-subtle);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
 .md-nav--primary .md-nav__link {
   color: var(--color-text-secondary) !important;
   font-size: 13.5px;

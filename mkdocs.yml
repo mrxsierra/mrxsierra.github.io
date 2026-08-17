@@ -158,23 +158,7 @@ plugins:
       auto_caption: true
   - search
   # - social
-  - tags:
-      tags_allowed:
-        - Welcome
-        - Backend
-        - Data Analysis
-        - Database Design
-        - Database Management
-        - Data Science
-        - Data Visualization
-        - Python
-        - Frontend
-        - Web Scraping
-        - Selenium
-        - Automation
-        - Hackathon
-        - Binary Classification
-        - Machine Learning
+  - tags
 # Extensions
 markdown_extensions:
   - abbr
