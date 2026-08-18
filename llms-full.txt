@@ -720,6 +720,389 @@ Practical architectural guides, cross-engine SQL compatibility, and programmatic
 
 ================================================================================
 
+## SECTION: Brand Standards & Design System Tokens
+## Path: docs/brand/index.md
+--------------------------------------------------------------------------------
+# Brand Identity & Press Kit
+
+  
+## Brand Standards & Content Creation Suite
+
+  
+    Canonical vector marks, video watermarks, presentation templates, cross-platform social assets, and media bio copy for **Sunil Sharma (@mrxsierra)**.
+  
+  
+    [Download Master Press Kit (.ZIP)](../assets/brand/mrxsierra-brand-press-kit.zip)
+  
+
+---
+
+## 1. Core Brand Marks & Logotypes
+
+Our visual identity is built on a **Geometric Constructivist "S"** mark, combining mathematical circular geometry, normalized optical balance, and pure structural clarity.
+
+  
+    
+      Primary Mark (Dark)
+    
+    
+      ![Monogram Dark](../assets/brand/monogram-dark.svg)
+    
+    
+### Obsidian Monogram
+
+    Master vector mark for dark surfaces, app icons, favicons, and header branding.
+    [Download SVG](../assets/brand/monogram-dark.svg)
+  
+
+  
+    
+      Secondary Mark (Light)
+    
+    
+      ![Monogram Light](../assets/brand/monogram-light.svg)
+    
+    
+### Light Canvas Monogram
+
+    High-contrast mark for white documents, PDF reports, and light background media.
+    [Download SVG](../assets/brand/monogram-light.svg)
+  
+
+  
+    
+      Horizontal Lockup
+    
+    
+      ![Horizontal Logotype](../assets/brand/logo-horizontal.svg)
+    
+    
+### Horizontal Logotype
+
+    Full brand lockup for documentation headers, partner portfolios, and sponsorships.
+    [Download SVG](../assets/brand/logo-horizontal.svg)
+  
+
+  
+    
+      Transparent Watermark
+    
+    
+      ![Transparent Monogram](../assets/brand/monogram-transparent.svg)
+    
+    
+### Transparent Glyph
+
+    Isolated white glyph with zero background for video overlays, code stamps, and watermarks.
+    [Download SVG](../assets/brand/monogram-transparent.svg)
+  
+
+---
+
+## 2. Video & Multimedia Creation Kit
+
+Broadcast-ready graphics for YouTube tutorials, coding screencasts, webinars, and live streams:
+
+| Asset | Format | Resolution | Description | Download |
+| :--- | :--- | :--- | :--- | :--- |
+| **YouTube Watermark** | PNG (Transparent) | 150×150 | Official bottom-right in-video branding watermark. | [Download PNG](../assets/brand/video/watermark-150x150.png) |
+| **Broadcast Lower Third** | SVG (Transparent) | 1920×1080 | Speaker overlay for video talks and webinars. | [Download SVG](../assets/brand/video/lower-third.svg) |
+| **Video End Screen / Outro** | SVG | 1920×1080 | YouTube 16:9 outro card with card placeholders. | [Download SVG](../assets/brand/video/video-end-screen.svg) |
+| **Thumbnail Frame Template** | SVG | 1280×720 | 16:9 YouTube video thumbnail template with badge. | [Download SVG](../assets/brand/video/thumbnail-frame.svg) |
+
+---
+
+## 3. Social Media & Publication Suite
+
+High-resolution header covers and document carousel templates:
+
+  
+    
+      GitHub Profile
+    
+    
+### GitHub Header Banner
+
+    1280×640px hero banner for GitHub profile READMEs and repository organization headers.
+    [Download SVG](../assets/brand/banners/github-banner.svg)
+  
+
+  
+    
+      LinkedIn Cover
+    
+    
+### LinkedIn Profile Banner
+
+    1584×396px cover banner optimized for LinkedIn avatar clearance and desktop/mobile responsiveness.
+    [Download SVG](../assets/brand/banners/linkedin-banner.svg)
+  
+
+  
+    
+      X (Twitter) Header
+    
+    
+### X Profile Header
+
+    1500×500px minimalist header with engineering disciplines and website domain.
+    [Download SVG](../assets/brand/banners/x-twitter-banner.svg)
+  
+
+  
+    
+      YouTube Channel
+    
+    
+### YouTube Channel Banner
+
+    2560×1440px master banner with centered multi-device safe zone.
+    [Download SVG](../assets/brand/banners/youtube-banner.svg)
+  
+
+---
+
+## 4. Standard Media Bios & Speaker Copy
+
+=== "One-Liner (Social & Short Bios)"
+    ```text
+    Sunil Sharma (mrxsierra) is a Full-Stack Web Architect and Machine Learning Systems Engineer.
+    ```
+
+=== "Short Bio (50 Words)"
+    ```text
+    Sunil Sharma is a Full-Stack Systems Engineer and ML Specialist based in India. He builds robust multi-RDBMS data platforms, autonomous AI agent pipelines, and high-throughput automation tooling with Python, PostgreSQL, and modern web frameworks.
+    ```
+
+=== "Full Bio (100 Words)"
+    ```text
+    Sunil Sharma (mrxsierra) is a software engineer specializing in autonomous agent workflows, machine learning pipelines, and distributed relational database architectures. A national finalist in the GSTN Predictive Binary Classification hackathon, Sunil designs production-grade software with rigorous pytest test suites, cross-engine SQL parity, and zero-downtime CI/CD automation. He publishes technical architecture guides and open-source tooling for the global developer ecosystem.
+    ```
+
+---
+
+## 5. Design System Tokens & Color Palette
+
+| Token Name | HEX Code | OKLCH Value | Role |
+| :--- | :--- | :--- | :--- |
+| `--color-obsidian` | `#08090D` | `oklch(0.12 0.01 260)` | Primary Canvas & Background |
+| `--color-accent` | `#6366F1` | `oklch(0.58 0.23 277)` | Electric Indigo (Primary Accent) |
+| `--color-accent-light`| `#818CF8` | `oklch(0.68 0.19 277)` | Highlight & Focus Indicators |
+| `--color-surface` | `#18181B` | `oklch(0.21 0.01 260)` | Card Surface & Elevated UI |
+| `--color-text` | `#FFFFFF` | `oklch(0.99 0.00 0)` | Primary Optical Text |
+| `--color-text-muted` | `#94A3B8` | `oklch(0.70 0.03 250)` | Secondary Metadata & Subtitles |
+
+---
+
+## 6. Brand Usage Guidelines
+
+- **Clear Space**: Always maintain clear space equal to at least 25% of the monogram width around the mark.
+- **Minimum Size**: Do not render the vector monogram below `16×16px` on digital screens or `5mm` in print.
+- **Color Integrity**: Never apply unauthorized drop shadows, skewed distortions, or unapproved multi-color gradients to the monogram glyph.
+
+================================================================================
+
+## SECTION: Official Media Press Kit & Assets
+## Path: docs/press/index.md
+--------------------------------------------------------------------------------
+# Press Kit & Media Resources
+
+  
+## Media Kit & Speaker Resources
+
+  
+    Official background material, verified headshots, vector brand marks, speaking topics, and media bio copy for **Sunil Sharma (@mrxsierra)**. Designed for conference organizers, technical journal editors, podcast hosts, and engineering publications.
+  
+  
+    [Download Master Press Kit (.ZIP)](../assets/brand/mrxsierra-brand-press-kit.zip)
+    [Media & Speaking Inquiries →](../contact/)
+  
+
+---
+
+## Media Fast Facts
+
+  
+    
+      Identity & Location
+      
+    
+    
+      **Full Name:** Sunil Sharma
+      **Handle:** mrxsierra / @mrxsierra
+      **Primary Role:** Full-Stack Web Architect & ML Systems Specialist
+      **Location:** India (UTC+05:30)
+    
+  
+
+  
+    
+      Technical Focus
+      
+    
+    
+      **Core Disciplines:** Multi-RDBMS Engineering, Autonomous Agents, Tabular ML Pipelines
+      **Languages:** Python, SQL, JavaScript, HTML5/CSS3
+      **Key Infrastructure:** PostgreSQL, MySQL, SQLite, Docker, AWS S3, Pytest
+    
+  
+
+---
+
+## Canonical Biography Sheets
+
+Use these pre-approved biography variations for conference programs, podcast introductions, guest publication bylines, and media coverage:
+
+=== "One-Liner (Social & Short Bios)"
+    ```text
+    Sunil Sharma (mrxsierra) is a Full-Stack Web Architect and Machine Learning Systems Engineer.
+    ```
+
+=== "Short Bio (50 Words)"
+    ```text
+    Sunil Sharma is a Full-Stack Systems Engineer and ML Specialist based in India. He builds robust multi-RDBMS data platforms, autonomous AI agent pipelines, and high-throughput automation tooling with Python, PostgreSQL, and modern web frameworks.
+    ```
+
+=== "Full Bio (100 Words)"
+    ```text
+    Sunil Sharma (mrxsierra) is a software engineer specializing in autonomous agent workflows, machine learning pipelines, and distributed relational database architectures. A national finalist in the GSTN Predictive Binary Classification hackathon, Sunil designs production-grade software with rigorous pytest test suites, cross-engine SQL parity, and zero-downtime CI/CD automation. He publishes technical architecture guides and open-source tooling for the global developer ecosystem.
+    ```
+
+=== "Technical Abstract & Architecture Philosophy"
+    ```text
+    Sunil's engineering philosophy centers on structural invariants, deterministic test harnesses, and cross-engine database compatibility. Rather than relying on fragile abstractions, he advocates for explicit SQL migrations, containerized chaos testing, and bounded tool execution for autonomous AI agent pipelines.
+    ```
+
+---
+
+## Speaking Topics & Technical Interviews
+
+Sunil is available for technical conference keynotes, engineering podcasts, webinars, and panel discussions on the following topics:
+
+  
+    
+      
+      
+### Multi-RDBMS Engineering & Dialect Nuances
+
+    
+    
+      Architecting database engines across PostgreSQL, MySQL, and SQLite. Strategies for dialect parity, schema migration invariants, connection pooling under load, and deterministic seed generation.
+    
+    
+      RDBMS Architecture
+      Schema Migrations
+      SQL Dialects
+    
+  
+
+  
+    
+      
+      
+### Interpretable ML on High-Throughput Data
+
+    
+    
+      Lessons from the GSTN Hackathon analyzing 900,000+ real-world taxpayer records. Feature engineering, addressing high class imbalance, XGBoost/LightGBM hyperparameter optimization, and SHAP explainability.
+    
+    
+      Tabular ML
+      SHAP Explainability
+      XGBoost / LightGBM
+    
+  
+
+  
+    
+      
+      
+### Autonomous AI Agent Workflows & Tooling
+
+    
+    
+      Designing multi-agent systems with bounded execution, structured memory architectures, MCP integration, and automated verification test harnesses.
+    
+    
+      Autonomous Agents
+      MCP Tools
+      Verification Harnesses
+    
+  
+
+---
+
+## Official Media Assets & Brand Marks
+
+All marks are mathematically compiled from the **Geometric Constructivist "S"** vector source:
+
+  
+    
+      Vector Monogram (Dark)
+    
+    
+      ![Monogram Dark](../assets/brand/monogram-dark.svg)
+    
+    
+### Obsidian Monogram Mark
+
+    Primary brand mark for dark surfaces, app icons, and publications.
+    [Download SVG](../assets/brand/monogram-dark.svg)
+  
+
+  
+    
+      Vector Monogram (Light)
+    
+    
+      ![Monogram Light](../assets/brand/monogram-light.svg)
+    
+    
+### Light Canvas Monogram Mark
+
+    High-contrast mark for white documents, PDF reports, and light background media.
+    [Download SVG](../assets/brand/monogram-light.svg)
+  
+
+  
+    
+      Verified Author Headshot
+    
+    
+      ![Sunil Sharma](../assets/mrxss_400x400.jpg)
+    
+    
+### Official Profile Photo
+
+    High-resolution canonical headshot for speaker bios and media articles.
+    [Download Photo (400x400)](../assets/mrxss_400x400.jpg)
+  
+
+  
+    
+      YouTube Watermark
+    
+    
+      ![YouTube Watermark](../assets/brand/video/watermark-150x150.png)
+    
+    
+### Video Branding Watermark
+
+    150×150px transparent PNG for official YouTube video branding overlay.
+    [Download PNG](../assets/brand/video/watermark-150x150.png)
+  
+
+---
+
+## Brand Guidelines & Media Attribution
+
+- **Naming Standards**: Always refer to Sunil Sharma as *"Sunil Sharma"* or *"Sunil Sharma (@mrxsierra)"*.
+- **Clear Space**: Ensure at least 25% padding surrounds the monogram in all digital and print layouts.
+- **Color Integrity**: The primary mark should be presented on Obsidian (`#08090D`), dark slate (`#18181B`), or pure white (`#FFFFFF`).
+- **Media Inquiries**: For interviews, speaking engagements, or press quotes, reach out via the [Contact Portal](../contact.md) or email directly.
+
+================================================================================
+
 ## SECTION: Release History & Changelog
 ## Path: docs/changelog.md
 --------------------------------------------------------------------------------
