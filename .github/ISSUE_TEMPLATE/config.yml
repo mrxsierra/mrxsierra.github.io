@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security & Governance
+    url: https://github.com/mrxsierra/mrxsierra.github.io/blob/main/CONTRIBUTING.md
+    about: Review our contribution, versioning, and SDLC practices.

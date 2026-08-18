@@ -1,15 +1,74 @@
-name: CI
+name: CI/CD Pipeline
 
 on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 
 permissions:
   contents: write
 
 jobs:
+  validate:
+    name: Lint, Typecheck, Build & Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install mkdocs-material[imaging] \
+                      pymdown-extensions \
+                      mkdocs-blogging-plugin \
+                      mkdocs-git-revision-date-localized-plugin \
+                      mkdocs-glightbox \
+                      mkdocs-git-committers-plugin-2 \
+                      beautifulsoup4 \
+                      mypy \
+                      pytest \
+                      ruff \
+                      types-PyYAML \
+                      types-beautifulsoup4 \
+                      types-requests
+
+      - name: Lint Code (Ruff)
+        run: ruff check .
+
+      - name: Format Check (Ruff)
+        run: ruff format --check .
+
+      - name: Static Type Check (Mypy)
+        run: mypy hooks scripts tests
+
+      - name: Build Site (MkDocs Strict)
+        run: mkdocs build --strict
+
+      - name: Run Verification Test Suite (Pytest)
+        run: pytest tests/ -v
+
   deploy:
+    name: Deploy to GitHub Pages
+    needs: validate
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
 
     steps:
@@ -26,7 +85,8 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.x
+          python-version: "3.12"
+          cache: "pip"
 
       - name: Set Cache ID
         run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
@@ -39,8 +99,27 @@ jobs:
           restore-keys: |
             mkdocs-material-
 
-      - name: Install MkDocs Material
-        run: pip install mkdocs-material mkdocs-blogging-plugin mkdocs-git-revision-date-localized-plugin pymdown-extensions mkdocs-glightbox mkdocs-git-committers-plugin-2
+      - name: Install MkDocs Material & Plugins
+        run: |
+          python -m pip install --upgrade pip
+          pip install mkdocs-material[imaging] \
+                      pymdown-extensions \
+                      mkdocs-blogging-plugin \
+                      mkdocs-git-revision-date-localized-plugin \
+                      mkdocs-glightbox \
+                      mkdocs-git-committers-plugin-2
 
       - name: Deploy with MkDocs
         run: mkdocs gh-deploy --force
+
+      - name: Tag Release
+        run: |
+          VERSION=$(cat VERSION)
+          TAG="v${VERSION}"
+          if ! git rev-parse "$TAG" >/dev/null 2>&1; then
+            echo "Creating and pushing tag: $TAG"
+            git tag -a "$TAG" -m "Release $TAG"
+            git push origin "$TAG"
+          else
+            echo "Tag $TAG already exists."
+          fi

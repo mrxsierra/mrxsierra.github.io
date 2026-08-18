@@ -1,0 +1,36 @@
+name: Feature or Content Request
+description: Propose a new project case study, interactive component, or technical article.
+title: "feat: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to propose a new feature, blog post, or project case study for the site.
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal Summary
+      description: What new content or capability would you like to see?
+      placeholder: "e.g. Add case study on distributed consensus simulator or new interactive terminal demo."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - "New Project Case Study"
+        - "Technical Blog Post"
+        - "UI / Component Enhancement"
+        - "DevOps / CI/CD Tooling"
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Additional Context & Technical Specifications
+      description: Relevant stack, links to GitHub repositories, or screenshots.

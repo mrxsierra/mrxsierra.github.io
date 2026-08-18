@@ -1,0 +1,46 @@
+name: Bug Report
+description: Report a broken link, visual layout defect, or script issue.
+title: "fix: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting an issue with `mrxsierra.github.io`!
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the issue is.
+      placeholder: "e.g. Broken link on project page or unexpected styling on mobile view."
+    validations:
+      required: true
+
+  - type: input
+    id: page-url
+    attributes:
+      label: Affected Page URL or File
+      description: The page or file where the bug occurs.
+      placeholder: "https://mrxsierra.github.io/projects/ems-db/ or docs/projects/ems-db.md"
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to reproduce the behavior.
+      placeholder: |
+        1. Navigate to '...'
+        2. Click on '....'
+        3. See error
+    validations:
+      required: false
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment / Browser
+      description: Browser, OS, or device where the issue was observed.
+      placeholder: "Chrome 124 / macOS / Mobile Safari"
