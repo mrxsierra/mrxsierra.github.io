@@ -251,7 +251,7 @@ extra:
     new: Recently added
   
   # Site version
-  version: 0.1.0
+  version: 0.2.0
 
   # Footer disable generator
   generator: false
