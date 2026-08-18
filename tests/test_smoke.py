@@ -67,3 +67,13 @@ def test_static_assets_exist(site_dir: Path, asset_rel_path: str):
 def test_site_has_healthy_page_count(all_html_files: list[Path]):
     """Ensure that the site build generated a realistic volume of pages (at least 10)."""
     assert len(all_html_files) >= 10, f"Expected >= 10 HTML pages, found {len(all_html_files)}"
+
+
+def test_footer_directory_and_version_tag(site_dir: Path, version_str: str):
+    """Ensure that the unified footer renders directory columns and the synchronized version badge."""
+    index_html = (site_dir / "index.html").read_text(encoding="utf-8")
+    assert "site-footer-container" in index_html, "Missing site-footer-container in index.html"
+    assert "site-footer-grid" in index_html, "Missing site-footer-grid in index.html"
+    assert f"v{version_str}" in index_html, f"Expected version badge v{version_str} in footer"
+    assert "llms.txt" in index_html, "Missing llms.txt link in footer"
+    assert "feed_rss_created.xml" in index_html, "Missing RSS feed link in footer"
