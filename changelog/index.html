@@ -1346,14 +1346,15 @@ and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semant
 <h2 id="001-2026-08-17">[0.0.1] - 2026-08-17<a class="headerlink" href="#001-2026-08-17" title="Permanent link">¶</a></h2>
 <h3 id="added">Added<a class="headerlink" href="#added" title="Permanent link">¶</a></h3>
 <ul>
-<li>Enterprise-grade local verification test suite (<code>pytest</code>, <code>beautifulsoup4</code>) covering smoke tests, DOM semantics, zero broken links, and template leak checks.</li>
-<li>Standalone 5-stage pre-commit verification engine (<code>scripts/verify.py</code>).</li>
-<li>Single source of truth versioning system starting at <code>0.0.1</code> (<code>VERSION</code>, <code>pyproject.toml</code>).</li>
-<li>Automated AI documentation generator lifecycle hook (<code>hooks/generate_ai_docs.py</code>) for <code>llms.txt</code> and <code>llms-full.txt</code> (llmstxt.org specification).</li>
-<li>Standardized developer shortcuts (<code>Makefile</code>) and <abbr title="A distributed version control system">Git</abbr> pre-commit hook runner (<code>.githooks/pre-commit</code>).</li>
-<li>Modern <abbr title="A code hosting platform for version control and collaboration">GitHub</abbr> Actions <abbr title="Continuous Integration / Continuous Deployment">CI/CD</abbr> pipeline (<code>.github/workflows/ci.yml</code>) with pull request gating, strict builds, and automated deployment.</li>
-<li>Contributor and AI coding agent guidelines (<code>CONTRIBUTING.md</code>).</li>
-<li><abbr title="A code hosting platform for version control and collaboration">GitHub</abbr> issue forms (<code>bug_report.yml</code>, <code>feature_request.yml</code>) and pull request template (<code>PULL_REQUEST_TEMPLATE.md</code>).</li>
+<li><strong>Multi-Tier Automated Test Suite</strong>: 38 <abbr title="A Python testing framework">pytest</abbr> assertions across 6 test modules (<code>test_smoke.py</code>, <code>test_html_integrity.py</code>, <code>test_hooks.py</code>, <code>test_social_sharing.py</code>, <code>test_versioning.py</code>, <code>conftest.py</code>) verifying zero broken links, valid DOM semantics, and zero template leaks.</li>
+<li><strong>5-Stage Pre-Commit Engine</strong>: <abbr title="Command Line Interface">CLI</abbr> verification engine (<code>scripts/verify.py</code>) running Ruff lint, Ruff format, Mypy static analysis, MkDocs strict build, and Pytest.</li>
+<li><strong>Branch Protection &amp; Governance</strong>: Local <code>.githooks/pre-commit</code> guard preventing accidental direct commits on <code>main</code> and <abbr title="A code hosting platform for version control and collaboration">GitHub</abbr> Repository Rulesets (<code>.github/rulesets/main-protection.json</code>).</li>
+<li><strong>Multi-Channel RSS Syndication</strong>: Automated post-build hook (<code>hooks/generate_rss_feed.py</code>) generating <abbr title="World Wide Web Consortium">W3C</abbr> RSS 2.0 feeds (<code>feed.xml</code>, <code>feed_blog.xml</code>, <code>feed_projects.xml</code>) with RSS auto-discovery tags.</li>
+<li><strong>Responsive Social Sharing Widget</strong>: 8-platform share component (<code>overrides/partials/social_share.html</code>, <code>docs/javascripts/index.js</code>, <code>docs/stylesheets/extra.css</code>) with copy-to-clipboard toast feedback.</li>
+<li><strong>Single Source of Truth SemVer</strong>: Root <code>VERSION</code> file (<code>0.0.1</code>) synchronized with <code>pyproject.toml</code>, <code>mkdocs.yml</code>, and auto-generated <code>docs/changelog.md</code> via <code>scripts/bump_version.py</code>.</li>
+<li><strong>Persistent Footer Version Tag</strong>: Clean interactive version pill in <code>overrides/partials/copyright.html</code> linking directly to <code>/changelog/</code>.</li>
+<li><strong>AI Documentation Endpoints</strong>: Pre-build hook (<code>hooks/generate_ai_docs.py</code>) generating <a href="https://mrxsierra.github.io/llms.txt"><code>llms.txt</code></a> and <a href="https://mrxsierra.github.io/llms-full.txt"><code>llms-full.txt</code></a> following the llmstxt.org standard.</li>
+<li><strong><abbr title="A code hosting platform for version control and collaboration">GitHub</abbr> Workflow Automation</strong>: Multi-stage <abbr title="Continuous Integration / Continuous Deployment">CI/CD</abbr> pipeline (<code>.github/workflows/ci.yml</code>), issue forms (<code>bug_report.yml</code>, <code>feature_request.yml</code>), and PR template (<code>PULL_REQUEST_TEMPLATE.md</code>).</li>
 </ul>
 <!-- markdownlint-disable -->
 
@@ -1378,7 +1379,7 @@ and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semant
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 18, 2026 08:38:43 UTC">August 18, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 18, 2026 09:12:32 UTC">August 18, 2026</span>
   </span>
 
     
