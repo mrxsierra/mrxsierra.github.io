@@ -28,7 +28,7 @@ As developers, we frequently encounter diverse SQL engines. While core relationa
   </div>
   <div style="font-size: 13.5px; color: var(--color-text-secondary); line-height: 1.5;">
     <strong>Part 1:</strong> Schema Definitions, DDL, &amp; Trigger Architecture (Current)<br>
-    <strong>Part 2:</strong> <a href="../2-query-interaction-diff/">Beyond the Schema: Querying, CLI Interaction, &amp; Docker Nuances</a>
+    <strong>Part 2:</strong> <a href="../beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql-postgresql/">Beyond the Schema: Querying, CLI Interaction, &amp; Docker Nuances</a>
   </div>
 </div>
 
@@ -328,7 +328,7 @@ When aggregating nullable scores (`SUM`), empty record sets return `NULL` unless
 <div class="series-banner" style="border-left-color: var(--color-accent);">
   <div class="series-banner-header">
     <span class="series-badge">Next Article</span>
-    <a href="../2-query-interaction-diff/" class="btn btn-secondary" style="padding: 4px 12px; font-size: 12.5px;">Read Part 2 &rarr;</a>
+    <a href="../beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql-postgresql/" class="btn btn-secondary" style="padding: 4px 12px; font-size: 12.5px;">Read Part 2 &rarr;</a>
   </div>
   <p style="margin: 0; font-size: 13.5px; color: var(--color-text-secondary); line-height: 1.5;">
     <strong>Beyond the Schema: A Practical Guide to Querying and Interacting with SQLite, MySQL, &amp; PostgreSQL</strong><br>
