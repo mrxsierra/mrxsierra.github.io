@@ -11,6 +11,7 @@ EXPECTED_CORE_PAGES = [
     "index.html",
     "404.html",
     "about/index.html",
+    "brand/index.html",
     "resume/index.html",
     "contact/index.html",
     "projects/index.html",
@@ -37,6 +38,7 @@ EXPECTED_STATIC_ASSETS = [
     "stylesheets/extra.css",
     "javascripts/index.js",
     "assets/img/favicon.ico",
+    "assets/img/logo-monogram.svg",
 ]
 
 

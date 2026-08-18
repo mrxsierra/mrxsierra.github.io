@@ -2,6 +2,12 @@
 
 {% block extrahead %}
   {{ super() }}
+  <!-- Exact Brand Favicon & Web Manifest -->
+  <link rel="icon" type="image/svg+xml" href="{{ config.site_url }}assets/img/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ config.site_url }}assets/img/apple-touch-icon.png" />
+  <link rel="manifest" href="{{ config.site_url }}assets/img/site.webmanifest" />
+  <meta name="theme-color" content="#08090d" />
+
   <!-- Pinterest Domain Verification -->
   <meta name="p:domain_verify" content="27f1066f07901202885ef3bb8b8c56fd" />
 
@@ -31,7 +37,9 @@
     <meta name="twitter:title" content="{% if page.meta and page.meta.title %}{{ page.meta.title }}{% elif page.title %}{{ page.title }} - {{ config.site_name }}{% else %}{{ config.site_name }}{% endif %}" />
     <meta name="twitter:description" content="{% if page.meta and page.meta.description %}{{ page.meta.description }}{% else %}{{ config.site_description }}{% endif %}" />
     {% if page.meta and page.meta.image %}
-      <meta name="twitter:image" content="{{ config.site_url ~ page.meta.image }}" />
+      <meta property="twitter:image" content="{{ config.site_url ~ page.meta.image }}" />
+    {% else %}
+      <meta property="twitter:image" content="{{ config.site_url }}assets/img/preview.png" />
     {% endif %}
   {% endif %}
 {% endblock %}

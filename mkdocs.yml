@@ -36,6 +36,7 @@ nav:
       - Blogs: blog/index.md
   - About:
       - Profile: about.md
+      - Brand & Press Kit: brand/index.md
       - Changelog: changelog.md
   - Resume: resume.md
   - Contact: contact.md
