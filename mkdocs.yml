@@ -250,6 +250,9 @@ extra:
     - icon: fontawesome/brands/docker
       link: https://hub.docker.com/u/mrxsierra
       name: DockerHub
+    - icon: fontawesome/brands/pinterest
+      link: https://www.pinterest.com/mrxsierra/
+      name: Pinterest
     - icon: fontawesome/solid/rss
       link: https://mrxsierra.github.io/feed_rss_created.xml
       name: RSS Feed (All Updates)

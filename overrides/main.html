@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  <!-- Pinterest Domain Verification -->
+  <meta name="p:domain_verify" content="27f1066f07901202885ef3bb8b8c56fd" />
+
+  <!-- RSS Feed Auto-Discovery for Syndication -->
+  <link rel="alternate" type="application/rss+xml" title="{{ config.site_name }} - RSS Feed" href="{{ config.site_url }}feed_rss_created.xml" />
+  <link rel="alternate" type="application/rss+xml" title="{{ config.site_name }} - Recent Updates" href="{{ config.site_url }}feed_rss_updated.xml" />
+  <link rel="alternate" type="application/rss+xml" title="{{ config.site_name }} - Blog Feed" href="{{ config.site_url }}feed_blog.xml" />
+  <link rel="alternate" type="application/rss+xml" title="{{ config.site_name }} - Projects Feed" href="{{ config.site_url }}feed_projects.xml" />
+
+  <!-- Open Graph & Social Card Meta Tags -->
+  {% if page %}
+    <meta property="og:type" content="{% if page.meta and page.meta.type %}{{ page.meta.type }}{% elif 'blog/' in page.url or 'projects/' in page.url %}article{% else %}website{% endif %}" />
+    <meta property="og:title" content="{% if page.meta and page.meta.title %}{{ page.meta.title }}{% elif page.title %}{{ page.title }} - {{ config.site_name }}{% else %}{{ config.site_name }}{% endif %}" />
+    <meta property="og:description" content="{% if page.meta and page.meta.description %}{{ page.meta.description }}{% else %}{{ config.site_description }}{% endif %}" />
+    <meta property="og:url" content="{{ page.canonical_url or (config.site_url ~ page.url) }}" />
+    <meta property="og:site_name" content="{{ config.site_name }}" />
+    {% if page.meta and page.meta.image %}
+      <meta property="og:image" content="{{ config.site_url ~ page.meta.image }}" />
+    {% else %}
+      <meta property="og:image" content="{{ config.site_url }}assets/img/preview.png" />
+    {% endif %}
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@mrxsierra" />
+    <meta name="twitter:creator" content="@mrxsierra" />
+    <meta name="twitter:title" content="{% if page.meta and page.meta.title %}{{ page.meta.title }}{% elif page.title %}{{ page.title }} - {{ config.site_name }}{% else %}{{ config.site_name }}{% endif %}" />
+    <meta name="twitter:description" content="{% if page.meta and page.meta.description %}{{ page.meta.description }}{% else %}{{ config.site_description }}{% endif %}" />
+    {% if page.meta and page.meta.image %}
+      <meta name="twitter:image" content="{{ config.site_url ~ page.meta.image }}" />
+    {% endif %}
+  {% endif %}
+{% endblock %}
