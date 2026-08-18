@@ -54,7 +54,7 @@ Systems Architecture • Autonomous Agents • Distributed Data
       
       
         > System
-        Production-grade & verified 
+        v0.0.1 • Verified & Automated CI/CD 
       
     
   
@@ -542,6 +542,23 @@ Systems Architecture • Autonomous Agents • Distributed Data
     
   
 
+  
+    
+      
+      
+### SDLC & Release Engineering
+
+    
+    
+      Pytest Multi-Tier Suite
+      Mypy Type Checking
+      Ruff Linter & Formatter
+      GitHub Actions CI/CD
+      Semantic Versioning (SemVer)
+      Git Pre-Commit Hooks
+    
+  
+
 ---
 
 ## Technical Writing & Publications
@@ -653,6 +670,32 @@ Practical architectural guides, cross-engine SQL compatibility, and programmatic
   [Full Engineering Story](../about/)
   [View Projects Portfolio](../projects/)
   [Contact](../contact/)
+
+================================================================================
+
+## SECTION: Release History & Changelog
+## Path: docs/changelog.md
+--------------------------------------------------------------------------------
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+---
+
+## [0.0.1] - 2026-08-17
+
+### Added
+- Enterprise-grade local verification test suite (`pytest`, `beautifulsoup4`) covering smoke tests, DOM semantics, zero broken links, and template leak checks.
+- Standalone 5-stage pre-commit verification engine (`scripts/verify.py`).
+- Single source of truth versioning system starting at `0.0.1` (`VERSION`, `pyproject.toml`).
+- Automated AI documentation generator lifecycle hook (`hooks/generate_ai_docs.py`) for `llms.txt` and `llms-full.txt` (llmstxt.org specification).
+- Standardized developer shortcuts (`Makefile`) and Git pre-commit hook runner (`.githooks/pre-commit`).
+- Modern GitHub Actions CI/CD pipeline (`.github/workflows/ci.yml`) with pull request gating, strict builds, and automated deployment.
+- Contributor and AI coding agent guidelines (`CONTRIBUTING.md`).
+- GitHub issue forms (`bug_report.yml`, `feature_request.yml`) and pull request template (`PULL_REQUEST_TEMPLATE.md`).
 
 ================================================================================
 
@@ -1372,7 +1415,7 @@ As developers, we frequently encounter diverse SQL engines. While core relationa
   
   
     **Part 1:** Schema Definitions, DDL, & Trigger Architecture (Current)
-    **Part 2:** [Beyond the Schema: Querying, CLI Interaction, & Docker Nuances](../2-query-interaction-diff/)
+    **Part 2:** [Beyond the Schema: Querying, CLI Interaction, & Docker Nuances](../beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql-postgresql/)
   
 
 This technical reference draws directly from real-world multi-database migrations implemented in the [**Examination Management System (EMS DB)**](https://github.com/mrxsierra/ems-db/) repository.
@@ -1670,7 +1713,7 @@ When aggregating nullable scores (`SUM`), empty record sets return `NULL` unless
 
   
     Next Article
-    [Read Part 2 →](../2-query-interaction-diff/)
+    [Read Part 2 →](../beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql-postgresql/)
   
   
     **Beyond the Schema: A Practical Guide to Querying and Interacting with SQLite, MySQL, & PostgreSQL**
@@ -1700,7 +1743,7 @@ Building on our analysis of cross-engine schema definitions, this guide focuses 
     Part 2 of 2
   
   
-    **Part 1:** [Navigating the Nuances: SQL Dialects (SQLite, MySQL, PostgreSQL)](../1-schema-diff/)
+    **Part 1:** [Navigating the Nuances: SQL Dialects (SQLite, MySQL, PostgreSQL)](../navigating-the-nuances-a-developers-guide-to-sql-dialects-sqlite-mysql-postgresql/)
     **Part 2:** Querying, CLI Interaction, & Docker Nuances (Current)
   
 
@@ -1885,7 +1928,7 @@ Understanding both the schema syntax (**Part 1**) and the operational tooling (*
 
   
     Series Complete
-    [← Review Part 1](../1-schema-diff/)
+    [← Review Part 1](../navigating-the-nuances-a-developers-guide-to-sql-dialects-sqlite-mysql-postgresql/)
   
   
     **Part 1: Navigating the Nuances: A Developer's Guide to SQL Dialects**

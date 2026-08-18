@@ -5,6 +5,7 @@
 - **Name**: Sunil Sharma
 - **Handle**: @mrxsierra
 - **Title**: Full-Stack & AI Systems Specialist
+- **Version**: v0.0.1
 - **Website**: https://mrxsierra.github.io/
 - **GitHub**: https://github.com/mrxsierra
 - **Primary Specializations**: Autonomous Agent Architectures, Multi-RDBMS Database Engineering (PostgreSQL, MySQL, SQLite), Machine Learning Competition Pipelines, Cloud Tooling (AWS S3, LocalStack, Docker).
@@ -32,7 +33,7 @@
 ## Technical Articles & Architecture Deep Dives
 
 - [Navigating the Nuances: A Developer's Guide to SQL Dialects (SQLite, MySQL, PostgreSQL)](https://mrxsierra.github.io/blog/2025/05/07/navigating-the-nuances-a-developers-guide-to-sql-dialects-sqlite-mysql-postgresql/): Comprehensive breakdown of SQL dialect differences across DDL, triggers, data types, and index strategies.
-- [Beyond the Schema: A Practical Guide to Querying and Interacting with SQLite, MySQL, & PostgreSQL](https://mrxsierra.github.io/blog/2025/05/07/beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql--postgresql/): Practical patterns for CLI interaction, Dockerized connection debugging, and Python multi-database automation.
+- [Beyond the Schema: A Practical Guide to Querying and Interacting with SQLite, MySQL, & PostgreSQL](https://mrxsierra.github.io/blog/2025/05/07/beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql-postgresql/): Practical patterns for CLI interaction, Dockerized connection debugging, and Python multi-database automation.
 
 ---
 

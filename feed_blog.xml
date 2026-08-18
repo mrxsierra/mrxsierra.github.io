@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>mrxsierra | Technical Blog</title>
+    <link>https://mrxsierra.github.io/blog/</link>
+    <description>In-depth database engineering, SQL dialect comparisons, and systems automation articles by Sunil Sharma.</description>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 18 Aug 2026 08:48:56 +0000</lastBuildDate>
+    <atom:link href="https://mrxsierra.github.io/feed_blog.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Beyond the Schema: A Practical Guide to Querying and Interacting with SQLite, MySQL, &amp; PostgreSQL</title>
+      <link>https://mrxsierra.github.io/blog/2025/05/07/beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql-postgresql/</link>
+      <guid isPermaLink="true">https://mrxsierra.github.io/blog/2025/05/07/beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql-postgresql/</guid>
+      <description>A practical guide to querying, CLI administration, Docker container networking, and auto-increment sequence resets across SQLite, MySQL, and PostgreSQL.</description>
+      <pubDate>Wed, 07 May 2025 12:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Navigating the Nuances: A Developer's Guide to SQL Dialects (SQLite, MySQL, PostgreSQL)</title>
+      <link>https://mrxsierra.github.io/blog/2025/05/07/navigating-the-nuances-a-developers-guide-to-sql-dialects-sqlite-mysql-postgresql/</link>
+      <guid isPermaLink="true">https://mrxsierra.github.io/blog/2025/05/07/navigating-the-nuances-a-developers-guide-to-sql-dialects-sqlite-mysql-postgresql/</guid>
+      <description>A comparative guide to SQL dialects (SQLite, MySQL, and PostgreSQL) covering schema definition, auto-increment keys, trigger procedures, and type systems.</description>
+      <pubDate>Wed, 07 May 2025 12:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>
