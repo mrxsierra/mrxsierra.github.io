@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.1.0] - 2026-08-18
+
+### Added
+- **Unified Developer Footer Navigation**: Bespoke 4-column engineering directory and dual-tile directional navigation (`md-footer__link`) with 1px neutral border framing, subtle hover elevation, topic pills, and directional chevrons.
+- **Pinterest Domain Verification**: Global site verification metadata (`<meta name="p:domain_verify">`) and Pinterest profile integration under developer social channels.
+- **Automated AI Knowledge Base Expansion**: Updated `llms.txt` and `llms-full.txt` endpoints with complete syndication, RSS feed directory, and release changelog sections.
+- **Main Branch Protection Ruleset**: Automated GitHub Repository Ruleset enforcement (`Protect main branch`) requiring pull request reviews and passing CI status checks.
+
+### Changed
+- Refactored `hooks/generate_ai_docs.py` with content-differential caching (`write_if_changed`) to eliminate infinite reload loops during local `mkdocs serve`.
+- Standardized editorial typography and project header meta cards across all 6 engineering case studies.
+
+
 ## [0.0.1] - 2026-08-17
 
 ### Added

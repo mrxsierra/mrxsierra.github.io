@@ -26,6 +26,12 @@ def docs_dir() -> Path:
 
 
 @pytest.fixture(scope="session")
+def version_str() -> str:
+    """Returns the current version string from VERSION file."""
+    return (PROJECT_ROOT / "VERSION").read_text(encoding="utf-8").strip()
+
+
+@pytest.fixture(scope="session")
 def site_dir() -> Path:
     """
     Returns the built site directory.
