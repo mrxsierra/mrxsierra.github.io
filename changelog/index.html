@@ -1159,6 +1159,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
+  <a href="#010-2026-08-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        [0.1.0] - 2026-08-18
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="[0.1.0] - 2026-08-18">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Added
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changed
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#001-2026-08-17" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1171,7 +1210,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#added" class="md-nav__link">
+  <a href="#added_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         Added
@@ -1283,6 +1322,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
+  <a href="#010-2026-08-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        [0.1.0] - 2026-08-18
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="[0.1.0] - 2026-08-18">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Added
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changed
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#001-2026-08-17" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1295,7 +1373,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#added" class="md-nav__link">
+  <a href="#added_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         Added
@@ -1343,8 +1421,21 @@
 <p>The format is based on <a href="https://keepachangelog.com/en/1.1.0/">Keep a Changelog</a>,
 and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
 <hr>
-<h2 id="001-2026-08-17">[0.0.1] - 2026-08-17<a class="headerlink" href="#001-2026-08-17" title="Permanent link">¶</a></h2>
+<h2 id="010-2026-08-18">[0.1.0] - 2026-08-18<a class="headerlink" href="#010-2026-08-18" title="Permanent link">¶</a></h2>
 <h3 id="added">Added<a class="headerlink" href="#added" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Unified Developer Footer Navigation</strong>: Bespoke 4-column engineering directory and dual-tile directional navigation (<code>md-footer__link</code>) with 1px neutral border framing, subtle hover elevation, topic pills, and directional chevrons.</li>
+<li><strong>Pinterest Domain Verification</strong>: Global site verification metadata (<code>&lt;meta name="p:domain_verify"&gt;</code>) and Pinterest profile integration under developer social channels.</li>
+<li><strong>Automated AI Knowledge Base Expansion</strong>: Updated <code>llms.txt</code> and <code>llms-full.txt</code> endpoints with complete syndication, RSS feed directory, and release changelog sections.</li>
+<li><strong>Main Branch Protection Ruleset</strong>: Automated <abbr title="A code hosting platform for version control and collaboration">GitHub</abbr> Repository Ruleset enforcement (<code>Protect main branch</code>) requiring pull request reviews and passing CI status checks.</li>
+</ul>
+<h3 id="changed">Changed<a class="headerlink" href="#changed" title="Permanent link">¶</a></h3>
+<ul>
+<li>Refactored <code>hooks/generate_ai_docs.py</code> with content-differential caching (<code>write_if_changed</code>) to eliminate infinite reload loops during local <code>mkdocs serve</code>.</li>
+<li>Standardized editorial typography and project header meta cards across all 6 engineering case studies.</li>
+</ul>
+<h2 id="001-2026-08-17">[0.0.1] - 2026-08-17<a class="headerlink" href="#001-2026-08-17" title="Permanent link">¶</a></h2>
+<h3 id="added_1">Added<a class="headerlink" href="#added_1" title="Permanent link">¶</a></h3>
 <ul>
 <li><strong>Multi-Tier Automated Test Suite</strong>: 38 <abbr title="A Python testing framework">pytest</abbr> assertions across 6 test modules (<code>test_smoke.py</code>, <code>test_html_integrity.py</code>, <code>test_hooks.py</code>, <code>test_social_sharing.py</code>, <code>test_versioning.py</code>, <code>conftest.py</code>) verifying zero broken links, valid DOM semantics, and zero template leaks.</li>
 <li><strong>5-Stage Pre-Commit Engine</strong>: <abbr title="Command Line Interface">CLI</abbr> verification engine (<code>scripts/verify.py</code>) running Ruff lint, Ruff format, Mypy static analysis, MkDocs strict build, and Pytest.</li>
@@ -1379,7 +1470,7 @@ and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semant
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 18, 2026 09:12:32 UTC">August 18, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 18, 2026 09:23:19 UTC">August 18, 2026</span>
   </span>
 
     
@@ -1410,6 +1501,11 @@ and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semant
         <a href="https://github.com/mrxsierra" class="md-author" title="@mrxsierra">
           
           <img src="https://avatars.githubusercontent.com/u/9698455?v=4&amp;size=72" alt="mrxsierra">
+        </a>
+      
+        <a href="https://github.com/web-flow" class="md-author" title="@web-flow">
+          
+          <img src="https://avatars.githubusercontent.com/u/19864447?v=4&amp;size=72" alt="web-flow">
         </a>
       
       
@@ -1514,57 +1610,119 @@ and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semant
         
       </main>
       
-        <footer class="md-footer">
+        <footer class="md-footer site-footer-container">
+
+  <!-- 1. Directional Previous / Next Page Navigation Tiles -->
   
-    
+    <nav class="md-footer__inner md-grid site-footer-nav" aria-label="Footer">
       
-      <nav class="md-footer__inner md-grid" aria-label="Footer">
-        
-          
-          <a href="../about/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Profile">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                Profile
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../resume/" class="md-footer__link md-footer__link--next" aria-label="Next: Resume">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Resume
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
-            </div>
-          </a>
-        
-      </nav>
-    
+        <a href="../about/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Profile">
+          <div class="md-footer__button md-icon">
+            <i class="fas fa-arrow-left" aria-hidden="true"></i>
+          </div>
+          <div class="md-footer__title">
+            <span class="md-footer__direction">Previous</span>
+            <div class="md-ellipsis">Profile</div>
+          </div>
+        </a>
+      
+
+      
+        <a href="../resume/" class="md-footer__link md-footer__link--next" aria-label="Next: Resume">
+          <div class="md-footer__title">
+            <span class="md-footer__direction">Next</span>
+            <div class="md-ellipsis">Resume</div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </div>
+        </a>
+      
+    </nav>
   
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
+
+  <!-- 2. Developer Engineering Directory Strip -->
+  <div class="site-footer-directory md-grid">
+    <div class="site-footer-grid">
+
+      <!-- Column 1: Identity & Telemetry -->
+      <div class="footer-col footer-col--brand">
+        <div class="footer-brand-header">
+          <div class="footer-brand-monogram">
+            <span>&gt;_</span>
+          </div>
+          <div>
+            <div class="footer-brand-name">Sunil Sharma</div>
+            <div class="footer-brand-handle">@mrxsierra</div>
+          </div>
+        </div>
+        <p class="footer-brand-bio">
+          Autonomous Agent Architectures, Multi-RDBMS Systems, and High-Throughput Automation Tooling.
+        </p>
+        <div class="footer-telemetry-strip">
+          <span class="footer-status-indicator">
+            <span class="status-dot"></span> CI/CD Verified
+          </span>
+          <a href="./" class="footer-version-badge" title="View Release Changelog">
+            <i class="fas fa-tag" aria-hidden="true"></i> v0.1.0
+          </a>
+        </div>
+      </div>
+
+      <!-- Column 2: Navigation -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Navigation</h4>
+        <ul class="footer-col-links">
+          <li><a href="..">Home</a></li>
+          <li><a href="../projects/">Projects Portfolio</a></li>
+          <li><a href="../blog/">Technical Blog</a></li>
+          <li><a href="../about/">About Developer</a></li>
+          <li><a href="../resume/">Resume &amp; Credentials</a></li>
+          <li><a href="../contact/">Get in Touch</a></li>
+          <li><a href="./">Release Changelog</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Machine & AI Endpoints -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Machine &amp; AI Endpoints</h4>
+        <ul class="footer-col-links">
+          <li><a href="../llms.txt" target="_blank" rel="noopener"><i class="fas fa-file-code"></i> llms.txt (Index)</a></li>
+          <li><a href="../llms-full.txt" target="_blank" rel="noopener"><i class="fas fa-file-lines"></i> llms-full.txt (Full KB)</a></li>
+          <li><a href="../robots.txt" target="_blank" rel="noopener"><i class="fas fa-robot"></i> robots.txt</a></li>
+          <li><a href="../feed_rss_created.xml" target="_blank" rel="noopener"><i class="fas fa-rss"></i> Main RSS Feed</a></li>
+          <li><a href="../feed_blog.xml" target="_blank" rel="noopener"><i class="fas fa-rss"></i> Blog RSS Feed</a></li>
+          <li><a href="../feed_projects.xml" target="_blank" rel="noopener"><i class="fas fa-rss"></i> Projects RSS Feed</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Developer Network -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Developer Network</h4>
+        <ul class="footer-col-links">
+          <li><a href="https://github.com/mrxsierra" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/sunilsharma97/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+          <li><a href="https://hub.docker.com/u/mrxsierra" target="_blank" rel="noopener"><i class="fab fa-docker"></i> DockerHub</a></li>
+          <li><a href="https://dev.to/mrxsierra" target="_blank" rel="noopener"><i class="fab fa-dev"></i> Dev.to</a></li>
+          <li><a href="https://medium.com/@mrxsierra" target="_blank" rel="noopener"><i class="fab fa-medium"></i> Medium</a></li>
+          <li><a href="https://www.pinterest.com/mrxsierra/" target="_blank" rel="noopener"><i class="fab fa-pinterest"></i> Pinterest</a></li>
+          <li><a href="https://x.com/mrxsierra" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i> X (Twitter)</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 3. Bottom Meta & Copyright Bar -->
+  <div class="md-footer-meta md-typeset site-footer-meta">
+    <div class="md-footer-meta__inner md-grid site-footer-meta__inner">
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
       © 2025 Sunil Sharma (mrxsierra). All rights reserved.
       <span class="footer-version-tag">
         <a href="./" title="View Release History &amp; Changelog">
-          <i class="fas fa-tag"></i> v0.0.1
+          <i class="fas fa-tag"></i> v0.1.0
         </a>
       </span>
     </div>
@@ -1675,6 +1833,7 @@ and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semant
       
     </div>
   </div>
+
 </footer>
       
     </div>
@@ -1688,7 +1847,7 @@ and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semant
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.footer", "navigation.instant.progress", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "header.autohide", "content.code.copy", "content.code.annotate", "content.tooltips", "content.footnote.tooltips", "content.action.view"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": {"C": "c", "CSS": "css", "HTML5": "html", "Home": "home", "JavaScript": "js", "Python": "python", "Welcome": "home", "blog": "blog", "latest": "latest", "project": "project"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "0.0.1"}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.footer", "navigation.instant.progress", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "header.autohide", "content.code.copy", "content.code.annotate", "content.tooltips", "content.footnote.tooltips", "content.action.view"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": {"C": "c", "CSS": "css", "HTML5": "html", "Home": "home", "JavaScript": "js", "Python": "python", "Welcome": "home", "blog": "blog", "latest": "latest", "project": "project"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "0.1.0"}</script>
     
     
       <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
