@@ -2,45 +2,38 @@
   <!-- Video Lower Third Broadcast Overlay (1920x1080) -->
   <defs>
     <style>
-      .lt-name { font-family: 'Inter', -apple-system, sans-serif; font-size: 38px; font-weight: 800; fill: #ffffff; letter-spacing: -0.5px; }
-      .lt-role { font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 500; fill: #818cf8; letter-spacing: 0.5px; }
+      .lt-name { font-family: 'Inter', sans-serif; font-size: 38px; font-weight: 800; fill: #FFFFFF; letter-spacing: -0.5px; }
+      .lt-role { font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 500; fill: #818CF8; letter-spacing: 0.5px; }
     </style>
   </defs>
-
-  <!-- Lower Third Card (Bottom Left Placement: x: 120, y: 860, w: 720, h: 120) -->
   <g transform="translate(120, 860)">
-    <!-- Backdrop Card with 1px Hairline -->
-    <rect width="680" height="120" rx="20" fill="#08090d" fill-opacity="0.94" stroke="#27272a" stroke-width="1.5" />
-    
-    <!-- Accent Indicator Bar -->
-    <rect x="0" y="24" width="6" height="72" rx="3" fill="#6366f1" />
-
-    <!-- Monogram Mark (72x72) -->
+    <rect width="680" height="120" rx="20" fill="#08090D" fill-opacity="0.94" stroke="#27272A" stroke-width="1.5" />
+    <rect x="0" y="24" width="6" height="72" rx="3" fill="#6366F1" />
     <g transform="translate(28, 24)">
-      <rect width="72" height="72" rx="14" fill="#18181b" stroke="#3f3f46" stroke-width="1" />
+      <rect width="72" height="72" rx="14" fill="#18181B" stroke="#3F3F46" stroke-width="1" />
       <g transform="scale(0.5625)">
-        <path fill="#ffffff" d="
-          M 92,30 L 92,48 L 77,48
-          C 77,40 71,34 62,34
-          C 53,34 47,39 47,46
-          C 47,53 53,57 63,60
-          L 73,63
-          C 88,68 96,75 96,89
-          C 96,104 83,114 62,114
-          C 42,114 28,103 28,88
-          L 28,70 L 43,70
-          C 43,79 50,86 62,86
-          C 72,86 78,80 78,73
-          C 78,66 71,62 61,59
-          L 51,56
-          C 36,51 29,44 29,31
-          C 29,16 43,6 62,6
-          C 81,6 92,16 92,30
-          Z" />
+        <path fill="#FFFFFF" d="M 92,30
+    L 92,48
+    L 77,48
+    C 77,40 71,34 62,34
+    C 53,34 47,39 47,46
+    C 47,53 53,57 63,60
+    L 73,63
+    C 88,68 96,75 96,89
+    C 96,104 83,114 62,114
+    C 42,114 28,103 28,88
+    L 28,70
+    L 43,70
+    C 43,79 50,86 62,86
+    C 72,86 78,80 78,73
+    C 78,66 71,62 61,59
+    L 51,56
+    C 36,51 29,44 29,31
+    C 29,16 43,6 62,6
+    C 81,6 92,16 92,30
+    Z" />
       </g>
     </g>
-
-    <!-- Speaker Details -->
     <text x="124" y="58" class="lt-name">Sunil Sharma</text>
     <text x="124" y="92" class="lt-role">FULL-STACK &amp; ML SYSTEMS • @mrxsierra</text>
   </g>

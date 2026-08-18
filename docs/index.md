@@ -454,18 +454,6 @@ tags:
         </div>
       </div>
 
-      <div class="profile-category-block" style="margin-top: 10px;">
-        <span class="profile-category-label">Machine &amp; AI Endpoints</span>
-        <div class="social-chips-grid">
-          <a href="llms.txt" target="_blank" rel="noopener" class="social-chip">
-            <i class="fas fa-robot"></i> llms.txt
-          </a>
-          <a href="llms-full.txt" target="_blank" rel="noopener" class="social-chip">
-            <i class="fas fa-file-code"></i> llms-full.txt
-          </a>
-        </div>
-      </div>
-
     </div>
 
   </div>

@@ -1,12 +1,14 @@
 """
-Automated Test Suite for Brand Identity, Vector Marks, and Content Creation Suite.
+Automated Test Suite for Brand Identity, Vector Marks, Content Creation Suite, and Press Kit.
 Verifies:
 1. Core vector marks exist and are valid SVG XML.
 2. Web favicons (SVG, ICO, Apple Touch, Android Chrome) exist.
 3. Video watermarks (150x150 PNG, lower third, end card) exist.
 4. Social headers (GitHub, LinkedIn, X, YouTube, preview.png) exist.
-5. Master Press Kit ZIP exists and is non-empty.
+5. Master Press Kit ZIP exists and contains structured directories.
 6. Web Manifest is valid JSON.
+7. Dedicated Press Kit page (/press/) exists and has download links.
+8. Brand Engine Python package modules exist and are importable.
 """
 
 import json
@@ -29,7 +31,6 @@ def test_core_vector_marks_exist(site_dir: Path):
     for svg_name in expected_svgs:
         svg_file = brand_dir / svg_name
         assert svg_file.exists(), f"Vector SVG {svg_name} must exist."
-        # Verify valid XML
         tree = ET.parse(svg_file)
         root = tree.getroot()
         assert "svg" in root.tag.lower(), f"{svg_name} root must be an SVG element."
@@ -106,6 +107,28 @@ def test_master_press_kit_zip(site_dir: Path):
 
     with zipfile.ZipFile(zip_path, "r") as zf:
         namelist = zf.namelist()
-        assert any("vector-svg" in n for n in namelist), "ZIP must contain vector SVGs."
+        assert any("vector" in n for n in namelist), "ZIP must contain vector marks."
         assert any("favicons" in n for n in namelist), "ZIP must contain favicons."
-        assert any("social-banners" in n for n in namelist), "ZIP must contain social banners."
+        assert any("social" in n for n in namelist), "ZIP must contain social banners."
+        assert any("00-PRESS-KIT-BIO-SHEET" in n for n in namelist), "ZIP must contain bio sheet."
+
+
+def test_press_kit_page_integrity(site_dir: Path):
+    press_html = site_dir / "press" / "index.html"
+    assert press_html.exists(), "Press Kit /press/ page must be built."
+    content = press_html.read_text(encoding="utf-8")
+    assert "Press Kit &amp; Media Resources" in content or "Press Kit" in content
+    assert "mrxsierra-brand-press-kit.zip" in content
+    assert "Media Fast Facts" in content
+
+
+def test_brand_engine_module_importable():
+    from scripts.brand_engine.config import BRAND_CONFIG
+    from scripts.brand_engine.packager import build_press_kit_zip
+    from scripts.brand_engine.rasterizer import rasterize_all_assets
+    from scripts.brand_engine.vector_builder import build_all_vectors
+
+    assert BRAND_CONFIG["handle"] == "mrxsierra"
+    assert callable(build_all_vectors)
+    assert callable(rasterize_all_assets)
+    assert callable(build_press_kit_zip)

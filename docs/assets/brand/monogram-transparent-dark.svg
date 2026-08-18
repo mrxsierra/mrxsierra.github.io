@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%">
-  <!-- mrxsierra | Monogram Transparent Dark (Light Mode Overlays) -->
-  <path fill="#08090d" d="
-    M 92,30
+  <!-- mrxsierra | Monogram Transparent Dark -->
+  <path fill="#08090D" d="M 92,30
     L 92,48
     L 77,48
     C 77,40 71,34 62,34

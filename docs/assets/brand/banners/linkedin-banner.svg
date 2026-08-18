@@ -2,54 +2,49 @@
   <!-- LinkedIn Profile Cover Banner (1584x396) -->
   <defs>
     <style>
-      .li-bg { fill: #08090d; }
-      .li-kicker { font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 700; fill: #818cf8; letter-spacing: 2px; }
-      .li-name { font-family: 'Inter', sans-serif; font-size: 44px; font-weight: 900; fill: #ffffff; letter-spacing: -1px; }
-      .li-role { font-family: 'Inter', sans-serif; font-size: 21px; font-weight: 500; fill: #cbd5e1; }
-      .li-sub { font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 500; fill: #94a3b8; }
+      .li-bg { fill: #08090D; }
+      .li-kicker { font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 700; fill: #818CF8; letter-spacing: 2px; }
+      .li-name { font-family: 'Inter', sans-serif; font-size: 44px; font-weight: 900; fill: #FFFFFF; letter-spacing: -1px; }
+      .li-role { font-family: 'Inter', sans-serif; font-size: 21px; font-weight: 500; fill: #CBD5E1; }
+      .li-sub { font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 500; fill: #94A3B8; }
     </style>
   </defs>
-
   <rect width="1584" height="396" class="li-bg" />
-  <rect x="16" y="16" width="1552" height="364" rx="14" fill="none" stroke="#27272a" stroke-width="1.5" />
-
-  <!-- Content positioned safely on right / center to clear left avatar area (Avatar sits at left: 60-240) -->
+  <rect x="16" y="16" width="1552" height="364" rx="14" fill="none" stroke="#27272A" stroke-width="1.5" />
   <g transform="translate(380, 80)">
-    <!-- Brand Header -->
     <g transform="translate(0, 0)">
-      <rect width="48" height="48" rx="10" fill="#18181b" stroke="#3f3f46" stroke-width="1" />
+      <rect width="48" height="48" rx="10" fill="#18181B" stroke="#3F3F46" stroke-width="1" />
       <g transform="scale(0.375)">
-        <path fill="#ffffff" d="
-          M 92,30 L 92,48 L 77,48
-          C 77,40 71,34 62,34
-          C 53,34 47,39 47,46
-          C 47,53 53,57 63,60
-          L 73,63
-          C 88,68 96,75 96,89
-          C 96,104 83,114 62,114
-          C 42,114 28,103 28,88
-          L 28,70 L 43,70
-          C 43,79 50,86 62,86
-          C 72,86 78,80 78,73
-          C 78,66 71,62 61,59
-          L 51,56
-          C 36,51 29,44 29,31
-          C 29,16 43,6 62,6
-          C 81,6 92,16 92,30
-          Z" />
+        <path fill="#FFFFFF" d="M 92,30
+    L 92,48
+    L 77,48
+    C 77,40 71,34 62,34
+    C 53,34 47,39 47,46
+    C 47,53 53,57 63,60
+    L 73,63
+    C 88,68 96,75 96,89
+    C 96,104 83,114 62,114
+    C 42,114 28,103 28,88
+    L 28,70
+    L 43,70
+    C 43,79 50,86 62,86
+    C 72,86 78,80 78,73
+    C 78,66 71,62 61,59
+    L 51,56
+    C 36,51 29,44 29,31
+    C 29,16 43,6 62,6
+    C 81,6 92,16 92,30
+    Z" />
       </g>
       <text x="64" y="32" class="li-kicker">FULL-STACK &amp; AI SYSTEMS ARCHITECT</text>
     </g>
-
     <text x="0" y="96" class="li-name">Sunil Sharma</text>
-    <text x="0" y="136" class="li-role">Autonomous Agents • Multi-RDBMS Optimization • ML Pipelines</text>
-    <text x="0" y="180" class="li-sub">mrxsierra.github.io • github.com/mrxsierra</text>
+    <text x="0" y="136" class="li-role">Autonomous Agents • Distributed Databases • Production Verification</text>
+    <text x="0" y="180" class="li-sub">https://mrxsierra.github.io • https://github.com/mrxsierra</text>
   </g>
-
-  <!-- Right Decorative Geometry -->
   <g transform="translate(1380, 80)">
-    <circle cx="80" cy="110" r="70" fill="none" stroke="#27272a" stroke-width="1" stroke-dasharray="3 3" />
-    <circle cx="80" cy="110" r="40" fill="none" stroke="#3f3f46" stroke-width="1" />
-    <circle cx="80" cy="110" r="4" fill="#6366f1" />
+    <circle cx="80" cy="110" r="70" fill="none" stroke="#27272A" stroke-width="1" stroke-dasharray="3 3" />
+    <circle cx="80" cy="110" r="40" fill="none" stroke="#3F3F46" stroke-width="1" />
+    <circle cx="80" cy="110" r="4" fill="#6366F1" />
   </g>
 </svg>

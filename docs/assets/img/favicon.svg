@@ -1,8 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%">
-  <!-- mrxsierra | Official Favicon SVG (Exact 1:1 Match with Header Logo) -->
-  <rect width="128" height="128" rx="26" fill="#08090d" />
-  <path fill="#ffffff" d="
-    M 92,30
+  <!-- mrxsierra | Master Monogram Dark -->
+  <rect width="128" height="128" rx="26" fill="#08090D" />
+  <path fill="#FFFFFF" d="M 92,30
     L 92,48
     L 77,48
     C 77,40 71,34 62,34
