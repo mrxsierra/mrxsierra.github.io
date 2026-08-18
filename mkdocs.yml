@@ -158,6 +158,7 @@ plugins:
       enabled: !ENV [CI, false]
       repository: mrxsierra/mrxsierra.github.io
       branch: main
+      token: !ENV [MKDOCS_GIT_COMMITTERS_APIKEY, ""]
   - git-revision-date-localized:
       enable_creation_date: true
       type: date

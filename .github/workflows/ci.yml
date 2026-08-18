@@ -60,6 +60,8 @@ jobs:
         run: mypy hooks scripts tests
 
       - name: Build Site (MkDocs Strict)
+        env:
+          MKDOCS_GIT_COMMITTERS_APIKEY: ${{ secrets.GITHUB_TOKEN }}
         run: mkdocs build --strict
 
       - name: Run Verification Test Suite (Pytest)
@@ -110,6 +112,8 @@ jobs:
                       mkdocs-git-committers-plugin-2
 
       - name: Deploy with MkDocs
+        env:
+          MKDOCS_GIT_COMMITTERS_APIKEY: ${{ secrets.GITHUB_TOKEN }}
         run: mkdocs gh-deploy --force
 
       - name: Tag Release
