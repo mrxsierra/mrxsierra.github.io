@@ -13,7 +13,9 @@ from bs4 import Tag
 from tests.conftest import HTMLDoc
 
 
-def test_opengraph_and_twitter_cards_present(site_dir: Path, parsed_html_docs: dict[Path, HTMLDoc]):
+def test_opengraph_and_twitter_cards_present(
+    site_dir: Path, parsed_html_docs: dict[Path, HTMLDoc], version_str: str
+):
     """Verify that OpenGraph and Twitter Card tags exist on all standard site pages."""
     assert len(parsed_html_docs) > 0, "No built HTML files found in site/ directory."
 
@@ -38,9 +40,16 @@ def test_opengraph_and_twitter_cards_present(site_dir: Path, parsed_html_docs: d
         # Twitter Cards
         tw_card = soup.find("meta", attrs={"name": "twitter:card"})
         tw_site = soup.find("meta", attrs={"name": "twitter:site"})
-
         assert tw_card is not None, f"Missing twitter:card in {rel_path}"
         assert tw_site is not None, f"Missing twitter:site in {rel_path}"
+
+        # Version metadata
+        meta_ver = soup.find("meta", attrs={"name": "version"})
+        assert isinstance(meta_ver, Tag), f"Missing meta[name=version] in {rel_path}"
+        content_val = meta_ver.get("content")
+        assert content_val == version_str, (
+            f"meta[name=version] content ({content_val}) != {version_str} in {rel_path}"
+        )
 
 
 def test_social_share_widget_present_and_not_duplicated(
@@ -50,6 +59,8 @@ def test_social_share_widget_present_and_not_duplicated(
     content_pages = [
         "about/index.html",
         "resume/index.html",
+        "press/index.html",
+        "brand/index.html",
         "contact/index.html",
         "projects/index.html",
         "projects/gstn-pbc/index.html",
@@ -58,6 +69,7 @@ def test_social_share_widget_present_and_not_duplicated(
         "projects/paraxcel/index.html",
         "projects/s3-faker/index.html",
         "projects/test-site/index.html",
+        "changelog/index.html",
     ]
 
     for rel_path in content_pages:
@@ -72,7 +84,7 @@ def test_social_share_widget_present_and_not_duplicated(
         )
         assert isinstance(widgets[0], Tag), f"social-share-widget is not a Tag in {rel_path}"
 
-        # Verify all buttons including RSS and Pinterest
+        # Verify all buttons including RSS, Pinterest, and View Source
         expected_btn_ids = [
             "btn-share-native",
             "btn-share-x",
@@ -84,6 +96,8 @@ def test_social_share_widget_present_and_not_duplicated(
             "btn-share-telegram",
             "btn-share-rss",
             "btn-share-copy",
+            "btn-view-source",
+            "btn-suggest-edit",
         ]
         for btn_id in expected_btn_ids:
             btn = widgets[0].find(id=btn_id)

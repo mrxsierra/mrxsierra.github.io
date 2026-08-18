@@ -200,6 +200,7 @@ def build_ai_docs() -> None:
     output_lines = [
         "# Sunil Sharma (mrxsierra) — Full Technical Knowledge Base",
         "# Standard: llmstxt.org Full Ingestion Format",
+        f"# Version: v{version}",
         "# Website: https://mrxsierra.github.io/",
         "# Source: https://github.com/mrxsierra/mrxsierra.github.io",
         "",
