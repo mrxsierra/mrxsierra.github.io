@@ -12,6 +12,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.3.1] - 2026-08-18
+
+### Added
+- **"View Page Source" & "Suggest Edit" Developer Action Bar**: Added direct GitHub markdown source inspection (`btn-view-source`) and collaborative editing links on all content pages.
+- **Machine-Readable Version Metadata**: Added `<meta name="version">` and `<meta name="docsearch:version">` tags across all site pages for automated tooling and search indexing.
+- **Monotonic SemVer Tag Fallback**: Enhanced `bump_version.py` to continuously reference the highest remote Git tag, ensuring clean version progression across parallel and sequential releases.
+
+### Fixed
+- **LLM Knowledge Base Version Header**: Injected standardized `# Version: vX.Y.Z` metadata header into `llms-full.txt`.
+- **GitHub Actions Release Push**: Corrected automated branch push target to `origin HEAD:main` in the CI/CD deploy stage.
+
+## [0.3.0] - 2026-08-18
+
+### Added
+- **Dual-Tier Automated Release Architecture**: Fully automated Minor and Patch SemVer bumping, changelog categorization, and release tagging in GitHub Actions CI/CD upon PR merge, with full local support for intentional Major releases (`make bump-major`).
+- **Structured Conventional Commit Changelog Extraction**: Enhanced version bumper to automatically parse commit messages into `### Added` (`feat:`), `### Fixed` (`fix:`), and `### Changed` sections.
+
 ## [0.2.0] - 2026-08-18
 
 ### Added

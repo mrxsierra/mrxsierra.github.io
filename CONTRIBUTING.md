@@ -29,13 +29,17 @@ Welcome to the **`mrxsierra.github.io`** repository. This document provides a co
 │       ├── copyright.html     # Footer partial embedding active version tag & changelog link
 │       └── social_share.html  # 8-platform responsive social sharing & copy toast widget
 ├── scripts/                   # Developer automation & verification tooling
-│   ├── brand_engine/          # Automated SVG vector generation & press archive packager
-│   │   └── generate_brand_assets.py # Generates monograms, lockups, favicons, and zip
+│   ├── brand_engine/          # Modular vector generation & press archive compiler
+│   │   ├── cli.py             # User-friendly CLI tool (`python scripts/brand_engine/cli.py --all`)
+│   │   ├── config.py          # Single source of truth (colors, typography, bios, dimensions)
+│   │   ├── vector_builder.py  # Mathematical SVG generator (monograms, banners, watermarks)
+│   │   ├── rasterizer.py      # High-density ImageMagick wrapper (PNGs, multi-res ICOs)
+│   │   └── packager.py        # Automated Press Kit ZIP packager
 │   ├── bump_version.py        # SemVer bumper (updates VERSION, pyproject.toml, mkdocs.yml, CHANGELOG.md)
 │   ├── install_hooks.py       # Git pre-commit hook installer
 │   ├── setup_github_ruleset.sh# GitHub Repository Ruleset installer via gh CLI
 │   └── verify.py              # 5-stage pre-commit verification pipeline
-├── tests/                     # Automated pytest verification test suite (49 tests)
+├── tests/                     # Automated pytest verification test suite (51 tests)
 │   ├── conftest.py            # Pytest session fixtures (cached strict build & BeautifulSoup parsers)
 │   ├── test_brand_kit.py      # Vector marks, raster assets, banners, & press kit archive integrity
 │   ├── test_hooks.py          # Build hook unit tests & llms.txt format checks
@@ -148,8 +152,9 @@ make serve
 ### Brand Asset & Press Kit Engine
 To compile vector SVGs, multi-density favicons, YouTube watermarks, and package the master zip press kit:
 ```bash
-python scripts/brand_engine/generate_brand_assets.py
-# Outputs vector assets to docs/assets/brand/ and builds docs/assets/brand/mrxsierra-brand-press-kit.zip
+make brand
+# or: python scripts/brand_engine/cli.py --all
+# Subcommands: --vectors, --favicons, --watermarks, --banners, --zip
 ```
 
 ### Build Hooks & Dynamic Endpoints
