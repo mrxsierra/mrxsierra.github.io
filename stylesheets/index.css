@@ -652,6 +652,12 @@ body {
   color: var(--color-accent) !important;
 }
 
+/* Suppress source-file contributors aside on home landing page */
+.md-content:has(.main-body) .md-source-file,
+article:has(.main-body) .md-source-file {
+  display: none !important;
+}
+
 /* --------------------------------------------------------------------------
    3. Typeset & Markdown Styling Uniformity Across All Pages
    -------------------------------------------------------------------------- */
