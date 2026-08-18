@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <!-- 16:9 Article Cover Banner (Dev.to / Medium / Hashnode) -->
+  <defs>
+    <style>
+      .art-bg { fill: #08090d; }
+      .art-border { stroke: #27272a; stroke-width: 1.5; fill: none; }
+      .art-kicker { font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 700; fill: #818cf8; letter-spacing: 2px; }
+      .art-title { font-family: 'Inter', sans-serif; font-size: 54px; font-weight: 800; fill: #ffffff; letter-spacing: -1.5px; }
+      .art-author { font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 500; fill: #94a3b8; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="675" class="art-bg" />
+  <rect x="24" y="24" width="1152" height="627" rx="16" class="art-border" />
+
+  <!-- Monogram Header Tag -->
+  <g transform="translate(72, 72)">
+    <rect width="56" height="56" rx="12" fill="#18181b" stroke="#3f3f46" stroke-width="1" />
+    <g transform="scale(0.4375)">
+      <path fill="#ffffff" d="
+        M 92,30 L 92,48 L 77,48
+        C 77,40 71,34 62,34
+        C 53,34 47,39 47,46
+        C 47,53 53,57 63,60
+        L 73,63
+        C 88,68 96,75 96,89
+        C 96,104 83,114 62,114
+        C 42,114 28,103 28,88
+        L 28,70 L 43,70
+        C 43,79 50,86 62,86
+        C 72,86 78,80 78,73
+        C 78,66 71,62 61,59
+        L 51,56
+        C 36,51 29,44 29,31
+        C 29,16 43,6 62,6
+        C 81,6 92,16 92,30
+        Z" />
+    </g>
+    <text x="76" y="36" class="art-kicker">TECHNICAL PUBLICATION</text>
+  </g>
+
+  <!-- Title Block Placeholder -->
+  <g transform="translate(72, 300)">
+    <text x="0" y="0" class="art-title">Production Systems Architecture</text>
+    <text x="0" y="68" class="art-title" fill="#818cf8">&amp; Multi-RDBMS Engineering</text>
+  </g>
+
+  <!-- Author Footer -->
+  <g transform="translate(72, 560)">
+    <line x1="0" y1="0" x2="1056" y2="0" stroke="#27272a" stroke-width="1" />
+    <text x="0" y="42" class="art-author">Sunil Sharma (@mrxsierra) • mrxsierra.github.io</text>
+  </g>
+</svg>

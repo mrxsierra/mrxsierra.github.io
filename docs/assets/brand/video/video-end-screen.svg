@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <!-- YouTube 16:9 Video End Screen / Outro Template (1920x1080) -->
+  <defs>
+    <style>
+      .es-bg { fill: #08090d; }
+      .es-slot { fill: #111218; stroke: #27272a; stroke-width: 2; stroke-dasharray: 6 6; rx: 16px; }
+      .es-label { font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 600; fill: #71717a; text-anchor: middle; }
+      .es-title { font-family: 'Inter', sans-serif; font-size: 48px; font-weight: 800; fill: #ffffff; letter-spacing: -1px; }
+      .es-sub { font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 500; fill: #94a3b8; }
+      .es-link { font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 600; fill: #818cf8; }
+    </style>
+  </defs>
+
+  <rect width="1920" height="1080" class="es-bg" />
+  
+  <!-- Left Side: Brand & Call to Action -->
+  <g transform="translate(140, 220)">
+    <!-- Monogram Mark -->
+    <rect width="112" height="112" rx="24" fill="#18181b" stroke="#3f3f46" stroke-width="2" />
+    <g transform="scale(0.875)">
+      <path fill="#ffffff" d="
+        M 92,30 L 92,48 L 77,48
+        C 77,40 71,34 62,34
+        C 53,34 47,39 47,46
+        C 47,53 53,57 63,60
+        L 73,63
+        C 88,68 96,75 96,89
+        C 96,104 83,114 62,114
+        C 42,114 28,103 28,88
+        L 28,70 L 43,70
+        C 43,79 50,86 62,86
+        C 72,86 78,80 78,73
+        C 78,66 71,62 61,59
+        L 51,56
+        C 36,51 29,44 29,31
+        C 29,16 43,6 62,6
+        C 81,6 92,16 92,30
+        Z" />
+    </g>
+
+    <text x="0" y="190" class="es-title">Thanks for Watching.</text>
+    <text x="0" y="240" class="es-sub">Subscribe for deep dives in ML, databases, and systems architecture.</text>
+    
+    <g transform="translate(0, 310)">
+      <rect width="360" height="64" rx="32" fill="#6366f1" />
+      <text x="180" y="40" font-family="'Inter', sans-serif" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">SUBSCRIBE / @mrxsierra</text>
+    </g>
+
+    <text x="0" y="440" class="es-link">https://mrxsierra.github.io</text>
+  </g>
+
+  <!-- Right Side: Standard YouTube Video Card Placeholders -->
+  <!-- Video 1 (Top Right) -->
+  <rect x="1140" y="160" width="620" height="348" class="es-slot" />
+  <text x="1450" y="340" class="es-label">BEST FOR VIEWER</text>
+
+  <!-- Video 2 (Bottom Right) -->
+  <rect x="1140" y="560" width="620" height="348" class="es-slot" />
+  <text x="1450" y="740" class="es-label">RECENT UPLOAD</text>
+
+  <!-- Subscribe Circle Element Position -->
+  <circle cx="940" cy="530" r="80" class="es-slot" />
+  <text x="940" y="538" class="es-label" font-size="16">AVATAR</text>
+</svg>
