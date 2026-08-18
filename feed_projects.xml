@@ -5,49 +5,49 @@
     <link>https://mrxsierra.github.io/projects/</link>
     <description>Case studies, architecture breakdowns, and open-source project releases by Sunil Sharma.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Aug 2026 12:11:09 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 18 Aug 2026 12:30:45 +0000</lastBuildDate>
     <atom:link href="https://mrxsierra.github.io/feed_projects.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Paraxcel Document Toolkit</title>
       <link>https://mrxsierra.github.io/projects/paraxcel/</link>
       <guid isPermaLink="true">https://mrxsierra.github.io/projects/paraxcel/</guid>
       <description>High-performance DOCX-to-Excel document extraction suite featuring run-level formatting parser, Pydantic validation, and Tkinter desktop GUI.</description>
-      <pubDate>Tue, 18 Aug 2026 12:10:49 +0000</pubDate>
-    </item>
-    <item>
-      <title>Examination Management System DB</title>
-      <link>https://mrxsierra.github.io/projects/ems-db/</link>
-      <guid isPermaLink="true">https://mrxsierra.github.io/projects/ems-db/</guid>
-      <description>Production-grade multi-RDBMS academic examination platform with cross-engine parity across PostgreSQL, MySQL, and SQLite, Python automation, and Dockerized test workflows.</description>
-      <pubDate>Tue, 18 Aug 2026 12:10:49 +0000</pubDate>
+      <pubDate>Tue, 18 Aug 2026 12:30:28 +0000</pubDate>
     </item>
     <item>
       <title>GSTN Predictive Binary Classification</title>
       <link>https://mrxsierra.github.io/projects/gstn-pbc/</link>
       <guid isPermaLink="true">https://mrxsierra.github.io/projects/gstn-pbc/</guid>
       <description>National-level hackathon finalist machine learning pipeline analyzing 900,000+ real-world GST records with XGBoost, LightGBM, and SHAP explainability.</description>
-      <pubDate>Tue, 18 Aug 2026 12:10:49 +0000</pubDate>
+      <pubDate>Tue, 18 Aug 2026 12:30:28 +0000</pubDate>
     </item>
     <item>
       <title>Naukri Market Data Scraper</title>
       <link>https://mrxsierra.github.io/projects/naukri-webscraper/</link>
       <guid isPermaLink="true">https://mrxsierra.github.io/projects/naukri-webscraper/</guid>
       <description>Automated job market telemetry and data extraction pipeline using Selenium WebDriver, BeautifulSoup, and Pandas with comprehensive pytest test coverage.</description>
-      <pubDate>Tue, 18 Aug 2026 12:10:49 +0000</pubDate>
+      <pubDate>Tue, 18 Aug 2026 12:30:28 +0000</pubDate>
     </item>
     <item>
       <title>S3 Faker Mock Data Generator</title>
       <link>https://mrxsierra.github.io/projects/s3-faker/</link>
       <guid isPermaLink="true">https://mrxsierra.github.io/projects/s3-faker/</guid>
       <description>High-throughput synthetic dataset generator with native AWS S3 and LocalStack emulator support for zero-cost cloud testing pipelines.</description>
-      <pubDate>Tue, 18 Aug 2026 12:10:49 +0000</pubDate>
+      <pubDate>Tue, 18 Aug 2026 12:30:28 +0000</pubDate>
     </item>
     <item>
       <title>Real-Time Test Management Interface</title>
       <link>https://mrxsierra.github.io/projects/test-site/</link>
       <guid isPermaLink="true">https://mrxsierra.github.io/projects/test-site/</guid>
       <description>Dynamic client-side test management and examination taking interface featuring local storage session persistence, timer synchronization, and responsive UI.</description>
-      <pubDate>Tue, 18 Aug 2026 12:10:49 +0000</pubDate>
+      <pubDate>Tue, 18 Aug 2026 12:30:28 +0000</pubDate>
+    </item>
+    <item>
+      <title>Examination Management System DB</title>
+      <link>https://mrxsierra.github.io/projects/ems-db/</link>
+      <guid isPermaLink="true">https://mrxsierra.github.io/projects/ems-db/</guid>
+      <description>Production-grade multi-RDBMS academic examination platform with cross-engine parity across PostgreSQL, MySQL, and SQLite, Python automation, and Dockerized test workflows.</description>
+      <pubDate>Tue, 18 Aug 2026 12:30:28 +0000</pubDate>
     </item>
   </channel>
 </rss>
