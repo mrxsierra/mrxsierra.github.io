@@ -225,7 +225,7 @@ draft: true
         Here's the result:
 
         ```py title="Result" linenums="1" hl_lines="1-2"
-        def hello(): # (1)!
+        def hello():  # (1)!
             print("Hello")
         ```
 
