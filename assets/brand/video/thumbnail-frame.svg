@@ -2,50 +2,43 @@
   <!-- YouTube 16:9 Thumbnail Frame Template (1280x720) -->
   <defs>
     <style>
-      .thumb-bg { fill: #08090d; }
-      .thumb-border { stroke: #6366f1; stroke-width: 4; fill: none; }
-      .thumb-tag { font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 700; fill: #818cf8; letter-spacing: 2px; }
-      .thumb-title { font-family: 'Inter', -apple-system, sans-serif; font-size: 64px; font-weight: 900; fill: #ffffff; letter-spacing: -2px; }
+      .thumb-bg { fill: #08090D; }
+      .thumb-border { stroke: #6366F1; stroke-width: 4; fill: none; }
+      .thumb-tag { font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 700; fill: #818CF8; letter-spacing: 2px; }
+      .thumb-title { font-family: 'Inter', sans-serif; font-size: 64px; font-weight: 900; fill: #FFFFFF; letter-spacing: -2px; }
     </style>
   </defs>
-
   <rect width="1280" height="720" class="thumb-bg" />
-  
-  <!-- Outer Structural Hairline -->
   <rect x="16" y="16" width="1248" height="688" rx="20" class="thumb-border" />
-  
-  <!-- Header Monogram Badge -->
   <g transform="translate(64, 56)">
-    <rect width="64" height="64" rx="14" fill="#18181b" stroke="#3f3f46" stroke-width="1.5" />
+    <rect width="64" height="64" rx="14" fill="#18181B" stroke="#3F3F46" stroke-width="1.5" />
     <g transform="scale(0.5)">
-      <path fill="#ffffff" d="
-        M 92,30 L 92,48 L 77,48
-        C 77,40 71,34 62,34
-        C 53,34 47,39 47,46
-        C 47,53 53,57 63,60
-        L 73,63
-        C 88,68 96,75 96,89
-        C 96,104 83,114 62,114
-        C 42,114 28,103 28,88
-        L 28,70 L 43,70
-        C 43,79 50,86 62,86
-        C 72,86 78,80 78,73
-        C 78,66 71,62 61,59
-        L 51,56
-        C 36,51 29,44 29,31
-        C 29,16 43,6 62,6
-        C 81,6 92,16 92,30
-        Z" />
+      <path fill="#FFFFFF" d="M 92,30
+    L 92,48
+    L 77,48
+    C 77,40 71,34 62,34
+    C 53,34 47,39 47,46
+    C 47,53 53,57 63,60
+    L 73,63
+    C 88,68 96,75 96,89
+    C 96,104 83,114 62,114
+    C 42,114 28,103 28,88
+    L 28,70
+    L 43,70
+    C 43,79 50,86 62,86
+    C 72,86 78,80 78,73
+    C 78,66 71,62 61,59
+    L 51,56
+    C 36,51 29,44 29,31
+    C 29,16 43,6 62,6
+    C 81,6 92,16 92,30
+    Z" />
     </g>
     <text x="84" y="42" class="thumb-tag">ENGINEERING DEEP DIVE</text>
   </g>
-
-  <!-- Title Placeholder Area -->
   <g transform="translate(64, 340)">
     <text x="0" y="0" class="thumb-title">BUILDING DISTRIBUTED</text>
-    <text x="0" y="76" class="thumb-title" fill="#818cf8">DATABASE ARCHITECTURES</text>
+    <text x="0" y="76" class="thumb-title" fill="#818CF8">DATABASE ARCHITECTURES</text>
   </g>
-
-  <!-- Footer Tag -->
-  <text x="64" y="640" font-family="'JetBrains Mono', monospace" font-size="22" font-weight="600" fill="#94a3b8">mrxsierra.github.io • Sunil Sharma</text>
+  <text x="64" y="640" font-family="'JetBrains Mono', monospace" font-size="22" font-weight="600" fill="#94A3B8">mrxsierra.github.io • Sunil Sharma</text>
 </svg>
