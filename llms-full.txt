@@ -54,7 +54,7 @@ Systems Architecture • Autonomous Agents • Distributed Data
       
       
         > System
-        v0.2.0 • Verified & Automated CI/CD 
+        v0.3.0 • Verified & Automated CI/CD 
       
     
   
@@ -1114,6 +1114,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+
+## [0.3.0] - 2026-08-18
+
+### Added
+- **feat(ci)**: Automate minor and patch releases with structured changelogs in GitHub Actions (#8)
+- **feat(tooling)**: Enhance bump_version to sync homepage terminal and auto-categorize changelog commits
+
+### Changed
+- **docs**: Sync brand standards and press kit portals into contributor guide and AI docs
 
 ## [0.2.0] - 2026-08-18
 
