@@ -33,12 +33,13 @@ nav:
       - Test Management Site: projects/test-site.md
       - Fake Data Generator: projects/s3-faker.md
   - Blog:
-      - Blogs: blog/index.md
+      - Articles: blog/index.md
   - About:
-      - Profile: about.md
-      - Brand & Press Kit: brand/index.md
-      - Changelog: changelog.md
-  - Resume: resume.md
+      - Profile & Bio: about.md
+      - Resume & Credentials: resume.md
+      - Press Kit: press/index.md
+      - Brand Standards: brand/index.md
+      - Release Changelog: changelog.md
   - Contact: contact.md
 
 not_in_nav: |
@@ -69,7 +70,7 @@ draft_docs: |
 extra_css:
   - stylesheets/index.css
   - stylesheets/extra.css
-  - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css
+  - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css
 
 
 extra_javascript:

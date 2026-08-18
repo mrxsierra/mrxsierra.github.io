@@ -1,8 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%">
-  <!-- mrxsierra | Master Monogram Light (Pure White Canvas) -->
-  <rect width="128" height="128" rx="26" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" />
-  <path fill="#08090d" d="
-    M 92,30
+  <!-- mrxsierra | Master Monogram Light -->
+  <rect width="128" height="128" rx="26" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" />
+  <path fill="#08090D" d="M 92,30
     L 92,48
     L 77,48
     C 77,40 71,34 62,34

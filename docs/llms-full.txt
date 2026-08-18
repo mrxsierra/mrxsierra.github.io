@@ -401,14 +401,6 @@ Systems Architecture • Autonomous Agents • Distributed Data
           [Reddit](https://www.reddit.com/user/mrxsierra/)
           [Pinterest](https://www.pinterest.com/mrxsierra/)
           [Instagram](https://www.instagram.com/mrxsierra/)
-        
-      
-
-      
-        Machine & AI Endpoints
-        
-          [llms.txt](llms.txt)
-          [llms-full.txt](llms-full.txt)
 
 ================================================================================
 

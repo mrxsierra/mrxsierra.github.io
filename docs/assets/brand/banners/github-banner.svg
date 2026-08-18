@@ -2,76 +2,60 @@
   <!-- GitHub Profile & Repository Header Banner (1280x640) -->
   <defs>
     <style>
-      .gh-bg { fill: #08090d; }
-      .gh-border { stroke: #27272a; stroke-width: 1.5; fill: none; }
-      .gh-kicker { font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 700; fill: #818cf8; letter-spacing: 2px; }
-      .gh-name { font-family: 'Inter', sans-serif; font-size: 56px; font-weight: 900; fill: #ffffff; letter-spacing: -1.5px; }
-      .gh-title { font-family: 'Inter', sans-serif; font-size: 26px; font-weight: 500; fill: #cbd5e1; }
-      .gh-badge { font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 600; fill: #94a3b8; }
+      .gh-bg { fill: #08090D; }
+      .gh-border { stroke: #27272A; stroke-width: 1.5; fill: none; }
+      .gh-kicker { font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 700; fill: #818CF8; letter-spacing: 2px; }
+      .gh-name { font-family: 'Inter', sans-serif; font-size: 56px; font-weight: 900; fill: #FFFFFF; letter-spacing: -1.5px; }
+      .gh-title { font-family: 'Inter', sans-serif; font-size: 26px; font-weight: 500; fill: #CBD5E1; }
+      .gh-badge { font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 600; fill: #94A3B8; }
     </style>
   </defs>
-
   <rect width="1280" height="640" class="gh-bg" />
   <rect x="24" y="24" width="1232" height="592" rx="20" class="gh-border" />
-
-  <!-- Monogram Brand Mark -->
   <g transform="translate(80, 80)">
-    <rect width="80" height="80" rx="18" fill="#18181b" stroke="#3f3f46" stroke-width="1.5" />
+    <rect width="80" height="80" rx="18" fill="#18181B" stroke="#3F3F46" stroke-width="1.5" />
     <g transform="scale(0.625)">
-      <path fill="#ffffff" d="
-        M 92,30 L 92,48 L 77,48
-        C 77,40 71,34 62,34
-        C 53,34 47,39 47,46
-        C 47,53 53,57 63,60
-        L 73,63
-        C 88,68 96,75 96,89
-        C 96,104 83,114 62,114
-        C 42,114 28,103 28,88
-        L 28,70 L 43,70
-        C 43,79 50,86 62,86
-        C 72,86 78,80 78,73
-        C 78,66 71,62 61,59
-        L 51,56
-        C 36,51 29,44 29,31
-        C 29,16 43,6 62,6
-        C 81,6 92,16 92,30
-        Z" />
+      <path fill="#FFFFFF" d="M 92,30
+    L 92,48
+    L 77,48
+    C 77,40 71,34 62,34
+    C 53,34 47,39 47,46
+    C 47,53 53,57 63,60
+    L 73,63
+    C 88,68 96,75 96,89
+    C 96,104 83,114 62,114
+    C 42,114 28,103 28,88
+    L 28,70
+    L 43,70
+    C 43,79 50,86 62,86
+    C 72,86 78,80 78,73
+    C 78,66 71,62 61,59
+    L 51,56
+    C 36,51 29,44 29,31
+    C 29,16 43,6 62,6
+    C 81,6 92,16 92,30
+    Z" />
     </g>
     <text x="100" y="46" class="gh-kicker">ENGINEERING &amp; RESEARCH ECOSYSTEM</text>
   </g>
-
-  <!-- Name & Mission -->
   <g transform="translate(80, 240)">
     <text x="0" y="0" class="gh-name">Sunil Sharma</text>
-    <text x="0" y="50" class="gh-title">Full-Stack Architect • Machine Learning Systems • Multi-RDBMS</text>
+    <text x="0" y="50" class="gh-title">Full-Stack Architect • Machine Learning Systems Specialist</text>
   </g>
-
-  <!-- Tech Badges -->
   <g transform="translate(80, 360)">
-    <!-- Pill 1 -->
-    <rect x="0" y="0" width="130" height="36" rx="8" fill="#18181b" stroke="#27272a" stroke-width="1" />
+    <rect x="0" y="0" width="130" height="36" rx="8" fill="#18181B" stroke="#27272A" stroke-width="1" />
     <text x="65" y="23" class="gh-badge" text-anchor="middle">PYTHON</text>
-
-    <!-- Pill 2 -->
-    <rect x="146" y="0" width="160" height="36" rx="8" fill="#18181b" stroke="#27272a" stroke-width="1" />
+    <rect x="146" y="0" width="160" height="36" rx="8" fill="#18181B" stroke="#27272A" stroke-width="1" />
     <text x="226" y="23" class="gh-badge" text-anchor="middle">POSTGRESQL</text>
-
-    <!-- Pill 3 -->
-    <rect x="322" y="0" width="140" height="36" rx="8" fill="#18181b" stroke="#27272a" stroke-width="1" />
+    <rect x="322" y="0" width="140" height="36" rx="8" fill="#18181B" stroke="#27272A" stroke-width="1" />
     <text x="392" y="23" class="gh-badge" text-anchor="middle">FASTAPI</text>
-
-    <!-- Pill 4 -->
-    <rect x="478" y="0" width="160" height="36" rx="8" fill="#18181b" stroke="#27272a" stroke-width="1" />
+    <rect x="478" y="0" width="160" height="36" rx="8" fill="#18181B" stroke="#27272A" stroke-width="1" />
     <text x="558" y="23" class="gh-badge" text-anchor="middle">XGBOOST / ML</text>
-
-    <!-- Pill 5 -->
-    <rect x="654" y="0" width="150" height="36" rx="8" fill="#18181b" stroke="#27272a" stroke-width="1" />
+    <rect x="654" y="0" width="150" height="36" rx="8" fill="#18181B" stroke="#27272A" stroke-width="1" />
     <text x="729" y="23" class="gh-badge" text-anchor="middle">DOCKER CI/CD</text>
   </g>
-
-  <!-- Footer Link -->
   <g transform="translate(80, 540)">
-    <line x1="0" y1="-20" x2="1120" y2="-20" stroke="#27272a" stroke-width="1" />
-    <text x="0" y="20" font-family="'JetBrains Mono', monospace" font-size="18" font-weight="600" fill="#818cf8">https://github.com/mrxsierra • https://mrxsierra.github.io</text>
+    <line x1="0" y1="-20" x2="1120" y2="-20" stroke="#27272A" stroke-width="1" />
+    <text x="0" y="20" font-family="'JetBrains Mono', monospace" font-size="18" font-weight="600" fill="#818CF8">https://github.com/mrxsierra • https://mrxsierra.github.io</text>
   </g>
 </svg>
