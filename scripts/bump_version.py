@@ -108,14 +108,16 @@ def calculate_next_version(current_ver: str, bump_type: str) -> str:
 
 
 MKDOCS_FILE = PROJECT_ROOT / "mkdocs.yml"
+INDEX_MD_FILE = PROJECT_ROOT / "docs" / "index.md"
 
 
 def sync_version_files(new_version: str, dry_run: bool = False) -> None:
-    """Updates VERSION, pyproject.toml, and mkdocs.yml with new version."""
+    """Updates VERSION, pyproject.toml, mkdocs.yml, and docs/index.md with new version."""
     if dry_run:
         print(f"[DRY-RUN] Would update {VERSION_FILE} to '{new_version}'")
         print(f"[DRY-RUN] Would update {PYPROJECT_FILE} version to '{new_version}'")
         print(f"[DRY-RUN] Would update {MKDOCS_FILE} extra.version to '{new_version}'")
+        print(f"[DRY-RUN] Would update {INDEX_MD_FILE} telemetry version to '{new_version}'")
         return
 
     # 1. Update VERSION file
@@ -135,9 +137,79 @@ def sync_version_files(new_version: str, dry_run: bool = False) -> None:
         )
         MKDOCS_FILE.write_text(updated, encoding="utf-8")
 
+    # 4. Update docs/index.md terminal preview widget
+    if INDEX_MD_FILE.exists():
+        content = INDEX_MD_FILE.read_text(encoding="utf-8")
+        updated = re.sub(
+            r"v[0-9]+\.[0-9]+\.[0-9]+\s*•\s*Verified\s*&amp;\s*Automated\s*CI/CD",
+            f"v{new_version} • Verified &amp; Automated CI/CD",
+            content,
+            count=1,
+        )
+        INDEX_MD_FILE.write_text(updated, encoding="utf-8")
+
+
+def extract_categorized_git_commits() -> dict[str, list[str]]:
+    """Extracts and groups git commits since last release tag."""
+    categories: dict[str, list[str]] = {"Added": [], "Fixed": [], "Changed": []}
+    try:
+        tag_result = subprocess.run(
+            ["git", "describe", "--tags", "--abbrev=0"],
+            cwd=PROJECT_ROOT,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        log_range = (
+            f"{tag_result.stdout.strip()}..HEAD"
+            if tag_result.returncode == 0 and tag_result.stdout.strip()
+            else "HEAD~5..HEAD"
+        )
+
+        log_result = subprocess.run(
+            ["git", "log", log_range, "--pretty=format:%s"],
+            cwd=PROJECT_ROOT,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        lines = [line.strip() for line in log_result.stdout.splitlines() if line.strip()]
+
+        for line in lines:
+            # Skip automated merge and release commit messages
+            if (
+                line.startswith("Merge pull request")
+                or line.startswith("Merge branch")
+                or "chore(release):" in line
+                or "[skip ci]" in line
+            ):
+                continue
+
+            clean_msg = line
+            if ":" in line:
+                prefix, rest = line.split(":", 1)
+                prefix_clean = prefix.lower().strip()
+                desc = rest.strip()
+                if desc:
+                    desc = desc[0].upper() + desc[1:]
+
+                if prefix_clean.startswith("feat"):
+                    categories["Added"].append(f"**{prefix.strip()}**: {desc}")
+                elif prefix_clean.startswith("fix"):
+                    categories["Fixed"].append(f"**{prefix.strip()}**: {desc}")
+                else:
+                    categories["Changed"].append(f"**{prefix.strip()}**: {desc}")
+            else:
+                categories["Changed"].append(clean_msg)
+
+    except Exception:
+        pass
+
+    return categories
+
 
 def append_changelog_entry(new_version: str, dry_run: bool = False) -> None:
-    """Appends a new version entry header to CHANGELOG.md if not already present."""
+    """Appends a new categorized version entry header to CHANGELOG.md if not already present."""
     if not CHANGELOG_FILE.exists():
         return
 
@@ -148,14 +220,32 @@ def append_changelog_entry(new_version: str, dry_run: bool = False) -> None:
     if entry_header in content:
         return
 
+    # Extract categorized commits
+    groups = extract_categorized_git_commits()
+    sections: list[str] = []
+
+    if groups["Added"]:
+        sections.append("### Added\n" + "\n".join(f"- {item}" for item in groups["Added"]))
+    if groups["Fixed"]:
+        sections.append("### Fixed\n" + "\n".join(f"- {item}" for item in groups["Fixed"]))
+    if groups["Changed"]:
+        sections.append("### Changed\n" + "\n".join(f"- {item}" for item in groups["Changed"]))
+
+    if not sections:
+        body = "### Changed\n- Maintenance updates, routine site improvements, and verified CI/CD releases."
+    else:
+        body = "\n\n".join(sections)
+
+    changelog_chunk = f"{entry_header}\n\n{body}\n"
+
     if dry_run:
-        print(f"[DRY-RUN] Would prepend changelog entry: {entry_header}")
+        print(f"[DRY-RUN] Would prepend changelog entry:\n{changelog_chunk}")
         return
 
     # Insert after '---'
     if "---" in content:
         parts = content.split("---", 1)
-        new_content = f"{parts[0]}---\n\n{entry_header}\n\n### Changed\n- Maintenance updates and routine site improvements.\n{parts[1]}"
+        new_content = f"{parts[0]}---\n\n{changelog_chunk}\n{parts[1].lstrip()}"
         CHANGELOG_FILE.write_text(new_content, encoding="utf-8")
 
 
