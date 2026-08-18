@@ -12,6 +12,7 @@ edit_uri: https://raw.githubusercontent.com/mrxsierra/mrxsierra.github.io/main/d
 # Automated Build Hooks
 hooks:
   - hooks/generate_ai_docs.py
+  - hooks/generate_rss_feed.py
 
 # copyright
 copyright: "© 2025 Sunil Sharma (mrxsierra). All rights reserved."
@@ -34,16 +35,24 @@ nav:
       - Fake Data Generator: projects/s3-faker.md
   - Blog:
       - Blogs: blog/index.md
-  - About: about.md
+  - About:
+      - Profile: about.md
+      - Changelog: changelog.md
   - Resume: resume.md
   - Contact: contact.md
 
 not_in_nav: |
   test.md
   tags.md
+  changelog.md
   llms.txt
   llms-full.txt
   robots.txt
+  feed_rss_created.xml
+  feed_rss_updated.xml
+  feed.xml
+  feed_blog.xml
+  feed_projects.xml
 
 # exclude
 exclude_docs: |
@@ -69,7 +78,7 @@ extra_javascript:
 # Theme
 theme:
   name: material
-  # custom_dir: overrides
+  custom_dir: overrides
   favicon: assets/img/favicon.ico
   font:
     text: Inter
@@ -241,9 +250,15 @@ extra:
     - icon: fontawesome/brands/docker
       link: https://hub.docker.com/u/mrxsierra
       name: DockerHub
+    - icon: fontawesome/solid/rss
+      link: https://mrxsierra.github.io/feed_rss_created.xml
+      name: RSS Feed (All Updates)
   
   status:
     new: Recently added
   
+  # Site version
+  version: 0.0.1
+
   # Footer disable generator
   generator: false

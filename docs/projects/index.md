@@ -5,7 +5,13 @@ description: Engineering portfolio of Sunil Sharma - Full-stack web applications
 # Engineering Projects
 
 <div class="page-intro">
-  <h2 class="page-intro-title">Proof of Work &amp; Case Studies</h2>
+  <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px;">
+    <h2 class="page-intro-title" style="margin: 0;">Proof of Work &amp; Case Studies</h2>
+    <a href="../feed_projects.xml" class="rss-subscribe-badge" title="Subscribe to Projects RSS Feed" target="_blank" rel="noopener">
+      <i class="fas fa-rss" aria-hidden="true"></i>
+      <span>Projects RSS</span>
+    </a>
+  </div>
   <p class="page-intro-desc">
     A curated index of production software, machine learning competition pipelines, and developer-first data extraction tooling. Each project contains architecture breakdowns, technical rationales, and source repositories.
   </p>

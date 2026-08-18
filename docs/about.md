@@ -128,6 +128,21 @@ description: About Sunil Sharma (mrxsierra) - Full-Stack & AI Systems Specialist
     </div>
   </div>
 
+  <div class="capability-card">
+    <div class="capability-header">
+      <div class="capability-icon"><i class="fas fa-vial-circle-check"></i></div>
+      <h3 class="capability-title">SDLC &amp; Release Engineering</h3>
+    </div>
+    <div class="capability-tags">
+      <span class="capability-tag">Pytest Multi-Tier Suite</span>
+      <span class="capability-tag">Mypy Type Checking</span>
+      <span class="capability-tag">Ruff Linter &amp; Formatter</span>
+      <span class="capability-tag">GitHub Actions CI/CD</span>
+      <span class="capability-tag">Semantic Versioning (SemVer)</span>
+      <span class="capability-tag">Git Pre-Commit Hooks</span>
+    </div>
+  </div>
+
 </div>
 
 ---

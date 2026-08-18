@@ -71,7 +71,7 @@ tags:
       </div>
       <div class="terminal-line">
         <span class="terminal-key">&gt; System</span>
-        <span class="terminal-val">Production-grade &amp; verified <span class="terminal-cursor"></span></span>
+        <span class="terminal-val">v0.0.1 • Verified &amp; Automated CI/CD <span class="terminal-cursor"></span></span>
       </div>
     </div>
   </div>
