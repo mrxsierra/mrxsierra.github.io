@@ -72,12 +72,13 @@ def test_social_share_widget_present_and_not_duplicated(
         )
         assert isinstance(widgets[0], Tag), f"social-share-widget is not a Tag in {rel_path}"
 
-        # Verify all buttons including RSS
+        # Verify all buttons including RSS and Pinterest
         expected_btn_ids = [
             "btn-share-native",
             "btn-share-x",
             "btn-share-linkedin",
             "btn-share-reddit",
+            "btn-share-pinterest",
             "btn-share-hn",
             "btn-share-whatsapp",
             "btn-share-telegram",

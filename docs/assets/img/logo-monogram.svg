@@ -1,27 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%">
-  <!-- Auto-Adaptive Dual-Theme Browser Favicon -->
+  <!-- mrxsierra | Geometric Constructivist Monogram -->
   <defs>
     <style>
       :root {
-        --fav-bg: #08090d;
-        --fav-glyph: #ffffff;
+        --canvas-fill: #08090d;
+        --glyph-fill: #ffffff;
       }
       @media (prefers-color-scheme: light) {
         :root {
-          --fav-bg: #ffffff;
-          --fav-glyph: #08090d;
+          --canvas-fill: #0f172a;
+          --glyph-fill: #ffffff;
         }
       }
-      .fav-bg { fill: var(--fav-bg); }
-      .fav-glyph { fill: var(--fav-glyph); }
+      .monogram-bg { fill: var(--canvas-fill); }
+      .monogram-glyph { fill: var(--glyph-fill); }
     </style>
   </defs>
 
-  <!-- Solid Plain Background -->
-  <rect width="128" height="128" rx="26" class="fav-bg" />
+  <!-- Plain Solid Canvas -->
+  <rect width="128" height="128" rx="26" class="monogram-bg" />
 
-  <!-- Pure Geometric Monogram Glyph -->
-  <path class="fav-glyph" d="
+  <!-- Pure Geometric Letterform -->
+  <path class="monogram-glyph" d="
     M 92,30
     L 92,48
     L 77,48

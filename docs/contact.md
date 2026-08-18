@@ -80,6 +80,9 @@ description: Contact Sunil Sharma (mrxsierra) for engineering collaborations, AI
         <a href="https://www.reddit.com/user/mrxsierra/" target="_blank" rel="noopener" class="social-chip">
           <i class="fab fa-reddit-alien"></i> Reddit
         </a>
+        <a href="https://www.pinterest.com/mrxsierra/" target="_blank" rel="noopener" class="social-chip">
+          <i class="fab fa-pinterest"></i> Pinterest
+        </a>
         <a href="https://www.instagram.com/mrxsierra/" target="_blank" rel="noopener" class="social-chip">
           <i class="fab fa-instagram"></i> Instagram
         </a>

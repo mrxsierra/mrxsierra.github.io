@@ -4,11 +4,16 @@ description: About Sunil Sharma (mrxsierra) - Full-Stack & AI Systems Specialist
 
 # About Sunil Sharma
 
-<div class="page-intro">
-  <h2 class="page-intro-title">Full-Stack &amp; AI Systems Specialist</h2>
-  <p class="page-intro-desc">
-    Specializing in autonomous agent architectures, full-stack systems engineering, distributed database optimization, and cloud tooling pipelines. Focused on shipping robust, maintainable, and verifiable software.
-  </p>
+<div class="page-intro" style="display: flex; gap: 24px; align-items: center; flex-wrap: wrap;">
+  <div style="flex-shrink: 0;">
+    <img src="../assets/mrxss_400x400.jpg" alt="Sunil Sharma" style="width: 104px; height: 104px; border-radius: 9999px; border: 2px solid var(--color-accent, #6366f1); box-shadow: 0 4px 16px rgba(0,0,0,0.08); object-fit: cover;" />
+  </div>
+  <div style="flex: 1; min-width: 260px;">
+    <h2 class="page-intro-title" style="margin-top: 0;">Full-Stack &amp; AI Systems Specialist</h2>
+    <p class="page-intro-desc" style="margin-bottom: 0;">
+      Specializing in autonomous agent architectures, full-stack systems engineering, distributed database optimization, and cloud tooling pipelines. Focused on shipping robust, maintainable, and verifiable software.
+    </p>
+  </div>
 </div>
 
 ---
@@ -72,34 +77,28 @@ description: About Sunil Sharma (mrxsierra) - Full-Stack & AI Systems Specialist
 
   <div class="clean-card">
     <div class="project-card-header">
-      <span class="project-category-badge">Data Automation</span>
+      <span class="project-category-badge">QA Automation</span>
       <div class="project-icon-box"><i class="fas fa-file-excel"></i></div>
     </div>
     <h3 class="project-card-title">Paraxcel Document Toolkit</h3>
     <p class="project-card-desc">
-      Python engine for high-throughput Excel data extraction, complex transformation, and automated reporting.
+      High-performance formatting extraction suite parsing complex DOCX runs and generating structured Excel test matrices.
     </p>
     <a href="../projects/paraxcel/" class="card-footer-link">Read Full Case Study <i class="fas fa-arrow-right"></i></a>
   </div>
 
 </div>
 
-<div style="margin-bottom: 30px;">
-  <a href="../projects/" class="btn btn-secondary">
-    <i class="fas fa-folder-open"></i> Browse All Projects &rarr;
-  </a>
-</div>
-
 ---
 
-## Technical Capabilities &amp; System Architecture
+## Core Technical Capabilities
 
-<div class="card-grid-2" style="margin: 20px 0;">
+<div class="capability-grid">
 
   <div class="capability-card">
     <div class="capability-header">
       <div class="capability-icon"><i class="fas fa-brain"></i></div>
-      <h3 class="capability-title">AI &amp; Data Science</h3>
+      <h3 class="capability-title">Machine Learning &amp; AI Systems</h3>
     </div>
     <div class="capability-tags">
       <span class="capability-tag">Pandas</span>
@@ -144,6 +143,61 @@ description: About Sunil Sharma (mrxsierra) - Full-Stack & AI Systems Specialist
   </div>
 
 </div>
+
+---
+
+## Brand Assets &amp; Press Kit
+
+Official vector marks, media bio copy, and typography specifications for speaking engagements, hackathons, and guest articles:
+
+<div class="card-grid-2" style="margin: 20px 0;">
+
+  <div class="clean-card">
+    <div class="project-card-header">
+      <span class="project-category-badge">Official Monogram</span>
+      <div class="project-icon-box"><i class="fas fa-shapes"></i></div>
+    </div>
+    <h3 class="project-card-title">Vector Brand Mark</h3>
+    <p class="project-card-desc">
+      Geometric Constructivist 'S' vector monogram designed for high-contrast technical publications and digital surfaces.
+    </p>
+    <a href="../assets/img/logo-monogram.svg" download class="card-footer-link">
+      <i class="fas fa-download"></i> Download Vector SVG
+    </a>
+  </div>
+
+  <div class="clean-card">
+    <div class="project-card-header">
+      <span class="project-category-badge">Author Headshot</span>
+      <div class="project-icon-box"><i class="fas fa-user-tie"></i></div>
+    </div>
+    <h3 class="project-card-title">High-Resolution Avatar</h3>
+    <p class="project-card-desc">
+      Canonical profile photograph used across GitHub, LinkedIn, technical blogs, and conference profiles.
+    </p>
+    <a href="../assets/mrxss_400x400.jpg" download class="card-footer-link">
+      <i class="fas fa-download"></i> Download Photo (400x400)
+    </a>
+  </div>
+
+</div>
+
+### Standard Bio Copy
+
+=== "One-Liner (Social & Short Bios)"
+    ```text
+    Sunil Sharma (mrxsierra) is a Full-Stack Web Architect and Machine Learning Systems Engineer.
+    ```
+
+=== "Short Bio (50 Words)"
+    ```text
+    Sunil Sharma is a Full-Stack Systems Engineer and ML Specialist based in India. He builds robust multi-RDBMS data platforms, autonomous AI agent pipelines, and high-throughput automation tooling with Python, PostgreSQL, and modern web frameworks.
+    ```
+
+=== "Full Bio (100 Words)"
+    ```text
+    Sunil Sharma (mrxsierra) is a software engineer specializing in autonomous agent workflows, machine learning pipelines, and distributed relational database architectures. A national finalist in the GSTN Predictive Binary Classification hackathon, Sunil designs production-grade software with rigorous pytest test suites, cross-engine SQL parity, and zero-downtime CI/CD automation. He publishes technical architecture guides and open-source tooling for the global developer ecosystem.
+    ```
 
 ---
 

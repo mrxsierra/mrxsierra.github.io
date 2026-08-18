@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%">
+  <!-- Quiet Authority: Direction 2 — International Swiss Modernist Monogram -->
+  <!-- Mathematical precision, pure optical harmony, zero superfluous decoration -->
+  <defs>
+    <style>
+      .swiss-canvas { fill: #111215; }
+      .swiss-hairline { stroke: #26282e; stroke-width: 1px; fill: none; }
+      .swiss-stroke { stroke: #ffffff; stroke-width: 11px; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .swiss-dot { fill: #ffffff; }
+    </style>
+  </defs>
+
+  <!-- Neutral Dark Slate Canvas -->
+  <rect width="128" height="128" rx="28" class="swiss-canvas" />
+  <rect x="0.5" y="0.5" width="127" height="127" rx="27.5" class="swiss-hairline" />
+
+  <!-- Pure Geometric Two-Arc S Glyph: Absolute Balance & Readability -->
+  <!-- Top Arc (starts at 86,36 -> sweeps left to 42,48 -> transitions at 64,64) -->
+  <!-- Bottom Arc (transitions at 64,64 -> sweeps right to 86,80 -> finishes at 42,92) -->
+  <path class="swiss-stroke" d="
+    M 84,38 
+    C 78,30 68,26 56,26 
+    C 42,26 34,35 34,47 
+    C 34,58 43,64 57,67 
+    L 71,70 
+    C 85,73 94,79 94,90 
+    C 94,102 85,111 69,111 
+    C 54,111 44,105 38,96" />
+</svg>

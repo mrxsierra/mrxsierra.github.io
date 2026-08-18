@@ -38,7 +38,7 @@ Systems Architecture • Autonomous Agents • Distributed Data
     
       
         $
-        npx mrxsierra --summary
+        uv mrxsierra --summary
       
       
         > Focus
@@ -54,7 +54,7 @@ Systems Architecture • Autonomous Agents • Distributed Data
       
       
         > System
-        v0.0.1 • Verified & Automated CI/CD 
+        v0.1.0 • Verified & Automated CI/CD 
       
     
   
@@ -399,6 +399,7 @@ Systems Architecture • Autonomous Agents • Distributed Data
         
           [YouTube](https://www.youtube.com/@mrxsierra)
           [Reddit](https://www.reddit.com/user/mrxsierra/)
+          [Pinterest](https://www.pinterest.com/mrxsierra/)
           [Instagram](https://www.instagram.com/mrxsierra/)
         
       
@@ -417,10 +418,15 @@ Systems Architecture • Autonomous Agents • Distributed Data
 # About Sunil Sharma
 
   
+    ![Sunil Sharma](../assets/mrxss_400x400.jpg)
+  
+  
+    
 ## Full-Stack & AI Systems Specialist
 
-  
-    Specializing in autonomous agent architectures, full-stack systems engineering, distributed database optimization, and cloud tooling pipelines. Focused on shipping robust, maintainable, and verifiable software.
+    
+      Specializing in autonomous agent architectures, full-stack systems engineering, distributed database optimization, and cloud tooling pipelines. Focused on shipping robust, maintainable, and verifiable software.
+    
   
 
 ---
@@ -488,29 +494,27 @@ Systems Architecture • Autonomous Agents • Distributed Data
 
   
     
-      Data Automation
+      QA Automation
       
     
     
 ### Paraxcel Document Toolkit
 
     
-      Python engine for high-throughput Excel data extraction, complex transformation, and automated reporting.
+      High-performance formatting extraction suite parsing complex DOCX runs and generating structured Excel test matrices.
     
     [Read Full Case Study](../projects/paraxcel/)
   
 
-  [Browse All Projects →](../projects/)
-
 ---
 
-## Technical Capabilities & System Architecture
+## Core Technical Capabilities
 
   
     
       
       
-### AI & Data Science
+### Machine Learning & AI Systems
 
     
     
@@ -558,6 +562,57 @@ Systems Architecture • Autonomous Agents • Distributed Data
       Git Pre-Commit Hooks
     
   
+
+---
+
+## Brand Assets & Press Kit
+
+Official vector marks, media bio copy, and typography specifications for speaking engagements, hackathons, and guest articles:
+
+  
+    
+      Official Monogram
+      
+    
+    
+### Vector Brand Mark
+
+    
+      Geometric Constructivist 'S' vector monogram designed for high-contrast technical publications and digital surfaces.
+    
+    [Download Vector SVG](../assets/img/logo-monogram.svg)
+  
+
+  
+    
+      Author Headshot
+      
+    
+    
+### High-Resolution Avatar
+
+    
+      Canonical profile photograph used across GitHub, LinkedIn, technical blogs, and conference profiles.
+    
+    [Download Photo (400x400)](../assets/mrxss_400x400.jpg)
+  
+
+### Standard Bio Copy
+
+=== "One-Liner (Social & Short Bios)"
+    ```text
+    Sunil Sharma (mrxsierra) is a Full-Stack Web Architect and Machine Learning Systems Engineer.
+    ```
+
+=== "Short Bio (50 Words)"
+    ```text
+    Sunil Sharma is a Full-Stack Systems Engineer and ML Specialist based in India. He builds robust multi-RDBMS data platforms, autonomous AI agent pipelines, and high-throughput automation tooling with Python, PostgreSQL, and modern web frameworks.
+    ```
+
+=== "Full Bio (100 Words)"
+    ```text
+    Sunil Sharma (mrxsierra) is a software engineer specializing in autonomous agent workflows, machine learning pipelines, and distributed relational database architectures. A national finalist in the GSTN Predictive Binary Classification hackathon, Sunil designs production-grade software with rigorous pytest test suites, cross-engine SQL parity, and zero-downtime CI/CD automation. He publishes technical architecture guides and open-source tooling for the global developer ecosystem.
+    ```
 
 ---
 
