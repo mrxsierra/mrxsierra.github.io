@@ -25,10 +25,25 @@ CHANGELOG_FILE = PROJECT_ROOT / "CHANGELOG.md"
 
 
 def get_current_version() -> str:
-    """Reads current version from VERSION file."""
-    if not VERSION_FILE.exists():
-        return "0.0.1"
-    return VERSION_FILE.read_text(encoding="utf-8").strip()
+    """Reads current version from VERSION file, with git tag fallback for monotonic consistency."""
+    file_ver = (
+        VERSION_FILE.read_text(encoding="utf-8").strip() if VERSION_FILE.exists() else "0.0.1"
+    )
+    try:
+        tag_result = subprocess.run(
+            ["git", "describe", "--tags", "--abbrev=0"],
+            cwd=PROJECT_ROOT,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if tag_result.returncode == 0 and tag_result.stdout.strip():
+            tag_ver = tag_result.stdout.strip().lstrip("v")
+            if parse_semver(tag_ver) > parse_semver(file_ver):
+                return tag_ver
+    except Exception:
+        pass
+    return file_ver
 
 
 def parse_semver(version_str: str) -> tuple[int, int, int]:

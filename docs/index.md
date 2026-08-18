@@ -71,7 +71,7 @@ tags:
       </div>
       <div class="terminal-line">
         <span class="terminal-key">&gt; System</span>
-        <span class="terminal-val">v0.2.0 • Verified &amp; Automated CI/CD <span class="terminal-cursor"></span></span>
+        <span class="terminal-val">v0.3.1 • Verified &amp; Automated CI/CD <span class="terminal-cursor"></span></span>
       </div>
     </div>
   </div>

@@ -1,4 +1,4 @@
-.PHONY: help install serve build test lint format typecheck verify hook-install version bump-patch bump-minor bump-major clean
+.PHONY: help install serve build test lint format typecheck verify hook-install version bump-patch bump-minor bump-major brand clean
 
 PYTHON ?= .venv/bin/python
 RUFF ?= .venv/bin/ruff
@@ -15,6 +15,7 @@ help:
 	@echo "  make format       - Format code using ruff"
 	@echo "  make typecheck    - Run mypy static type checking"
 	@echo "  make verify       - Run full verification pipeline (lint, types, build, tests)"
+	@echo "  make brand        - Compile all vector marks, favicons, banners, and Press Kit"
 	@echo "  make version      - Print current repository version"
 	@echo "  make bump-patch   - Bump patch version (0.0.X)"
 	@echo "  make bump-minor   - Bump minor version (0.X.0)"
@@ -44,6 +45,9 @@ typecheck:
 
 verify:
 	$(PYTHON) scripts/verify.py
+
+brand:
+	$(PYTHON) scripts/brand_engine/cli.py --all
 
 version:
 	$(PYTHON) scripts/bump_version.py current

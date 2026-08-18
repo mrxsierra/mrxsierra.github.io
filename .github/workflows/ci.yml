@@ -126,7 +126,7 @@ jobs:
               echo "Committing automated release artifacts for v$VERSION..."
               git add VERSION pyproject.toml mkdocs.yml CHANGELOG.md docs/ index.md || true
               git commit -m "chore(release): auto-bump version to v$VERSION [skip ci]" || true
-              git push origin main || echo "Push to main skipped or failed."
+              git push origin HEAD:main || echo "Push to main skipped or failed."
             fi
           fi
 
