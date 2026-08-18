@@ -163,7 +163,8 @@ make verify
 2. **Ruff Format Check (`ruff format --check .`)**: Validates uniform code formatting.
 3. **Mypy Static Analysis (`mypy hooks scripts tests`)**: Strict Python type checking.
 4. **MkDocs Strict Build (`mkdocs build --strict`)**: Builds the site treating all warnings as errors.
-5. **Pytest Verification Suite (`pytest tests/ -v`, 38 tests)**:
+5. **Pytest Verification Suite (`pytest tests/ -v`, 49 tests)**:
+   - **`test_brand_kit.py`**: Validates vector marks, raster assets, video watermarks, social banners, and master press kit archive integrity.
    - **`test_smoke.py`**: Asserts existence and non-empty sizes of all core HTML pages, sitemaps, RSS feeds, stylesheets, scripts, and favicon.
    - **`test_html_integrity.py`**: Scans all built HTML for zero broken internal links, zero missing media assets, valid DOM semantics (`<!DOCTYPE>`, `<title>`, `<meta name="viewport">`), and zero unrendered template placeholders (`{{ ... }}`).
    - **`test_hooks.py`**: Verifies HTML-to-markdown sanitization and `llms.txt` / `llms-full.txt` format compliance.
@@ -172,7 +173,7 @@ make verify
 
 ### Individual Commands
 ```bash
-make test         # Run full 38-test pytest suite
+make test         # Run full 49-test pytest suite
 make lint         # Run Ruff lint & formatting checks
 make format       # Auto-format Python code and fix lint issues
 make typecheck    # Run Mypy static type analysis

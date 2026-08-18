@@ -54,7 +54,7 @@ Systems Architecture • Autonomous Agents • Distributed Data
       
       
         > System
-        v0.1.0 • Verified & Automated CI/CD 
+        v0.2.0 • Verified & Automated CI/CD 
       
     
   
@@ -731,6 +731,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+
+## [0.2.0] - 2026-08-18
+
+### Added
+- **Official Geometric Brand System & Engine**: Automated vector compilation pipeline (`scripts/brand_engine/`) generating SVG monograms, horizontal/stacked lockups, multi-density favicons, YouTube/broadcast watermarks, and master press kit archive (`mrxsierra-brand-press-kit.zip`).
+- **Brand Standards & Press Kit Portals**: Added dedicated [`/brand/`](https://mrxsierra.github.io/brand/) and [`/press/`](https://mrxsierra.github.io/press/) portals featuring vector mark downloads, video templates, authorized speaker bios, and design system tokens.
+- **FontAwesome 6.7.2 Integration**: Upgraded global icon CDN to FontAwesome 6.7.2, providing native vector support for `fa-brands fa-x-twitter` across the header, developer profile cards, and share widget.
+- **Brand Kit Automated Test Suite**: Added 11 automated pytest assertions (`tests/test_brand_kit.py`) verifying vector integrity, favicon bundles, watermarks, banner dimensions, and press kit archive structure (bringing the test suite to 49 assertions).
+
+### Changed
+- **Elevated Brand Authority Navigation Hierarchy**: Restructured primary site navigation by nesting `Resume & Credentials` under the `About` dropdown (`Profile & Bio`, `Resume & Credentials`, `Press Kit`, `Brand Standards`, `Release Changelog`), streamlining the main header tabs into authoritative categories.
+- **Footer Brand Monogram Integration**: Replaced text placeholder with the official constructivist vector SVG mark inside the 4-column footer directory.
+- **Landing Page & Profile Card Polish**: Cleaned homepage `#connect` card by isolating AI machine endpoints to the global footer directory and suppressed git contributor boxes on the landing page hero.
 
 ## [0.1.0] - 2026-08-18
 
