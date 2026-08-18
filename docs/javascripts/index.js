@@ -78,6 +78,7 @@
       'btn-share-x': `https://x.com/intent/post?text=${encodedTitle}&url=${encodedUrl}&via=mrxsierra`,
       'btn-share-linkedin': `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
       'btn-share-reddit': `https://www.reddit.com/submit?url=${encodedUrl}&title=${encodedTitle}`,
+      'btn-share-pinterest': `https://pinterest.com/pin/create/button/?url=${encodedUrl}&description=${encodedTitle}`,
       'btn-share-hn': `https://news.ycombinator.com/submitlink?u=${encodedUrl}&t=${encodedTitle}`,
       'btn-share-whatsapp': `https://api.whatsapp.com/send?text=${encodedTitle}%20${encodedUrl}`,
       'btn-share-telegram': `https://t.me/share/url?url=${encodedUrl}&text=${encodedTitle}`

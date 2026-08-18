@@ -2,11 +2,6 @@
   {% if config.copyright %}
     <div class="md-copyright__highlight">
       {{ config.copyright }}
-      <span class="footer-version-tag">
-        <a href="{{ 'changelog/' | url }}" title="View Release History & Changelog">
-          <i class="fas fa-tag"></i> v{{ config.extra.version }}
-        </a>
-      </span>
     </div>
   {% endif %}
   {% if not config.extra.generator == false %}

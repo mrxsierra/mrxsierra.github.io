@@ -55,7 +55,7 @@ tags:
     <div class="terminal-body">
       <div class="terminal-line">
         <span class="terminal-prompt">$</span>
-        <span class="terminal-command">npx mrxsierra --summary</span>
+        <span class="terminal-command">uv mrxsierra --summary</span>
       </div>
       <div class="terminal-line">
         <span class="terminal-key">&gt; Focus</span>
@@ -71,7 +71,7 @@ tags:
       </div>
       <div class="terminal-line">
         <span class="terminal-key">&gt; System</span>
-        <span class="terminal-val">v0.0.1 • Verified &amp; Automated CI/CD <span class="terminal-cursor"></span></span>
+        <span class="terminal-val">v0.1.0 • Verified &amp; Automated CI/CD <span class="terminal-cursor"></span></span>
       </div>
     </div>
   </div>
@@ -444,6 +444,9 @@ tags:
           </a>
           <a href="https://www.reddit.com/user/mrxsierra/" target="_blank" rel="noopener" class="social-chip">
             <i class="fab fa-reddit-alien"></i> Reddit
+          </a>
+          <a href="https://www.pinterest.com/mrxsierra/" target="_blank" rel="noopener" class="social-chip">
+            <i class="fab fa-pinterest"></i> Pinterest
           </a>
           <a href="https://www.instagram.com/mrxsierra/" target="_blank" rel="noopener" class="social-chip">
             <i class="fab fa-instagram"></i> Instagram

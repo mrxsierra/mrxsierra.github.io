@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mGradD" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+    <linearGradient id="sGradD" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+  </defs>
+
+  <!-- Deep Obsidian Canvas -->
+  <rect x="4" y="4" width="120" height="120" rx="28" fill="#0b0b10" stroke="#22222f" stroke-width="2.5" />
+
+  <!-- Left 'M' Geometric Pillar -->
+  <path d="M 28 88 L 28 40 L 46 64 L 64 40 L 64 88" 
+        fill="none" 
+        stroke="url(#mGradD)" 
+        stroke-width="8" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" />
+
+  <!-- Right 'S' Interlocking Fluid Curve -->
+  <path d="M 100 44 C 94 38 84 38 78 42 C 72 46 72 52 78 56 L 90 64 C 98 68 100 76 96 82 C 92 88 80 90 74 86" 
+        fill="none" 
+        stroke="url(#sGradD)" 
+        stroke-width="8" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" />
+
+  <!-- Interlocking Intersection Glow Node -->
+  <circle cx="64" cy="64" r="3" fill="#ffffff" />
+</svg>

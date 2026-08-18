@@ -5,9 +5,8 @@ site_url: https://mrxsierra.github.io/
 site_description: "Welcome to my personal website. Here you will find my projects, blogs, and more."
 
 # repository
-repo_url: https://github.com/mrxsierra/mrxsierra.github.io
-repo_name: mrxsierra/mrxsierra.github.io
-edit_uri: https://raw.githubusercontent.com/mrxsierra/mrxsierra.github.io/main/docs/
+repo_url: https://github.com/mrxsierra
+repo_name: mrxsierra
 
 # Automated Build Hooks
 hooks:
@@ -80,6 +79,7 @@ theme:
   name: material
   custom_dir: overrides
   favicon: assets/img/favicon.ico
+  logo: assets/img/logo-monogram.svg
   font:
     text: Inter
     code: JetBrains Mono
@@ -103,19 +103,6 @@ theme:
   
   icon:
     # admonition:
-        # note: fontawesome/solid/note-sticky
-        # abstract: fontawesome/solid/book
-        # info: fontawesome/solid/circle-info
-        # tip: fontawesome/solid/bullhorn
-        # success: fontawesome/solid/check
-        # question: fontawesome/solid/circle-question
-        # warning: fontawesome/solid/triangle-exclamation
-        # failure: fontawesome/solid/bomb
-        # danger: fontawesome/solid/skull
-        # bug: fontawesome/solid/robot
-        # example: fontawesome/solid/flask
-        # quote: fontawesome/solid/quote-left
-    logo: simple/sogou
   #   tag:
   #     home: material/home-roof
   #     html: fontawesome/brands/html5
