@@ -6,11 +6,12 @@ Generates valid W3C RSS 2.0 XML feeds:
 - Project Case Studies Feed: site/feed_projects.xml, site/projects/feed_rss_created.xml
 """
 
-from datetime import date, datetime, timezone
-from email.utils import format_datetime
-from pathlib import Path
 import re
 import xml.etree.ElementTree as ET
+from datetime import UTC, date, datetime
+from email.utils import format_datetime
+from pathlib import Path
+
 import yaml
 
 
@@ -35,16 +36,16 @@ def parse_date(date_val) -> datetime:
     if isinstance(date_val, dict):
         date_val = date_val.get("created") or date_val.get("updated")
     if isinstance(date_val, datetime):
-        return date_val.replace(tzinfo=timezone.utc) if date_val.tzinfo is None else date_val
+        return date_val.replace(tzinfo=UTC) if date_val.tzinfo is None else date_val
     if isinstance(date_val, date):
-        return datetime(date_val.year, date_val.month, date_val.day, 12, 0, 0, tzinfo=timezone.utc)
+        return datetime(date_val.year, date_val.month, date_val.day, 12, 0, 0, tzinfo=UTC)
     if isinstance(date_val, str):
         try:
             dt = datetime.fromisoformat(date_val.strip())
-            return dt.replace(tzinfo=timezone.utc) if dt.tzinfo is None else dt
+            return dt.replace(tzinfo=UTC) if dt.tzinfo is None else dt
         except Exception:
             pass
-    return datetime.now(timezone.utc)
+    return datetime.now(UTC)
 
 
 def create_rss_xml(
@@ -71,13 +72,13 @@ def create_rss_xml(
     lang_elem.text = "en-us"
 
     last_build = ET.SubElement(channel, "lastBuildDate")
-    last_build.text = format_datetime(datetime.now(timezone.utc))
+    last_build.text = format_datetime(datetime.now(UTC))
 
-    ET.SubElement(channel, "atom:link", attrib={
-        "href": feed_url,
-        "rel": "self",
-        "type": "application/rss+xml"
-    })
+    ET.SubElement(
+        channel,
+        "atom:link",
+        attrib={"href": feed_url, "rel": "self", "type": "application/rss+xml"},
+    )
 
     for item in items:
         item_elem = ET.SubElement(channel, "item")
@@ -129,13 +130,15 @@ def build_rss_feeds(site_dir: Path, site_url: str = "https://mrxsierra.github.io
             date_prefix = dt.strftime("%Y/%m/%d")
             clean_link = f"{site_url}blog/{date_prefix}/{slug}/"
 
-            blog_items.append({
-                "title": title,
-                "link": clean_link,
-                "description": description or f"Technical article on {title}",
-                "pub_date": format_datetime(dt),
-                "timestamp": str(dt.timestamp()),
-            })
+            blog_items.append(
+                {
+                    "title": title,
+                    "link": clean_link,
+                    "description": description or f"Technical article on {title}",
+                    "pub_date": format_datetime(dt),
+                    "timestamp": str(dt.timestamp()),
+                }
+            )
 
     # 2. Collect Project Articles
     projects_dir = docs_dir / "projects"
@@ -152,21 +155,25 @@ def build_rss_feeds(site_dir: Path, site_url: str = "https://mrxsierra.github.io
                 title = match.group(1).strip() if match else md_file.stem
 
             description = str(meta.get("description", "")).strip()
-            dt = datetime.fromtimestamp(md_file.stat().st_mtime, tz=timezone.utc)
+            dt = datetime.fromtimestamp(md_file.stat().st_mtime, tz=UTC)
             clean_link = f"{site_url}projects/{md_file.stem}/"
 
-            project_items.append({
-                "title": title,
-                "link": clean_link,
-                "description": description or f"Engineering project case study: {title}",
-                "pub_date": format_datetime(dt),
-                "timestamp": str(dt.timestamp()),
-            })
+            project_items.append(
+                {
+                    "title": title,
+                    "link": clean_link,
+                    "description": description or f"Engineering project case study: {title}",
+                    "pub_date": format_datetime(dt),
+                    "timestamp": str(dt.timestamp()),
+                }
+            )
 
     # Sort each list newest first
     blog_items.sort(key=lambda x: float(x["timestamp"]), reverse=True)
     project_items.sort(key=lambda x: float(x["timestamp"]), reverse=True)
-    combined_items = sorted(blog_items + project_items, key=lambda x: float(x["timestamp"]), reverse=True)
+    combined_items = sorted(
+        blog_items + project_items, key=lambda x: float(x["timestamp"]), reverse=True
+    )
 
     # 3. Build & Write Feeds
 
@@ -191,7 +198,9 @@ def build_rss_feeds(site_dir: Path, site_url: str = "https://mrxsierra.github.io
     )
     blog_tree.write(str(site_dir / "feed_blog.xml"), encoding="utf-8", xml_declaration=True)
     (site_dir / "blog").mkdir(parents=True, exist_ok=True)
-    blog_tree.write(str(site_dir / "blog" / "feed_rss_created.xml"), encoding="utf-8", xml_declaration=True)
+    blog_tree.write(
+        str(site_dir / "blog" / "feed_rss_created.xml"), encoding="utf-8", xml_declaration=True
+    )
 
     # Projects-Only Feed
     projects_tree = create_rss_xml(
@@ -203,7 +212,9 @@ def build_rss_feeds(site_dir: Path, site_url: str = "https://mrxsierra.github.io
     )
     projects_tree.write(str(site_dir / "feed_projects.xml"), encoding="utf-8", xml_declaration=True)
     (site_dir / "projects").mkdir(parents=True, exist_ok=True)
-    projects_tree.write(str(site_dir / "projects" / "feed_rss_created.xml"), encoding="utf-8", xml_declaration=True)
+    projects_tree.write(
+        str(site_dir / "projects" / "feed_rss_created.xml"), encoding="utf-8", xml_declaration=True
+    )
 
 
 def on_post_build(config, **kwargs):

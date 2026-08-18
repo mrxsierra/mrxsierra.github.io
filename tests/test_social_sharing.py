@@ -5,16 +5,15 @@ that the social share widget renders exactly once without duplicates across arti
 and that valid RSS syndication feeds are generated across multi-channel endpoints (Combined, Blog, Projects).
 """
 
-from pathlib import Path
 import xml.etree.ElementTree as ET
+from pathlib import Path
 
 from bs4 import Tag
+
 from tests.conftest import HTMLDoc
 
 
-def test_opengraph_and_twitter_cards_present(
-    site_dir: Path, parsed_html_docs: dict[Path, HTMLDoc]
-):
+def test_opengraph_and_twitter_cards_present(site_dir: Path, parsed_html_docs: dict[Path, HTMLDoc]):
     """Verify that OpenGraph and Twitter Card tags exist on all standard site pages."""
     assert len(parsed_html_docs) > 0, "No built HTML files found in site/ directory."
 

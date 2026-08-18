@@ -7,8 +7,8 @@ Prevents infinite reload loops during `mkdocs serve` by only updating files when
 
 import html
 import os
-from pathlib import Path
 import re
+from pathlib import Path
 
 
 def write_if_changed(filepath: str | Path, new_content: str) -> bool:
