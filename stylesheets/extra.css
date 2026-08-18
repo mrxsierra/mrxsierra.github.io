@@ -317,3 +317,75 @@
     font-size: 0.72rem;
     color: #f97316;
 }
+
+/* ==========================================================================
+   Developer Page Source & Collaboration Action Bar
+   ========================================================================== */
+
+.page-source-action-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--color-border-subtle, rgba(255, 255, 255, 0.06));
+}
+
+[data-md-color-scheme="default"] .page-source-action-bar {
+    border-top-color: #e2e8f0;
+}
+
+.btn-page-source {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.35rem 0.75rem;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--color-text-secondary, #94a3b8) !important;
+    background: transparent;
+    border: 1px solid var(--color-border, rgba(255, 255, 255, 0.12));
+    border-radius: 6px;
+    text-decoration: none !important;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    white-space: nowrap;
+}
+
+[data-md-color-scheme="default"] .btn-page-source {
+    color: #64748b !important;
+    border-color: #cbd5e1;
+}
+
+.btn-page-source:hover {
+    color: var(--color-text-primary, #ffffff) !important;
+    background: rgba(99, 102, 241, 0.08);
+    border-color: var(--color-accent, #6366f1);
+    transform: translateY(-1px);
+}
+
+[data-md-color-scheme="default"] .btn-page-source:hover {
+    color: #0f172a !important;
+    background: rgba(99, 102, 241, 0.06);
+    border-color: #6366f1;
+}
+
+.btn-page-source i {
+    font-size: 0.85rem;
+}
+
+.btn-page-source .source-ext-icon {
+    font-size: 0.65rem;
+    opacity: 0.7;
+    margin-left: 0.15rem;
+}
+
+@media screen and (max-width: 600px) {
+    .page-source-action-bar {
+        justify-content: stretch;
+    }
+    .btn-page-source {
+        flex: 1 1 auto;
+        justify-content: center;
+    }
+}
