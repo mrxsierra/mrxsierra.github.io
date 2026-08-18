@@ -143,6 +143,12 @@ def build_ai_docs() -> None:
 
 ---
 
+## Brand Standards &amp; Media Press Kit
+- [Brand Standards &amp; Identity System](https://mrxsierra.github.io/brand/): Developer-first geometric brand identity, vector SVGs, color tokens, and usage guidelines.
+- [Official Media Press Kit](https://mrxsierra.github.io/press/): Authorized speaker bios, executive headshots, vector logo downloads, and master press zip archive.
+
+---
+
 ## Syndication &amp; Release History
 - [Changelog &amp; Release Notes](https://mrxsierra.github.io/changelog/): Full version history and feature milestone changelog.
 - [Combined RSS Feed](https://mrxsierra.github.io/feed.xml): Main site-wide syndication feed for all articles and case studies.
@@ -175,6 +181,8 @@ def build_ai_docs() -> None:
         ("docs/index.md", "Overview & Developer Profile"),
         ("docs/about.md", "Background & Education"),
         ("docs/resume.md", "Verified Accreditations & Credentials"),
+        ("docs/brand/index.md", "Brand Standards & Design System Tokens"),
+        ("docs/press/index.md", "Official Media Press Kit & Assets"),
         ("docs/changelog.md", "Release History & Changelog"),
         ("docs/projects/gstn-pbc.md", "Case Study: GSTN Predictive Binary Classification"),
         ("docs/projects/ems-db.md", "Case Study: Examination Management System DB"),

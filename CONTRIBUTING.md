@@ -8,10 +8,12 @@ Welcome to the **`mrxsierra.github.io`** repository. This document provides a co
 
 ```text
 ├── docs/                      # Site markdown sources, assets, styles, & scripts
-│   ├── assets/                # Static assets (images, icons, favicons)
+│   ├── assets/                # Static assets (images, icons, favicons, brand exports)
 │   ├── blog/                  # Blog post articles and index
+│   ├── brand/                 # Geometric Brand Standards portal & vector mark downloads
 │   ├── cert/                  # Professional accreditation certificates
 │   ├── javascripts/           # Client-side custom scripts (index.js)
+│   ├── press/                 # Official Media Press Kit & speaker assets
 │   ├── projects/              # Featured project case studies & specs
 │   ├── stylesheets/           # Custom CSS stylesheets (index.css, extra.css)
 │   ├── changelog.md           # Site Changelog & release history page
@@ -27,12 +29,15 @@ Welcome to the **`mrxsierra.github.io`** repository. This document provides a co
 │       ├── copyright.html     # Footer partial embedding active version tag & changelog link
 │       └── social_share.html  # 8-platform responsive social sharing & copy toast widget
 ├── scripts/                   # Developer automation & verification tooling
+│   ├── brand_engine/          # Automated SVG vector generation & press archive packager
+│   │   └── generate_brand_assets.py # Generates monograms, lockups, favicons, and zip
 │   ├── bump_version.py        # SemVer bumper (updates VERSION, pyproject.toml, mkdocs.yml, CHANGELOG.md)
 │   ├── install_hooks.py       # Git pre-commit hook installer
 │   ├── setup_github_ruleset.sh# GitHub Repository Ruleset installer via gh CLI
 │   └── verify.py              # 5-stage pre-commit verification pipeline
-├── tests/                     # Automated pytest verification test suite (38 tests)
+├── tests/                     # Automated pytest verification test suite (49 tests)
 │   ├── conftest.py            # Pytest session fixtures (cached strict build & BeautifulSoup parsers)
+│   ├── test_brand_kit.py      # Vector marks, raster assets, banners, & press kit archive integrity
 │   ├── test_hooks.py          # Build hook unit tests & llms.txt format checks
 │   ├── test_html_integrity.py # Link checker, DOM semantics, & template leak checks
 │   ├── test_smoke.py          # Core HTML pages, sitemaps, RSS feeds, & static asset smoke tests
@@ -118,7 +123,8 @@ make serve
 ### Adding / Editing Content
 1. **Homepage (`docs/index.md`)**: Custom developer layout, terminal preview widget, and profile cards.
 2. **Project Case Studies (`docs/projects/<name>.md`)**: Include in `mkdocs.yml` navigation under `Projects`.
-3. **Blog Posts (`docs/blog/posts/<name>.md`)**:
+3. **Brand & Press Portals (`docs/brand/index.md`, `docs/press/index.md`)**: Maintain brand token definitions, usage guidance, and authorized speaker media kits.
+4. **Blog Posts (`docs/blog/posts/<name>.md`)**:
    - Provide standard YAML frontmatter:
      ```yaml
      ---
@@ -135,9 +141,16 @@ make serve
      ---
      ```
    - Use standard markdown links for inter-page navigation (e.g. `[Next Post](other-post.md)`).
-4. **Changelog (`CHANGELOG.md`)**:
+5. **Changelog (`CHANGELOG.md`)**:
    - Record changes under `## [Unreleased]` or version headers following [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
    - `hooks/generate_ai_docs.py` automatically synchronizes `docs/changelog.md` from `CHANGELOG.md` on every build.
+
+### Brand Asset & Press Kit Engine
+To compile vector SVGs, multi-density favicons, YouTube watermarks, and package the master zip press kit:
+```bash
+python scripts/brand_engine/generate_brand_assets.py
+# Outputs vector assets to docs/assets/brand/ and builds docs/assets/brand/mrxsierra-brand-press-kit.zip
+```
 
 ### Build Hooks & Dynamic Endpoints
 - **AI Documentation (`hooks/generate_ai_docs.py`)**: Runs pre-build to generate [`llms.txt`](https://mrxsierra.github.io/llms.txt) and [`llms-full.txt`](https://mrxsierra.github.io/llms-full.txt) per [llmstxt.org](https://llmstxt.org).
@@ -184,26 +197,26 @@ make build        # Run strict MkDocs build
 
 ## 6. Semantic Versioning & SDLC Release Process
 
-This project follows [Semantic Versioning (SemVer)](https://semver.org/) starting from **`v0.0.1`** with a single source of truth in the `VERSION` file:
+This project follows [Semantic Versioning (SemVer)](https://semver.org/) with a single source of truth in the `VERSION` file:
 
 ### Versioning Tiers:
 | Version Level | Pattern | Trigger / Flow | Description |
 | :--- | :--- | :--- | :--- |
-| **Patch** | `0.0.X` | Commits on `main` / `fix:` / `chore:` | Bug fixes, typo corrections, dependency updates (`make bump-patch`) |
-| **Minor** | `0.X.0` | **Feature PR to `main`** (`feat:`, `feat/*`) | New project case study, interactive component, or major blog post (`make bump-minor`) |
+| **Patch** | `0.X.Y` | Commits on `main` / `fix:` / `chore:` | Bug fixes, typo corrections, dependency updates (`make bump-patch`) |
+| **Minor** | `0.X.0` | **Feature PR to `main`** (`feat:`, `feat/*`) | New project case study, interactive component, brand update, or major blog post (`make bump-minor`) |
 | **Major** | `X.0.0` | **Manual** (`make bump-major`) | Complete architectural redesign or major milestone launch |
 
 ### Version Management Commands:
 ```bash
 make version      # Display current version from VERSION file
-make bump-patch   # Increment patch version (0.0.X)
+make bump-patch   # Increment patch version (0.X.Y)
 make bump-minor   # Increment minor version (0.X.0) & reset patch
 make bump-major   # Increment major version (X.0.0) & reset minor/patch
 ```
 
 ### Conventional Commits:
 When creating a PR or committing, use conventional prefixes:
-- `feat:` New project case study, page, or feature (triggers Minor bump on PR merge)
+- `feat:` New project case study, brand update, page, or feature (triggers Minor bump on PR merge)
 - `fix:` Broken link repair, layout bug fix, or script correction (Patch bump)
 - `docs:` Documentation or technical article update
 - `refactor:` Code restructuring
