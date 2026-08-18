@@ -79,3 +79,30 @@ def test_version_bump_calculations():
     # Custom set
     assert calculate_next_version(base, "set:0.5.0") == "0.5.0"
     assert calculate_next_version(base, "set:v1.0.0") == "1.0.0"
+
+
+def test_extract_categorized_git_commits():
+    """Verify that git commits are cleanly partitioned into Added, Fixed, and Changed."""
+    from scripts.bump_version import extract_categorized_git_commits
+
+    categories = extract_categorized_git_commits()
+    assert isinstance(categories, dict)
+    assert "Added" in categories
+    assert "Fixed" in categories
+    assert "Changed" in categories
+    assert isinstance(categories["Added"], list)
+    assert isinstance(categories["Fixed"], list)
+    assert isinstance(categories["Changed"], list)
+
+
+def test_terminal_telemetry_in_index_matches_version(project_root: Path):
+    """Verify that docs/index.md terminal widget matches the VERSION file."""
+    version_file = project_root / "VERSION"
+    index_file = project_root / "docs" / "index.md"
+
+    version_str = version_file.read_text(encoding="utf-8").strip()
+    index_content = index_file.read_text(encoding="utf-8")
+
+    assert f"v{version_str} • Verified &amp; Automated CI/CD" in index_content, (
+        f"docs/index.md does not contain 'v{version_str} • Verified &amp; Automated CI/CD'"
+    )
