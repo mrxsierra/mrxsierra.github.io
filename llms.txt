@@ -5,7 +5,7 @@
 - **Name**: Sunil Sharma
 - **Handle**: @mrxsierra
 - **Title**: Full-Stack & AI Systems Specialist
-- **Version**: v0.6.0
+- **Version**: v0.7.0
 - **Website**: https://mrxsierra.github.io/
 - **GitHub**: https://github.com/mrxsierra
 - **Primary Specializations**: Autonomous Agent Architectures, Multi-RDBMS Database Engineering (PostgreSQL, MySQL, SQLite), Machine Learning Competition Pipelines, Cloud Tooling (AWS S3, LocalStack, Docker).

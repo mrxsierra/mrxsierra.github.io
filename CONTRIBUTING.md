@@ -42,7 +42,7 @@ Welcome to the **`mrxsierra.github.io`** repository. This document provides a co
 │   ├── install_hooks.py       # Git pre-commit hook installer
 │   ├── setup_github_ruleset.sh# GitHub Repository Ruleset installer via gh CLI
 │   └── verify.py              # 5-stage pre-commit verification pipeline
-├── tests/                     # Automated pytest verification test suite (49 tests)
+├── tests/                     # Automated pytest verification test suite (55 tests)
 │   ├── conftest.py            # Pytest session fixtures (cached strict build & BeautifulSoup parsers)
 │   ├── test_brand_kit.py      # Vector marks, raster assets, banners, & press kit archive integrity
 │   ├── test_hooks.py          # Build hook unit tests & llms.txt format checks
@@ -212,7 +212,7 @@ make verify
 2. **Ruff Format Check (`ruff format --check .`)**: Validates uniform code formatting.
 3. **Mypy Static Analysis (`mypy hooks scripts tests`)**: Strict Python type checking.
 4. **MkDocs Strict Build (`mkdocs build --strict`)**: Builds the site treating all warnings as errors.
-5. **Pytest Verification Suite (`pytest tests/ -v`, 49 tests)**:
+5. **Pytest Verification Suite (`pytest tests/ -v`, 55 tests)**:
    - **`test_brand_kit.py`**: Validates vector marks, raster assets, video watermarks, social banners, and master press kit archive integrity.
    - **`test_smoke.py`**: Asserts existence and non-empty sizes of all core HTML pages, sitemaps, RSS feeds, stylesheets, scripts, and favicon.
    - **`test_html_integrity.py`**: Scans all built HTML for zero broken internal links, zero missing media assets, valid DOM semantics (`<!DOCTYPE>`, `<title>`, `<meta name="viewport">`), and zero unrendered template placeholders (`{{ ... }}`).

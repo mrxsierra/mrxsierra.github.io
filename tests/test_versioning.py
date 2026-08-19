@@ -106,3 +106,27 @@ def test_terminal_telemetry_in_index_matches_version(project_root: Path):
     assert f"v{version_str} • Verified &amp; Automated CI/CD" in index_content, (
         f"docs/index.md does not contain 'v{version_str} • Verified &amp; Automated CI/CD'"
     )
+
+
+def test_all_git_tags_present_in_changelog(project_root: Path):
+    """Verify that every Git tag in the repository has a matching section in CHANGELOG.md."""
+    import subprocess
+
+    changelog_file = project_root / "CHANGELOG.md"
+    assert changelog_file.exists(), "CHANGELOG.md missing"
+    changelog_content = changelog_file.read_text(encoding="utf-8")
+
+    result = subprocess.run(
+        ["git", "tag", "-l"],
+        cwd=project_root,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if result.returncode == 0 and result.stdout.strip():
+        tags = [t.strip() for t in result.stdout.splitlines() if t.strip()]
+        for tag in tags:
+            clean_ver = tag.lstrip("v")
+            assert f"[{clean_ver}]" in changelog_content, (
+                f"Git tag '{tag}' missing from CHANGELOG.md entry header '[{clean_ver}]'"
+            )
