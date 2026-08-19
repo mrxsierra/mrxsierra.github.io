@@ -319,47 +319,78 @@
 }
 
 /* ==========================================================================
-   Page-Scoped Developer Action Suite (.md-content__button)
+   Page-Scoped Segmented Developer Action Suite (.page-actions-pill-group)
    ========================================================================== */
 
-.md-content__button {
+.page-actions-pill-group {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    padding: 2px;
+    border: 1px solid var(--color-border, rgba(255, 255, 255, 0.1));
+    border-radius: 8px;
+    background: rgba(24, 24, 27, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    float: right;
+    margin-left: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+[data-md-color-scheme="default"] .page-actions-pill-group {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.page-action-pill-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 1.8rem;
-    height: 1.8rem;
-    margin-left: 0.35rem;
-    border-radius: 6px;
-    border: 1px solid transparent;
+    width: 26px;
+    height: 26px;
+    border-radius: 5px;
     color: var(--color-text-secondary, #94a3b8) !important;
-    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    background: transparent;
+    border: none;
+    text-decoration: none !important;
+    transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
 }
 
-.md-content__button svg {
-    width: 1.15rem;
-    height: 1.15rem;
-    fill: currentColor;
-    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), fill 0.2s ease;
+.page-action-pill-btn svg {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.md-content__button:hover {
-    color: var(--color-accent, #6366f1) !important;
-    background: rgba(99, 102, 241, 0.08);
-    border-color: rgba(99, 102, 241, 0.25);
+/* Icon specific accent color tokens */
+.page-action-pill-btn .icon-raw {
+    color: #f59e0b; /* Amber */
+}
+
+.page-action-pill-btn .icon-source {
+    color: #a855f7; /* Purple */
+}
+
+.page-action-pill-btn .icon-edit {
+    color: #3b82f6; /* Blue */
+}
+
+.page-action-pill-btn .icon-feedback {
+    color: #10b981; /* Emerald */
+}
+
+.page-action-pill-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
     transform: translateY(-1px);
 }
 
-.md-content__button:hover svg {
-    transform: scale(1.08);
-    fill: var(--color-accent, #6366f1);
+.page-action-pill-btn:hover svg {
+    transform: scale(1.12);
 }
 
-[data-md-color-scheme="default"] .md-content__button {
-    color: #64748b !important;
-}
-
-[data-md-color-scheme="default"] .md-content__button:hover {
-    color: #4f46e5 !important;
-    background: rgba(79, 70, 229, 0.06);
-    border-color: rgba(79, 70, 229, 0.2);
+[data-md-color-scheme="default"] .page-action-pill-btn:hover {
+    background: #f1f5f9;
 }
