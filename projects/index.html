@@ -72,8 +72,8 @@
   <meta name="theme-color" content="#08090d">
 
   <!-- Release Version & Telemetry Metadata -->
-  <meta name="version" content="0.5.0">
-  <meta name="docsearch:version" content="0.5.0">
+  <meta name="version" content="0.6.0">
+  <meta name="docsearch:version" content="0.6.0">
 
   <!-- Pinterest Domain Verification -->
   <meta name="p:domain_verify" content="27f1066f07901202885ef3bb8b8c56fd">
@@ -1280,8 +1280,8 @@
               <article class="md-content__inner md-typeset">
                 
                   
-
-
+<div class="page-top-actions">
+  
 <nav class="page-actions-pill-group" aria-label="Page developer actions">
   <!-- 1. Raw Markdown / Plain Machine-Readable Text of THIS page -->
   <a href="https://raw.githubusercontent.com/mrxsierra/mrxsierra.github.io/main/docs/projects/index.md" title="View raw markdown of this page" class="page-action-pill-btn btn-action-raw" target="_blank" rel="noopener noreferrer" aria-label="View raw markdown of this page">
@@ -1317,11 +1317,17 @@
   </a>
 </nav>
 
+</div>
+
+
+
+
+
 
 <h1 id="engineering-projects">Engineering Projects<a class="headerlink" href="#engineering-projects" title="Permanent link">¶</a></h1>
 <div class="page-intro">
-  <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px;">
-    <h2 class="page-intro-title" style="margin: 0;">Proof of Work &amp; Case Studies</h2>
+  <div class="page-intro-header">
+    <h2 class="page-intro-title">Proof of Work &amp; Case Studies</h2>
     <a href="../feed_projects.xml" class="rss-subscribe-badge" title="Subscribe to Projects RSS Feed" target="_blank" rel="noopener">
       <i class="fas fa-rss" aria-hidden="true"></i>
       <span>Projects RSS</span>
@@ -1330,7 +1336,7 @@
   <p class="page-intro-desc">
     A curated index of production software, machine learning competition pipelines, and developer-first data extraction tooling. Each project contains architecture breakdowns, technical rationales, and source repositories.
   </p>
-  <div style="margin-top: 16px; display: flex; gap: 8px; flex-wrap: wrap;">
+  <div class="page-intro-tags">
     <span class="tag-item"><i class="fas fa-brain"></i> Machine Learning</span>
     <span class="tag-item"><i class="fas fa-database"></i> Database Architecture</span>
     <span class="tag-item"><i class="fas fa-cloud"></i> Cloud Emulation</span>
@@ -1339,136 +1345,164 @@
   </div>
 </div>
 
-<hr>
 <h2 id="featured-project-case-studies">Featured Project Case Studies<a class="headerlink" href="#featured-project-case-studies" title="Permanent link">¶</a></h2>
-<div class="card-grid-2" style="margin: 24px 0;">
+<div class="feed-stream">
 
   <!-- Project 1: GSTN Hackathon -->
-  <a class="clean-card" href="gstn-pbc/">
-    <div class="project-card-header">
-      <span class="project-category-badge">Machine Learning</span>
-      <div class="project-icon-box"><i class="fas fa-award"></i></div>
+  <a class="feed-card" href="gstn-pbc/">
+    <div class="feed-card-header">
+      <div class="feed-card-badge-row">
+        <span class="feed-card-badge">Machine Learning</span>
+        <span class="feed-card-meta"><i class="fas fa-award"></i> National Finalist</span>
+      </div>
+      <span class="feed-card-meta">Python / ML Pipeline</span>
     </div>
-    <h3 class="project-card-title">GSTN Predictive Binary Classification</h3>
-    <p class="project-card-desc">
+    <h3 class="feed-card-title">GSTN Predictive Binary Classification</h3>
+    <p class="feed-card-desc">
       National-level hackathon finalist project — interpretable gradient boosted ML pipeline analyzing 900,000+ real-world GST records with strict reproducibility.
     </p>
-    <div class="tag-list">
-      <span class="tag-item">Python</span>
-      <span class="tag-item">Scikit-Learn</span>
-      <span class="tag-item">XGBoost</span>
-      <span class="tag-item">SHAP</span>
+    <div class="feed-card-footer">
+      <div class="feed-card-tags">
+        <span class="tag-item">Python</span>
+        <span class="tag-item">Scikit-Learn</span>
+        <span class="tag-item">XGBoost</span>
+        <span class="tag-item">SHAP</span>
+      </div>
+      <span class="feed-card-action">Read Case Study <i class="fas fa-arrow-right"></i></span>
     </div>
-    <span class="card-footer-link">Read Case Study <i class="fas fa-arrow-right"></i></span>
   </a>
 
   <!-- Project 2: EMS DB -->
-  <a class="clean-card" href="ems-db/">
-    <div class="project-card-header">
-      <span class="project-category-badge">Database Architecture</span>
-      <div class="project-icon-box"><i class="fas fa-database"></i></div>
+  <a class="feed-card" href="ems-db/">
+    <div class="feed-card-header">
+      <div class="feed-card-badge-row">
+        <span class="feed-card-badge">Database Architecture</span>
+        <span class="feed-card-meta"><i class="fas fa-database"></i> Multi-RDBMS</span>
+      </div>
+      <span class="feed-card-meta">SQL / Automation</span>
     </div>
-    <h3 class="project-card-title">Examination Management System DB</h3>
-    <p class="project-card-desc">
+    <h3 class="feed-card-title">Examination Management System DB</h3>
+    <p class="feed-card-desc">
       Modular, production-ready multi-RDBMS architecture (PostgreSQL, MySQL, SQLite) with Python automation, Dockerized environments, and CI pipeline validation.
     </p>
-    <div class="tag-list">
-      <span class="tag-item">PostgreSQL</span>
-      <span class="tag-item">MySQL</span>
-      <span class="tag-item">Docker</span>
-      <span class="tag-item">Python</span>
+    <div class="feed-card-footer">
+      <div class="feed-card-tags">
+        <span class="tag-item">PostgreSQL</span>
+        <span class="tag-item">MySQL</span>
+        <span class="tag-item">Docker</span>
+        <span class="tag-item">Python</span>
+      </div>
+      <span class="feed-card-action">Read Case Study <i class="fas fa-arrow-right"></i></span>
     </div>
-    <span class="card-footer-link">Read Case Study <i class="fas fa-arrow-right"></i></span>
   </a>
 
   <!-- Project 3: S3 Faker -->
-  <a class="clean-card" href="s3-faker/">
-    <div class="project-card-header">
-      <span class="project-category-badge">Cloud Tooling</span>
-      <div class="project-icon-box"><i class="fas fa-cloud-arrow-up"></i></div>
+  <a class="feed-card" href="s3-faker/">
+    <div class="feed-card-header">
+      <div class="feed-card-badge-row">
+        <span class="feed-card-badge">Cloud Tooling</span>
+        <span class="feed-card-meta"><i class="fas fa-cloud-arrow-up"></i> AWS / S3</span>
+      </div>
+      <span class="feed-card-meta">Data Generation</span>
     </div>
-    <h3 class="project-card-title">S3 Faker Mock Data Generator</h3>
-    <p class="project-card-desc">
+    <h3 class="feed-card-title">S3 Faker Mock Data Generator</h3>
+    <p class="feed-card-desc">
       High-throughput synthetic data generation suite with native AWS S3 and LocalStack integration for cloud testing pipelines.
     </p>
-    <div class="tag-list">
-      <span class="tag-item">Python</span>
-      <span class="tag-item">AWS S3</span>
-      <span class="tag-item">LocalStack</span>
-      <span class="tag-item">Boto3</span>
+    <div class="feed-card-footer">
+      <div class="feed-card-tags">
+        <span class="tag-item">Python</span>
+        <span class="tag-item">AWS S3</span>
+        <span class="tag-item">LocalStack</span>
+        <span class="tag-item">Boto3</span>
+      </div>
+      <span class="feed-card-action">Read Case Study <i class="fas fa-arrow-right"></i></span>
     </div>
-    <span class="card-footer-link">Read Case Study <i class="fas fa-arrow-right"></i></span>
   </a>
 
   <!-- Project 4: Paraxcel -->
-  <a class="clean-card" href="paraxcel/">
-    <div class="project-card-header">
-      <span class="project-category-badge">Data Automation</span>
-      <div class="project-icon-box"><i class="fas fa-file-excel"></i></div>
+  <a class="feed-card" href="paraxcel/">
+    <div class="feed-card-header">
+      <div class="feed-card-badge-row">
+        <span class="feed-card-badge">Data Automation</span>
+        <span class="feed-card-meta"><i class="fas fa-file-excel"></i> Parser Engine</span>
+      </div>
+      <span class="feed-card-meta">Document ETL</span>
     </div>
-    <h3 class="project-card-title">Paraxcel Document Toolkit</h3>
-    <p class="project-card-desc">
+    <h3 class="feed-card-title">Paraxcel Document Toolkit</h3>
+    <p class="feed-card-desc">
       High-performance document parsing engine for complex Docx-to-Excel extraction, tabular data normalization, and automated reporting.
     </p>
-    <div class="tag-list">
-      <span class="tag-item">Python</span>
-      <span class="tag-item">Pandas</span>
-      <span class="tag-item">OpenPyXL</span>
-      <span class="tag-item">Tkinter</span>
+    <div class="feed-card-footer">
+      <div class="feed-card-tags">
+        <span class="tag-item">Python</span>
+        <span class="tag-item">Pandas</span>
+        <span class="tag-item">OpenPyXL</span>
+        <span class="tag-item">Tkinter</span>
+      </div>
+      <span class="feed-card-action">Read Case Study <i class="fas fa-arrow-right"></i></span>
     </div>
-    <span class="card-footer-link">Read Case Study <i class="fas fa-arrow-right"></i></span>
   </a>
 
   <!-- Project 5: Naukri Scraper -->
-  <a class="clean-card" href="naukri-webscraper/">
-    <div class="project-card-header">
-      <span class="project-category-badge">Web Automation</span>
-      <div class="project-icon-box"><i class="fas fa-spider"></i></div>
+  <a class="feed-card" href="naukri-webscraper/">
+    <div class="feed-card-header">
+      <div class="feed-card-badge-row">
+        <span class="feed-card-badge">Web Automation</span>
+        <span class="feed-card-meta"><i class="fas fa-spider"></i> Selenium / BS4</span>
+      </div>
+      <span class="feed-card-meta">Data Pipeline</span>
     </div>
-    <h3 class="project-card-title">Naukri Market Data Scraper</h3>
-    <p class="project-card-desc">
+    <h3 class="feed-card-title">Naukri Market Data Scraper</h3>
+    <p class="feed-card-desc">
       Automated Selenium &amp; BeautifulSoup extraction engine for tech hiring telemetry, salary benchmarking, and role aggregation.
     </p>
-    <div class="tag-list">
-      <span class="tag-item">Python</span>
-      <span class="tag-item">Selenium</span>
-      <span class="tag-item">BeautifulSoup</span>
-      <span class="tag-item">pytest</span>
+    <div class="feed-card-footer">
+      <div class="feed-card-tags">
+        <span class="tag-item">Python</span>
+        <span class="tag-item">Selenium</span>
+        <span class="tag-item">BeautifulSoup</span>
+        <span class="tag-item">pytest</span>
+      </div>
+      <span class="feed-card-action">Read Case Study <i class="fas fa-arrow-right"></i></span>
     </div>
-    <span class="card-footer-link">Read Case Study <i class="fas fa-arrow-right"></i></span>
   </a>
 
   <!-- Project 6: Test Site -->
-  <a class="clean-card" href="test-site/">
-    <div class="project-card-header">
-      <span class="project-category-badge">Web Application</span>
-      <div class="project-icon-box"><i class="fas fa-clipboard-check"></i></div>
+  <a class="feed-card" href="test-site/">
+    <div class="feed-card-header">
+      <div class="feed-card-badge-row">
+        <span class="feed-card-badge">Web Application</span>
+        <span class="feed-card-meta"><i class="fas fa-clipboard-check"></i> Interactive UI</span>
+      </div>
+      <span class="feed-card-meta">Frontend App</span>
     </div>
-    <h3 class="project-card-title">Real-Time Test Management Interface</h3>
-    <p class="project-card-desc">
+    <h3 class="feed-card-title">Real-Time Test Management Interface</h3>
+    <p class="feed-card-desc">
       Responsive frontend application for live examination management, test scheduling, student authentication, and scoring.
     </p>
-    <div class="tag-list">
-      <span class="tag-item">JavaScript</span>
-      <span class="tag-item">HTML5</span>
-      <span class="tag-item">CSS3</span>
-      <span class="tag-item">Bootstrap</span>
+    <div class="feed-card-footer">
+      <div class="feed-card-tags">
+        <span class="tag-item">JavaScript</span>
+        <span class="tag-item">HTML5</span>
+        <span class="tag-item">CSS3</span>
+        <span class="tag-item">Bootstrap</span>
+      </div>
+      <span class="feed-card-action">Read Case Study <i class="fas fa-arrow-right"></i></span>
     </div>
-    <span class="card-footer-link">Read Case Study <i class="fas fa-arrow-right"></i></span>
   </a>
 
 </div>
 
-<hr>
 <h2 id="architectural-principles">Architectural Principles<a class="headerlink" href="#architectural-principles" title="Permanent link">¶</a></h2>
-<div class="card-grid-3" style="margin: 24px 0;">
+<div class="card-grid-3">
 
   <div class="capability-card">
     <div class="capability-header">
       <div class="capability-icon"><i class="fas fa-chart-line"></i></div>
       <h3 class="capability-title">Interpretable ML Systems</h3>
     </div>
-    <p style="margin: 0; font-size: 13.5px; color: var(--color-text-secondary); line-height: 1.55;">
+    <p class="capability-desc">
       Prioritizing feature explainability (SHAP, permutation importance) and strict data isolation to eliminate target leakage in production models.
     </p>
   </div>
@@ -1478,7 +1512,7 @@
       <div class="capability-icon"><i class="fas fa-scale-balanced"></i></div>
       <h3 class="capability-title">Multi-RDBMS Parity</h3>
     </div>
-    <p style="margin: 0; font-size: 13.5px; color: var(--color-text-secondary); line-height: 1.55;">
+    <p class="capability-desc">
       Enforcing strict relational integrity, trigger parity, and automated query validation across PostgreSQL, MySQL, and SQLite.
     </p>
   </div>
@@ -1488,7 +1522,7 @@
       <div class="capability-icon"><i class="fas fa-cloud-bolt"></i></div>
       <h3 class="capability-title">Zero-Spend Cloud Simulation</h3>
     </div>
-    <p style="margin: 0; font-size: 13.5px; color: var(--color-text-secondary); line-height: 1.55;">
+    <p class="capability-desc">
       Leveraging containerized LocalStack emulation and automated Docker workflows to validate cloud storage logic locally.
     </p>
   </div>
@@ -1496,6 +1530,7 @@
 </div>
 
 <!-- markdownlint-disable -->
+
 
 
 
@@ -1518,7 +1553,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 18, 2026 08:29:41 UTC">August 18, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 19, 2026 14:32:04 UTC">August 19, 2026</span>
   </span>
 
     
@@ -1551,6 +1586,11 @@
           <img src="https://avatars.githubusercontent.com/u/9698455?v=4&amp;size=72" alt="mrxsierra">
         </a>
       
+        <a href="https://github.com/web-flow" class="md-author" title="@web-flow">
+          
+          <img src="https://avatars.githubusercontent.com/u/19864447?v=4&amp;size=72" alt="web-flow">
+        </a>
+      
       
       
     </nav>
@@ -1558,6 +1598,7 @@
 
     
   </aside>
+
 
 
   <!-- Social Sharing Partial Component -->
@@ -1643,6 +1684,7 @@
 
 
 
+
                 
               </article>
             </div>
@@ -1713,7 +1755,7 @@
             <span class="status-dot"></span> CI/CD Verified
           </span>
           <a href="../changelog/" class="footer-version-badge" title="View Release Changelog">
-            <i class="fas fa-tag" aria-hidden="true"></i> v0.5.0
+            <i class="fas fa-tag" aria-hidden="true"></i> v0.6.0
           </a>
         </div>
       </div>
@@ -1893,7 +1935,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.footer", "navigation.instant.progress", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "header.autohide", "content.code.copy", "content.code.annotate", "content.tooltips", "content.footnote.tooltips", "content.action.view"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": {"C": "c", "CSS": "css", "HTML5": "html", "Home": "home", "JavaScript": "js", "Python": "python", "Welcome": "home", "blog": "blog", "latest": "latest", "project": "project"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "0.5.0"}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.footer", "navigation.instant.progress", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "header.autohide", "content.code.copy", "content.code.annotate", "content.tooltips", "content.footnote.tooltips", "content.action.view"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": {"C": "c", "CSS": "css", "HTML5": "html", "Home": "home", "JavaScript": "js", "Python": "python", "Welcome": "home", "blog": "blog", "latest": "latest", "project": "project"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "0.6.0"}</script>
     
     
       <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
