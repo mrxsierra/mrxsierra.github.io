@@ -71,7 +71,6 @@ draft_docs: |
 extra_css:
   - stylesheets/index.css
   - stylesheets/extra.css
-  - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css
 
 
 extra_javascript:

@@ -101,12 +101,12 @@ The challenge required building an accurate predictive model $F_\theta(X) \to Y_
 
 <div class="card-grid-2">
   <div>
-    <h4>Precision-Recall Curve</h4>
-    <img src="https://raw.githubusercontent.com/mrxsierra/gstn_dsp_pbc/main/3-submission/static/prc.png" alt="Precision-Recall Curve" class="media-img-rounded" loading="lazy">
+    <h3>Precision-Recall Curve</h3>
+    <img src="https://raw.githubusercontent.com/mrxsierra/gstn_dsp_pbc/main/3-submission/static/prc.png" alt="Precision-Recall Curve" class="media-img-rounded" loading="lazy" width="600" height="450">
   </div>
   <div>
-    <h4>Confusion Matrix</h4>
-    <img src="https://raw.githubusercontent.com/mrxsierra/gstn_dsp_pbc/main/3-submission/static/cm.png" alt="Confusion Matrix" class="media-img-rounded" loading="lazy">
+    <h3>Confusion Matrix</h3>
+    <img src="https://raw.githubusercontent.com/mrxsierra/gstn_dsp_pbc/main/3-submission/static/cm.png" alt="Confusion Matrix" class="media-img-rounded" loading="lazy" width="600" height="450">
   </div>
 </div>
 

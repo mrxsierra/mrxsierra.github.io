@@ -92,21 +92,21 @@ The **Real-Time Test Management Interface** is a client-side web application bui
 
 <div class="card-grid-3">
   <div>
-    <h4>1. Test Taking View</h4>
+    <h3>1. Test Taking View</h3>
     <a href="https://raw.githubusercontent.com/mrxsierra/test-site/main/img/test-page.png" class="glightbox" data-gallery="testsite" data-title="Active Test Taking Interface">
-      <img src="https://raw.githubusercontent.com/mrxsierra/test-site/main/img/test-page.png" alt="Test Taking Interface" class="media-img-rounded" loading="lazy">
+      <img src="https://raw.githubusercontent.com/mrxsierra/test-site/main/img/test-page.png" alt="Test Taking Interface" class="media-img-rounded" loading="lazy" width="600" height="400">
     </a>
   </div>
   <div>
-    <h4>2. Analytics Dashboard</h4>
+    <h3>2. Analytics Dashboard</h3>
     <a href="https://raw.githubusercontent.com/mrxsierra/test-site/main/img/anamoly-dash.png" class="glightbox" data-gallery="testsite" data-title="Analytics Dashboard">
-      <img src="https://raw.githubusercontent.com/mrxsierra/test-site/main/img/anamoly-dash.png" alt="Analytics Dashboard" class="media-img-rounded" loading="lazy">
+      <img src="https://raw.githubusercontent.com/mrxsierra/test-site/main/img/anamoly-dash.png" alt="Analytics Dashboard" class="media-img-rounded" loading="lazy" width="600" height="400">
     </a>
   </div>
   <div>
-    <h4>3. Score Results View</h4>
+    <h3>3. Score Results View</h3>
     <a href="https://raw.githubusercontent.com/mrxsierra/test-site/main/img/individual-test-result.png" class="glightbox" data-gallery="testsite" data-title="Score Results View">
-      <img src="https://raw.githubusercontent.com/mrxsierra/test-site/main/img/individual-test-result.png" alt="Score Results View" class="media-img-rounded" loading="lazy">
+      <img src="https://raw.githubusercontent.com/mrxsierra/test-site/main/img/individual-test-result.png" alt="Score Results View" class="media-img-rounded" loading="lazy" width="600" height="400">
     </a>
   </div>
 </div>

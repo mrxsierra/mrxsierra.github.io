@@ -100,21 +100,21 @@ Designed for educators and assessment coordinators, Paraxcel operates entirely o
 
 <div class="card-grid-3">
   <div>
-    <h4>1. Desktop GUI Interface</h4>
+    <h3>1. Desktop GUI Interface</h3>
     <a href="https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/ui.jpg" class="glightbox" data-gallery="paraxcel" data-title="Paraxcel Desktop GUI">
-      <img src="https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/ui.jpg" alt="Paraxcel Desktop GUI" class="media-img-rounded" loading="lazy">
+      <img src="https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/ui.jpg" alt="Paraxcel Desktop GUI" class="media-img-rounded" loading="lazy" width="600" height="400">
     </a>
   </div>
   <div>
-    <h4>2. Sample DOCX Input</h4>
+    <h3>2. Sample DOCX Input</h3>
     <a href="https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/sample.jpg" class="glightbox" data-gallery="paraxcel" data-title="Sample DOCX Input">
-      <img src="https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/sample.jpg" alt="Sample DOCX Input" class="media-img-rounded" loading="lazy">
+      <img src="https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/sample.jpg" alt="Sample DOCX Input" class="media-img-rounded" loading="lazy" width="600" height="400">
     </a>
   </div>
   <div>
-    <h4>3. Normalized Excel Output</h4>
+    <h3>3. Normalized Excel Output</h3>
     <a href="https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/excel.jpg" class="glightbox" data-gallery="paraxcel" data-title="Normalized Excel Output">
-      <img src="https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/excel.jpg" alt="Normalized Excel Output" class="media-img-rounded" loading="lazy">
+      <img src="https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/excel.jpg" alt="Normalized Excel Output" class="media-img-rounded" loading="lazy" width="600" height="400">
     </a>
   </div>
 </div>
