@@ -9,8 +9,6 @@ hide:
   - action.view
   - action.edit
   - content.action.view
-tags:
-  - Welcome
 ---
 
 <!-- markdownlint-disable MD041 -->

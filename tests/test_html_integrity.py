@@ -7,7 +7,7 @@ native Mermaid diagram compilation, and Reader Mode compatibility.
 from pathlib import Path
 from urllib.parse import unquote, urlparse
 
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Tag
 
 SITE_DOMAIN = "https://mrxsierra.github.io"
 # Sibling standalone GitHub Pages repositories (not hosted in this MkDocs site root)
@@ -212,3 +212,31 @@ def test_reader_mode_article_headings(all_html_files: list[Path], site_dir: Path
         assert h1 is not None, (
             f"Page {html_file.relative_to(site_dir)} must contain an <h1> element for Reader Mode."
         )
+
+
+def test_homepage_has_zero_tags(site_dir: Path):
+    """Ensure that the homepage (index.html) does not render any tag elements."""
+    homepage = site_dir / "index.html"
+    assert homepage.exists(), "Homepage index.html must exist."
+    content = homepage.read_text(encoding="utf-8")
+    soup = BeautifulSoup(content, "html.parser")
+    tags_nav = soup.find("nav", class_="md-tags")
+    tag_elements = soup.find_all("a", class_="md-tag")
+    page_tags_wrapper = soup.find("div", class_="page-tags-wrapper")
+    assert tags_nav is None, "Homepage should not render <nav class='md-tags'>"
+    assert len(tag_elements) == 0, "Homepage should have zero .md-tag elements"
+    assert page_tags_wrapper is None, "Homepage should not render .page-tags-wrapper"
+
+
+def test_tags_ribbon_structure_on_tagged_pages(site_dir: Path):
+    """Ensure that tagged pages wrap their tags in .page-tags-wrapper."""
+    tagged_page = site_dir / "projects" / "gstn-pbc" / "index.html"
+    assert tagged_page.exists(), "Tagged project page must exist."
+    content = tagged_page.read_text(encoding="utf-8")
+    soup = BeautifulSoup(content, "html.parser")
+    wrapper = soup.find("div", class_="page-tags-wrapper")
+    assert isinstance(wrapper, Tag), "Tagged page must contain .page-tags-wrapper"
+    tags_nav = wrapper.find("nav", class_="md-tags")
+    assert isinstance(tags_nav, Tag), ".page-tags-wrapper must contain <nav class='md-tags'>"
+    tag_elements = tags_nav.find_all("a", class_="md-tag")
+    assert len(tag_elements) >= 1, "Tagged page must contain tag links"

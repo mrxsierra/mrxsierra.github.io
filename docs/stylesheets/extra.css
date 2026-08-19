@@ -69,15 +69,43 @@
     border-top-color: rgba(255, 255, 255, 0.08);
 }
 
-/* Metadata Byline & Tags Placement */
+/* Metadata Byline & Tags Placement - Smooth Scrollable Tag Ribbon */
+.page-tags-wrapper {
+    max-width: calc(100% - 155px);
+    margin: 0.25rem 0 1rem 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.page-tags-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
 .md-typeset .md-tags {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     gap: 0.35rem;
-    margin: 0.5rem 0 1.5rem 0;
-    padding: 0;
-    clear: both;
+    margin: 0;
+    padding: 2px 0;
+    white-space: nowrap;
+}
+
+.md-typeset .md-tag {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    white-space: nowrap;
+    margin: 0;
+}
+
+@media screen and (max-width: 45em) {
+    .page-tags-wrapper {
+        max-width: 100%;
+        margin-bottom: 0.75rem;
+    }
 }
 
 /* ==========================================================================
@@ -241,8 +269,10 @@
    Sidebar & Scroll Boundary Protection
    ========================================================================== */
 
-.md-sidebar {
-    z-index: 1;
+@media screen and (min-width: 76.25em) {
+    .md-sidebar {
+        z-index: 1;
+    }
 }
 
 .md-sidebar__inner {

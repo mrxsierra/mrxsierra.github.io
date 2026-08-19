@@ -1105,7 +1105,7 @@ article:has(.main-body) .md-source-file {
 .subnav-sticky {
   position: sticky;
   top: 12px;
-  z-index: 100;
+  z-index: 2;
   margin: var(--space-6) 0;
   display: flex;
   justify-content: center;
