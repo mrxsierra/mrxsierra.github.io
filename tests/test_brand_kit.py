@@ -60,7 +60,16 @@ def test_favicon_and_app_suite(site_dir: Path):
     manifest_data = json.loads(manifest_file.read_text(encoding="utf-8"))
     assert manifest_data.get("name") == "Sunil Sharma | mrxsierra"
     assert manifest_data.get("short_name") == "mrxsierra"
-    assert len(manifest_data.get("icons", [])) >= 2
+    icons = manifest_data.get("icons", [])
+    assert len(icons) >= 2
+    for icon in icons:
+        src = icon.get("src", "")
+        assert not src.startswith("assets/"), (
+            f"Icon src '{src}' in manifest must be relative to manifest directory"
+        )
+        assert (img_dir / src).exists(), (
+            f"Icon file '{src}' referenced in manifest must exist in {img_dir}"
+        )
 
 
 def test_video_and_multimedia_suite(site_dir: Path):
