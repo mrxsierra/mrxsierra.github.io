@@ -14,12 +14,12 @@ description: >
 # Paraxcel Document Toolkit
 
 <div class="project-header-card">
-  <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px;">
+  <div class="project-header-top">
     <div>
       <span class="project-category-badge">Data Automation • Desktop Application</span>
-      <h2 style="margin: 6px 0 0 0; font-size: 22px; font-weight: 700;">Paraxcel Document Parsing Engine</h2>
+      <h2 class="project-header-title">Paraxcel Document Parsing Engine</h2>
     </div>
-    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+    <div class="project-header-actions">
       <a href="https://github.com/mrxsierra/paraxcel" target="_blank" rel="noopener" class="btn btn-primary">
         <i class="fab fa-github"></i> Repository
       </a>

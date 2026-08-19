@@ -15,12 +15,12 @@ description: >
 # S3 Faker Mock Data Generator
 
 <div class="project-header-card">
-  <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px;">
+  <div class="project-header-top">
     <div>
       <span class="project-category-badge">Cloud Tooling • Data Automation</span>
-      <h2 style="margin: 6px 0 0 0; font-size: 22px; font-weight: 700;">Synthetic Cloud Data Generation Suite</h2>
+      <h2 class="project-header-title">Synthetic Cloud Data Generation Suite</h2>
     </div>
-    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+    <div class="project-header-actions">
       <a href="https://github.com/mrxsierra/s3_faker" target="_blank" rel="noopener" class="btn btn-primary">
         <i class="fab fa-github"></i> Repository
       </a>
@@ -96,17 +96,17 @@ python -m s3_faker --config schema.json --target s3://test-bucket/data/ --endpoi
 
 ## Verification &amp; Workflow Visuals
 
-<div class="card-grid-2" style="margin: 20px 0;">
+<div class="card-grid-2">
   <div>
-    <h4 style="margin: 0 0 8px 0;">LocalStack Emulation Environment</h4>
+    <h4>LocalStack Emulation Environment</h4>
     <a href="https://raw.githubusercontent.com/mrxsierra/s3_faker/main/img/localstack%20resource.jpg" class="glightbox" data-gallery="s3faker" data-title="LocalStack Resource Visualization">
-      <img src="https://raw.githubusercontent.com/mrxsierra/s3_faker/main/img/localstack%20resource.jpg" alt="LocalStack S3 Environment" style="border-radius: 8px; border: 1px solid var(--color-border);" loading="lazy">
+      <img src="https://raw.githubusercontent.com/mrxsierra/s3_faker/main/img/localstack%20resource.jpg" alt="LocalStack S3 Environment" class="media-img-rounded" loading="lazy">
     </a>
   </div>
   <div>
-    <h4 style="margin: 0 0 8px 0;">Data Synthesis &amp; Upload Execution</h4>
+    <h4>Data Synthesis &amp; Upload Execution</h4>
     <a href="https://raw.githubusercontent.com/mrxsierra/s3_faker/main/img/update.jpg" class="glightbox" data-gallery="s3faker" data-title="Synthetic Data Pipeline Run">
-      <img src="https://raw.githubusercontent.com/mrxsierra/s3_faker/main/img/update.jpg" alt="Synthetic Data Generation Run" style="border-radius: 8px; border: 1px solid var(--color-border);" loading="lazy">
+      <img src="https://raw.githubusercontent.com/mrxsierra/s3_faker/main/img/update.jpg" alt="Synthetic Data Generation Run" class="media-img-rounded" loading="lazy">
     </a>
   </div>
 </div>
@@ -117,8 +117,8 @@ python -m s3_faker --config schema.json --target s3://test-bucket/data/ --endpoi
     <span class="project-nav-dir"><i class="fas fa-arrow-left"></i> Previous Project</span>
     <span class="project-nav-title">Examination Management System DB</span>
   </a>
-  <a href="../paraxcel/" class="project-nav-card" style="text-align: right;">
-    <span class="project-nav-dir" style="justify-content: flex-end;">Next Project <i class="fas fa-arrow-right"></i></span>
+  <a href="../paraxcel/" class="project-nav-card nav-right">
+    <span class="project-nav-dir dir-right">Next Project <i class="fas fa-arrow-right"></i></span>
     <span class="project-nav-title">Paraxcel Document Toolkit</span>
   </a>
 </div>

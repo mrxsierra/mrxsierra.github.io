@@ -14,12 +14,12 @@ description: >
 # GSTN Predictive Binary Classification
 
 <div class="project-header-card">
-  <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px;">
+  <div class="project-header-top">
     <div>
       <span class="project-category-badge">Machine Learning • Competition Finalist</span>
-      <h2 style="margin: 6px 0 0 0; font-size: 22px; font-weight: 700;">GSTN AI/ML Analytics Challenge</h2>
+      <h2 class="project-header-title">GSTN AI/ML Analytics Challenge</h2>
     </div>
-    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+    <div class="project-header-actions">
       <a href="https://github.com/mrxsierra/gstn_dsp_pbc" target="_blank" rel="noopener" class="btn btn-primary">
         <i class="fab fa-github"></i> Repository
       </a>
@@ -112,11 +112,11 @@ The challenge required building an accurate predictive model $F_\theta(X) \to Y_
 
 ## Verified Accreditation
 
-<div style="max-width: 650px; margin: 20px 0;">
+<div class="media-container-650">
   <a href="../../cert/GSTN_Team_137.jpg" class="glightbox" data-gallery="certs" data-title="GSTN National Hackathon Finalist Certificate">
-    <img src="../../cert/GSTN_Team_137.jpg" alt="GSTN Hackathon Finalist Certificate" style="border-radius: 8px; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm);" loading="lazy">
+    <img src="../../cert/GSTN_Team_137.jpg" alt="GSTN Hackathon Finalist Certificate" class="media-img-rounded" loading="lazy">
   </a>
-  <p style="font-size: 12.5px; color: var(--color-text-muted); margin-top: 6px; text-align: center;">
+  <p class="media-caption">
     GSTN AI/ML National Hackathon Finalist • Awarded by Goods &amp; Services Tax Network (GSTN)
   </p>
 </div>
@@ -131,8 +131,8 @@ The challenge required building an accurate predictive model $F_\theta(X) \to Y_
     <span class="project-nav-dir"><i class="fas fa-arrow-left"></i> Portfolio</span>
     <span class="project-nav-title">All Engineering Projects</span>
   </a>
-  <a href="../ems-db/" class="project-nav-card" style="text-align: right;">
-    <span class="project-nav-dir" style="justify-content: flex-end;">Next Project <i class="fas fa-arrow-right"></i></span>
+  <a href="../ems-db/" class="project-nav-card nav-right">
+    <span class="project-nav-dir dir-right">Next Project <i class="fas fa-arrow-right"></i></span>
     <span class="project-nav-title">Examination Management System DB</span>
   </a>
 </div>
