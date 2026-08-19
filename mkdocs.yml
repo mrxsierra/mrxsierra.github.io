@@ -58,7 +58,7 @@ not_in_nav: |
 
 # exclude
 exclude_docs: |
-  # test.md
+  templates/
 
 draft_docs: |
   drafts/          # Any file inside the "drafts" directory

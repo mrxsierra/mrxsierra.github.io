@@ -25,9 +25,9 @@ Building on our analysis of cross-engine schema definitions, this guide focuses 
 <div class="series-banner">
   <div class="series-banner-header">
     <span class="series-badge">2-Part Engineering Series</span>
-    <span style="font-size: 12.5px; color: var(--color-text-muted);">Part 2 of 2</span>
+    <span class="series-banner-meta">Part 2 of 2</span>
   </div>
-  <div style="font-size: 13.5px; color: var(--color-text-secondary); line-height: 1.5;">
+  <div class="series-banner-desc">
     <strong>Part 1:</strong> <a href="../navigating-the-nuances-a-developers-guide-to-sql-dialects-sqlite-mysql-postgresql/">Navigating the Nuances: SQL Dialects (SQLite, MySQL, PostgreSQL)</a><br>
     <strong>Part 2:</strong> Querying, CLI Interaction, &amp; Docker Nuances (Current)
   </div>
@@ -256,9 +256,9 @@ Understanding both the schema syntax (**Part 1**) and the operational tooling (*
 <div class="series-banner">
   <div class="series-banner-header">
     <span class="series-badge">Series Complete</span>
-    <a href="../navigating-the-nuances-a-developers-guide-to-sql-dialects-sqlite-mysql-postgresql/" class="btn btn-secondary" style="padding: 4px 12px; font-size: 12.5px;">&larr; Review Part 1</a>
+    <a href="../navigating-the-nuances-a-developers-guide-to-sql-dialects-sqlite-mysql-postgresql/" class="btn btn-secondary btn-series">&larr; Review Part 1</a>
   </div>
-  <p style="margin: 0; font-size: 13.5px; color: var(--color-text-secondary); line-height: 1.5;">
+  <p class="series-banner-desc">
     <strong>Part 1: Navigating the Nuances: A Developer's Guide to SQL Dialects</strong><br>
     Deep dive into schema definitions, trigger syntax, timestamp functions, and type systems across PostgreSQL, MySQL, and SQLite.
   </p>

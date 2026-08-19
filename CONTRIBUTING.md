@@ -16,6 +16,9 @@ Welcome to the **`mrxsierra.github.io`** repository. This document provides a co
 │   ├── press/                 # Official Media Press Kit & speaker assets
 │   ├── projects/              # Featured project case studies & specs
 │   ├── stylesheets/           # Custom CSS stylesheets (index.css, extra.css)
+│   ├── templates/             # Production case study & blog post editorial templates
+│   │   ├── project-template.md# Plug-and-play high-converting project case study template
+│   │   └── blog-template.md   # Viral engineering thought-leadership article template
 │   ├── changelog.md           # Site Changelog & release history page
 │   ├── index.md               # Portfolio homepage
 │   ├── llms.txt               # High-level AI discovery index (auto-generated)
@@ -39,7 +42,7 @@ Welcome to the **`mrxsierra.github.io`** repository. This document provides a co
 │   ├── install_hooks.py       # Git pre-commit hook installer
 │   ├── setup_github_ruleset.sh# GitHub Repository Ruleset installer via gh CLI
 │   └── verify.py              # 5-stage pre-commit verification pipeline
-├── tests/                     # Automated pytest verification test suite (54 tests)
+├── tests/                     # Automated pytest verification test suite (49 tests)
 │   ├── conftest.py            # Pytest session fixtures (cached strict build & BeautifulSoup parsers)
 │   ├── test_brand_kit.py      # Vector marks, raster assets, banners, & press kit archive integrity
 │   ├── test_hooks.py          # Build hook unit tests & llms.txt format checks
@@ -116,7 +119,59 @@ graph TD
 
 ---
 
-## 4. Daily Development Workflows
+## 4. Content Authoring Standards & Editorial Framework
+
+To simultaneously attract **freelance clients**, **job recruiters**, **technical leads**, and achieve **cross-platform social virality**, content must adhere to the **"Dual-Depth Inverted Pyramid"**:
+
+```mermaid
+graph TD
+    subgraph "Layer 1: The Executive Hook (Top 20%)"
+    A["1-Sentence Hook + Problem-Result Metric Card<br>(For CEOs, Clients, Recruiters, Social Scrollers)"]
+    end
+    subgraph "Layer 2: Architectural Narrative (Middle 50%)"
+    B["Trade-off Analysis + System Architecture Diagram + Curated Code Snippets<br>(For Tech Leads, Engineers, System Architects)"]
+    end
+    subgraph "Layer 3: Proof & Actionable Takeaways (Bottom 30%)"
+    C["Benchmarks + Edge Cases Handled + Quotable Takeaways + Inbound CTA<br>(For Deep Technical Auditors & Freelance Inbound)"]
+    end
+    A --> B --> C
+```
+
+### A. Authoring Portfolio Project Case Studies
+- **Template Location**: [`docs/templates/project-template.md`](docs/templates/project-template.md)
+- **Primary Goal**: Convert traffic into inbound freelance contracts and engineering job offers.
+- **Key Requirements**:
+  1. **Hero Metadata**: Role, timeline, tech stack chips, client/org context, and GitHub source/demo links.
+  2. **Executive Summary & 3-Metric Stat Card**: Quantifiable impact (e.g. `900K+ Records Analyzed`, `40% Latency Reduction`).
+  3. **Architecture Diagrams**: High-clarity Mermaid or SVG data flow diagram.
+  4. **Decision Matrix**: "Why We Chose X over Y" (e.g. SQLite vs PostgreSQL, Redis vs Memcached).
+  5. **Curated Code Highlights**: High-leverage 15–30 line snippets (no massive code dumps).
+  6. **Automated Verification**: Pytest pass rates, benchmark latency numbers, edge-case handling.
+  7. **Clear Inbound CTA**: Contact button directing prospective clients to discuss projects.
+
+### B. Authoring Viral Engineering Blog Posts
+- **Template Location**: [`docs/templates/blog-template.md`](docs/templates/blog-template.md)
+- **Primary Goal**: Thought leadership, social distribution across X/LinkedIn/Reddit, and organic inbound growth.
+- **Key Requirements**:
+  1. **Provocative Hook & Title**: Challenge a common assumption or share a hard-won production fix.
+  2. **30-Second TL;DR Card**: Problem $\rightarrow$ Discovery $\rightarrow$ Production Solution.
+  3. **Mental Model & Flow Diagram**: Visual simplification of complex concepts.
+  4. **"Do This, Not That" Diffs**: Anti-pattern vs production-grade pattern with syntax highlighting.
+  5. **Production Gotchas**: 3 non-obvious traps that only happen under real load.
+  6. **Quotable Summary**: Punchy takeaway bullets designed for screenshotting and sharing.
+
+### C. Cross-Platform Distribution Matrix
+
+| Platform | Format & Hook Strategy | Content Adaptation |
+| :--- | :--- | :--- |
+| **X (Twitter)** | **Multi-Tweet Thread**: Hook tweet with diagram image $\rightarrow$ 3 core lessons $\rightarrow$ Link | Extract TL;DR bullets, diagram SVG, and quotable takeaways. |
+| **LinkedIn** | **Story Post**: Problem $\rightarrow$ Production obstacle $\rightarrow$ Business/Architecture insight $\rightarrow$ Takeaways | Frame around engineering leadership, reliability, and business impact. |
+| **Dev.to / Medium** | **Syndicated Article**: Full markdown post with canonical URL pointing back to `mrxsierra.github.io` | Direct copy of blog post; set canonical link to avoid SEO duplication. |
+| **Reddit (r/Python, r/webdev)** | **Value-First Self-Post**: Comprehensive text tutorial without aggressive self-promotion | Post the practical code breakdown and problem context directly in Reddit markdown. |
+
+---
+
+## 5. Daily Development Workflows
 
 ### Live Preview Server
 ```bash
@@ -124,30 +179,9 @@ make serve
 # Starts dev server with live reload at http://127.0.0.1:8000
 ```
 
-### Adding / Editing Content
-1. **Homepage (`docs/index.md`)**: Custom developer layout, terminal preview widget, and profile cards.
-2. **Project Case Studies (`docs/projects/<name>.md`)**: Include in `mkdocs.yml` navigation under `Projects`.
-3. **Brand & Press Portals (`docs/brand/index.md`, `docs/press/index.md`)**: Maintain brand token definitions, usage guidance, and authorized speaker media kits.
-4. **Blog Posts (`docs/blog/posts/<name>.md`)**:
-   - Provide standard YAML frontmatter:
-     ```yaml
-     ---
-     date:
-       created: YYYY-MM-DD
-     authors: [mrxsierra]
-     categories:
-       - Category Name
-     tags:
-       - Tag1
-       - Tag2
-     slug: your-custom-slug
-     description: Concise summary of the article.
-     ---
-     ```
-   - Use standard markdown links for inter-page navigation (e.g. `[Next Post](other-post.md)`).
-5. **Changelog (`CHANGELOG.md`)**:
-   - Record changes under `## [Unreleased]` or version headers following [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
-   - `hooks/generate_ai_docs.py` automatically synchronizes `docs/changelog.md` from `CHANGELOG.md` on every build.
+### Adding New Case Studies & Articles
+1. **New Project**: Copy `docs/templates/project-template.md` $\rightarrow$ `docs/projects/your-project.md`, fill out sections, and add to `nav` in `mkdocs.yml`.
+2. **New Blog Post**: Copy `docs/templates/blog-template.md` $\rightarrow$ `docs/blog/posts/YYYY-MM-DD-slug.md`, customize frontmatter, and preview locally.
 
 ### Brand Asset & Press Kit Engine
 To compile vector SVGs, multi-density favicons, YouTube watermarks, and package the master zip press kit:
@@ -159,15 +193,12 @@ make brand
 
 ### Build Hooks & Dynamic Endpoints
 - **AI Documentation (`hooks/generate_ai_docs.py`)**: Runs pre-build to generate [`llms.txt`](https://mrxsierra.github.io/llms.txt) and [`llms-full.txt`](https://mrxsierra.github.io/llms-full.txt) per [llmstxt.org](https://llmstxt.org).
-- **Multi-Channel RSS Feeds (`hooks/generate_rss_feed.py`)**: Runs post-build to generate valid W3C RSS 2.0 XML feeds:
-  - Combined Feed: `site/feed.xml`, `site/feed_rss_created.xml`, `site/feed_rss_updated.xml`
-  - Blog-Only Feed: `site/feed_blog.xml`, `site/blog/feed_rss_created.xml`
-  - Projects-Only Feed: `site/feed_projects.xml`, `site/projects/feed_rss_created.xml`
+- **Multi-Channel RSS Feeds (`hooks/generate_rss_feed.py`)**: Runs post-build to generate valid W3C RSS 2.0 XML feeds (`feed.xml`, `feed_blog.xml`, `feed_projects.xml`).
 - **Social Sharing Widget (`overrides/partials/social_share.html`)**: Injects an 8-platform responsive share bar with toast copy notifications on articles and project case studies.
 
 ---
 
-## 5. Quality Verification & Testing Gate
+## 6. Quality Verification & Testing Gate
 
 Before committing changes, **always run the verification engine**:
 
@@ -200,7 +231,7 @@ make build        # Run strict MkDocs build
 
 ---
 
-## 6. Semantic Versioning & SDLC Release Process
+## 7. Semantic Versioning & SDLC Release Process
 
 This project follows [Semantic Versioning (SemVer)](https://semver.org/) with a single source of truth in the `VERSION` file:
 
@@ -219,21 +250,14 @@ make bump-minor   # Increment minor version (0.X.0) & reset patch
 make bump-major   # Increment major version (X.0.0) & reset minor/patch
 ```
 
-### Conventional Commits:
-When creating a PR or committing, use conventional prefixes:
-- `feat:` New project case study, brand update, page, or feature (triggers Minor bump on PR merge)
-- `fix:` Broken link repair, layout bug fix, or script correction (Patch bump)
-- `docs:` Documentation or technical article update
-- `refactor:` Code restructuring
-- `chore:` Dependency update or maintenance
-
 ---
 
-## 7. AI Agent Guidelines
+## 8. AI Agent Guidelines
 
 When an AI coding assistant operates on this repository:
 - **Single Source of Truth**: Keep `VERSION`, `pyproject.toml`, `mkdocs.yml`, and `CHANGELOG.md` synchronized.
 - **Branch Protection**: Never attempt direct commits to `main`; always branch off into a feature or chore branch.
+- **Use Official Templates**: When creating new projects or blog posts, base them on `docs/templates/project-template.md` and `docs/templates/blog-template.md`.
 - **Zero Broken Links**: Never use ad-hoc raw paths that bypass MkDocs slug resolution; run `make verify` to confirm link integrity.
 - **Maintain Typing**: All Python scripts and hooks must have explicit type annotations passing Mypy.
 - **Run Verification Before Completion**: Always execute `python scripts/verify.py` before finalizing any task.
