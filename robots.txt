@@ -22,5 +22,5 @@ Allow: /
 
 # Sitemaps & LLM Context Endpoints
 Sitemap: https://mrxsierra.github.io/sitemap.xml
-LLMs-Txt: https://mrxsierra.github.io/llms.txt
-LLMs-Full-Txt: https://mrxsierra.github.io/llms-full.txt
+# LLMs-Txt: https://mrxsierra.github.io/llms.txt
+# LLMs-Full-Txt: https://mrxsierra.github.io/llms-full.txt

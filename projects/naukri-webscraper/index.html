@@ -57,8 +57,6 @@
     
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -73,6 +71,13 @@
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
+  <!-- Asynchronous Non-Blocking FontAwesome -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" as="style">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  </noscript>
 
   <!-- Exact Brand Favicon & Web Manifest -->
   <link rel="icon" type="image/svg+xml" href="../../assets/img/favicon.svg">
@@ -1963,7 +1968,7 @@
 
       <!-- Column 2: Navigation -->
       <div class="footer-col">
-        <h4 class="footer-col-title">Navigation</h4>
+        <div class="footer-col-title" role="heading" aria-level="3">Navigation</div>
         <ul class="footer-col-links">
           <li><a href="../..">Home</a></li>
           <li><a href="../">Projects Portfolio</a></li>
@@ -1979,7 +1984,7 @@
 
       <!-- Column 3: Machine & AI Endpoints -->
       <div class="footer-col">
-        <h4 class="footer-col-title">Machine &amp; AI Endpoints</h4>
+        <div class="footer-col-title" role="heading" aria-level="3">Machine &amp; AI Endpoints</div>
         <ul class="footer-col-links">
           <li><a href="../../llms.txt" target="_blank" rel="noopener"><i class="fas fa-file-code"></i> llms.txt (Index)</a></li>
           <li><a href="../../llms-full.txt" target="_blank" rel="noopener"><i class="fas fa-file-lines"></i> llms-full.txt (Full KB)</a></li>
@@ -1992,7 +1997,7 @@
 
       <!-- Column 4: Developer Network -->
       <div class="footer-col">
-        <h4 class="footer-col-title">Developer Network</h4>
+        <div class="footer-col-title" role="heading" aria-level="3">Developer Network</div>
         <ul class="footer-col-links">
           <li><a href="https://github.com/mrxsierra" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a></li>
           <li><a href="https://www.linkedin.com/in/sunilsharma97/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a></li>

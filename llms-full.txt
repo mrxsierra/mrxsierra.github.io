@@ -1263,13 +1263,13 @@ The challenge required building an accurate predictive model $F_\theta(X) \to Y_
 
   
     
-#### Precision-Recall Curve
+### Precision-Recall Curve
 
     ![Precision-Recall Curve](https://raw.githubusercontent.com/mrxsierra/gstn_dsp_pbc/main/3-submission/static/prc.png)
   
   
     
-#### Confusion Matrix
+### Confusion Matrix
 
     ![Confusion Matrix](https://raw.githubusercontent.com/mrxsierra/gstn_dsp_pbc/main/3-submission/static/cm.png)
   
@@ -1480,13 +1480,13 @@ python -m s3_faker --config schema.json --target s3://test-bucket/data/ --endpoi
 
   
     
-#### LocalStack Emulation Environment
+### LocalStack Emulation Environment
 
     [![LocalStack S3 Environment](https://raw.githubusercontent.com/mrxsierra/s3_faker/main/img/localstack%20resource.jpg)](https://raw.githubusercontent.com/mrxsierra/s3_faker/main/img/localstack%20resource.jpg)
   
   
     
-#### Data Synthesis & Upload Execution
+### Data Synthesis & Upload Execution
 
     [![Synthetic Data Generation Run](https://raw.githubusercontent.com/mrxsierra/s3_faker/main/img/update.jpg)](https://raw.githubusercontent.com/mrxsierra/s3_faker/main/img/update.jpg)
   
@@ -1582,19 +1582,19 @@ Designed for educators and assessment coordinators, Paraxcel operates entirely o
 
   
     
-#### 1. Desktop GUI Interface
+### 1. Desktop GUI Interface
 
     [![Paraxcel Desktop GUI](https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/ui.jpg)](https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/ui.jpg)
   
   
     
-#### 2. Sample DOCX Input
+### 2. Sample DOCX Input
 
     [![Sample DOCX Input](https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/sample.jpg)](https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/sample.jpg)
   
   
     
-#### 3. Normalized Excel Output
+### 3. Normalized Excel Output
 
     [![Normalized Excel Output](https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/excel.jpg)](https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/excel.jpg)
   
@@ -1777,19 +1777,19 @@ The **Real-Time Test Management Interface** is a client-side web application bui
 
   
     
-#### 1. Test Taking View
+### 1. Test Taking View
 
     [![Test Taking Interface](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/test-page.png)](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/test-page.png)
   
   
     
-#### 2. Analytics Dashboard
+### 2. Analytics Dashboard
 
     [![Analytics Dashboard](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/anamoly-dash.png)](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/anamoly-dash.png)
   
   
     
-#### 3. Score Results View
+### 3. Score Results View
 
     [![Score Results View](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/individual-test-result.png)](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/individual-test-result.png)
   
