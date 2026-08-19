@@ -1,6 +1,6 @@
 # Sunil Sharma (mrxsierra) — Full Technical Knowledge Base
 # Standard: llmstxt.org Full Ingestion Format
-# Version: v0.10.0
+# Version: v0.11.0
 # Website: https://mrxsierra.github.io/
 # Source: https://github.com/mrxsierra/mrxsierra.github.io
 
@@ -55,7 +55,7 @@ Systems Architecture • Autonomous Agents • Distributed Data
       
       
         > System
-        v0.10.0 • Verified & Automated CI/CD 
+        v0.11.0 • Verified & Automated CI/CD 
       
     
   
@@ -626,8 +626,6 @@ Practical architectural guides, cross-engine SQL compatibility, and programmatic
     
   
 
----
-
 ## Verified Credentials & Accreditations
 
   
@@ -699,8 +697,6 @@ Practical architectural guides, cross-engine SQL compatibility, and programmatic
       Machine Learning & Spatial Data Science
     
   
-
----
 
   [Full Engineering Story](../about/)
   [View Projects Portfolio](../projects/)
@@ -1103,10 +1099,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [0.10.0] - 2026-08-19
+## [0.11.0] - 2026-08-19
 
 ### Changed
-- **style(home)**: Replace inline styles with shared CSS helper class
+- **style(templates)**: Standardize project template and resume page css classes
+- **style(templates)**: Streamline CSS classes in blog template and gstn case study
 
 ## [0.6.0] - 2026-08-19
 
