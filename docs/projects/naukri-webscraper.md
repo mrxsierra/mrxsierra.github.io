@@ -15,12 +15,12 @@ description: >
 # Naukri Market Data Scraper
 
 <div class="project-header-card">
-  <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px;">
+  <div class="project-header-top">
     <div>
       <span class="project-category-badge">Web Automation • Data Extraction</span>
-      <h2 style="margin: 6px 0 0 0; font-size: 22px; font-weight: 700;">Naukri Market Telemetry Scraper</h2>
+      <h2 class="project-header-title">Naukri Market Telemetry Scraper</h2>
     </div>
-    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+    <div class="project-header-actions">
       <a href="https://github.com/mrxsierra/naukari-webscraper" target="_blank" rel="noopener" class="btn btn-primary">
         <i class="fab fa-github"></i> Repository
       </a>
@@ -88,20 +88,20 @@ The scraper automates browser navigation across paginated listings, resolves asy
 
 ## Verified Accreditation
 
-<div style="max-width: 650px; margin: 20px 0;">
+<div class="media-container-650">
   <a href="../../cert/1708063772979-cs50p.jpeg" class="glightbox" data-gallery="certs" data-title="Harvard CS50P Certificate">
-    <img src="../../cert/1708063772979-cs50p.jpeg" alt="Harvard CS50P Certificate" style="border-radius: 8px; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm);" loading="lazy">
+    <img src="../../cert/1708063772979-cs50p.jpeg" alt="Harvard CS50P Certificate" class="media-img-rounded" loading="lazy">
   </a>
-  <p style="font-size: 12.5px; color: var(--color-text-muted); margin-top: 6px; text-align: center;">
+  <p class="media-caption">
     Harvard CS50P: Introduction to Programming with Python • Harvard University (CS50)
   </p>
 </div>
 
 ## Video Demonstration
 
-<div style="max-width: 650px; margin: 20px 0;">
+<div class="media-container-650">
   <a href="https://www.youtube.com/watch?v=ls_uxjfADN4" target="_blank" rel="noopener">
-    <img src="https://img.youtube.com/vi/ls_uxjfADN4/maxresdefault.jpg" alt="Video Demo Walkthrough" style="border-radius: 8px; border: 1px solid var(--color-border);" loading="lazy">
+    <img src="https://img.youtube.com/vi/ls_uxjfADN4/maxresdefault.jpg" alt="Video Demo Walkthrough" class="media-img-rounded" loading="lazy">
   </a>
 </div>
 
@@ -111,8 +111,8 @@ The scraper automates browser navigation across paginated listings, resolves asy
     <span class="project-nav-dir"><i class="fas fa-arrow-left"></i> Previous Project</span>
     <span class="project-nav-title">Paraxcel Document Toolkit</span>
   </a>
-  <a href="../test-site/" class="project-nav-card" style="text-align: right;">
-    <span class="project-nav-dir" style="justify-content: flex-end;">Next Project <i class="fas fa-arrow-right"></i></span>
+  <a href="../test-site/" class="project-nav-card nav-right">
+    <span class="project-nav-dir dir-right">Next Project <i class="fas fa-arrow-right"></i></span>
     <span class="project-nav-title">Real-Time Test Management Interface</span>
   </a>
 </div>
