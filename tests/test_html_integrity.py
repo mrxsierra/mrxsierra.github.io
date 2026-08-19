@@ -280,3 +280,52 @@ def test_social_share_aria_labels_match_visible_text(site_dir: Path):
     assert "Copy Link" in btn_copy.get("aria-label", ""), (
         "btn-share-copy aria-label must contain 'Copy Link'"
     )
+
+
+def test_robots_txt_compliance(site_dir: Path):
+    """Ensure robots.txt has no unknown directives that cause Lighthouse SEO audit failures."""
+    robots_path = site_dir / "robots.txt"
+    assert robots_path.exists(), "robots.txt must exist in build output."
+    lines = [
+        line.strip()
+        for line in robots_path.read_text(encoding="utf-8").splitlines()
+        if line.strip() and not line.strip().startswith("#")
+    ]
+    valid_directives = {"user-agent", "allow", "disallow", "sitemap", "crawl-delay"}
+    for line in lines:
+        if ":" in line:
+            directive = line.split(":", 1)[0].strip().lower()
+            assert directive in valid_directives, (
+                f"Invalid directive '{directive}' found in robots.txt: {line}"
+            )
+
+
+def test_async_fontawesome_and_heading_structure(site_dir: Path):
+    """Ensure FontAwesome is loaded non-blocking and footer headings are semantic."""
+    homepage = site_dir / "index.html"
+    assert homepage.exists()
+    content = homepage.read_text(encoding="utf-8")
+    soup = BeautifulSoup(content, "html.parser")
+
+    # FontAwesome should be loaded via preload + media=print/all or non-blocking
+    fa_preload = soup.find(
+        "link",
+        rel="preload",
+        href=lambda h: h and "font-awesome" in h,
+    )
+    assert fa_preload is not None, "FontAwesome should be preloaded."
+
+    fa_async = soup.find(
+        "link",
+        rel="stylesheet",
+        href=lambda h: h and "font-awesome" in h,
+    )
+    assert isinstance(fa_async, Tag) and fa_async.get("media") == "print", (
+        "FontAwesome should have media='print' for non-blocking paint."
+    )
+
+    # Footer titles should use role="heading" to prevent skipping heading levels
+    footer_titles = soup.find_all(class_="footer-col-title")
+    assert len(footer_titles) >= 3
+    for title in footer_titles:
+        assert title.name != "h4", "Footer title should not be h4 to prevent skipping h2/h3."

@@ -2237,3 +2237,21 @@ span.md-source-file__fact img {
   object-fit: cover;
   display: inline-block;
 }
+
+/* Nav Monogram & Image Stability */
+a.md-nav__button > img,
+.md-header__button.md-logo > img {
+  width: 48px;
+  height: 48px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+.media-img-rounded {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}

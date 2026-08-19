@@ -98,15 +98,15 @@ python -m s3_faker --config schema.json --target s3://test-bucket/data/ --endpoi
 
 <div class="card-grid-2">
   <div>
-    <h4>LocalStack Emulation Environment</h4>
+    <h3>LocalStack Emulation Environment</h3>
     <a href="https://raw.githubusercontent.com/mrxsierra/s3_faker/main/img/localstack%20resource.jpg" class="glightbox" data-gallery="s3faker" data-title="LocalStack Resource Visualization">
-      <img src="https://raw.githubusercontent.com/mrxsierra/s3_faker/main/img/localstack%20resource.jpg" alt="LocalStack S3 Environment" class="media-img-rounded" loading="lazy">
+      <img src="https://raw.githubusercontent.com/mrxsierra/s3_faker/main/img/localstack%20resource.jpg" alt="LocalStack S3 Environment" class="media-img-rounded" loading="lazy" width="600" height="400">
     </a>
   </div>
   <div>
-    <h4>Data Synthesis &amp; Upload Execution</h4>
+    <h3>Data Synthesis &amp; Upload Execution</h3>
     <a href="https://raw.githubusercontent.com/mrxsierra/s3_faker/main/img/update.jpg" class="glightbox" data-gallery="s3faker" data-title="Synthetic Data Pipeline Run">
-      <img src="https://raw.githubusercontent.com/mrxsierra/s3_faker/main/img/update.jpg" alt="Synthetic Data Generation Run" class="media-img-rounded" loading="lazy">
+      <img src="https://raw.githubusercontent.com/mrxsierra/s3_faker/main/img/update.jpg" alt="Synthetic Data Generation Run" class="media-img-rounded" loading="lazy" width="600" height="400">
     </a>
   </div>
 </div>
