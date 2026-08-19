@@ -1,6 +1,6 @@
 # Sunil Sharma (mrxsierra) — Full Technical Knowledge Base
 # Standard: llmstxt.org Full Ingestion Format
-# Version: v0.7.0
+# Version: v0.8.0
 # Website: https://mrxsierra.github.io/
 # Source: https://github.com/mrxsierra/mrxsierra.github.io
 
@@ -55,7 +55,7 @@ Systems Architecture • Autonomous Agents • Distributed Data
       
       
         > System
-        v0.7.0 • Verified & Automated CI/CD 
+        v0.8.0 • Verified & Automated CI/CD 
       
     
   
@@ -1103,10 +1103,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [0.7.0] - 2026-08-19
+## [0.8.0] - 2026-08-19
 
-### Added
-- **feat(editorial)**: Add dual-depth project & blog templates and authoring guidelines
+### Changed
+- **style(projects)**: Replace inline styles with shared CSS helper classes
 
 ## [0.6.0] - 2026-08-19
 
