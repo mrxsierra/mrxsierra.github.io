@@ -99,14 +99,14 @@ The challenge required building an accurate predictive model $F_\theta(X) \to Y_
 
 ## Diagnostic Visualizations
 
-<div class="card-grid-2" style="margin: 20px 0;">
+<div class="card-grid-2">
   <div>
-    <h4 style="margin: 0 0 8px 0;">Precision-Recall Curve</h4>
-    <img src="https://raw.githubusercontent.com/mrxsierra/gstn_dsp_pbc/main/3-submission/static/prc.png" alt="Precision-Recall Curve" style="border-radius: 8px; border: 1px solid var(--color-border);" loading="lazy">
+    <h4>Precision-Recall Curve</h4>
+    <img src="https://raw.githubusercontent.com/mrxsierra/gstn_dsp_pbc/main/3-submission/static/prc.png" alt="Precision-Recall Curve" class="media-img-rounded" loading="lazy">
   </div>
   <div>
-    <h4 style="margin: 0 0 8px 0;">Confusion Matrix</h4>
-    <img src="https://raw.githubusercontent.com/mrxsierra/gstn_dsp_pbc/main/3-submission/static/cm.png" alt="Confusion Matrix" style="border-radius: 8px; border: 1px solid var(--color-border);" loading="lazy">
+    <h4>Confusion Matrix</h4>
+    <img src="https://raw.githubusercontent.com/mrxsierra/gstn_dsp_pbc/main/3-submission/static/cm.png" alt="Confusion Matrix" class="media-img-rounded" loading="lazy">
   </div>
 </div>
 

@@ -528,6 +528,22 @@ body {
   justify-content: flex-end;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.stat-highlight {
+  font-size: 2rem;
+  color: var(--color-accent);
+  margin: 0;
+}
+
+.stat-label {
+  margin: 4px 0 0 0;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
 .project-meta-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
