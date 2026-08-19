@@ -12,8 +12,10 @@
   <h1>{{ page.title | d(config.site_name, true) }}</h1>
 {% endif %}
 
-{% if page and page.meta and page.meta.tags %}
+{% if page and page.meta and page.meta.tags and "tags" not in (page.meta.hide or []) and page.file.src_path != "index.md" %}
+<div class="page-tags-wrapper">
   {% include "partials/tags.html" %}
+</div>
 {% endif %}
 
 {{ page.content }}
