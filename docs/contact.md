@@ -9,7 +9,7 @@ description: Contact Sunil Sharma (mrxsierra) for engineering collaborations, AI
   <p class="page-intro-desc">
     Open for architectural discussions, autonomous AI systems engineering, distributed database optimization, and high-impact technical consulting. Inquiries receive a response within 24 hours.
   </p>
-  <div style="margin-top: 16px; display: flex; gap: 10px; flex-wrap: wrap;">
+  <div class="profile-btn-row">
     <a href="mailto:9.sunilsharma@gmail.com" class="btn btn-primary">
       <i class="fas fa-paper-plane"></i> Initiate Direct Contact
     </a>
@@ -19,11 +19,9 @@ description: Contact Sunil Sharma (mrxsierra) for engineering collaborations, AI
   </div>
 </div>
 
----
-
 ## Online Profiles &amp; Developer Network
 
-<div class="workspace-grid" style="margin: 20px 0;">
+<div class="workspace-grid">
 
   <!-- Professional & Code -->
   <div class="workspace-panel">
@@ -71,7 +69,7 @@ description: Contact Sunil Sharma (mrxsierra) for engineering collaborations, AI
       </div>
     </div>
 
-    <div class="profile-category-block" style="margin-top: 12px;">
+    <div class="profile-category-block">
       <span class="profile-category-label">Media &amp; Community</span>
       <div class="social-chips-grid">
         <a href="https://www.youtube.com/@mrxsierra" target="_blank" rel="noopener" class="social-chip">
