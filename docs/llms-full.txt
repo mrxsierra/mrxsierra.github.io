@@ -626,8 +626,6 @@ Practical architectural guides, cross-engine SQL compatibility, and programmatic
     
   
 
----
-
 ## Verified Credentials & Accreditations
 
   
@@ -699,8 +697,6 @@ Practical architectural guides, cross-engine SQL compatibility, and programmatic
       Machine Learning & Spatial Data Science
     
   
-
----
 
   [Full Engineering Story](../about/)
   [View Projects Portfolio](../projects/)
