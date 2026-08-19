@@ -52,8 +52,6 @@ description: >
   </div>
 </div>
 
----
-
 ## Architecture &amp; Data Pipeline
 
 ```mermaid
@@ -66,15 +64,11 @@ graph LR
     D --> E3["Production AWS S3 (Direct Upload)"]
 ```
 
----
-
 ## Executive Overview
 
 **S3 Faker** is a developer-first data synthesis tool designed to generate high-volume, realistic datasets driven by declarative JSON configuration schemas. The generated artifacts can be written to the local filesystem or streamed directly to an Amazon S3 bucket or local containerized LocalStack emulator.
 
 The system addresses a critical bottleneck in modern data engineering: acquiring compliant, realistic test data for ETL pipeline benchmarking without incurring cloud storage costs or risking PII data leaks.
-
----
 
 ## Technical Challenges &amp; Architectural Solutions
 
@@ -90,8 +84,6 @@ The system addresses a critical bottleneck in modern data engineering: acquiring
 - **Challenge:** Allowing engineers to define complex relational schemas without modifying the underlying Python engine.
 - **Solution:** Built a dynamic JSON schema interpreter supporting custom distributions, localized locales, foreign key dependencies, and field type coercions.
 
----
-
 ## CLI Workflow &amp; Example Usage
 
 ```bash
@@ -101,8 +93,6 @@ python -m s3_faker --config schema.json --records 50000 --format parquet
 # Stream directly to LocalStack S3 emulator
 python -m s3_faker --config schema.json --target s3://test-bucket/data/ --endpoint http://localhost:4566
 ```
-
----
 
 ## Verification &amp; Workflow Visuals
 
@@ -120,8 +110,6 @@ python -m s3_faker --config schema.json --target s3://test-bucket/data/ --endpoi
     </a>
   </div>
 </div>
-
----
 
 <!-- Sequential Case Study Navigation -->
 <div class="project-nav-footer">

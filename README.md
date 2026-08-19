@@ -4,7 +4,7 @@
 [![CI/CD Pipeline](https://github.com/mrxsierra/mrxsierra.github.io/actions/workflows/ci.yml/badge.svg)](https://github.com/mrxsierra/mrxsierra.github.io/actions/workflows/ci.yml)
 [![Site Status](https://img.shields.io/badge/Site-Live-2ea44f?style=flat&logo=github)](https://mrxsierra.github.io/)
 [![Standard: llms.txt](https://img.shields.io/badge/Standard-llms.txt-blue?style=flat)](https://mrxsierra.github.io/llms.txt)
-[![Tests](https://img.shields.io/badge/Tests-51%20Passed-brightgreen?style=flat&logo=pytest)](tests/)
+[![Tests](https://img.shields.io/badge/Tests-54%20Passed-brightgreen?style=flat&logo=pytest)](tests/)
 [![Code Style](https://img.shields.io/badge/Code%20Style-Ruff-000000?style=flat&logo=ruff)](https://github.com/astral-sh/ruff)
 
 > Personal portfolio, technical case studies, and engineering blog of **Sunil Sharma (@mrxsierra)**.  
@@ -36,7 +36,7 @@ make brand
 | :--- | :--- |
 | `make serve` | Start local MkDocs preview server with live reload |
 | `make verify` | Run full 5-stage pre-commit pipeline (Ruff, Mypy, MkDocs strict, Pytest) |
-| `make test` | Run full 51-test automated pytest verification suite |
+| `make test` | Run full 54-test automated pytest verification suite |
 | `make lint` | Run Ruff linter and format validation |
 | `make format` | Auto-format Python code and fix lint issues |
 | `make typecheck` | Run Mypy static type analysis on hooks, scripts, and tests |
@@ -65,7 +65,7 @@ make brand
 - **Interactive UI Components**:
   - 8-platform responsive social sharing widget (`overrides/partials/social_share.html`) with copy-to-clipboard toast.
   - Persistent footer version badge linking to `/changelog/`.
-- **Verification Engine**: 51 automated test cases via `pytest`, `beautifulsoup4`, `ruff`, and `mypy` (`scripts/verify.py`).
+- **Verification Engine**: 54 automated test cases via `pytest`, `beautifulsoup4`, `ruff`, and `mypy` (`scripts/verify.py`).
 - **Governance & CI/CD**:
   - GitHub Actions CI/CD (`.github/workflows/ci.yml`) with automated tagging on deployment.
   - Branch protection rulesets (`.github/rulesets/main-protection.json`) and local pre-commit branch guards (`.githooks/pre-commit`).

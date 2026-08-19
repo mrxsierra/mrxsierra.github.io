@@ -57,8 +57,6 @@ description: >
   </div>
 </div>
 
----
-
 ## Architecture &amp; Parity Pipeline
 
 ```mermaid
@@ -75,15 +73,11 @@ graph TD
     F --> G["Materialized Analytical Reporting Views"]
 ```
 
----
-
 ## Executive Overview
 
 The **Examination Management System (EMS DB)** project is a modular, production-ready relational database architecture designed to administer educational examinations. It models students, proctors, tests, dynamic question banks, timed test sessions, audit events, and computed academic scores.
 
 The architecture was engineered with strict **multi-RDBMS parity**: the system maintains three synchronized dialect implementations (**PostgreSQL**, **MySQL**, and **SQLite**) with automated Python test harnesses validating identical business logic execution across all three engines.
-
----
 
 ## Technical Challenges &amp; Architectural Solutions
 
@@ -99,8 +93,6 @@ The architecture was engineered with strict **multi-RDBMS parity**: the system m
 - **Challenge:** Heavy joins across student records, question options, and audit history caused query latency.
 - **Solution:** Created targeted composite indexes and encapsulated analytical reporting logic into optimized SQL views (`tests_history`, `summary_reports`).
 
----
-
 ## Verified Accreditation
 
 <div style="max-width: 650px; margin: 20px 0;">
@@ -112,8 +104,6 @@ The architecture was engineered with strict **multi-RDBMS parity**: the system m
   </p>
 </div>
 
----
-
 ## Entity Relationship Architecture
 
 <div style="max-width: 800px; margin: 20px 0;">
@@ -122,14 +112,10 @@ The architecture was engineered with strict **multi-RDBMS parity**: the system m
   </a>
 </div>
 
----
-
 ## Related Technical Deep Dives
 
 - [**Navigating the Nuances: A Developer's Guide to SQL Dialects**](../blog/posts/1-schema-diff.md): Deep dive into DDL differences, autoincrement sequence strategies, and trigger syntax across SQLite, MySQL, and PostgreSQL.
 - [**Beyond the Schema: Querying, CLI Interaction, &amp; Docker Nuances**](../blog/posts/2-query-interaction-diff.md): Practical patterns for script piping, container networking, and auto-increment resets.
-
----
 
 <!-- Sequential Case Study Navigation -->
 <div class="project-nav-footer">

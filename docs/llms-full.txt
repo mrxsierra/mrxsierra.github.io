@@ -1,6 +1,6 @@
 # Sunil Sharma (mrxsierra) — Full Technical Knowledge Base
 # Standard: llmstxt.org Full Ingestion Format
-# Version: v0.3.1
+# Version: v0.6.0
 # Website: https://mrxsierra.github.io/
 # Source: https://github.com/mrxsierra/mrxsierra.github.io
 
@@ -55,7 +55,7 @@ Systems Architecture • Autonomous Agents • Distributed Data
       
       
         > System
-        v0.3.1 • Verified & Automated CI/CD 
+        v0.6.0 • Verified & Automated CI/CD 
       
     
   
@@ -411,18 +411,18 @@ Systems Architecture • Autonomous Agents • Distributed Data
 # About Sunil Sharma
 
   
-    ![Sunil Sharma](../assets/mrxss_400x400.jpg)
-  
-  
     
+      ![Sunil Sharma](../assets/mrxss_400x400.jpg)
+    
+    
+      
 ## Full-Stack & AI Systems Specialist
 
-    
-      Specializing in autonomous agent architectures, full-stack systems engineering, distributed database optimization, and cloud tooling pipelines. Focused on shipping robust, maintainable, and verifiable software.
+      
+        Specializing in autonomous agent architectures, full-stack systems engineering, distributed database optimization, and cloud tooling pipelines. Focused on shipping robust, maintainable, and verifiable software.
+      
     
   
-
----
 
 ## Academic Background & Foundation
 
@@ -439,8 +439,6 @@ Systems Architecture • Autonomous Agents • Distributed Data
     Rigorous foundation in Data Structures & Algorithms, Relational Database Management Systems (RDBMS), Object-Oriented Software Design, and Operating Systems.
   
 
----
-
 ## Featured Engineering Case Studies
 
   
@@ -454,70 +452,41 @@ Systems Architecture • Autonomous Agents • Distributed Data
     
       National-level hackathon finalist project — interpretable ML pipeline analyzing 900,000+ real-world GST records with XGBoost, LightGBM, and SHAP explainability.
     
-    [Read Full Case Study](../projects/gstn-pbc/)
+    [Read Case Study](../projects/gstn-pbc/)
   
 
   
     
-      Database Architecture
+      Production Database Engine
       
     
     
 ### Examination Management System DB
 
     
-      Modular, production-ready multi-RDBMS architecture (PostgreSQL, MySQL, SQLite) with Python automation, Dockerized environments, and CI pipeline validation.
+      Production-ready multi-RDBMS architecture featuring PostgreSQL, MySQL, and SQLite parity with automated migration test harnesses.
     
-    [Read Full Case Study](../projects/ems-db/)
+    [Read Case Study](../projects/ems-db/)
   
 
-  
-    
-      Cloud Tooling
-      
-    
-    
-### S3 Faker Data Generator
-
-    
-      High-throughput synthetic data generation suite with native AWS S3 and LocalStack integration for cloud testing pipelines.
-    
-    [Read Full Case Study](../projects/s3-faker/)
-  
-
-  
-    
-      QA Automation
-      
-    
-    
-### Paraxcel Document Toolkit
-
-    
-      High-performance formatting extraction suite parsing complex DOCX runs and generating structured Excel test matrices.
-    
-    [Read Full Case Study](../projects/paraxcel/)
-  
-
----
-
-## Core Technical Capabilities
+## Core Competencies & Technical Capabilities
 
   
     
       
       
-### Machine Learning & AI Systems
+### Machine Learning & AI Agents
 
     
     
-      Pandas
-      NumPy
+      Building autonomous agent workflows, model evaluations, tabular ML pipelines, and gradient boosting classifiers with verifiable outputs.
+    
+    
+      Google Antigravity SDK
+      XGBoost / LightGBM
       Scikit-Learn
-      XGBoost
-      LightGBM
-      LangGraph
-      Feature Engineering
+      SHAP Interpretability
+      Model Context Protocol (MCP)
     
   
 
@@ -525,17 +494,18 @@ Systems Architecture • Autonomous Agents • Distributed Data
     
       
       
-### Full-Stack & Databases
+### Database Engineering & Systems
 
     
     
-      Python (FastAPI, Flask)
+      Designing normalized schemas, complex indexing strategies, automated cross-dialect parity checks, and transactional integrity systems.
+    
+    
       PostgreSQL
       MySQL
       SQLite
-      JavaScript / React
-      Docker
-      AWS S3
+      SQL Dialect Transpilation
+      Query Optimization
     
   
 
@@ -543,20 +513,39 @@ Systems Architecture • Autonomous Agents • Distributed Data
     
       
       
-### SDLC & Release Engineering
+### Full-Stack Web Architecture
 
     
     
-      Pytest Multi-Tier Suite
-      Mypy Type Checking
-      Ruff Linter & Formatter
+      Developing high-performance user interfaces, REST APIs, static sites with Material for MkDocs, and developer portals.
+    
+    
+      Python (FastAPI / Flask)
+      JavaScript / ES6+
+      HTML5 / Modern CSS
+      Bootstrap / Tailwind Tokens
+      Jinja Templating
+    
+  
+
+  
+    
+      
+      
+### Automated Testing & DevOps CI/CD
+
+    
+    
+      Implementing multi-tier test suites (unit, integration, smoke, benchmark), zero-leak commit sanitization, and GitHub Actions release pipelines.
+    
+    
+      pytest (Fixtures & Mocking)
+      Docker & LocalStack
       GitHub Actions CI/CD
       Semantic Versioning (SemVer)
       Git Pre-Commit Hooks
     
   
-
----
 
 ## Brand Assets & Press Kit
 
@@ -573,7 +562,7 @@ Official vector marks, media bio copy, and typography specifications for speakin
     
       Geometric Constructivist 'S' vector monogram designed for high-contrast technical publications and digital surfaces.
     
-    [Download Vector SVG](../assets/img/logo-monogram.svg)
+    [Download Vector SVG](../assets/brand/monogram-dark.svg)
   
 
   
@@ -606,8 +595,6 @@ Official vector marks, media bio copy, and typography specifications for speakin
     ```text
     Sunil Sharma (mrxsierra) is a software engineer specializing in autonomous agent workflows, machine learning pipelines, and distributed relational database architectures. A national finalist in the GSTN Predictive Binary Classification hackathon, Sunil designs production-grade software with rigorous pytest test suites, cross-engine SQL parity, and zero-downtime CI/CD automation. He publishes technical architecture guides and open-source tooling for the global developer ecosystem.
     ```
-
----
 
 ## Technical Writing & Publications
 
@@ -727,16 +714,14 @@ Practical architectural guides, cross-engine SQL compatibility, and programmatic
 # Brand Identity & Press Kit
 
   
+    
 ## Brand Standards & Content Creation Suite
 
+    [Download Master Press Kit (.ZIP)](../assets/brand/mrxsierra-brand-press-kit.zip)
+  
   
     Canonical vector marks, video watermarks, presentation templates, cross-platform social assets, and media bio copy for **Sunil Sharma (@mrxsierra)**.
   
-  
-    [Download Master Press Kit (.ZIP)](../assets/brand/mrxsierra-brand-press-kit.zip)
-  
-
----
 
 ## 1. Core Brand Marks & Logotypes
 
@@ -798,8 +783,6 @@ Our visual identity is built on a **Geometric Constructivist "S"** mark, combini
     [Download SVG](../assets/brand/monogram-transparent.svg)
   
 
----
-
 ## 2. Video & Multimedia Creation Kit
 
 Broadcast-ready graphics for YouTube tutorials, coding screencasts, webinars, and live streams:
@@ -810,8 +793,6 @@ Broadcast-ready graphics for YouTube tutorials, coding screencasts, webinars, an
 | **Broadcast Lower Third** | SVG (Transparent) | 1920×1080 | Speaker overlay for video talks and webinars. | [Download SVG](../assets/brand/video/lower-third.svg) |
 | **Video End Screen / Outro** | SVG | 1920×1080 | YouTube 16:9 outro card with card placeholders. | [Download SVG](../assets/brand/video/video-end-screen.svg) |
 | **Thumbnail Frame Template** | SVG | 1280×720 | 16:9 YouTube video thumbnail template with badge. | [Download SVG](../assets/brand/video/thumbnail-frame.svg) |
-
----
 
 ## 3. Social Media & Publication Suite
 
@@ -861,8 +842,6 @@ High-resolution header covers and document carousel templates:
     [Download SVG](../assets/brand/banners/youtube-banner.svg)
   
 
----
-
 ## 4. Standard Media Bios & Speaker Copy
 
 === "One-Liner (Social & Short Bios)"
@@ -879,8 +858,6 @@ High-resolution header covers and document carousel templates:
     ```text
     Sunil Sharma (mrxsierra) is a software engineer specializing in autonomous agent workflows, machine learning pipelines, and distributed relational database architectures. A national finalist in the GSTN Predictive Binary Classification hackathon, Sunil designs production-grade software with rigorous pytest test suites, cross-engine SQL parity, and zero-downtime CI/CD automation. He publishes technical architecture guides and open-source tooling for the global developer ecosystem.
     ```
-
----
 
 ## 5. Design System Tokens & Color Palette
 
@@ -1116,6 +1093,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.6.0] - 2026-08-19
+
+### Changed
+- Maintenance updates, routine site improvements, and verified CI/CD releases.
+
 ## [0.3.1] - 2026-08-18
 
 ### Added
@@ -1215,8 +1197,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     **Finalist Selection:** Ranked among the top 17 finalist teams out of 200+ national participating teams as a single-member solo developer.
   
 
----
-
 ## Architecture & ML Pipeline Flow
 
 ```mermaid
@@ -1231,15 +1211,11 @@ graph TD
     H --> I["Competition-Compliant Model Artifact"]
 ```
 
----
-
 ## Executive Overview
 
 Developed for the **Goods and Services Tax Network (GSTN) AI/ML Hackathon** organized by the Government of India, this project engineered a high-throughput, interpretable binary classification pipeline for GST financial tax analytics.
 
 The challenge required building an accurate predictive model $F_\theta(X) \to Y_{\text{pred}}$ over 900,000 real-world records characterized by severe class imbalance (91% majority / 9% minority) and extreme feature skewness, while adhering to strict zero-data-leakage compliance protocols.
-
----
 
 ## Technical Challenges & Architectural Solutions
 
@@ -1255,8 +1231,6 @@ The challenge required building an accurate predictive model $F_\theta(X) \to Y_
 - **Challenge:** Risk of subtle data leakage across feature engineering and hyperparameter search.
 - **Solution:** Enforced strict nested cross-validation and pipeline encapsulation (scikit-learn `Pipeline`) ensuring preprocessing transformations were fitted exclusively on training splits.
 
----
-
 ## Performance & Evaluation Metrics
 
 | Evaluation Metric | Cross-Validation Score | Test Partition Score | Objective |
@@ -1265,8 +1239,6 @@ The challenge required building an accurate predictive model $F_\theta(X) \to Y_
 | **F1 Score** | 0.884 | **~0.891** | Harmonic mean of precision and recall |
 | **MCC (Matthews Correlation)** | 0.875 | **~0.880** | Balanced quality metric for imbalanced classes |
 | **ROC-AUC** | 0.988 | **~0.990** | Separability threshold performance |
-
----
 
 ## Diagnostic Visualizations
 
@@ -1283,8 +1255,6 @@ The challenge required building an accurate predictive model $F_\theta(X) \to Y_
     ![Confusion Matrix](https://raw.githubusercontent.com/mrxsierra/gstn_dsp_pbc/main/3-submission/static/cm.png)
   
 
----
-
 ## Verified Accreditation
 
   [![GSTN Hackathon Finalist Certificate](../../cert/GSTN_Team_137.jpg)](../../cert/GSTN_Team_137.jpg)
@@ -1292,13 +1262,9 @@ The challenge required building an accurate predictive model $F_\theta(X) \to Y_
     GSTN AI/ML National Hackathon Finalist • Awarded by Goods & Services Tax Network (GSTN)
   
 
----
-
 ## Source Repository
 
 - [GitHub Repository — mrxsierra/gstn_dsp_pbc](https://github.com/mrxsierra/gstn_dsp_pbc): Complete reproduction scripts, cross-validation benches, and documentation.
-
----
 
   [Portfolio
     All Engineering Projects](../)
@@ -1349,8 +1315,6 @@ The challenge required building an accurate predictive model $F_\theta(X) \to Y_
     **Multi-Engine Consistency:** 100% trigger and relational logic parity validated across PostgreSQL, MySQL, and SQLite using automated pytest test benches.
   
 
----
-
 ## Architecture & Parity Pipeline
 
 ```mermaid
@@ -1367,15 +1331,11 @@ graph TD
     F --> G["Materialized Analytical Reporting Views"]
 ```
 
----
-
 ## Executive Overview
 
 The **Examination Management System (EMS DB)** project is a modular, production-ready relational database architecture designed to administer educational examinations. It models students, proctors, tests, dynamic question banks, timed test sessions, audit events, and computed academic scores.
 
 The architecture was engineered with strict **multi-RDBMS parity**: the system maintains three synchronized dialect implementations (**PostgreSQL**, **MySQL**, and **SQLite**) with automated Python test harnesses validating identical business logic execution across all three engines.
-
----
 
 ## Technical Challenges & Architectural Solutions
 
@@ -1391,8 +1351,6 @@ The architecture was engineered with strict **multi-RDBMS parity**: the system m
 - **Challenge:** Heavy joins across student records, question options, and audit history caused query latency.
 - **Solution:** Created targeted composite indexes and encapsulated analytical reporting logic into optimized SQL views (`tests_history`, `summary_reports`).
 
----
-
 ## Verified Accreditation
 
   [![Harvard CS50 SQL Certificate](../../cert/1713864822125-cs50s.jpeg)](../../cert/1713864822125-cs50s.jpeg)
@@ -1400,20 +1358,14 @@ The architecture was engineered with strict **multi-RDBMS parity**: the system m
     Harvard CS50 SQL: Introduction to Databases with SQL • Harvard University (CS50)
   
 
----
-
 ## Entity Relationship Architecture
 
   [![EMS DB ER Diagram](https://raw.githubusercontent.com/mrxsierra/ems-db/main/assets/erDiagram.png)](https://raw.githubusercontent.com/mrxsierra/ems-db/main/assets/erDiagram.png)
-
----
 
 ## Related Technical Deep Dives
 
 - [**Navigating the Nuances: A Developer's Guide to SQL Dialects**](../blog/posts/1-schema-diff.md): Deep dive into DDL differences, autoincrement sequence strategies, and trigger syntax across SQLite, MySQL, and PostgreSQL.
 - [**Beyond the Schema: Querying, CLI Interaction, & Docker Nuances**](../blog/posts/2-query-interaction-diff.md): Practical patterns for script piping, container networking, and auto-increment resets.
-
----
 
   [Previous Project
     GSTN Predictive Binary Classification](../gstn-pbc/)
@@ -1463,8 +1415,6 @@ The architecture was engineered with strict **multi-RDBMS parity**: the system m
     **Zero-Cost Cloud Emulation:** Simulates full AWS S3 object storage workflows locally via containerized LocalStack, eliminating cloud testing infrastructure expenses.
   
 
----
-
 ## Architecture & Data Pipeline
 
 ```mermaid
@@ -1477,15 +1427,11 @@ graph LR
     D --> E3["Production AWS S3 (Direct Upload)"]
 ```
 
----
-
 ## Executive Overview
 
 **S3 Faker** is a developer-first data synthesis tool designed to generate high-volume, realistic datasets driven by declarative JSON configuration schemas. The generated artifacts can be written to the local filesystem or streamed directly to an Amazon S3 bucket or local containerized LocalStack emulator.
 
 The system addresses a critical bottleneck in modern data engineering: acquiring compliant, realistic test data for ETL pipeline benchmarking without incurring cloud storage costs or risking PII data leaks.
-
----
 
 ## Technical Challenges & Architectural Solutions
 
@@ -1501,8 +1447,6 @@ The system addresses a critical bottleneck in modern data engineering: acquiring
 - **Challenge:** Allowing engineers to define complex relational schemas without modifying the underlying Python engine.
 - **Solution:** Built a dynamic JSON schema interpreter supporting custom distributions, localized locales, foreign key dependencies, and field type coercions.
 
----
-
 ## CLI Workflow & Example Usage
 
 ```bash
@@ -1512,8 +1456,6 @@ python -m s3_faker --config schema.json --records 50000 --format parquet
 # Stream directly to LocalStack S3 emulator
 python -m s3_faker --config schema.json --target s3://test-bucket/data/ --endpoint http://localhost:4566
 ```
-
----
 
 ## Verification & Workflow Visuals
 
@@ -1529,8 +1471,6 @@ python -m s3_faker --config schema.json --target s3://test-bucket/data/ --endpoi
 
     [![Synthetic Data Generation Run](https://raw.githubusercontent.com/mrxsierra/s3_faker/main/img/update.jpg)](https://raw.githubusercontent.com/mrxsierra/s3_faker/main/img/update.jpg)
   
-
----
 
   [Previous Project
     Examination Management System DB](../ems-db/)
@@ -1581,8 +1521,6 @@ python -m s3_faker --config schema.json --target s3://test-bucket/data/ --endpoi
     **Automated ETL Pipeline:** Eliminates manual data entry by automatically extracting MCQs, highlighted correct options, and superscripts from DOCX files into validated Excel sheets.
   
 
----
-
 ## Architecture & Extraction Flow
 
 ```mermaid
@@ -1594,15 +1532,11 @@ graph LR
     E --> F["Normalized Excel Workbook (.xlsx)"]
 ```
 
----
-
 ## Executive Overview
 
 **Paraxcel** is a modular Python desktop utility built to automate the extraction of multiple-choice questions (MCQs), answers, and option formatting from Microsoft Word (`.docx`) documents into structured Excel workbooks (`.xlsx`).
 
 Designed for educators and assessment coordinators, Paraxcel operates entirely offline with zero cloud dependencies. It parses low-level OpenXML document structures to reliably detect marked answers (font color, background highlights) and mathematical notations (superscripts, subscripts).
-
----
 
 ## Technical Challenges & Architectural Solutions
 
@@ -1618,16 +1552,12 @@ Designed for educators and assessment coordinators, Paraxcel operates entirely o
 - **Challenge:** Distributing a Python application to non-technical end-users without requiring a Python runtime environment.
 - **Solution:** Configured `PyInstaller` build pipelines with embedded icon resources (`paraxcel.ico`), packaging the application into a standalone Windows binary.
 
----
-
 ## Verified Accreditation
 
   [![Harvard CS50x Certificate](../../cert/1738690195028-cs50x.jpeg)](../../cert/1738690195028-cs50x.jpeg)
   
     Harvard CS50x: Introduction to Computer Science • Harvard University (CS50)
   
-
----
 
 ## Application Screenshots
 
@@ -1649,8 +1579,6 @@ Designed for educators and assessment coordinators, Paraxcel operates entirely o
 
     [![Normalized Excel Output](https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/excel.jpg)](https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/excel.jpg)
   
-
----
 
   [Previous Project
     S3 Faker Mock Data Generator](../s3-faker/)
@@ -1701,8 +1629,6 @@ Designed for educators and assessment coordinators, Paraxcel operates entirely o
     **Resilient Automation:** Extracts paginated job market telemetry (titles, salary bands, required skills, locations) with graceful fallback handling and pytest test benches.
   
 
----
-
 ## Architecture & Scraping Flow
 
 ```mermaid
@@ -1714,15 +1640,11 @@ graph TD
     E --> F["Structured CSV Telemetry Output"]
 ```
 
----
-
 ## Executive Overview
 
 **Naukri Market Data Scraper** is a Python automation tool that extracts job listings from Naukri.com to facilitate programmatic tech hiring telemetry, salary benchmarking, and skill requirement analysis.
 
 The scraper automates browser navigation across paginated listings, resolves asynchronously hydrated DOM components, normalizes inconsistent compensation notations, and filters results against user-defined skill matrices before exporting clean datasets for downstream analytics.
-
----
 
 ## Technical Challenges & Architectural Solutions
 
@@ -1738,8 +1660,6 @@ The scraper automates browser navigation across paginated listings, resolves asy
 - **Challenge:** Ensuring scraper parser logic remains resilient against minor frontend updates.
 - **Solution:** Authored a complete test suite in `test_project.py` using `pytest`, featuring mocked DOM responses and fixture-driven parser validation.
 
----
-
 ## Verified Accreditation
 
   [![Harvard CS50P Certificate](../../cert/1708063772979-cs50p.jpeg)](../../cert/1708063772979-cs50p.jpeg)
@@ -1747,13 +1667,9 @@ The scraper automates browser navigation across paginated listings, resolves asy
     Harvard CS50P: Introduction to Programming with Python • Harvard University (CS50)
   
 
----
-
 ## Video Demonstration
 
   [![Video Demo Walkthrough](https://img.youtube.com/vi/ls_uxjfADN4/maxresdefault.jpg)](https://www.youtube.com/watch?v=ls_uxjfADN4)
-
----
 
   [Previous Project
     Paraxcel Document Toolkit](../paraxcel/)
@@ -1804,8 +1720,6 @@ The scraper automates browser navigation across paginated listings, resolves asy
     **Zero-Backend Prototyping:** Demonstrates complete test creation, timed execution, real-time scoring, and historical result visualization purely client-side.
   
 
----
-
 ## Architecture & State Lifecycle
 
 ```mermaid
@@ -1817,8 +1731,6 @@ graph TD
     E --> F["Interactive Analytical Dashboards & Result Export"]
 ```
 
----
-
 ## Executive Overview
 
 The **Real-Time Test Management Interface** is a client-side web application built with vanilla JavaScript (ES6+), HTML5, and Bootstrap. It demonstrates full test administration workflows without requiring server-side infrastructure:
@@ -1827,8 +1739,6 @@ The **Real-Time Test Management Interface** is a client-side web application bui
 - Timed examination sessions with auto-submission triggers.
 - In-browser file parsing for bulk question import via CSV and Excel workbooks.
 - Historical score tracking and visual performance analytics.
-
----
 
 ## Technical Challenges & Architectural Solutions
 
@@ -1843,8 +1753,6 @@ The **Real-Time Test Management Interface** is a client-side web application bui
 ### 3. Responsive Multi-Device UI
 - **Challenge:** Ensuring consistent test-taking controls across desktop monitors and mobile devices.
 - **Solution:** Utilized fluid CSS Grid, modern Flexbox components, and Bootstrap 5 responsive utility classes.
-
----
 
 ## Application Interface Gallery
 
@@ -1866,8 +1774,6 @@ The **Real-Time Test Management Interface** is a client-side web application bui
 
     [![Score Results View](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/individual-test-result.png)](https://raw.githubusercontent.com/mrxsierra/test-site/main/img/individual-test-result.png)
   
-
----
 
   [Previous Project
     Naukri Market Data Scraper](../naukri-webscraper/)
@@ -1893,8 +1799,6 @@ As developers, we frequently encounter diverse SQL engines. While core relationa
   
 
 This technical reference draws directly from real-world multi-database migrations implemented in the [**Examination Management System (EMS DB)**](https://github.com/mrxsierra/ems-db/) repository.
-
----
 
 ## Key Areas of Schema Divergence
 
@@ -1932,8 +1836,6 @@ The syntax for dropping database objects is broadly compatible, but identifier q
     DROP VIEW IF EXISTS "tests_history";
     DROP TABLE IF EXISTS "students";
     ```
-
----
 
 ### 2. Primary Keys, Auto-Increment, & Types
 
@@ -2017,8 +1919,6 @@ The syntax for dropping database objects is broadly compatible, but identifier q
     );
     ```
 
----
-
 ### 3. Trigger Architecture & Execution
 
 Triggers represent the most significant syntactical divide across the three engines.
@@ -2083,8 +1983,6 @@ Triggers represent the most significant syntactical divide across the three engi
     END;
     ```
 
----
-
 ### 4. Timestamp & Interval Arithmetic
 
 How intervals and timestamps are computed across engines:
@@ -2109,8 +2007,6 @@ How intervals and timestamps are computed across engines:
     -- String modifier concatenation inside DATETIME()
     DATETIME(new.start, '+' || (SELECT TIME(duration) FROM "tests" WHERE "id" = new.test_id))
     ```
-
----
 
 ### 5. Conditional Expressions
 
@@ -2145,8 +2041,6 @@ How intervals and timestamps are computed across engines:
     END
     ```
 
----
-
 ### 6. Aggregate NULL Handling
 
 When aggregating nullable scores (`SUM`), empty record sets return `NULL` unless coalesced:
@@ -2169,8 +2063,6 @@ When aggregating nullable scores (`SUM`), empty record sets return `NULL` unless
     SELECT IFNULL(SUM("score"), 0) FROM "results" WHERE "test_session_id" = new.id;
     ```
 
----
-
 ## Architectural Comparison Matrix
 
 | Feature | PostgreSQL | MySQL | SQLite |
@@ -2180,8 +2072,6 @@ When aggregating nullable scores (`SUM`), empty record sets return `NULL` unless
 | **Procedural Logic** | `PL/pgSQL` (Separate function) | `DELIMITER` blocks inside trigger | `BEGIN...END` inside trigger |
 | **Interval Typing** | Native `INTERVAL` | `INTERVAL val UNIT` functions | String modifier parsing |
 | **Strict Typing** | Highly strict & extensible | Strict with mode flags | Type affinity (permissive) |
-
----
 
 ## Next in the Series
 
@@ -2193,8 +2083,6 @@ When aggregating nullable scores (`SUM`), empty record sets return `NULL` unless
     **Beyond the Schema: A Practical Guide to Querying and Interacting with SQLite, MySQL, & PostgreSQL**
     Explore CLI interaction patterns, script piping, Dockerized connection debugging, and Python multi-RDBMS driver integration.
   
-
----
 
 ## Reference Repositories
 
@@ -2222,8 +2110,6 @@ Building on our analysis of cross-engine schema definitions, this guide focuses 
   
 
 This reference is grounded in practical scripts from the [**Examination Management System (EMS DB)**](https://github.com/mrxsierra/ems-db/) project repository.
-
----
 
 ## 1. CLI Shell Access & Connection Flags
 
@@ -2257,8 +2143,6 @@ Each RDBMS provides a dedicated terminal client with specific formatting and deb
     # File-based connection with column table mode and command echo
     sqlite3 ems.db -table -echo
     ```
-
----
 
 ## 2. Executing SQL Scripts from Files
 
@@ -2321,8 +2205,6 @@ Running batch DDL migrations or query test benches from external `.sql` files:
     SELECT name FROM sqlite_master WHERE type = 'index';
     ```
 
----
-
 ## 5. Dockerized Multi-Database Orchestration
 
 In reproducible testing environments, database services run inside isolated Docker networks.
@@ -2381,8 +2263,6 @@ services:
     docker compose exec app sqlite3 /workspace/ems.db
     ```
 
----
-
 ## Quick Reference Summary
 
 | Operation | PostgreSQL | MySQL | SQLite |
@@ -2393,8 +2273,6 @@ services:
 | **Inspect DDL** | `\d+ table_name` | `SHOW CREATE TABLE table_name;` | `.schema table_name` |
 | **Execution Plan** | `EXPLAIN ANALYZE SELECT ...;` | `EXPLAIN SELECT ...;` | `EXPLAIN QUERY PLAN SELECT ...;` |
 | **Docker Hostname** | DNS service name (`postgres-db`) | DNS service name (`mysql-db`) | Local file path / mount |
-
----
 
 ## Conclusion & Series Navigation
 
@@ -2408,8 +2286,6 @@ Understanding both the schema syntax (**Part 1**) and the operational tooling (*
     **Part 1: Navigating the Nuances: A Developer's Guide to SQL Dialects**
     Deep dive into schema definitions, trigger syntax, timestamp functions, and type systems across PostgreSQL, MySQL, and SQLite.
   
-
----
 
 ## Reference Documentation
 

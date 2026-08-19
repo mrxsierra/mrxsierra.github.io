@@ -55,8 +55,6 @@ description: >
   </div>
 </div>
 
----
-
 ## Architecture &amp; Scraping Flow
 
 ```mermaid
@@ -68,15 +66,11 @@ graph TD
     E --> F["Structured CSV Telemetry Output"]
 ```
 
----
-
 ## Executive Overview
 
 **Naukri Market Data Scraper** is a Python automation tool that extracts job listings from Naukri.com to facilitate programmatic tech hiring telemetry, salary benchmarking, and skill requirement analysis.
 
 The scraper automates browser navigation across paginated listings, resolves asynchronously hydrated DOM components, normalizes inconsistent compensation notations, and filters results against user-defined skill matrices before exporting clean datasets for downstream analytics.
-
----
 
 ## Technical Challenges &amp; Architectural Solutions
 
@@ -92,8 +86,6 @@ The scraper automates browser navigation across paginated listings, resolves asy
 - **Challenge:** Ensuring scraper parser logic remains resilient against minor frontend updates.
 - **Solution:** Authored a complete test suite in `test_project.py` using `pytest`, featuring mocked DOM responses and fixture-driven parser validation.
 
----
-
 ## Verified Accreditation
 
 <div style="max-width: 650px; margin: 20px 0;">
@@ -105,8 +97,6 @@ The scraper automates browser navigation across paginated listings, resolves asy
   </p>
 </div>
 
----
-
 ## Video Demonstration
 
 <div style="max-width: 650px; margin: 20px 0;">
@@ -114,8 +104,6 @@ The scraper automates browser navigation across paginated listings, resolves asy
     <img src="https://img.youtube.com/vi/ls_uxjfADN4/maxresdefault.jpg" alt="Video Demo Walkthrough" style="border-radius: 8px; border: 1px solid var(--color-border);" loading="lazy">
   </a>
 </div>
-
----
 
 <!-- Sequential Case Study Navigation -->
 <div class="project-nav-footer">

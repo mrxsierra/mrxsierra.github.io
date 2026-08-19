@@ -54,8 +54,6 @@ description: >
   </div>
 </div>
 
----
-
 ## Architecture &amp; ML Pipeline Flow
 
 ```mermaid
@@ -70,15 +68,11 @@ graph TD
     H --> I["Competition-Compliant Model Artifact"]
 ```
 
----
-
 ## Executive Overview
 
 Developed for the **Goods and Services Tax Network (GSTN) AI/ML Hackathon** organized by the Government of India, this project engineered a high-throughput, interpretable binary classification pipeline for GST financial tax analytics.
 
 The challenge required building an accurate predictive model $F_\theta(X) \to Y_{\text{pred}}$ over 900,000 real-world records characterized by severe class imbalance (91% majority / 9% minority) and extreme feature skewness, while adhering to strict zero-data-leakage compliance protocols.
-
----
 
 ## Technical Challenges &amp; Architectural Solutions
 
@@ -94,8 +88,6 @@ The challenge required building an accurate predictive model $F_\theta(X) \to Y_
 - **Challenge:** Risk of subtle data leakage across feature engineering and hyperparameter search.
 - **Solution:** Enforced strict nested cross-validation and pipeline encapsulation (scikit-learn `Pipeline`) ensuring preprocessing transformations were fitted exclusively on training splits.
 
----
-
 ## Performance &amp; Evaluation Metrics
 
 | Evaluation Metric | Cross-Validation Score | Test Partition Score | Objective |
@@ -104,8 +96,6 @@ The challenge required building an accurate predictive model $F_\theta(X) \to Y_
 | **F1 Score** | 0.884 | **~0.891** | Harmonic mean of precision and recall |
 | **MCC (Matthews Correlation)** | 0.875 | **~0.880** | Balanced quality metric for imbalanced classes |
 | **ROC-AUC** | 0.988 | **~0.990** | Separability threshold performance |
-
----
 
 ## Diagnostic Visualizations
 
@@ -120,8 +110,6 @@ The challenge required building an accurate predictive model $F_\theta(X) \to Y_
   </div>
 </div>
 
----
-
 ## Verified Accreditation
 
 <div style="max-width: 650px; margin: 20px 0;">
@@ -133,13 +121,9 @@ The challenge required building an accurate predictive model $F_\theta(X) \to Y_
   </p>
 </div>
 
----
-
 ## Source Repository
 
 - [GitHub Repository — mrxsierra/gstn_dsp_pbc](https://github.com/mrxsierra/gstn_dsp_pbc): Complete reproduction scripts, cross-validation benches, and documentation.
-
----
 
 <!-- Sequential Case Study Navigation -->
 <div class="project-nav-footer">

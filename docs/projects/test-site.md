@@ -54,8 +54,6 @@ description: >
   </div>
 </div>
 
----
-
 ## Architecture &amp; State Lifecycle
 
 ```mermaid
@@ -67,8 +65,6 @@ graph TD
     E --> F["Interactive Analytical Dashboards &amp; Result Export"]
 ```
 
----
-
 ## Executive Overview
 
 The **Real-Time Test Management Interface** is a client-side web application built with vanilla JavaScript (ES6+), HTML5, and Bootstrap. It demonstrates full test administration workflows without requiring server-side infrastructure:
@@ -77,8 +73,6 @@ The **Real-Time Test Management Interface** is a client-side web application bui
 - Timed examination sessions with auto-submission triggers.
 - In-browser file parsing for bulk question import via CSV and Excel workbooks.
 - Historical score tracking and visual performance analytics.
-
----
 
 ## Technical Challenges &amp; Architectural Solutions
 
@@ -93,8 +87,6 @@ The **Real-Time Test Management Interface** is a client-side web application bui
 ### 3. Responsive Multi-Device UI
 - **Challenge:** Ensuring consistent test-taking controls across desktop monitors and mobile devices.
 - **Solution:** Utilized fluid CSS Grid, modern Flexbox components, and Bootstrap 5 responsive utility classes.
-
----
 
 ## Application Interface Gallery
 
@@ -118,8 +110,6 @@ The **Real-Time Test Management Interface** is a client-side web application bui
     </a>
   </div>
 </div>
-
----
 
 <!-- Sequential Case Study Navigation -->
 <div class="project-nav-footer">

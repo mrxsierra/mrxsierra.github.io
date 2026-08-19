@@ -54,8 +54,6 @@ description: >
   </div>
 </div>
 
----
-
 ## Architecture &amp; Extraction Flow
 
 ```mermaid
@@ -67,15 +65,11 @@ graph LR
     E --> F["Normalized Excel Workbook (.xlsx)"]
 ```
 
----
-
 ## Executive Overview
 
 **Paraxcel** is a modular Python desktop utility built to automate the extraction of multiple-choice questions (MCQs), answers, and option formatting from Microsoft Word (`.docx`) documents into structured Excel workbooks (`.xlsx`).
 
 Designed for educators and assessment coordinators, Paraxcel operates entirely offline with zero cloud dependencies. It parses low-level OpenXML document structures to reliably detect marked answers (font color, background highlights) and mathematical notations (superscripts, subscripts).
-
----
 
 ## Technical Challenges &amp; Architectural Solutions
 
@@ -91,8 +85,6 @@ Designed for educators and assessment coordinators, Paraxcel operates entirely o
 - **Challenge:** Distributing a Python application to non-technical end-users without requiring a Python runtime environment.
 - **Solution:** Configured `PyInstaller` build pipelines with embedded icon resources (`paraxcel.ico`), packaging the application into a standalone Windows binary.
 
----
-
 ## Verified Accreditation
 
 <div style="max-width: 650px; margin: 20px 0;">
@@ -103,8 +95,6 @@ Designed for educators and assessment coordinators, Paraxcel operates entirely o
     Harvard CS50x: Introduction to Computer Science • Harvard University (CS50)
   </p>
 </div>
-
----
 
 ## Application Screenshots
 
@@ -128,8 +118,6 @@ Designed for educators and assessment coordinators, Paraxcel operates entirely o
     </a>
   </div>
 </div>
-
----
 
 <!-- Sequential Case Study Navigation -->
 <div class="project-nav-footer">

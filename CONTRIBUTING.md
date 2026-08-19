@@ -39,7 +39,7 @@ Welcome to the **`mrxsierra.github.io`** repository. This document provides a co
 │   ├── install_hooks.py       # Git pre-commit hook installer
 │   ├── setup_github_ruleset.sh# GitHub Repository Ruleset installer via gh CLI
 │   └── verify.py              # 5-stage pre-commit verification pipeline
-├── tests/                     # Automated pytest verification test suite (51 tests)
+├── tests/                     # Automated pytest verification test suite (54 tests)
 │   ├── conftest.py            # Pytest session fixtures (cached strict build & BeautifulSoup parsers)
 │   ├── test_brand_kit.py      # Vector marks, raster assets, banners, & press kit archive integrity
 │   ├── test_hooks.py          # Build hook unit tests & llms.txt format checks

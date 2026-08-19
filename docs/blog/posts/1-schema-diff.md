@@ -34,8 +34,6 @@ As developers, we frequently encounter diverse SQL engines. While core relationa
 
 This technical reference draws directly from real-world multi-database migrations implemented in the [**Examination Management System (EMS DB)**](https://github.com/mrxsierra/ems-db/) repository.
 
----
-
 ## Key Areas of Schema Divergence
 
 ```mermaid
@@ -72,8 +70,6 @@ The syntax for dropping database objects is broadly compatible, but identifier q
     DROP VIEW IF EXISTS "tests_history";
     DROP TABLE IF EXISTS "students";
     ```
-
----
 
 ### 2. Primary Keys, Auto-Increment, &amp; Types
 
@@ -157,8 +153,6 @@ The syntax for dropping database objects is broadly compatible, but identifier q
     );
     ```
 
----
-
 ### 3. Trigger Architecture &amp; Execution
 
 Triggers represent the most significant syntactical divide across the three engines.
@@ -223,8 +217,6 @@ Triggers represent the most significant syntactical divide across the three engi
     END;
     ```
 
----
-
 ### 4. Timestamp &amp; Interval Arithmetic
 
 How intervals and timestamps are computed across engines:
@@ -249,8 +241,6 @@ How intervals and timestamps are computed across engines:
     -- String modifier concatenation inside DATETIME()
     DATETIME(new.start, '+' || (SELECT TIME(duration) FROM "tests" WHERE "id" = new.test_id))
     ```
-
----
 
 ### 5. Conditional Expressions
 
@@ -285,8 +275,6 @@ How intervals and timestamps are computed across engines:
     END
     ```
 
----
-
 ### 6. Aggregate NULL Handling
 
 When aggregating nullable scores (`SUM`), empty record sets return `NULL` unless coalesced:
@@ -309,8 +297,6 @@ When aggregating nullable scores (`SUM`), empty record sets return `NULL` unless
     SELECT IFNULL(SUM("score"), 0) FROM "results" WHERE "test_session_id" = new.id;
     ```
 
----
-
 ## Architectural Comparison Matrix
 
 | Feature | PostgreSQL | MySQL | SQLite |
@@ -320,8 +306,6 @@ When aggregating nullable scores (`SUM`), empty record sets return `NULL` unless
 | **Procedural Logic** | `PL/pgSQL` (Separate function) | `DELIMITER` blocks inside trigger | `BEGIN...END` inside trigger |
 | **Interval Typing** | Native `INTERVAL` | `INTERVAL val UNIT` functions | String modifier parsing |
 | **Strict Typing** | Highly strict &amp; extensible | Strict with mode flags | Type affinity (permissive) |
-
----
 
 ## Next in the Series
 
@@ -335,8 +319,6 @@ When aggregating nullable scores (`SUM`), empty record sets return `NULL` unless
     Explore CLI interaction patterns, script piping, Dockerized connection debugging, and Python multi-RDBMS driver integration.
   </p>
 </div>
-
----
 
 ## Reference Repositories
 
