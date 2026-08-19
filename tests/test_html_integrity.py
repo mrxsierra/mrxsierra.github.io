@@ -240,3 +240,43 @@ def test_tags_ribbon_structure_on_tagged_pages(site_dir: Path):
     assert isinstance(tags_nav, Tag), ".page-tags-wrapper must contain <nav class='md-tags'>"
     tag_elements = tags_nav.find_all("a", class_="md-tag")
     assert len(tag_elements) >= 1, "Tagged page must contain tag links"
+
+
+def test_accessibility_preconnect_and_jsonld(site_dir: Path):
+    """Ensure pages include preconnect resource hints and Schema.org JSON-LD structured data."""
+    import json
+
+    homepage = site_dir / "index.html"
+    assert homepage.exists(), "Homepage index.html must exist."
+    content = homepage.read_text(encoding="utf-8")
+    soup = BeautifulSoup(content, "html.parser")
+
+    # Check preconnect
+    preconnect = soup.find("link", rel="preconnect", href="https://fonts.googleapis.com")
+    assert preconnect is not None, "Pages must include fonts.googleapis.com preconnect hint."
+
+    # Check JSON-LD structured data
+    jsonld_script = soup.find("script", type="application/ld+json")
+    assert isinstance(jsonld_script, Tag), "Homepage must contain Schema.org JSON-LD script."
+    data = json.loads(jsonld_script.string or "{}")
+    assert data.get("@context") == "https://schema.org"
+    assert "author" in data
+    assert data["author"].get("name") == "Sunil Sharma"
+
+
+def test_social_share_aria_labels_match_visible_text(site_dir: Path):
+    """Ensure social sharing button aria-labels match visible text for voice control navigation."""
+    page = site_dir / "projects" / "gstn-pbc" / "index.html"
+    assert page.exists(), "Project page must exist."
+    content = page.read_text(encoding="utf-8")
+    soup = BeautifulSoup(content, "html.parser")
+
+    btn_x = soup.find(id="btn-share-x")
+    assert btn_x is not None and isinstance(btn_x, Tag), "Share on X button must exist."
+    assert "Post" in btn_x.get("aria-label", ""), "btn-share-x aria-label must contain 'Post'"
+
+    btn_copy = soup.find(id="btn-share-copy")
+    assert btn_copy is not None and isinstance(btn_copy, Tag), "Copy link button must exist."
+    assert "Copy Link" in btn_copy.get("aria-label", ""), (
+        "btn-share-copy aria-label must contain 'Copy Link'"
+    )
