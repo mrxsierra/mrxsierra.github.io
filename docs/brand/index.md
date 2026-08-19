@@ -5,31 +5,29 @@ description: Official Brand Identity, Vector Marks, Content Creation Suite, and 
 # Brand Identity &amp; Press Kit
 
 <div class="page-intro">
-  <h2 class="page-intro-title">Brand Standards &amp; Content Creation Suite</h2>
-  <p class="page-intro-desc">
-    Canonical vector marks, video watermarks, presentation templates, cross-platform social assets, and media bio copy for <strong>Sunil Sharma (@mrxsierra)</strong>.
-  </p>
-  <div style="margin-top: 16px;">
+  <div class="page-intro-header">
+    <h2 class="page-intro-title">Brand Standards &amp; Content Creation Suite</h2>
     <a href="../assets/brand/mrxsierra-brand-press-kit.zip" download class="btn btn-primary">
       <i class="fas fa-file-zipper"></i> Download Master Press Kit (.ZIP)
     </a>
   </div>
+  <p class="page-intro-desc">
+    Canonical vector marks, video watermarks, presentation templates, cross-platform social assets, and media bio copy for <strong>Sunil Sharma (@mrxsierra)</strong>.
+  </p>
 </div>
-
----
 
 ## 1. Core Brand Marks &amp; Logotypes
 
 Our visual identity is built on a **Geometric Constructivist "S"** mark, combining mathematical circular geometry, normalized optical balance, and pure structural clarity.
 
-<div class="card-grid-2" style="margin: 24px 0;">
+<div class="card-grid-2">
 
   <div class="clean-card">
     <div class="project-card-header">
       <span class="project-category-badge">Primary Mark (Dark)</span>
     </div>
-    <div style="text-align: center; padding: 24px; background: #08090d; border-radius: 12px; margin: 12px 0;">
-      <img src="../assets/brand/monogram-dark.svg" alt="Monogram Dark" style="width: 88px; height: 88px;" />
+    <div class="brand-asset-preview-dark">
+      <img src="../assets/brand/monogram-dark.svg" alt="Monogram Dark" class="brand-asset-img-square" />
     </div>
     <h3 class="project-card-title">Obsidian Monogram</h3>
     <p class="project-card-desc">Master vector mark for dark surfaces, app icons, favicons, and header branding.</p>
@@ -42,8 +40,8 @@ Our visual identity is built on a **Geometric Constructivist "S"** mark, combini
     <div class="project-card-header">
       <span class="project-category-badge">Secondary Mark (Light)</span>
     </div>
-    <div style="text-align: center; padding: 24px; background: #f8fafc; border-radius: 12px; margin: 12px 0; border: 1px solid #e2e8f0;">
-      <img src="../assets/brand/monogram-light.svg" alt="Monogram Light" style="width: 88px; height: 88px;" />
+    <div class="brand-asset-preview-light">
+      <img src="../assets/brand/monogram-light.svg" alt="Monogram Light" class="brand-asset-img-square" />
     </div>
     <h3 class="project-card-title">Light Canvas Monogram</h3>
     <p class="project-card-desc">High-contrast mark for white documents, PDF reports, and light background media.</p>
@@ -56,8 +54,8 @@ Our visual identity is built on a **Geometric Constructivist "S"** mark, combini
     <div class="project-card-header">
       <span class="project-category-badge">Horizontal Lockup</span>
     </div>
-    <div style="text-align: center; padding: 24px; background: #08090d; border-radius: 12px; margin: 12px 0;">
-      <img src="../assets/brand/logo-horizontal.svg" alt="Horizontal Logotype" style="max-height: 56px; width: auto;" />
+    <div class="brand-asset-preview-dark">
+      <img src="../assets/brand/logo-horizontal.svg" alt="Horizontal Logotype" class="brand-asset-img-h" />
     </div>
     <h3 class="project-card-title">Horizontal Logotype</h3>
     <p class="project-card-desc">Full brand lockup for documentation headers, partner portfolios, and sponsorships.</p>
@@ -70,8 +68,8 @@ Our visual identity is built on a **Geometric Constructivist "S"** mark, combini
     <div class="project-card-header">
       <span class="project-category-badge">Transparent Watermark</span>
     </div>
-    <div style="text-align: center; padding: 24px; background: #18181b; border-radius: 12px; margin: 12px 0;">
-      <img src="../assets/brand/monogram-transparent.svg" alt="Transparent Monogram" style="width: 88px; height: 88px;" />
+    <div class="brand-asset-preview-dark-alt">
+      <img src="../assets/brand/monogram-transparent.svg" alt="Transparent Monogram" class="brand-asset-img-square" />
     </div>
     <h3 class="project-card-title">Transparent Glyph</h3>
     <p class="project-card-desc">Isolated white glyph with zero background for video overlays, code stamps, and watermarks.</p>
@@ -81,8 +79,6 @@ Our visual identity is built on a **Geometric Constructivist "S"** mark, combini
   </div>
 
 </div>
-
----
 
 ## 2. Video &amp; Multimedia Creation Kit
 
@@ -95,13 +91,11 @@ Broadcast-ready graphics for YouTube tutorials, coding screencasts, webinars, an
 | **Video End Screen / Outro** | SVG | 1920×1080 | YouTube 16:9 outro card with card placeholders. | [Download SVG](../assets/brand/video/video-end-screen.svg) |
 | **Thumbnail Frame Template** | SVG | 1280×720 | 16:9 YouTube video thumbnail template with badge. | [Download SVG](../assets/brand/video/thumbnail-frame.svg) |
 
----
-
 ## 3. Social Media &amp; Publication Suite
 
 High-resolution header covers and document carousel templates:
 
-<div class="card-grid-2" style="margin: 20px 0;">
+<div class="card-grid-2">
 
   <div class="clean-card">
     <div class="project-card-header">
@@ -149,8 +143,6 @@ High-resolution header covers and document carousel templates:
 
 </div>
 
----
-
 ## 4. Standard Media Bios &amp; Speaker Copy
 
 === "One-Liner (Social & Short Bios)"
@@ -168,8 +160,6 @@ High-resolution header covers and document carousel templates:
     Sunil Sharma (mrxsierra) is a software engineer specializing in autonomous agent workflows, machine learning pipelines, and distributed relational database architectures. A national finalist in the GSTN Predictive Binary Classification hackathon, Sunil designs production-grade software with rigorous pytest test suites, cross-engine SQL parity, and zero-downtime CI/CD automation. He publishes technical architecture guides and open-source tooling for the global developer ecosystem.
     ```
 
----
-
 ## 5. Design System Tokens &amp; Color Palette
 
 | Token Name | HEX Code | OKLCH Value | Role |
@@ -181,10 +171,9 @@ High-resolution header covers and document carousel templates:
 | `--color-text` | `#FFFFFF` | `oklch(0.99 0.00 0)` | Primary Optical Text |
 | `--color-text-muted` | `#94A3B8` | `oklch(0.70 0.03 250)` | Secondary Metadata &amp; Subtitles |
 
----
-
 ## 6. Brand Usage Guidelines
 
 - **Clear Space**: Always maintain clear space equal to at least 25% of the monogram width around the mark.
 - **Minimum Size**: Do not render the vector monogram below `16×16px` on digital screens or `5mm` in print.
 - **Color Integrity**: Never apply unauthorized drop shadows, skewed distortions, or unapproved multi-color gradients to the monogram glyph.
+

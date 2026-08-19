@@ -5,32 +5,32 @@ description: Official Press Kit, Media Resources, Biography Sheets, and Brand As
 # Press Kit &amp; Media Resources
 
 <div class="page-intro">
-  <h2 class="page-intro-title">Media Kit &amp; Speaker Resources</h2>
+  <div class="page-intro-header">
+    <h2 class="page-intro-title">Media Kit &amp; Speaker Resources</h2>
+    <div class="profile-btn-row">
+      <a href="../assets/brand/mrxsierra-brand-press-kit.zip" download class="btn btn-primary">
+        <i class="fas fa-file-zipper"></i> Download Master Press Kit (.ZIP)
+      </a>
+      <a href="../contact/" class="btn btn-secondary">
+        <i class="fas fa-envelope"></i> Media &amp; Speaking Inquiries &rarr;
+      </a>
+    </div>
+  </div>
   <p class="page-intro-desc">
     Official background material, verified headshots, vector brand marks, speaking topics, and media bio copy for <strong>Sunil Sharma (@mrxsierra)</strong>. Designed for conference organizers, technical journal editors, podcast hosts, and engineering publications.
   </p>
-  <div style="margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap;">
-    <a href="../assets/brand/mrxsierra-brand-press-kit.zip" download class="btn btn-primary">
-      <i class="fas fa-file-zipper"></i> Download Master Press Kit (.ZIP)
-    </a>
-    <a href="../contact/" class="btn btn-secondary">
-      <i class="fas fa-envelope"></i> Media &amp; Speaking Inquiries &rarr;
-    </a>
-  </div>
 </div>
-
----
 
 ## Media Fast Facts
 
-<div class="card-grid-2" style="margin: 20px 0;">
+<div class="card-grid-2">
 
   <div class="clean-card">
     <div class="project-card-header">
       <span class="project-category-badge">Identity &amp; Location</span>
       <div class="project-icon-box"><i class="fas fa-id-badge"></i></div>
     </div>
-    <p style="margin: 0; font-size: 14.5px; line-height: 1.7; color: var(--color-text-secondary);">
+    <p class="profile-intro-subtitle">
       <strong>Full Name:</strong> Sunil Sharma<br>
       <strong>Handle:</strong> mrxsierra / @mrxsierra<br>
       <strong>Primary Role:</strong> Full-Stack Web Architect &amp; ML Systems Specialist<br>
@@ -43,7 +43,7 @@ description: Official Press Kit, Media Resources, Biography Sheets, and Brand As
       <span class="project-category-badge">Technical Focus</span>
       <div class="project-icon-box"><i class="fas fa-microchip"></i></div>
     </div>
-    <p style="margin: 0; font-size: 14.5px; line-height: 1.7; color: var(--color-text-secondary);">
+    <p class="profile-intro-subtitle">
       <strong>Core Disciplines:</strong> Multi-RDBMS Engineering, Autonomous Agents, Tabular ML Pipelines<br>
       <strong>Languages:</strong> Python, SQL, JavaScript, HTML5/CSS3<br>
       <strong>Key Infrastructure:</strong> PostgreSQL, MySQL, SQLite, Docker, AWS S3, Pytest
@@ -51,8 +51,6 @@ description: Official Press Kit, Media Resources, Biography Sheets, and Brand As
   </div>
 
 </div>
-
----
 
 ## Canonical Biography Sheets
 
@@ -78,20 +76,18 @@ Use these pre-approved biography variations for conference programs, podcast int
     Sunil's engineering philosophy centers on structural invariants, deterministic test harnesses, and cross-engine database compatibility. Rather than relying on fragile abstractions, he advocates for explicit SQL migrations, containerized chaos testing, and bounded tool execution for autonomous AI agent pipelines.
     ```
 
----
-
 ## Speaking Topics &amp; Technical Interviews
 
 Sunil is available for technical conference keynotes, engineering podcasts, webinars, and panel discussions on the following topics:
 
-<div class="capability-grid" style="margin: 20px 0;">
+<div class="capability-grid">
 
   <div class="capability-card">
     <div class="capability-header">
       <div class="capability-icon"><i class="fas fa-database"></i></div>
       <h3 class="capability-title">Multi-RDBMS Engineering &amp; Dialect Nuances</h3>
     </div>
-    <p style="font-size: 14px; color: var(--color-text-secondary); margin-bottom: 12px;">
+    <p class="capability-desc">
       Architecting database engines across PostgreSQL, MySQL, and SQLite. Strategies for dialect parity, schema migration invariants, connection pooling under load, and deterministic seed generation.
     </p>
     <div class="capability-tags">
@@ -106,7 +102,7 @@ Sunil is available for technical conference keynotes, engineering podcasts, webi
       <div class="capability-icon"><i class="fas fa-brain"></i></div>
       <h3 class="capability-title">Interpretable ML on High-Throughput Data</h3>
     </div>
-    <p style="font-size: 14px; color: var(--color-text-secondary); margin-bottom: 12px;">
+    <p class="capability-desc">
       Lessons from the GSTN Hackathon analyzing 900,000+ real-world taxpayer records. Feature engineering, addressing high class imbalance, XGBoost/LightGBM hyperparameter optimization, and SHAP explainability.
     </p>
     <div class="capability-tags">
@@ -121,7 +117,7 @@ Sunil is available for technical conference keynotes, engineering podcasts, webi
       <div class="capability-icon"><i class="fas fa-robot"></i></div>
       <h3 class="capability-title">Autonomous AI Agent Workflows &amp; Tooling</h3>
     </div>
-    <p style="font-size: 14px; color: var(--color-text-secondary); margin-bottom: 12px;">
+    <p class="capability-desc">
       Designing multi-agent systems with bounded execution, structured memory architectures, MCP integration, and automated verification test harnesses.
     </p>
     <div class="capability-tags">
@@ -133,20 +129,18 @@ Sunil is available for technical conference keynotes, engineering podcasts, webi
 
 </div>
 
----
-
 ## Official Media Assets &amp; Brand Marks
 
 All marks are mathematically compiled from the **Geometric Constructivist "S"** vector source:
 
-<div class="card-grid-2" style="margin: 24px 0;">
+<div class="card-grid-2">
 
   <div class="clean-card">
     <div class="project-card-header">
       <span class="project-category-badge">Vector Monogram (Dark)</span>
     </div>
-    <div style="text-align: center; padding: 20px; background: #08090d; border-radius: 12px; margin: 12px 0;">
-      <img src="../assets/brand/monogram-dark.svg" alt="Monogram Dark" style="width: 72px; height: 72px;" />
+    <div class="brand-asset-preview-dark">
+      <img src="../assets/brand/monogram-dark.svg" alt="Monogram Dark" class="brand-asset-img-square" />
     </div>
     <h3 class="project-card-title">Obsidian Monogram Mark</h3>
     <p class="project-card-desc">Primary brand mark for dark surfaces, app icons, and publications.</p>
@@ -159,8 +153,8 @@ All marks are mathematically compiled from the **Geometric Constructivist "S"** 
     <div class="project-card-header">
       <span class="project-category-badge">Vector Monogram (Light)</span>
     </div>
-    <div style="text-align: center; padding: 20px; background: #ffffff; border-radius: 12px; margin: 12px 0; border: 1px solid #e2e8f0;">
-      <img src="../assets/brand/monogram-light.svg" alt="Monogram Light" style="width: 72px; height: 72px;" />
+    <div class="brand-asset-preview-light">
+      <img src="../assets/brand/monogram-light.svg" alt="Monogram Light" class="brand-asset-img-square" />
     </div>
     <h3 class="project-card-title">Light Canvas Monogram Mark</h3>
     <p class="project-card-desc">High-contrast mark for white documents, PDF reports, and light background media.</p>
@@ -173,8 +167,8 @@ All marks are mathematically compiled from the **Geometric Constructivist "S"** 
     <div class="project-card-header">
       <span class="project-category-badge">Verified Author Headshot</span>
     </div>
-    <div style="text-align: center; padding: 20px; background: #08090d; border-radius: 12px; margin: 12px 0;">
-      <img src="../assets/mrxss_400x400.jpg" alt="Sunil Sharma" style="width: 72px; height: 72px; border-radius: 9999px; border: 2px solid #6366f1; object-fit: cover;" />
+    <div class="brand-asset-preview-dark">
+      <img src="../assets/mrxss_400x400.jpg" alt="Sunil Sharma" class="profile-avatar-img" />
     </div>
     <h3 class="project-card-title">Official Profile Photo</h3>
     <p class="project-card-desc">High-resolution canonical headshot for speaker bios and media articles.</p>
@@ -187,8 +181,8 @@ All marks are mathematically compiled from the **Geometric Constructivist "S"** 
     <div class="project-card-header">
       <span class="project-category-badge">YouTube Watermark</span>
     </div>
-    <div style="text-align: center; padding: 20px; background: #18181b; border-radius: 12px; margin: 12px 0;">
-      <img src="../assets/brand/video/watermark-150x150.png" alt="YouTube Watermark" style="width: 72px; height: 72px;" />
+    <div class="brand-asset-preview-dark-alt">
+      <img src="../assets/brand/video/watermark-150x150.png" alt="YouTube Watermark" class="brand-asset-img-square" />
     </div>
     <h3 class="project-card-title">Video Branding Watermark</h3>
     <p class="project-card-desc">150×150px transparent PNG for official YouTube video branding overlay.</p>
@@ -199,11 +193,10 @@ All marks are mathematically compiled from the **Geometric Constructivist "S"** 
 
 </div>
 
----
-
 ## Brand Guidelines &amp; Media Attribution
 
 - **Naming Standards**: Always refer to Sunil Sharma as *"Sunil Sharma"* or *"Sunil Sharma (@mrxsierra)"*.
 - **Clear Space**: Ensure at least 25% padding surrounds the monogram in all digital and print layouts.
 - **Color Integrity**: The primary mark should be presented on Obsidian (`#08090D`), dark slate (`#18181B`), or pure white (`#FFFFFF`).
 - **Media Inquiries**: For interviews, speaking engagements, or press quotes, reach out via the [Contact Portal](../contact.md) or email directly.
+
