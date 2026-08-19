@@ -75,19 +75,4 @@
     <i class="fa-solid fa-check" aria-hidden="true"></i>
     <span>Link copied to clipboard!</span>
   </div>
-
-  {% if page and page.file and page.file.src_path %}
-  <!-- Developer Source & Collaboration Action Bar -->
-  <div class="page-source-action-bar">
-    <a href="https://github.com/mrxsierra/mrxsierra.github.io/blob/main/docs/{{ page.file.src_path }}" target="_blank" rel="noopener noreferrer" class="btn-page-source" id="btn-view-source" title="View markdown source on GitHub">
-      <i class="fa-brands fa-github" aria-hidden="true"></i>
-      <span>View Page Source</span>
-      <i class="fa-solid fa-arrow-up-right-from-square source-ext-icon" aria-hidden="true"></i>
-    </a>
-    <a href="https://github.com/mrxsierra/mrxsierra.github.io/edit/main/docs/{{ page.file.src_path }}" target="_blank" rel="noopener noreferrer" class="btn-page-source btn-page-edit" id="btn-suggest-edit" title="Suggest an edit on GitHub">
-      <i class="fa-solid fa-pen-to-square" aria-hidden="true"></i>
-      <span>Suggest Edit</span>
-    </a>
-  </div>
-  {% endif %}
 </div>

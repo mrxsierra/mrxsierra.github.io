@@ -84,7 +84,7 @@ def test_social_share_widget_present_and_not_duplicated(
         )
         assert isinstance(widgets[0], Tag), f"social-share-widget is not a Tag in {rel_path}"
 
-        # Verify all buttons including RSS, Pinterest, and View Source
+        # Verify all buttons including RSS and Pinterest
         expected_btn_ids = [
             "btn-share-native",
             "btn-share-x",
@@ -96,12 +96,68 @@ def test_social_share_widget_present_and_not_duplicated(
             "btn-share-telegram",
             "btn-share-rss",
             "btn-share-copy",
-            "btn-view-source",
-            "btn-suggest-edit",
         ]
         for btn_id in expected_btn_ids:
             btn = widgets[0].find(id=btn_id)
             assert btn is not None, f"Missing {btn_id} in {rel_path}"
+
+
+def test_page_scoped_developer_actions_present(
+    site_dir: Path, parsed_html_docs: dict[Path, HTMLDoc]
+):
+    """Verify that the 4 page-scoped developer action buttons exist with valid dynamic URLs."""
+    content_pages = [
+        "about/index.html",
+        "resume/index.html",
+        "press/index.html",
+        "brand/index.html",
+        "contact/index.html",
+        "projects/gstn-pbc/index.html",
+        "projects/ems-db/index.html",
+    ]
+
+    for rel_path in content_pages:
+        target_path = site_dir / rel_path
+        if target_path not in parsed_html_docs:
+            continue
+
+        soup = parsed_html_docs[target_path].soup
+
+        # 1. Raw page markdown button
+        raw_btn = soup.find("a", class_="btn-action-raw")
+        assert raw_btn is not None, f"Missing btn-action-raw in {rel_path}"
+        assert isinstance(raw_btn, Tag), f"btn-action-raw is not a Tag in {rel_path}"
+        raw_href = raw_btn.get("href", "")
+        assert "raw.githubusercontent.com/mrxsierra/mrxsierra.github.io/main/docs/" in str(
+            raw_href
+        ), f"Invalid raw href ({raw_href}) in {rel_path}"
+
+        # 2. View source on GitHub button
+        source_btn = soup.find("a", class_="btn-action-source")
+        assert source_btn is not None, f"Missing btn-action-source in {rel_path}"
+        assert isinstance(source_btn, Tag), f"btn-action-source is not a Tag in {rel_path}"
+        source_href = source_btn.get("href", "")
+        assert "github.com/mrxsierra/mrxsierra.github.io/blob/main/docs/" in str(source_href), (
+            f"Invalid source href ({source_href}) in {rel_path}"
+        )
+
+        # 3. Suggest edit on GitHub button
+        edit_btn = soup.find("a", class_="btn-action-edit")
+        assert edit_btn is not None, f"Missing btn-action-edit in {rel_path}"
+        assert isinstance(edit_btn, Tag), f"btn-action-edit is not a Tag in {rel_path}"
+        edit_href = edit_btn.get("href", "")
+        assert "github.com/mrxsierra/mrxsierra.github.io/edit/main/docs/" in str(edit_href), (
+            f"Invalid edit href ({edit_href}) in {rel_path}"
+        )
+
+        # 4. Report issue / feedback button
+        feedback_btn = soup.find("a", class_="btn-action-feedback")
+        assert feedback_btn is not None, f"Missing btn-action-feedback in {rel_path}"
+        assert isinstance(feedback_btn, Tag), f"btn-action-feedback is not a Tag in {rel_path}"
+        feedback_href = feedback_btn.get("href", "")
+        assert "github.com/mrxsierra/mrxsierra.github.io/issues/new" in str(feedback_href), (
+            f"Invalid feedback href ({feedback_href}) in {rel_path}"
+        )
 
 
 def test_social_share_widget_excluded_on_homepage_and_404(

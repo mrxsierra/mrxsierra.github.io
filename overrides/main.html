@@ -3,9 +3,9 @@
 {% block extrahead %}
   {{ super() }}
   <!-- Exact Brand Favicon & Web Manifest -->
-  <link rel="icon" type="image/svg+xml" href="{{ config.site_url }}assets/img/favicon.svg" />
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ config.site_url }}assets/img/apple-touch-icon.png" />
-  <link rel="manifest" href="{{ config.site_url }}assets/img/site.webmanifest" />
+  <link rel="icon" type="image/svg+xml" href="{{ 'assets/img/favicon.svg' | url }}" />
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ 'assets/img/apple-touch-icon.png' | url }}" />
+  <link rel="manifest" href="{{ 'assets/img/site.webmanifest' | url }}" />
   <meta name="theme-color" content="#08090d" />
 
   <!-- Release Version & Telemetry Metadata -->
