@@ -1174,17 +1174,17 @@ article:has(.main-body) .md-source-file {
 
 .card-grid-3 {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: var(--space-4);
 }
 
 @media (min-width: 640px) {
   .card-grid-3 {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
 }
 
-@media (min-width: 960px) {
+@media (min-width: 1150px) {
   .card-grid-3 {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1198,25 +1198,21 @@ article:has(.main-body) .md-source-file {
   padding: var(--space-5);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: var(--space-3);
-  text-align: left;
-  transition: border-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
-  position: relative;
   text-decoration: none !important;
+  transition: all var(--transition-fast);
 }
 
 .clean-card:hover {
-  border-color: var(--color-border-strong);
+  border-color: var(--color-accent);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
 
 .project-card-header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: flex-start;
-  gap: var(--space-2);
 }
 
 .project-category-badge {
@@ -1252,8 +1248,6 @@ article:has(.main-body) .md-source-file {
   font-weight: 600;
   color: var(--color-text-primary);
   margin: 0;
-  line-height: 1.35;
-  letter-spacing: -0.01em;
 }
 
 .project-card-desc {
@@ -1264,11 +1258,12 @@ article:has(.main-body) .md-source-file {
   flex-grow: 1;
 }
 
-.tag-list {
+.clean-card .tag-list {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-1);
-  margin-top: var(--space-2);
+  gap: 6px;
+  margin-top: auto;
+  padding-top: var(--space-2);
 }
 
 .tag-item {
@@ -1283,12 +1278,12 @@ article:has(.main-body) .md-source-file {
 
 .card-footer-link {
   font-size: 12.5px;
-  font-weight: 500;
-  color: var(--color-text-primary);
+  font-weight: 600;
+  color: var(--color-text-muted);
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  margin-top: var(--space-1);
+  gap: 6px;
+  margin-top: var(--space-2);
   transition: color var(--transition-fast);
 }
 
@@ -1310,7 +1305,8 @@ article:has(.main-body) .md-source-file {
 
 .capability-header {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   gap: var(--space-3);
 }
 
@@ -1329,10 +1325,12 @@ article:has(.main-body) .md-source-file {
 }
 
 .capability-title {
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 15.5px;
+  font-weight: 650;
+  line-height: 1.35;
   color: var(--color-text-primary);
   margin: 0;
+  text-wrap: balance;
 }
 
 .capability-tags {
@@ -1458,19 +1456,29 @@ article:has(.main-body) .md-source-file {
    7. Inner Pages Components (About, Resume, Contact, Projects)
    -------------------------------------------------------------------------- */
 .page-intro {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-6);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin-top: var(--space-2);
   margin-bottom: var(--space-6);
 }
 
+.page-intro-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+
 .page-intro-title {
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 600;
   letter-spacing: -0.02em;
   color: var(--color-text-primary);
-  margin: 0 0 var(--space-2) 0;
+  margin: 0;
 }
 
 .page-intro-desc {
@@ -1478,6 +1486,197 @@ article:has(.main-body) .md-source-file {
   line-height: 1.6;
   color: var(--color-text-secondary);
   margin: 0;
+}
+
+.page-intro-tags {
+  margin-top: var(--space-3);
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+/* Profile Layout Utilities (Zero Inline Styles) */
+.profile-intro-row {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.profile-avatar-wrap {
+  flex-shrink: 0;
+}
+
+.profile-avatar-img {
+  width: 96px;
+  height: 96px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-accent);
+  box-shadow: var(--shadow-sm);
+  object-fit: cover;
+}
+
+.profile-intro-content {
+  flex: 1;
+  min-width: 260px;
+}
+
+.profile-intro-subtitle {
+  margin: 0;
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+.profile-intro-loc {
+  margin: 4px 0 0 0;
+  font-size: 13.5px;
+  color: var(--color-text-muted);
+}
+
+.profile-btn-row {
+  margin-top: var(--space-4);
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Brand Asset Showcase Cards */
+.brand-asset-preview-dark {
+  text-align: center;
+  padding: 24px;
+  background: #08090d;
+  border-radius: 12px;
+  margin: 12px 0;
+}
+
+.brand-asset-preview-light {
+  text-align: center;
+  padding: 24px;
+  background: #f8fafc;
+  border-radius: 12px;
+  margin: 12px 0;
+  border: 1px solid #e2e8f0;
+}
+
+.brand-asset-preview-dark-alt {
+  text-align: center;
+  padding: 24px;
+  background: #18181b;
+  border-radius: 12px;
+  margin: 12px 0;
+}
+
+.brand-asset-img-square {
+  width: 88px;
+  height: 88px;
+}
+
+.brand-asset-img-h {
+  max-height: 56px;
+  width: auto;
+}
+
+/* Feed Stream & Social-Style Card Architecture */
+.feed-stream {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: var(--space-4) 0 var(--space-8);
+}
+
+.feed-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-decoration: none !important;
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.feed-card:hover {
+  border-color: var(--color-accent-border);
+  background: var(--color-surface-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.feed-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.feed-card-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.feed-card-badge {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-accent);
+  background: var(--color-accent-subtle);
+  padding: 2px 8px;
+  border-radius: var(--radius-xs);
+}
+
+.feed-card-meta {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.feed-card-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+.feed-card-desc {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.feed-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 4px;
+  padding-top: 10px;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.feed-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.feed-card-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-accent);
+  margin-left: auto;
 }
 
 /* Certificate Cards */
@@ -1642,6 +1841,9 @@ article:has(.main-body) .md-source-file {
   color: var(--color-text-secondary);
   padding: 0;
   margin-top: var(--space-12);
+  position: relative;
+  z-index: 4;
+  clear: both;
 }
 
 /* 1. Prev / Next Navigation Strip */
@@ -1902,4 +2104,54 @@ article:has(.main-body) .md-source-file {
   .site-footer-nav {
     grid-template-columns: 1fr;
   }
+}
+
+/* ==========================================================================
+   8. Global Mobile Gutters & Spacing Standardization
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  .md-main__inner {
+    margin-top: 0.75rem !important;
+  }
+  .md-content__inner {
+    padding: 0 16px 32px 16px !important;
+  }
+  .md-content .main-body {
+    padding: 0 0 32px 0 !important;
+  }
+  .hero-container {
+    padding: var(--space-5) !important;
+    gap: var(--space-5) !important;
+  }
+  .feed-card {
+    padding: 16px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .md-content__inner {
+    padding: 0 12px 24px 12px !important;
+  }
+  .feed-card {
+    padding: 14px !important;
+    gap: 8px !important;
+  }
+}
+
+/* Series Banner Utility Classes (Zero Inline Styles) */
+.series-banner-meta {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+}
+
+.series-banner-desc {
+  font-size: 13.5px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.btn-series {
+  padding: 4px 12px !important;
+  font-size: 12.5px !important;
 }

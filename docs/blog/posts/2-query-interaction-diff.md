@@ -35,8 +35,6 @@ Building on our analysis of cross-engine schema definitions, this guide focuses 
 
 This reference is grounded in practical scripts from the [**Examination Management System (EMS DB)**](https://github.com/mrxsierra/ems-db/) project repository.
 
----
-
 ## 1. CLI Shell Access &amp; Connection Flags
 
 Each RDBMS provides a dedicated terminal client with specific formatting and debugging flags:
@@ -69,8 +67,6 @@ Each RDBMS provides a dedicated terminal client with specific formatting and deb
     # File-based connection with column table mode and command echo
     sqlite3 ems.db -table -echo
     ```
-
----
 
 ## 2. Executing SQL Scripts from Files
 
@@ -108,8 +104,6 @@ Running batch DDL migrations or query test benches from external `.sql` files:
     sqlite3 ems.db -table -echo < ./queries.sql
     ```
 
----
-
 ## 3. Resetting Auto-Increment Sequences
 
 When wiping test tables (`DELETE FROM students;`), resetting the primary key counter requires engine-specific operations:
@@ -134,8 +128,6 @@ When wiping test tables (`DELETE FROM students;`), resetting the primary key cou
     -- SQLite tracks AUTOINCREMENT counters in the internal sqlite_sequence table
     DELETE FROM sqlite_sequence WHERE name = 'students';
     ```
-
----
 
 ## 4. Shell Diagnostic &amp; Inspection Commands
 
@@ -187,8 +179,6 @@ Inspecting catalog objects (tables, indexes, views) from within interactive data
     SELECT name, sql FROM sqlite_master WHERE type = 'table';
     SELECT name FROM sqlite_master WHERE type = 'index';
     ```
-
----
 
 ## 5. Dockerized Multi-Database Orchestration
 
@@ -248,8 +238,6 @@ services:
     docker compose exec app sqlite3 /workspace/ems.db
     ```
 
----
-
 ## Quick Reference Summary
 
 | Operation | PostgreSQL | MySQL | SQLite |
@@ -260,8 +248,6 @@ services:
 | **Inspect DDL** | `\d+ table_name` | `SHOW CREATE TABLE table_name;` | `.schema table_name` |
 | **Execution Plan** | `EXPLAIN ANALYZE SELECT ...;` | `EXPLAIN SELECT ...;` | `EXPLAIN QUERY PLAN SELECT ...;` |
 | **Docker Hostname** | DNS service name (`postgres-db`) | DNS service name (`mysql-db`) | Local file path / mount |
-
----
 
 ## Conclusion &amp; Series Navigation
 
@@ -277,8 +263,6 @@ Understanding both the schema syntax (**Part 1**) and the operational tooling (*
     Deep dive into schema definitions, trigger syntax, timestamp functions, and type systems across PostgreSQL, MySQL, and SQLite.
   </p>
 </div>
-
----
 
 ## Reference Documentation
 

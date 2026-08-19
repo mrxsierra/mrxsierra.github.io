@@ -12,12 +12,250 @@
 }
 
 /* ==========================================================================
+   Editorial & Reading Standards (Swiss Modernist / Monocle Style)
+   Optimized for distraction-free reading, zero layout shift, & Reader Mode
+   ========================================================================== */
+
+/* Longform Reading Measure & Typographic Rhythm */
+.md-typeset p,
+.md-typeset ul:not(.md-nav__list),
+.md-typeset ol {
+    max-width: 72ch;
+    line-height: 1.72;
+    letter-spacing: -0.011em;
+    color: var(--color-text-primary, var(--md-typeset-color, #1f1f1f));
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4 {
+    text-wrap: balance;
+    letter-spacing: -0.02em;
+}
+
+.md-typeset h1 {
+    font-size: 2.15rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.md-typeset h2 {
+    font-size: 1.45rem;
+    font-weight: 650;
+    line-height: 1.35;
+    margin-top: 2.5rem;
+    margin-bottom: 0.85rem;
+}
+
+.md-typeset h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-top: 1.85rem;
+    margin-bottom: 0.65rem;
+}
+
+/* Restrain excessive HR breaks - soften borders */
+.md-typeset hr {
+    margin: 2.5rem 0;
+    border: none;
+    border-top: 1px solid var(--color-border-subtle, rgba(0, 0, 0, 0.08));
+}
+
+[data-md-color-scheme="slate"] .md-typeset hr {
+    border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Metadata Byline & Tags Placement */
+.md-typeset .md-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem;
+    margin: 0.5rem 0 1.5rem 0;
+    padding: 0;
+    clear: both;
+}
+
+/* ==========================================================================
+   Mermaid Diagrams - Crisp Vector Rendering, Theming, & Zoom Stability
+   ========================================================================== */
+
+.mermaid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: var(--color-surface, #f7f7f5);
+    border: 1px solid var(--color-border, #e5e5e5);
+    border-radius: 12px;
+    overflow-x: auto;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+[data-md-color-scheme="slate"] .mermaid {
+    background: #090a0f;
+    border-color: #27272a;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.mermaid svg {
+    max-width: 100% !important;
+    height: auto !important;
+    overflow: visible;
+}
+
+/* ==========================================================================
+   Page-Scoped Developer Action Suite (.page-actions-pill-group)
+   Pinned to Top-Right Corner of Page Title
+   ========================================================================== */
+
+.page-top-actions {
+    float: right;
+    margin-top: 0.35rem;
+    margin-bottom: 0.75rem;
+    margin-left: 1rem;
+    position: relative;
+    z-index: 3;
+}
+
+@media screen and (max-width: 45em) {
+    .page-top-actions {
+        float: none;
+        display: flex;
+        justify-content: flex-end;
+        margin: 0 0 0.75rem 0;
+    }
+}
+
+.page-actions-pill-group {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    padding: 2px;
+    border: 1px solid var(--color-border, rgba(255, 255, 255, 0.1));
+    border-radius: 8px;
+    background: rgba(24, 24, 27, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+[data-md-color-scheme="default"] .page-actions-pill-group {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.page-action-pill-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    color: var(--color-text-secondary, #94a3b8) !important;
+    background: transparent;
+    border: none;
+    text-decoration: none !important;
+    transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+}
+
+.page-action-pill-btn svg {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.page-action-pill-btn .icon-raw {
+    color: #f59e0b; /* Amber */
+}
+
+.page-action-pill-btn .icon-source {
+    color: #a855f7; /* Purple */
+}
+
+.page-action-pill-btn .icon-edit {
+    color: #3b82f6; /* Blue */
+}
+
+.page-action-pill-btn .icon-feedback {
+    color: #10b981; /* Emerald */
+}
+
+.page-action-pill-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-1px);
+}
+
+.page-action-pill-btn:hover svg {
+    transform: scale(1.12);
+}
+
+[data-md-color-scheme="default"] .page-action-pill-btn:hover {
+    background: #f1f5f9;
+}
+
+/* ==========================================================================
+   Vibrant Orange RSS Subscribe Pill Badge
+   ========================================================================== */
+
+.rss-subscribe-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    background: rgba(249, 115, 22, 0.1);
+    border: 1px solid rgba(249, 115, 22, 0.35);
+    color: #ea580c !important;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none !important;
+    transition: all 0.15s ease-in-out;
+    white-space: nowrap;
+}
+
+[data-md-color-scheme="slate"] .rss-subscribe-badge {
+    background: rgba(249, 115, 22, 0.15);
+    border-color: rgba(249, 115, 22, 0.4);
+    color: #fb923c !important;
+}
+
+.rss-subscribe-badge:hover {
+    background: #f97316 !important;
+    border-color: #f97316 !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(249, 115, 22, 0.35);
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   Sidebar & Scroll Boundary Protection
+   ========================================================================== */
+
+.md-sidebar {
+    z-index: 1;
+}
+
+.md-sidebar__inner {
+    max-height: calc(100vh - 5rem);
+}
+
+/* ==========================================================================
    Social Sharing Widget Component
    Clean Productivity / Developer Aesthetics (Light & Dark mode compatible)
    ========================================================================== */
 
 .social-share-container {
-    margin: 2.5rem 0 1.5rem 0;
+    margin: 3rem 0 1.5rem 0;
     padding: 1.25rem 1.5rem;
     background: var(--color-surface, var(--md-code-bg-color, rgba(0, 0, 0, 0.02)));
     border: 1px solid var(--color-border, var(--md-default-fg-color--lightest, rgba(0, 0, 0, 0.08)));
@@ -28,6 +266,7 @@
     position: relative;
     box-sizing: border-box;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    clear: both;
 }
 
 .social-share-container:hover {
@@ -98,299 +337,109 @@
     box-shadow: none;
 }
 
-.social-share-btn i {
-    font-size: 0.85rem;
-    transition: transform 0.15s ease;
-}
-
-.social-share-btn:hover i {
-    transform: scale(1.1);
-}
-
-/* Individual Brand Styling on Hover */
-.social-share-btn.share-native:hover {
-    border-color: #6366f1;
-    color: #6366f1 !important;
-    background: rgba(99, 102, 241, 0.06);
-}
-
-.social-share-btn.share-x:hover {
-    border-color: #000000;
-    color: #000000 !important;
-    background: rgba(0, 0, 0, 0.05);
-}
-[data-md-color-scheme="slate"] .social-share-btn.share-x:hover {
-    border-color: #ffffff;
+/* Button Individual Colors / Hover */
+.social-share-btn#btn-share-native:hover {
+    background: #4f46e5;
     color: #ffffff !important;
-    background: rgba(255, 255, 255, 0.08);
+    border-color: #4f46e5;
 }
 
-.social-share-btn.share-linkedin:hover {
-    border-color: #0077b5;
-    color: #0077b5 !important;
-    background: rgba(0, 119, 181, 0.08);
+.social-share-btn#btn-share-x:hover {
+    background: #000000;
+    color: #ffffff !important;
+    border-color: #000000;
 }
 
-.social-share-btn.share-reddit:hover {
+.social-share-btn#btn-share-linkedin:hover {
+    background: #0a66c2;
+    color: #ffffff !important;
+    border-color: #0a66c2;
+}
+
+.social-share-btn#btn-share-reddit:hover {
+    background: #ff4500;
+    color: #ffffff !important;
     border-color: #ff4500;
-    color: #ff4500 !important;
-    background: rgba(255, 69, 0, 0.08);
 }
 
-.social-share-btn.share-pinterest:hover {
+.social-share-btn#btn-share-pinterest:hover {
+    background: #e60023;
+    color: #ffffff !important;
     border-color: #e60023;
-    color: #e60023 !important;
-    background: rgba(230, 0, 35, 0.08);
 }
 
-.social-share-btn.share-hn:hover {
+.social-share-btn#btn-share-hn:hover {
+    background: #ff6600;
+    color: #ffffff !important;
     border-color: #ff6600;
-    color: #ff6600 !important;
-    background: rgba(255, 102, 0, 0.08);
 }
 
-.social-share-btn.share-whatsapp:hover {
+.social-share-btn#btn-share-whatsapp:hover {
+    background: #25d366;
+    color: #ffffff !important;
     border-color: #25d366;
-    color: #25d366 !important;
-    background: rgba(37, 211, 102, 0.08);
 }
 
-.social-share-btn.share-telegram:hover {
+.social-share-btn#btn-share-telegram:hover {
+    background: #229ed9;
+    color: #ffffff !important;
     border-color: #229ed9;
-    color: #229ed9 !important;
-    background: rgba(34, 158, 217, 0.08);
 }
 
-.social-share-btn.share-rss:hover {
+.social-share-btn#btn-share-rss:hover {
+    background: #f97316;
+    color: #ffffff !important;
     border-color: #f97316;
-    color: #f97316 !important;
-    background: rgba(249, 115, 22, 0.08);
 }
 
-.social-share-btn.share-copy:hover {
-    border-color: var(--color-accent, #6366f1);
-    color: var(--color-accent, #6366f1) !important;
-    background: var(--color-accent-subtle, rgba(99, 102, 241, 0.06));
+.social-share-btn#btn-share-copy:hover {
+    background: var(--color-surface-hover, #f0f0ee);
+    color: var(--color-text-primary, #1f1f1f) !important;
 }
 
-.social-share-btn.share-copy.copied {
+.social-share-btn#btn-view-source:hover {
+    background: #8b5cf6;
+    color: #ffffff !important;
+    border-color: #8b5cf6;
+}
+
+.social-share-btn#btn-suggest-edit:hover {
+    background: #10b981;
+    color: #ffffff !important;
     border-color: #10b981;
-    color: #10b981 !important;
-    background: rgba(16, 185, 129, 0.08);
 }
 
-/* Toast Notification */
+.social-share-btn.copied {
+    background: #10b981 !important;
+    color: #ffffff !important;
+    border-color: #10b981 !important;
+}
+
+/* Toast Feedback Notification */
 .share-toast {
     position: absolute;
-    bottom: -12px;
+    bottom: -32px;
     right: 1.5rem;
-    transform: translateY(100%);
-    background: var(--color-surface-raised, #1f1f1f);
-    color: var(--color-text-primary, #ffffff);
-    padding: 0.5rem 0.9rem;
-    border-radius: 8px;
-    font-size: 0.78rem;
-    font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
-    border: 1px solid var(--color-border, rgba(255, 255, 255, 0.1));
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-    z-index: 10;
-}
-
-[data-md-color-scheme="default"] .share-toast {
-    background: #1e293b;
-    color: #f8fafc;
-    border-color: #334155;
-}
-
-[data-md-color-scheme="slate"] .share-toast {
     background: #18181b;
-    color: #f4f4f5;
-    border-color: #3f3f46;
-}
-
-.share-toast i {
-    color: #10b981;
+    color: #ffffff;
+    padding: 0.35rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    pointer-events: none;
+    z-index: 10;
 }
 
 .share-toast.show {
     opacity: 1;
-    transform: translateY(calc(100% + 4px));
+    transform: translateY(0);
 }
 
-/* Responsive styles */
-@media screen and (max-width: 600px) {
-    .social-share-container {
-        padding: 1rem;
-        margin: 2rem 0 1rem 0;
-    }
-
-    .social-share-buttons {
-        gap: 0.4rem;
-    }
-
-    .social-share-btn {
-        padding: 0.4rem 0.65rem;
-        font-size: 0.75rem;
-        flex: 1 1 calc(33.333% - 0.4rem);
-        min-width: 80px;
-    }
-
-    .share-toast {
-        right: 1rem;
-        left: 1rem;
-        justify-content: center;
-    }
-}
-
-/* ==========================================================================
-   Footer Version Tag & Changelog Link
-   ========================================================================== */
-
-.footer-version-tag {
-    display: inline-flex;
-    align-items: center;
-    margin-left: 8px;
-    vertical-align: middle;
-}
-
-.footer-version-tag a {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    padding: 2px 8px;
-    font-size: 0.72rem;
-    font-weight: 600;
-    font-family: var(--md-code-font-family, monospace);
-    border-radius: 9999px;
-    background: rgba(99, 102, 241, 0.08);
-    color: var(--color-accent, #6366f1) !important;
-    border: 1px solid rgba(99, 102, 241, 0.2);
-    text-decoration: none !important;
-    transition: all 0.2s ease;
-}
-
-.footer-version-tag a:hover {
-    background: rgba(99, 102, 241, 0.15);
-    border-color: var(--color-accent, #6366f1);
-    transform: translateY(-1px);
-}
-
-.footer-version-tag i {
-    font-size: 0.65rem;
-}
-
-/* ==========================================================================
-   Page Intro RSS Subscribe Badge
-   ========================================================================== */
-
-.rss-subscribe-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 4px 10px;
-    font-size: 0.76rem;
-    font-weight: 600;
-    font-family: inherit;
-    border-radius: 9999px;
-    background: rgba(249, 115, 22, 0.08);
-    color: #ea580c !important;
-    border: 1px solid rgba(249, 115, 22, 0.25);
-    text-decoration: none !important;
-    transition: all 0.2s ease;
-    white-space: nowrap;
-}
-
-.rss-subscribe-badge:hover {
-    background: rgba(249, 115, 22, 0.16);
-    border-color: #ea580c;
-    transform: translateY(-1px);
-    box-shadow: 0 2px 6px rgba(234, 88, 12, 0.15);
-}
-
-.rss-subscribe-badge i {
-    font-size: 0.72rem;
-    color: #f97316;
-}
-
-/* ==========================================================================
-   Page-Scoped Segmented Developer Action Suite (.page-actions-pill-group)
-   ========================================================================== */
-
-.page-actions-pill-group {
-    display: inline-flex;
-    align-items: center;
-    gap: 2px;
-    padding: 2px;
-    border: 1px solid var(--color-border, rgba(255, 255, 255, 0.1));
-    border-radius: 8px;
-    background: rgba(24, 24, 27, 0.85);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-    float: right;
-    margin-left: 0.75rem;
-    margin-bottom: 0.5rem;
-}
-
-[data-md-color-scheme="default"] .page-actions-pill-group {
-    background: rgba(255, 255, 255, 0.95);
-    border-color: #e2e8f0;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-}
-
-.page-action-pill-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 26px;
-    height: 26px;
-    border-radius: 5px;
-    color: var(--color-text-secondary, #94a3b8) !important;
-    background: transparent;
-    border: none;
-    text-decoration: none !important;
-    transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
-    cursor: pointer;
-}
-
-.page-action-pill-btn svg {
-    width: 14px;
-    height: 14px;
-    transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-/* Icon specific accent color tokens */
-.page-action-pill-btn .icon-raw {
-    color: #f59e0b; /* Amber */
-}
-
-.page-action-pill-btn .icon-source {
-    color: #a855f7; /* Purple */
-}
-
-.page-action-pill-btn .icon-edit {
-    color: #3b82f6; /* Blue */
-}
-
-.page-action-pill-btn .icon-feedback {
-    color: #10b981; /* Emerald */
-}
-
-.page-action-pill-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-1px);
-}
-
-.page-action-pill-btn:hover svg {
-    transform: scale(1.12);
-}
-
-[data-md-color-scheme="default"] .page-action-pill-btn:hover {
-    background: #f1f5f9;
+[data-md-color-scheme="slate"] .share-toast {
+    background: #27272a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }

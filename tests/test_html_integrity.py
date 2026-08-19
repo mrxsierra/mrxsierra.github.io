@@ -1,6 +1,7 @@
 """
 HTML integrity, link validation, and DOM quality test suite for mrxsierra.github.io.
-Verifies zero broken internal links, valid asset references, valid DOM semantics, and clean builds.
+Verifies zero broken internal links, valid asset references, valid DOM semantics, clean builds,
+native Mermaid diagram compilation, and Reader Mode compatibility.
 """
 
 from pathlib import Path
@@ -177,3 +178,37 @@ def test_no_unrendered_template_artifacts(all_html_files: list[Path], site_dir: 
                 leaks.append(f"[{rel_path}] Contains raw template marker '{marker}'")
 
     assert not leaks, "Found unrendered template leaks:\n" + "\n".join(leaks)
+
+
+def test_mermaid_diagrams_compiled_natively(site_dir: Path):
+    """Ensure that pages with Mermaid diagrams compile to pre.mermaid elements rather than unparsed text blocks."""
+    mermaid_pages = [
+        site_dir / "projects" / "gstn-pbc" / "index.html",
+        site_dir / "projects" / "ems-db" / "index.html",
+        site_dir / "projects" / "naukri-webscraper" / "index.html",
+        site_dir / "projects" / "paraxcel" / "index.html",
+        site_dir / "projects" / "s3-faker" / "index.html",
+        site_dir / "projects" / "test-site" / "index.html",
+    ]
+
+    for p in mermaid_pages:
+        assert p.exists(), f"Page {p} must exist."
+        content = p.read_text(encoding="utf-8")
+        soup = BeautifulSoup(content, "html.parser")
+        mermaid_blocks = soup.find_all("pre", class_="mermaid")
+        assert len(mermaid_blocks) >= 1, (
+            f"Expected at least 1 compiled <pre class='mermaid'> block in {p.relative_to(site_dir)}, found {len(mermaid_blocks)}"
+        )
+
+
+def test_reader_mode_article_headings(all_html_files: list[Path], site_dir: Path):
+    """Ensure that all content article pages have an H1 element for Reader Mode parsing."""
+    for html_file in all_html_files:
+        if html_file.name == "404.html":
+            continue
+        content = html_file.read_text(encoding="utf-8")
+        soup = BeautifulSoup(content, "html.parser")
+        h1 = soup.find("h1")
+        assert h1 is not None, (
+            f"Page {html_file.relative_to(site_dir)} must contain an <h1> element for Reader Mode."
+        )

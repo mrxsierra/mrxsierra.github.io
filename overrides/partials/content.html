@@ -1,15 +1,28 @@
 {#-
   Custom Content Partial Override - mrxsierra.github.io
+  Streamlined for distraction-free reading, zero layout shift (CLS), and browser Reader Mode
 -#}
-{% include "partials/tags.html" %}
-{% include "partials/actions.html" %}
-{% if "\u003ch1" not in page.content %}
-  <h1>{{ page.title | d(config.site_name, true)}}</h1>
+{% if page and page.file and page.file.src_path and page.file.src_path != "index.md" and page.file.src_path != "404.html" and not page.file.src_path.endswith(".txt") %}
+<div class="page-top-actions">
+  {% include "partials/actions.html" %}
+</div>
 {% endif %}
+
+{% if "<h1>" not in page.content and "<h1 " not in page.content %}
+  <h1>{{ page.title | d(config.site_name, true) }}</h1>
+{% endif %}
+
+{% if page and page.meta and page.meta.tags %}
+  {% include "partials/tags.html" %}
+{% endif %}
+
 {{ page.content }}
+
 {% include "partials/source-file.html" %}
+
 {% if page and page.url != "" and page.file.src_path != "404.html" and not page.file.src_path.endswith(".txt") %}
   {% include "partials/social_share.html" %}
 {% endif %}
+
 {% include "partials/feedback.html" %}
 {% include "partials/comments.html" %}
