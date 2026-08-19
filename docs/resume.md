@@ -5,14 +5,14 @@ description: Verified technical certifications and credentials of Sunil Sharma -
 # Credentials &amp; Certifications
 
 <div class="page-intro">
-  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+  <div class="page-intro-header">
     <div>
       <h2 class="page-intro-title">Technical Credentials</h2>
       <p class="page-intro-desc">
         Verified accreditations across computer science fundamentals, machine learning systems, relational database architecture, and spatial analytics.
       </p>
     </div>
-    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+    <div class="profile-btn-row">
       <a href="../cert/main_resume.pdf" class="btn btn-primary" download>
         <i class="fas fa-file-pdf"></i> Download Resume (PDF)
       </a>
@@ -22,8 +22,6 @@ description: Verified technical certifications and credentials of Sunil Sharma -
     </div>
   </div>
 </div>
-
----
 
 ## Verified Credentials &amp; Accreditations
 
@@ -91,9 +89,7 @@ description: Verified technical certifications and credentials of Sunil Sharma -
 
 </div>
 
----
-
-<div style="margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap;">
+<div class="profile-btn-row">
   <a href="../about/" class="btn btn-secondary">
     <i class="fas fa-user"></i> Full Engineering Story
   </a>
