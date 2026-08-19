@@ -411,18 +411,18 @@ Systems Architecture • Autonomous Agents • Distributed Data
 # About Sunil Sharma
 
   
-    ![Sunil Sharma](../assets/mrxss_400x400.jpg)
-  
-  
     
+      ![Sunil Sharma](../assets/mrxss_400x400.jpg)
+    
+    
+      
 ## Full-Stack & AI Systems Specialist
 
-    
-      Specializing in autonomous agent architectures, full-stack systems engineering, distributed database optimization, and cloud tooling pipelines. Focused on shipping robust, maintainable, and verifiable software.
+      
+        Specializing in autonomous agent architectures, full-stack systems engineering, distributed database optimization, and cloud tooling pipelines. Focused on shipping robust, maintainable, and verifiable software.
+      
     
   
-
----
 
 ## Academic Background & Foundation
 
@@ -439,8 +439,6 @@ Systems Architecture • Autonomous Agents • Distributed Data
     Rigorous foundation in Data Structures & Algorithms, Relational Database Management Systems (RDBMS), Object-Oriented Software Design, and Operating Systems.
   
 
----
-
 ## Featured Engineering Case Studies
 
   
@@ -454,70 +452,41 @@ Systems Architecture • Autonomous Agents • Distributed Data
     
       National-level hackathon finalist project — interpretable ML pipeline analyzing 900,000+ real-world GST records with XGBoost, LightGBM, and SHAP explainability.
     
-    [Read Full Case Study](../projects/gstn-pbc/)
+    [Read Case Study](../projects/gstn-pbc/)
   
 
   
     
-      Database Architecture
+      Production Database Engine
       
     
     
 ### Examination Management System DB
 
     
-      Modular, production-ready multi-RDBMS architecture (PostgreSQL, MySQL, SQLite) with Python automation, Dockerized environments, and CI pipeline validation.
+      Production-ready multi-RDBMS architecture featuring PostgreSQL, MySQL, and SQLite parity with automated migration test harnesses.
     
-    [Read Full Case Study](../projects/ems-db/)
+    [Read Case Study](../projects/ems-db/)
   
 
-  
-    
-      Cloud Tooling
-      
-    
-    
-### S3 Faker Data Generator
-
-    
-      High-throughput synthetic data generation suite with native AWS S3 and LocalStack integration for cloud testing pipelines.
-    
-    [Read Full Case Study](../projects/s3-faker/)
-  
-
-  
-    
-      QA Automation
-      
-    
-    
-### Paraxcel Document Toolkit
-
-    
-      High-performance formatting extraction suite parsing complex DOCX runs and generating structured Excel test matrices.
-    
-    [Read Full Case Study](../projects/paraxcel/)
-  
-
----
-
-## Core Technical Capabilities
+## Core Competencies & Technical Capabilities
 
   
     
       
       
-### Machine Learning & AI Systems
+### Machine Learning & AI Agents
 
     
     
-      Pandas
-      NumPy
+      Building autonomous agent workflows, model evaluations, tabular ML pipelines, and gradient boosting classifiers with verifiable outputs.
+    
+    
+      Google Antigravity SDK
+      XGBoost / LightGBM
       Scikit-Learn
-      XGBoost
-      LightGBM
-      LangGraph
-      Feature Engineering
+      SHAP Interpretability
+      Model Context Protocol (MCP)
     
   
 
@@ -525,17 +494,18 @@ Systems Architecture • Autonomous Agents • Distributed Data
     
       
       
-### Full-Stack & Databases
+### Database Engineering & Systems
 
     
     
-      Python (FastAPI, Flask)
+      Designing normalized schemas, complex indexing strategies, automated cross-dialect parity checks, and transactional integrity systems.
+    
+    
       PostgreSQL
       MySQL
       SQLite
-      JavaScript / React
-      Docker
-      AWS S3
+      SQL Dialect Transpilation
+      Query Optimization
     
   
 
@@ -543,20 +513,39 @@ Systems Architecture • Autonomous Agents • Distributed Data
     
       
       
-### SDLC & Release Engineering
+### Full-Stack Web Architecture
 
     
     
-      Pytest Multi-Tier Suite
-      Mypy Type Checking
-      Ruff Linter & Formatter
+      Developing high-performance user interfaces, REST APIs, static sites with Material for MkDocs, and developer portals.
+    
+    
+      Python (FastAPI / Flask)
+      JavaScript / ES6+
+      HTML5 / Modern CSS
+      Bootstrap / Tailwind Tokens
+      Jinja Templating
+    
+  
+
+  
+    
+      
+      
+### Automated Testing & DevOps CI/CD
+
+    
+    
+      Implementing multi-tier test suites (unit, integration, smoke, benchmark), zero-leak commit sanitization, and GitHub Actions release pipelines.
+    
+    
+      pytest (Fixtures & Mocking)
+      Docker & LocalStack
       GitHub Actions CI/CD
       Semantic Versioning (SemVer)
       Git Pre-Commit Hooks
     
   
-
----
 
 ## Brand Assets & Press Kit
 
@@ -573,7 +562,7 @@ Official vector marks, media bio copy, and typography specifications for speakin
     
       Geometric Constructivist 'S' vector monogram designed for high-contrast technical publications and digital surfaces.
     
-    [Download Vector SVG](../assets/img/logo-monogram.svg)
+    [Download Vector SVG](../assets/brand/monogram-dark.svg)
   
 
   
@@ -606,8 +595,6 @@ Official vector marks, media bio copy, and typography specifications for speakin
     ```text
     Sunil Sharma (mrxsierra) is a software engineer specializing in autonomous agent workflows, machine learning pipelines, and distributed relational database architectures. A national finalist in the GSTN Predictive Binary Classification hackathon, Sunil designs production-grade software with rigorous pytest test suites, cross-engine SQL parity, and zero-downtime CI/CD automation. He publishes technical architecture guides and open-source tooling for the global developer ecosystem.
     ```
-
----
 
 ## Technical Writing & Publications
 
@@ -727,16 +714,14 @@ Practical architectural guides, cross-engine SQL compatibility, and programmatic
 # Brand Identity & Press Kit
 
   
+    
 ## Brand Standards & Content Creation Suite
 
+    [Download Master Press Kit (.ZIP)](../assets/brand/mrxsierra-brand-press-kit.zip)
+  
   
     Canonical vector marks, video watermarks, presentation templates, cross-platform social assets, and media bio copy for **Sunil Sharma (@mrxsierra)**.
   
-  
-    [Download Master Press Kit (.ZIP)](../assets/brand/mrxsierra-brand-press-kit.zip)
-  
-
----
 
 ## 1. Core Brand Marks & Logotypes
 
@@ -798,8 +783,6 @@ Our visual identity is built on a **Geometric Constructivist "S"** mark, combini
     [Download SVG](../assets/brand/monogram-transparent.svg)
   
 
----
-
 ## 2. Video & Multimedia Creation Kit
 
 Broadcast-ready graphics for YouTube tutorials, coding screencasts, webinars, and live streams:
@@ -810,8 +793,6 @@ Broadcast-ready graphics for YouTube tutorials, coding screencasts, webinars, an
 | **Broadcast Lower Third** | SVG (Transparent) | 1920×1080 | Speaker overlay for video talks and webinars. | [Download SVG](../assets/brand/video/lower-third.svg) |
 | **Video End Screen / Outro** | SVG | 1920×1080 | YouTube 16:9 outro card with card placeholders. | [Download SVG](../assets/brand/video/video-end-screen.svg) |
 | **Thumbnail Frame Template** | SVG | 1280×720 | 16:9 YouTube video thumbnail template with badge. | [Download SVG](../assets/brand/video/thumbnail-frame.svg) |
-
----
 
 ## 3. Social Media & Publication Suite
 
@@ -861,8 +842,6 @@ High-resolution header covers and document carousel templates:
     [Download SVG](../assets/brand/banners/youtube-banner.svg)
   
 
----
-
 ## 4. Standard Media Bios & Speaker Copy
 
 === "One-Liner (Social & Short Bios)"
@@ -879,8 +858,6 @@ High-resolution header covers and document carousel templates:
     ```text
     Sunil Sharma (mrxsierra) is a software engineer specializing in autonomous agent workflows, machine learning pipelines, and distributed relational database architectures. A national finalist in the GSTN Predictive Binary Classification hackathon, Sunil designs production-grade software with rigorous pytest test suites, cross-engine SQL parity, and zero-downtime CI/CD automation. He publishes technical architecture guides and open-source tooling for the global developer ecosystem.
     ```
-
----
 
 ## 5. Design System Tokens & Color Palette
 
