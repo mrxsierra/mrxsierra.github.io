@@ -165,9 +165,32 @@
     }
   }
 
+  /**
+   * Accessible Names & ARIA State Enhancer
+   * Fulfills WCAG 2.1 AA requirements by ensuring search dialogs and progress bars have accessible labels.
+   */
+  function initA11yAttributes() {
+    // Accessible names for role="dialog" search interfaces
+    const searchDialogs = document.querySelectorAll('.md-search[role="dialog"]');
+    searchDialogs.forEach((el) => {
+      if (!el.getAttribute('aria-label') && !el.getAttribute('aria-labelledby')) {
+        el.setAttribute('aria-label', 'Site Search');
+      }
+    });
+
+    // Accessible names for role="progressbar" elements
+    const progressBars = document.querySelectorAll('.md-progress[role="progressbar"]');
+    progressBars.forEach((el) => {
+      if (!el.getAttribute('aria-label') && !el.getAttribute('aria-labelledby')) {
+        el.setAttribute('aria-label', 'Page loading progress');
+      }
+    });
+  }
+
   function initAll() {
     initHomePageInteractions();
     initSocialSharing();
+    initA11yAttributes();
   }
 
   // Run on initial load

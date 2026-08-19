@@ -2,6 +2,14 @@
 
 {% block extrahead %}
   {{ super() }}
+  <!-- Preconnect & DNS Prefetch for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+
   <!-- Exact Brand Favicon & Web Manifest -->
   <link rel="icon" type="image/svg+xml" href="{{ 'assets/img/favicon.svg' | url }}" />
   <link rel="apple-touch-icon" sizes="180x180" href="{{ 'assets/img/apple-touch-icon.png' | url }}" />
@@ -45,5 +53,28 @@
     {% else %}
       <meta property="twitter:image" content="{{ config.site_url }}assets/img/preview.png" />
     {% endif %}
+
+    <!-- Agentic Browsing & Search Engine Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "{% if 'blog/' in page.url %}TechArticle{% elif 'projects/' in page.url %}SoftwareApplication{% elif page.url == '' %}ProfilePage{% else %}WebPage{% endif %}",
+      "name": "{% if page.meta and page.meta.title %}{{ page.meta.title }}{% elif page.title %}{{ page.title }}{% else %}{{ config.site_name }}{% endif %}",
+      "description": "{% if page.meta and page.meta.description %}{{ page.meta.description }}{% else %}{{ config.site_description }}{% endif %}",
+      "url": "{{ page.canonical_url or (config.site_url ~ page.url) }}",
+      "author": {
+        "@type": "Person",
+        "name": "Sunil Sharma",
+        "alternateName": "mrxsierra",
+        "url": "{{ config.site_url }}",
+        "sameAs": [
+          "https://github.com/mrxsierra",
+          "https://www.linkedin.com/in/sunilsharma97/",
+          "https://x.com/mrxsierra",
+          "https://hub.docker.com/u/mrxsierra"
+        ]
+      }
+    }
+    </script>
   {% endif %}
 {% endblock %}
