@@ -5,7 +5,7 @@
     <link>https://mrxsierra.github.io/blog/</link>
     <description>In-depth database engineering, SQL dialect comparisons, and systems automation articles by Sunil Sharma.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 19 Aug 2026 15:19:36 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Aug 2026 15:24:44 +0000</lastBuildDate>
     <atom:link href="https://mrxsierra.github.io/feed_blog.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Beyond the Schema: A Practical Guide to Querying and Interacting with SQLite, MySQL, &amp; PostgreSQL</title>
