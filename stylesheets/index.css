@@ -2225,3 +2225,15 @@ article:has(.main-body) .md-source-file {
   padding: 4px 12px !important;
   font-size: 12.5px !important;
 }
+
+/* Author Avatar & Media Layout Stability (Zero CLS) */
+.md-author img,
+a.md-author > img,
+span.md-source-file__fact img {
+  width: 32px;
+  height: 32px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  display: inline-block;
+}
