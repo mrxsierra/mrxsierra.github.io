@@ -383,7 +383,7 @@ tags:
       <p>
         Committed to reproducible software engineering, data-driven automation, and active open-source contribution.
       </p>
-      <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: auto;">
+      <div class="profile-btn-row">
         <a href="about/" class="btn btn-secondary">
           <i class="fas fa-id-card"></i> Read Full Bio
         </a>
