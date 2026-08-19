@@ -1,10 +1,10 @@
 # mrxsierra.github.io
 
-[![Version](https://img.shields.io/badge/version-0.3.1-blue?style=flat)](VERSION)
+[![Version](https://img.shields.io/badge/version-0.7.0-blue?style=flat)](VERSION)
 [![CI/CD Pipeline](https://github.com/mrxsierra/mrxsierra.github.io/actions/workflows/ci.yml/badge.svg)](https://github.com/mrxsierra/mrxsierra.github.io/actions/workflows/ci.yml)
 [![Site Status](https://img.shields.io/badge/Site-Live-2ea44f?style=flat&logo=github)](https://mrxsierra.github.io/)
 [![Standard: llms.txt](https://img.shields.io/badge/Standard-llms.txt-blue?style=flat)](https://mrxsierra.github.io/llms.txt)
-[![Tests](https://img.shields.io/badge/Tests-54%20Passed-brightgreen?style=flat&logo=pytest)](tests/)
+[![Tests](https://img.shields.io/badge/Tests-55%20Passed-brightgreen?style=flat&logo=pytest)](tests/)
 [![Code Style](https://img.shields.io/badge/Code%20Style-Ruff-000000?style=flat&logo=ruff)](https://github.com/astral-sh/ruff)
 
 > Personal portfolio, technical case studies, and engineering blog of **Sunil Sharma (@mrxsierra)**.  

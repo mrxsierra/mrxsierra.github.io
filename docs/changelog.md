@@ -12,10 +12,38 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [0.6.0] - 2026-08-19
+## [0.7.0] - 2026-08-19
+
+### Added
+- **Dual-Depth Portfolio Project Template (`docs/templates/project-template.md`)**: High-converting case study blueprint featuring 3-metric executive stat cards, Mermaid system architecture flows, trade-off decision matrices, curated 20-line code highlights, automated verification benchmarks, and client inbound CTA.
+- **Viral Engineering Blog Template (`docs/templates/blog-template.md`)**: Thought-leadership article template with provocative hooks, 30-second TL;DR cards, visual mental models, "Do This, Not That" diffs, production gotchas, and quotable takeaway summary cheat sheets.
+- **Content Authoring & Cross-Platform Distribution Standards**: Added Section 4 in `CONTRIBUTING.md` outlining multi-audience alignment and specific distribution frameworks for X (Twitter) threads, LinkedIn stories, Dev.to/Medium syndication, and Reddit technical discussions.
 
 ### Changed
-- Maintenance updates, routine site improvements, and verified CI/CD releases.
+- **Styling Standardization**: Replaced legacy inline styling across project case studies, article series banners, and contact portal with shared CSS helper classes in `docs/stylesheets/index.css`.
+- **Site Exclusions**: Excluded `templates/` directory from public MkDocs navigation and build output (`mkdocs.yml`).
+
+
+## [0.6.0] - 2026-08-19
+
+### Added
+- **Publication Reading Standards**: Refined editorial line-height, typographic hierarchy, and responsive margins across engineering deep dives and case studies.
+- **Native Mermaid Rendering**: Enabled responsive client-side Mermaid diagram rendering for system architectures and data flow charts.
+- **Page-Scoped Developer Action Bar**: Positioned top-right action suite featuring "View Source", "Suggest Edit", and "Copy Raw Markdown".
+
+
+## [0.5.0] - 2026-08-19
+
+### Added
+- **Segmented Pill Developer Control Bar**: Replaced standalone floating buttons with an integrated, high-contrast segmented pill control bar in the top-right header area.
+- **Mobile Viewport Standardization**: Optimized touch target boundaries, typography scaling, and overflow containment on mobile devices.
+
+
+## [0.4.0] - 2026-08-19
+
+### Added
+- **4-Button Page-Scoped Developer Suite**: Added interactive actions to top-right content area for direct GitHub repository linking, raw source view, and issue templates.
+
 
 ## [0.3.1] - 2026-08-18
 
@@ -28,11 +56,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **LLM Knowledge Base Version Header**: Injected standardized `# Version: vX.Y.Z` metadata header into `llms-full.txt`.
 - **GitHub Actions Release Push**: Corrected automated branch push target to `origin HEAD:main` in the CI/CD deploy stage.
 
+
 ## [0.3.0] - 2026-08-18
 
 ### Added
 - **Dual-Tier Automated Release Architecture**: Fully automated Minor and Patch SemVer bumping, changelog categorization, and release tagging in GitHub Actions CI/CD upon PR merge, with full local support for intentional Major releases (`make bump-major`).
 - **Structured Conventional Commit Changelog Extraction**: Enhanced version bumper to automatically parse commit messages into `### Added` (`feat:`), `### Fixed` (`fix:`), and `### Changed` sections.
+
+
+## [0.2.1] - 2026-08-18
+
+### Added
+- **View Page Source Developer Action**: Added direct markdown source inspection button on all content pages.
+- **Machine-Readable Version Metadata**: Added `<meta name="version">` and `<meta name="docsearch:version">` tags across all site pages for search indexing and automated tooling.
+
+### Fixed
+- **Monotonic SemVer Tag Fallback**: Resolved version fallback logic during rapid tag increments.
+
 
 ## [0.2.0] - 2026-08-18
 

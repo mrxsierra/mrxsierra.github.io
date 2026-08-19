@@ -111,25 +111,6 @@ jobs:
                       mkdocs-glightbox \
                       mkdocs-git-committers-plugin-2
 
-      - name: Automated SemVer Bump & Changelog Sync
-        run: |
-          # Check if VERSION was modified in the latest commit
-          if git diff-tree --no-commit-id --name-only -r HEAD | grep -q "^VERSION$"; then
-            echo "VERSION was explicitly modified in incoming commit; skipping automated auto-bump."
-          else
-            echo "Running automated SemVer bump based on git history..."
-            python scripts/bump_version.py auto
-            python hooks/generate_ai_docs.py
-            
-            if [ -n "$(git status --porcelain)" ]; then
-              VERSION=$(cat VERSION)
-              echo "Committing automated release artifacts for v$VERSION..."
-              git add VERSION pyproject.toml mkdocs.yml CHANGELOG.md docs/ index.md || true
-              git commit -m "chore(release): auto-bump version to v$VERSION [skip ci]" || true
-              git push origin HEAD:main || echo "Push to main skipped or failed."
-            fi
-          fi
-
       - name: Deploy with MkDocs
         env:
           MKDOCS_GIT_COMMITTERS_APIKEY: ${{ secrets.GITHUB_TOKEN }}
@@ -137,7 +118,7 @@ jobs:
 
       - name: Tag Release
         run: |
-          VERSION=$(cat VERSION)
+          VERSION=$(cat VERSION | tr -d '[:space:]')
           TAG="v${VERSION}"
           if ! git rev-parse "$TAG" >/dev/null 2>&1; then
             echo "Creating and pushing tag: $TAG"
