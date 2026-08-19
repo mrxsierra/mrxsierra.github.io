@@ -5,8 +5,9 @@ site_url: https://mrxsierra.github.io/
 site_description: "Welcome to my personal website. Here you will find my projects, blogs, and more."
 
 # repository
-repo_url: https://github.com/mrxsierra
-repo_name: mrxsierra
+repo_url: https://github.com/mrxsierra/mrxsierra.github.io
+repo_name: mrxsierra/mrxsierra.github.io
+edit_uri: edit/main/docs/
 
 # Automated Build Hooks
 hooks:

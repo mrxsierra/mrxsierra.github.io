@@ -319,73 +319,47 @@
 }
 
 /* ==========================================================================
-   Developer Page Source & Collaboration Action Bar
+   Page-Scoped Developer Action Suite (.md-content__button)
    ========================================================================== */
 
-.page-source-action-bar {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 0.75rem;
-    margin-top: 1rem;
-    padding-top: 0.75rem;
-    border-top: 1px solid var(--color-border-subtle, rgba(255, 255, 255, 0.06));
-}
-
-[data-md-color-scheme="default"] .page-source-action-bar {
-    border-top-color: #e2e8f0;
-}
-
-.btn-page-source {
+.md-content__button {
     display: inline-flex;
     align-items: center;
-    gap: 0.45rem;
-    padding: 0.35rem 0.75rem;
-    font-size: 0.78rem;
-    font-weight: 500;
-    color: var(--color-text-secondary, #94a3b8) !important;
-    background: transparent;
-    border: 1px solid var(--color-border, rgba(255, 255, 255, 0.12));
+    justify-content: center;
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-left: 0.35rem;
     border-radius: 6px;
-    text-decoration: none !important;
+    border: 1px solid transparent;
+    color: var(--color-text-secondary, #94a3b8) !important;
     transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-    white-space: nowrap;
 }
 
-[data-md-color-scheme="default"] .btn-page-source {
-    color: #64748b !important;
-    border-color: #cbd5e1;
+.md-content__button svg {
+    width: 1.15rem;
+    height: 1.15rem;
+    fill: currentColor;
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), fill 0.2s ease;
 }
 
-.btn-page-source:hover {
-    color: var(--color-text-primary, #ffffff) !important;
+.md-content__button:hover {
+    color: var(--color-accent, #6366f1) !important;
     background: rgba(99, 102, 241, 0.08);
-    border-color: var(--color-accent, #6366f1);
+    border-color: rgba(99, 102, 241, 0.25);
     transform: translateY(-1px);
 }
 
-[data-md-color-scheme="default"] .btn-page-source:hover {
-    color: #0f172a !important;
-    background: rgba(99, 102, 241, 0.06);
-    border-color: #6366f1;
+.md-content__button:hover svg {
+    transform: scale(1.08);
+    fill: var(--color-accent, #6366f1);
 }
 
-.btn-page-source i {
-    font-size: 0.85rem;
+[data-md-color-scheme="default"] .md-content__button {
+    color: #64748b !important;
 }
 
-.btn-page-source .source-ext-icon {
-    font-size: 0.65rem;
-    opacity: 0.7;
-    margin-left: 0.15rem;
-}
-
-@media screen and (max-width: 600px) {
-    .page-source-action-bar {
-        justify-content: stretch;
-    }
-    .btn-page-source {
-        flex: 1 1 auto;
-        justify-content: center;
-    }
+[data-md-color-scheme="default"] .md-content__button:hover {
+    color: #4f46e5 !important;
+    background: rgba(79, 70, 229, 0.06);
+    border-color: rgba(79, 70, 229, 0.2);
 }

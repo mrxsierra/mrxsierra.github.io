@@ -37,5 +37,19 @@
 
 ---
 
+## Brand Standards &amp; Media Press Kit
+- [Brand Standards &amp; Identity System](https://mrxsierra.github.io/brand/): Developer-first geometric brand identity, vector SVGs, color tokens, and usage guidelines.
+- [Official Media Press Kit](https://mrxsierra.github.io/press/): Authorized speaker bios, executive headshots, vector logo downloads, and master press zip archive.
+
+---
+
+## Syndication &amp; Release History
+- [Changelog &amp; Release Notes](https://mrxsierra.github.io/changelog/): Full version history and feature milestone changelog.
+- [Combined RSS Feed](https://mrxsierra.github.io/feed.xml): Main site-wide syndication feed for all articles and case studies.
+- [Blog RSS Feed](https://mrxsierra.github.io/feed_blog.xml): Technical articles and architecture deep-dives.
+- [Projects RSS Feed](https://mrxsierra.github.io/feed_projects.xml): Engineering project releases and case studies.
+
+---
+
 ## Full Knowledge Base
 - [Full Text Knowledge Base (llms-full.txt)](https://mrxsierra.github.io/llms-full.txt): Complete concatenated raw markdown containing full project architectures, schema scripts, and guides in a single file for direct prompt context injection.
