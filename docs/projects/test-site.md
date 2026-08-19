@@ -14,12 +14,12 @@ description: >
 # Real-Time Test Management Interface
 
 <div class="project-header-card">
-  <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px;">
+  <div class="project-header-top">
     <div>
       <span class="project-category-badge">Frontend Engineering • Web Application</span>
-      <h2 style="margin: 6px 0 0 0; font-size: 22px; font-weight: 700;">Client-Side Examination Platform</h2>
+      <h2 class="project-header-title">Client-Side Examination Platform</h2>
     </div>
-    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+    <div class="project-header-actions">
       <a href="https://mrxsierra.github.io/test-site/" target="_blank" rel="noopener" class="btn btn-primary">
         <i class="fas fa-arrow-up-right-from-square"></i> Live Application
       </a>
@@ -90,23 +90,23 @@ The **Real-Time Test Management Interface** is a client-side web application bui
 
 ## Application Interface Gallery
 
-<div class="card-grid-3" style="margin: 20px 0;">
+<div class="card-grid-3">
   <div>
-    <h4 style="margin: 0 0 8px 0; font-size: 13px;">1. Test Taking View</h4>
+    <h4>1. Test Taking View</h4>
     <a href="https://raw.githubusercontent.com/mrxsierra/test-site/main/img/test-page.png" class="glightbox" data-gallery="testsite" data-title="Active Test Taking Interface">
-      <img src="https://raw.githubusercontent.com/mrxsierra/test-site/main/img/test-page.png" alt="Test Taking Interface" style="border-radius: 8px; border: 1px solid var(--color-border);" loading="lazy">
+      <img src="https://raw.githubusercontent.com/mrxsierra/test-site/main/img/test-page.png" alt="Test Taking Interface" class="media-img-rounded" loading="lazy">
     </a>
   </div>
   <div>
-    <h4 style="margin: 0 0 8px 0; font-size: 13px;">2. Analytics Dashboard</h4>
+    <h4>2. Analytics Dashboard</h4>
     <a href="https://raw.githubusercontent.com/mrxsierra/test-site/main/img/anamoly-dash.png" class="glightbox" data-gallery="testsite" data-title="Analytics Dashboard">
-      <img src="https://raw.githubusercontent.com/mrxsierra/test-site/main/img/anamoly-dash.png" alt="Analytics Dashboard" style="border-radius: 8px; border: 1px solid var(--color-border);" loading="lazy">
+      <img src="https://raw.githubusercontent.com/mrxsierra/test-site/main/img/anamoly-dash.png" alt="Analytics Dashboard" class="media-img-rounded" loading="lazy">
     </a>
   </div>
   <div>
-    <h4 style="margin: 0 0 8px 0; font-size: 13px;">3. Score Results View</h4>
+    <h4>3. Score Results View</h4>
     <a href="https://raw.githubusercontent.com/mrxsierra/test-site/main/img/individual-test-result.png" class="glightbox" data-gallery="testsite" data-title="Score Results View">
-      <img src="https://raw.githubusercontent.com/mrxsierra/test-site/main/img/individual-test-result.png" alt="Score Results View" style="border-radius: 8px; border: 1px solid var(--color-border);" loading="lazy">
+      <img src="https://raw.githubusercontent.com/mrxsierra/test-site/main/img/individual-test-result.png" alt="Score Results View" class="media-img-rounded" loading="lazy">
     </a>
   </div>
 </div>
@@ -117,8 +117,8 @@ The **Real-Time Test Management Interface** is a client-side web application bui
     <span class="project-nav-dir"><i class="fas fa-arrow-left"></i> Previous Project</span>
     <span class="project-nav-title">Naukri Market Data Scraper</span>
   </a>
-  <a href="../" class="project-nav-card" style="text-align: right;">
-    <span class="project-nav-dir" style="justify-content: flex-end;">All Projects <i class="fas fa-arrow-right"></i></span>
+  <a href="../" class="project-nav-card nav-right">
+    <span class="project-nav-dir dir-right">All Projects <i class="fas fa-arrow-right"></i></span>
     <span class="project-nav-title">Engineering Portfolio Index</span>
   </a>
 </div>

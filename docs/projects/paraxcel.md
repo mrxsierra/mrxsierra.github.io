@@ -87,34 +87,34 @@ Designed for educators and assessment coordinators, Paraxcel operates entirely o
 
 ## Verified Accreditation
 
-<div style="max-width: 650px; margin: 20px 0;">
+<div class="media-container-650">
   <a href="../../cert/1738690195028-cs50x.jpeg" class="glightbox" data-gallery="certs" data-title="Harvard CS50x Certificate">
-    <img src="../../cert/1738690195028-cs50x.jpeg" alt="Harvard CS50x Certificate" style="border-radius: 8px; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm);" loading="lazy">
+    <img src="../../cert/1738690195028-cs50x.jpeg" alt="Harvard CS50x Certificate" class="media-img-rounded" loading="lazy">
   </a>
-  <p style="font-size: 12.5px; color: var(--color-text-muted); margin-top: 6px; text-align: center;">
+  <p class="media-caption">
     Harvard CS50x: Introduction to Computer Science • Harvard University (CS50)
   </p>
 </div>
 
 ## Application Screenshots
 
-<div class="card-grid-3" style="margin: 20px 0;">
+<div class="card-grid-3">
   <div>
-    <h4 style="margin: 0 0 8px 0; font-size: 13px;">1. Desktop GUI Interface</h4>
+    <h4>1. Desktop GUI Interface</h4>
     <a href="https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/ui.jpg" class="glightbox" data-gallery="paraxcel" data-title="Paraxcel Desktop GUI">
-      <img src="https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/ui.jpg" alt="Paraxcel Desktop GUI" style="border-radius: 8px; border: 1px solid var(--color-border);" loading="lazy">
+      <img src="https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/ui.jpg" alt="Paraxcel Desktop GUI" class="media-img-rounded" loading="lazy">
     </a>
   </div>
   <div>
-    <h4 style="margin: 0 0 8px 0; font-size: 13px;">2. Sample DOCX Input</h4>
+    <h4>2. Sample DOCX Input</h4>
     <a href="https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/sample.jpg" class="glightbox" data-gallery="paraxcel" data-title="Sample DOCX Input">
-      <img src="https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/sample.jpg" alt="Sample DOCX Input" style="border-radius: 8px; border: 1px solid var(--color-border);" loading="lazy">
+      <img src="https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/sample.jpg" alt="Sample DOCX Input" class="media-img-rounded" loading="lazy">
     </a>
   </div>
   <div>
-    <h4 style="margin: 0 0 8px 0; font-size: 13px;">3. Normalized Excel Output</h4>
+    <h4>3. Normalized Excel Output</h4>
     <a href="https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/excel.jpg" class="glightbox" data-gallery="paraxcel" data-title="Normalized Excel Output">
-      <img src="https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/excel.jpg" alt="Normalized Excel Output" style="border-radius: 8px; border: 1px solid var(--color-border);" loading="lazy">
+      <img src="https://raw.githubusercontent.com/mrxsierra/paraxcel/main/sample/excel.jpg" alt="Normalized Excel Output" class="media-img-rounded" loading="lazy">
     </a>
   </div>
 </div>
@@ -125,8 +125,8 @@ Designed for educators and assessment coordinators, Paraxcel operates entirely o
     <span class="project-nav-dir"><i class="fas fa-arrow-left"></i> Previous Project</span>
     <span class="project-nav-title">S3 Faker Mock Data Generator</span>
   </a>
-  <a href="../naukri-webscraper/" class="project-nav-card" style="text-align: right;">
-    <span class="project-nav-dir" style="justify-content: flex-end;">Next Project <i class="fas fa-arrow-right"></i></span>
+  <a href="../naukri-webscraper/" class="project-nav-card nav-right">
+    <span class="project-nav-dir dir-right">Next Project <i class="fas fa-arrow-right"></i></span>
     <span class="project-nav-title">Naukri Market Data Scraper</span>
   </a>
 </div>
