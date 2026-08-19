@@ -24,9 +24,9 @@ As developers, we frequently encounter diverse SQL engines. While core relationa
 <div class="series-banner">
   <div class="series-banner-header">
     <span class="series-badge">2-Part Engineering Series</span>
-    <span style="font-size: 12.5px; color: var(--color-text-muted);">Part 1 of 2</span>
+    <span class="series-banner-meta">Part 1 of 2</span>
   </div>
-  <div style="font-size: 13.5px; color: var(--color-text-secondary); line-height: 1.5;">
+  <div class="series-banner-desc">
     <strong>Part 1:</strong> Schema Definitions, DDL, &amp; Trigger Architecture (Current)<br>
     <strong>Part 2:</strong> <a href="../beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql-postgresql/">Beyond the Schema: Querying, CLI Interaction, &amp; Docker Nuances</a>
   </div>
@@ -309,12 +309,12 @@ When aggregating nullable scores (`SUM`), empty record sets return `NULL` unless
 
 ## Next in the Series
 
-<div class="series-banner" style="border-left-color: var(--color-accent);">
+<div class="series-banner">
   <div class="series-banner-header">
     <span class="series-badge">Next Article</span>
-    <a href="../beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql-postgresql/" class="btn btn-secondary" style="padding: 4px 12px; font-size: 12.5px;">Read Part 2 &rarr;</a>
+    <a href="../beyond-the-schema-a-practical-guide-to-querying-and-interacting-with-sqlite-mysql-postgresql/" class="btn btn-secondary btn-series">Read Part 2 &rarr;</a>
   </div>
-  <p style="margin: 0; font-size: 13.5px; color: var(--color-text-secondary); line-height: 1.5;">
+  <p class="series-banner-desc">
     <strong>Beyond the Schema: A Practical Guide to Querying and Interacting with SQLite, MySQL, &amp; PostgreSQL</strong><br>
     Explore CLI interaction patterns, script piping, Dockerized connection debugging, and Python multi-RDBMS driver integration.
   </p>
